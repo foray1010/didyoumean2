@@ -1,0 +1,50 @@
+{
+  "name": "didyoumean2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foray1010/didyoumean2.git"
+  },
+  "keywords": [
+    "algo",
+    "algorithm",
+    "compare",
+    "comparison",
+    "didyoumean",
+    "diff",
+    "difference",
+    "distance",
+    "edit",
+    "fast",
+    "fuzzy",
+    "leven",
+    "levenshtein",
+    "match",
+    "matching",
+    "mean",
+    "similar",
+    "similarity",
+    "string",
+    "text"
+  ],
+  "author": "foray1010",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foray1010/didyoumean2/issues"
+  },
+  "homepage": "https://github.com/foray1010/didyoumean2#readme",
+  "dependencies": {
+    "leven": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.9.1",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "seamless-immutable": "^4.1.1"
+  }
+}
