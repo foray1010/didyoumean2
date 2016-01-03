@@ -1,0 +1,6 @@
+{
+  "ALL_MATCHES": "all-matches",
+  "CLOSEST_FIRST_MATCH": "closest-first-match",
+  "CLOSEST_RANDOM_MATCH": "closest-random-match",
+  "FIRST_MATCH": "first-match"
+}

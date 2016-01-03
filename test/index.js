@@ -2,6 +2,5 @@
 
 const test = require('ava')
 
-test('Test index', (t) => {
-  t.same(2, 2)
+test('main test', (t) => {
 })
