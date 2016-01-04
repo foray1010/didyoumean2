@@ -17,6 +17,13 @@ const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
 
+/**
+ * Main function for didyoumean2
+ * @param {string} input - A string that you are not sure and want to match with `matchList`
+ * @param {Object[]|string[]} matchList - A List for matching with `input`
+ * @param {null|Object|undefined} options - An options that allows you to modify the behavior
+ * @returns {string|string[]} A list of or single matched result(s)
+ */
 function didYouMean(input, matchList, options) {
   /*+++++++++++++++++++
    + Initiate options +
@@ -64,8 +71,8 @@ function didYouMean(input, matchList, options) {
   })()
 
 
-  let checkIfMatched
-  let checkMarginValue
+  let checkIfMatched // Validate if result is matched
+  let checkMarginValue // {string} Check for `max` or `min` result value
   switch (returnType) {
     case CLOSEST_FIRST_MATCH:
     case CLOSEST_RANDOM_MATCH:
@@ -108,6 +115,7 @@ function didYouMean(input, matchList, options) {
     for (let i = 0; i < matchListLen; i++) {
       const result = resultProcessor(matchList[i])
 
+      // Return once matched, performance is main target in this returnType
       if (checkIfMatched(result)) {
         return matchList[i]
       }
@@ -119,6 +127,7 @@ function didYouMean(input, matchList, options) {
 
     switch (checkMarginValue) {
       case 'max':
+        // Process result and save the largest result
         marginValue = 0
         for (let i = 0; i < matchListLen; i++) {
           const result = resultProcessor(matchList[i])
@@ -130,6 +139,7 @@ function didYouMean(input, matchList, options) {
         break
 
       case 'min':
+        // Process result and save the smallest result
         marginValue = Infinity
         for (let i = 0; i < matchListLen; i++) {
           const result = resultProcessor(matchList[i])
@@ -148,6 +158,7 @@ function didYouMean(input, matchList, options) {
     for (let i = 0; i < resultsLen; i++) {
       const result = results[i]
 
+      // Just save the closest value
       if (result === marginValue) {
         matchedIndexes.push(i)
       }
@@ -156,6 +167,7 @@ function didYouMean(input, matchList, options) {
     for (let i = 0; i < matchListLen; i++) {
       const result = resultProcessor(matchList[i])
 
+      // save all indexes of matched results
       if (checkIfMatched(result)) {
         matchedIndexes.push(i)
       }
@@ -182,11 +194,12 @@ function didYouMean(input, matchList, options) {
       return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
 
     case CLOSEST_FIRST_MATCH:
-    case FIRST_MATCH:
       return matchList[matchedIndexes[0]]
 
     case CLOSEST_RANDOM_MATCH:
       return matchList[matchedIndexes[random(matchedIndexes.length - 1)]]
+
+    // case FIRST_MATCH: // It is handled on above
 
     default:
   }
