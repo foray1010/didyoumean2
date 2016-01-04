@@ -7,6 +7,11 @@ const test = require('ava')
 const didYouMean = require('..')
 const returnTypeEnums = require('../enums/returnTypeEnums')
 
+const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
+const CLOSEST_FIRST_MATCH = returnTypeEnums.CLOSEST_FIRST_MATCH
+const CLOSEST_RANDOM_MATCH = returnTypeEnums.CLOSEST_RANDOM_MATCH
+const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+
 const input = 'abcdefghij'
 const matchList = Immutable([
   'abc*******',
@@ -32,55 +37,67 @@ test('matchPath', (t) => {
 })
 
 test('returnType', (t) => {
+  // test all-matches
   let allMatchesResult = matchList.asMutable()
   allMatchesResult.splice(0, 1)
   allMatchesResult = Immutable(allMatchesResult)
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.ALL_MATCHES
+    returnType: ALL_MATCHES
   }), allMatchesResult)
 
+
+  // test closest-first-match
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.CLOSEST_FIRST_MATCH
+    returnType: CLOSEST_FIRST_MATCH
   }), matchList[3])
 
-  // t.same(didYouMean(input, matchList, {
-  //   returnType: returnTypeEnums.CLOSEST_RANDOM_MATCH
-  // }), matchList)
 
+  // test closest-random-match
+  let matchListWithSingleClosestValue = matchList.asMutable()
+  matchListWithSingleClosestValue.push(input)
+  matchListWithSingleClosestValue = Immutable(matchListWithSingleClosestValue)
+
+  t.same(didYouMean(input, matchListWithSingleClosestValue, {
+    returnType: CLOSEST_RANDOM_MATCH,
+    threshold: 1
+  }), matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
+
+
+  // test first-match
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH
+    returnType: FIRST_MATCH
   }), matchList[1])
 })
 
 test('threshold', (t) => {
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH,
+    returnType: FIRST_MATCH,
     threshold: 0.3
   }), matchList[0])
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH,
+    returnType: FIRST_MATCH,
     threshold: 0.4
   }), matchList[1])
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH,
+    returnType: FIRST_MATCH,
     threshold: 0.5
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH,
+    returnType: FIRST_MATCH,
     threshold: 0.6
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.FIRST_MATCH,
+    returnType: FIRST_MATCH,
     threshold: 0.7
   }), null)
 
   t.same(didYouMean(input, matchList, {
-    returnType: returnTypeEnums.ALL_MATCHES,
+    returnType: ALL_MATCHES,
     threshold: 0.7
   }), [])
 })
