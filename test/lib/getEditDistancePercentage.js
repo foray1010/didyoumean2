@@ -8,11 +8,11 @@ const getEditDistancePercentage = require('../../lib/getEditDistancePercentage')
 test('basic', (t) => {
   const options = Immutable({})
 
-  t.is(getEditDistancePercentage('abcde', 'fghij', options), 0)
-  t.is(getEditDistancePercentage('identical', 'identical', options), 1)
-  t.is(getEditDistancePercentage('test empty string', '', options), 0)
-  t.is(getEditDistancePercentage('holy', 'poly', options), 3 / 4)
-  t.is(getEditDistancePercentage('children', 'child', options), 5 / 8)
+  t.same(getEditDistancePercentage('abcde', 'fghij', options), 0)
+  t.same(getEditDistancePercentage('identical', 'identical', options), 1)
+  t.same(getEditDistancePercentage('test empty string', '', options), 0)
+  t.same(getEditDistancePercentage('holy', 'poly', options), 3 / 4)
+  t.same(getEditDistancePercentage('children', 'child', options), 5 / 8)
 })
 
 test('case sensitive', (t) => {
@@ -20,8 +20,8 @@ test('case sensitive', (t) => {
     caseSensitive: true
   })
 
-  t.is(getEditDistancePercentage('abcde', 'ABCDE', options), 0)
-  t.is(getEditDistancePercentage('case sensitive', 'Case Sensitive', options), 12 / 14)
+  t.same(getEditDistancePercentage('abcde', 'ABCDE', options), 0)
+  t.same(getEditDistancePercentage('case sensitive', 'Case Sensitive', options), 12 / 14)
 })
 
 test('case insensitive', (t) => {
@@ -29,6 +29,6 @@ test('case insensitive', (t) => {
     caseSensitive: false
   })
 
-  t.is(getEditDistancePercentage('abcde', 'ABCDE', options), 1)
-  t.is(getEditDistancePercentage('case insensitive', 'Case Insensitive', options), 1)
+  t.same(getEditDistancePercentage('abcde', 'ABCDE', options), 1)
+  t.same(getEditDistancePercentage('case insensitive', 'Case Insensitive', options), 1)
 })
