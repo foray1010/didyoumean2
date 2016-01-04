@@ -6,11 +6,15 @@ const test = require('ava')
 
 const didYouMean = require('..')
 const returnTypeEnums = require('../enums/returnTypeEnums')
+const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
 
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
 const CLOSEST_FIRST_MATCH = returnTypeEnums.CLOSEST_FIRST_MATCH
 const CLOSEST_RANDOM_MATCH = returnTypeEnums.CLOSEST_RANDOM_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+
+const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
+const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
 
 const input = 'abcdefghij'
 const matchList = Immutable([
@@ -24,6 +28,16 @@ const matchList = Immutable([
 
 test('without options', (t) => {
   t.same(didYouMean(input, matchList), matchList[3])
+})
+
+test('caseSensitive', (t) => {
+  t.same(didYouMean(input, matchList, {
+    caseSensitive: true
+  }), matchList[4])
+
+  t.same(didYouMean(input, matchList, {
+    caseSensitive: false
+  }), matchList[3])
 })
 
 test('matchPath', (t) => {
@@ -70,34 +84,78 @@ test('returnType', (t) => {
   }), matchList[1])
 })
 
-test('threshold', (t) => {
+test('threshold: "edit-distance"', (t) => {
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.3
+    threshold: 7,
+    thresholdType: EDIT_DISTANCE
   }), matchList[0])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.4
+    threshold: 6,
+    thresholdType: EDIT_DISTANCE
   }), matchList[1])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.5
+    threshold: 5,
+    thresholdType: EDIT_DISTANCE
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.6
+    threshold: 4,
+    thresholdType: EDIT_DISTANCE
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.7
+    threshold: 3,
+    thresholdType: EDIT_DISTANCE
   }), null)
 
   t.same(didYouMean(input, matchList, {
     returnType: ALL_MATCHES,
-    threshold: 0.7
+    threshold: 3,
+    thresholdType: EDIT_DISTANCE
+  }), [])
+})
+
+test('threshold: "percentage"', (t) => {
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.3,
+    thresholdType: PERCENTAGE
+  }), matchList[0])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.4,
+    thresholdType: PERCENTAGE
+  }), matchList[1])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.5,
+    thresholdType: PERCENTAGE
+  }), matchList[2])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.6,
+    thresholdType: PERCENTAGE
+  }), matchList[3])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.7,
+    thresholdType: PERCENTAGE
+  }), null)
+
+  t.same(didYouMean(input, matchList, {
+    returnType: ALL_MATCHES,
+    threshold: 0.7,
+    thresholdType: PERCENTAGE
   }), [])
 })
