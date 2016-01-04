@@ -1,54 +1,97 @@
 'use strict'
 
 const get = require('lodash.get')
+const leven = require('leven')
 const random = require('lodash.random')
 
 const getEditDistancePercentage = require('./lib/getEditDistancePercentage')
 const fillDefaultOptions = require('./lib/fillDefaultOptions')
 const returnTypeEnums = require('./enums/returnTypeEnums')
+const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
 
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
 const CLOSEST_FIRST_MATCH = returnTypeEnums.CLOSEST_FIRST_MATCH
 const CLOSEST_RANDOM_MATCH = returnTypeEnums.CLOSEST_RANDOM_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 
+const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
+const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
+
 function didYouMean(input, matchList, options) {
   options = fillDefaultOptions(options)
 
+  const caseSensitive = options.caseSensitive
   const matchPath = options.matchPath
   const returnType = options.returnType
   const threshold = options.threshold
+  const thresholdType = options.thresholdType
 
-  const processedMatchList = matchPath ?
+  let processedMatchList = matchPath ?
     matchList.map((matchObjItem) => get(matchObjItem, matchPath)) :
     matchList
 
-  const editDistancePercentageResults = processedMatchList
-    .map((matchItem) => getEditDistancePercentage(input, matchItem, options))
+  if (!caseSensitive) {
+    input = input.toLowerCase()
+    processedMatchList = processedMatchList.map((matchItem) => matchItem.toLowerCase())
+  }
 
-  const editDistancePercentageResultsLen = editDistancePercentageResults.length
+  let resultProcessor
+  switch (thresholdType) {
+    case EDIT_DISTANCE:
+      resultProcessor = (matchItem) => leven(input, matchItem)
+      break
 
-  const matchedIndexes = []
-
-  let checkIfMatched
-
-  switch (returnType) {
-    case CLOSEST_FIRST_MATCH:
-    case CLOSEST_RANDOM_MATCH:
-      const maxValue = Math.max.apply(null, editDistancePercentageResults)
-
-      checkIfMatched = (editDistancePercentage) => editDistancePercentage === maxValue
-
+    case PERCENTAGE:
+      resultProcessor = (matchItem) => getEditDistancePercentage(input, matchItem)
       break
 
     default:
-      checkIfMatched = (editDistancePercentage) => editDistancePercentage >= threshold
   }
 
-  for (let i = 0; i < editDistancePercentageResultsLen; i++) {
-    const editDistancePercentage = editDistancePercentageResults[i]
+  const results = processedMatchList.map(resultProcessor)
 
-    if (checkIfMatched(editDistancePercentage)) {
+  const resultsLen = results.length
+
+  let checkIfMatched
+  switch (returnType) {
+    case CLOSEST_FIRST_MATCH:
+    case CLOSEST_RANDOM_MATCH:
+      switch (thresholdType) {
+        case EDIT_DISTANCE:
+          const minValue = Math.min.apply(null, results)
+
+          checkIfMatched = (result) => result === minValue
+          break
+
+        case PERCENTAGE:
+          const maxValue = Math.max.apply(null, results)
+
+          checkIfMatched = (result) => result === maxValue
+          break
+
+        default:
+      }
+      break
+
+    default:
+      switch (thresholdType) {
+        case EDIT_DISTANCE:
+          checkIfMatched = (result) => result <= threshold
+          break
+
+        case PERCENTAGE:
+          checkIfMatched = (result) => result >= threshold
+          break
+
+        default:
+      }
+  }
+
+  const matchedIndexes = []
+  for (let i = 0; i < resultsLen; i++) {
+    const result = results[i]
+
+    if (checkIfMatched(result)) {
       matchedIndexes.push(i)
     }
   }
@@ -75,7 +118,6 @@ function didYouMean(input, matchList, options) {
       return matchList[matchedIndexes[random(matchedIndexes.length - 1)]]
 
     default:
-      return null
   }
 }
 
