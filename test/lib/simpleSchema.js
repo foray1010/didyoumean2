@@ -5,7 +5,7 @@ const test = require('ava')
 const returnTypeEnums = require('../../enums/returnTypeEnums')
 const simpleSchema = require('../../lib/simpleSchema')
 
-test('test: check enum', (t) => {
+test('check enum', (t) => {
   t.doesNotThrow(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
@@ -21,7 +21,7 @@ test('test: check enum', (t) => {
   }, RangeError)
 })
 
-test('test: check type', (t) => {
+test('check type', (t) => {
   // array
   t.doesNotThrow(() => {
     simpleSchema([], {
@@ -92,7 +92,7 @@ test('test: check type', (t) => {
   }, TypeError)
 })
 
-test('test: fill defaultValue', (t) => {
+test('fill defaultValue', (t) => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined

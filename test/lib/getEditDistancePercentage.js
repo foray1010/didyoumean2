@@ -5,7 +5,7 @@ const test = require('ava')
 
 const getEditDistancePercentage = require('../../lib/getEditDistancePercentage')
 
-test('main test', (t) => {
+test('basic', (t) => {
   const options = Immutable({})
 
   t.is(getEditDistancePercentage('abcde', 'fghij', options), 0)
@@ -15,7 +15,7 @@ test('main test', (t) => {
   t.is(getEditDistancePercentage('children', 'child', options), 5 / 8)
 })
 
-test('test: case sensitive', (t) => {
+test('case sensitive', (t) => {
   const options = Immutable({
     caseSensitive: true
   })
@@ -24,7 +24,7 @@ test('test: case sensitive', (t) => {
   t.is(getEditDistancePercentage('case sensitive', 'Case Sensitive', options), 12 / 14)
 })
 
-test('test: case insensitive', (t) => {
+test('case insensitive', (t) => {
   const options = Immutable({
     caseSensitive: false
   })
