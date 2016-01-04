@@ -18,6 +18,10 @@ const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
 
 function didYouMean(input, matchList, options) {
+  /*+++++++++++++++++++
+   + Initiate options +
+   +++++++++++++++++++*/
+
   options = fillDefaultOptions(options)
 
   const caseSensitive = options.caseSensitive
@@ -26,47 +30,52 @@ function didYouMean(input, matchList, options) {
   const threshold = options.threshold
   const thresholdType = options.thresholdType
 
-  let processedMatchList = matchPath ?
-    matchList.map((matchObjItem) => get(matchObjItem, matchPath)) :
-    matchList
+
+  /*++++++++++++++++++++
+   + Deal with options +
+   ++++++++++++++++++++*/
 
   if (!caseSensitive) {
     input = input.toLowerCase()
-    processedMatchList = processedMatchList.map((matchItem) => matchItem.toLowerCase())
   }
 
-  let resultProcessor
-  switch (thresholdType) {
-    case EDIT_DISTANCE:
-      resultProcessor = (matchItem) => leven(input, matchItem)
-      break
+  const resultProcessor = (() => {
+    const matchItemProcessor = (matchItem) => {
+      if (matchPath) {
+        matchItem = get(matchItem, matchPath)
+      }
 
-    case PERCENTAGE:
-      resultProcessor = (matchItem) => getEditDistancePercentage(input, matchItem)
-      break
+      if (!caseSensitive) {
+        matchItem = matchItem.toLowerCase()
+      }
 
-    default:
-  }
+      return matchItem
+    }
 
-  const results = processedMatchList.map(resultProcessor)
+    switch (thresholdType) {
+      case EDIT_DISTANCE:
+        return (matchItem) => leven(input, matchItemProcessor(matchItem))
 
-  const resultsLen = results.length
+      case PERCENTAGE:
+        return (matchItem) => getEditDistancePercentage(input, matchItemProcessor(matchItem))
+
+      default:
+    }
+  })()
+
 
   let checkIfMatched
+  let checkMarginValue
   switch (returnType) {
     case CLOSEST_FIRST_MATCH:
     case CLOSEST_RANDOM_MATCH:
       switch (thresholdType) {
         case EDIT_DISTANCE:
-          const minValue = Math.min.apply(null, results)
-
-          checkIfMatched = (result) => result === minValue
+          checkMarginValue = 'min'
           break
 
         case PERCENTAGE:
-          const maxValue = Math.max.apply(null, results)
-
-          checkIfMatched = (result) => result === maxValue
+          checkMarginValue = 'max'
           break
 
         default:
@@ -87,14 +96,76 @@ function didYouMean(input, matchList, options) {
       }
   }
 
-  const matchedIndexes = []
-  for (let i = 0; i < resultsLen; i++) {
-    const result = results[i]
 
-    if (checkIfMatched(result)) {
-      matchedIndexes.push(i)
+  /*+++++++++++
+   + Matching +
+   +++++++++++*/
+
+  const matchedIndexes = []
+  const matchListLen = matchList.length
+
+  if (returnType === FIRST_MATCH) {
+    for (let i = 0; i < matchListLen; i++) {
+      const result = resultProcessor(matchList[i])
+
+      if (checkIfMatched(result)) {
+        return matchList[i]
+      }
+    }
+  } else if (checkMarginValue) {
+    const results = []
+
+    let marginValue
+
+    switch (checkMarginValue) {
+      case 'max':
+        marginValue = 0
+        for (let i = 0; i < matchListLen; i++) {
+          const result = resultProcessor(matchList[i])
+
+          if (marginValue < result) marginValue = result
+
+          results.push(result)
+        }
+        break
+
+      case 'min':
+        marginValue = Infinity
+        for (let i = 0; i < matchListLen; i++) {
+          const result = resultProcessor(matchList[i])
+
+          if (marginValue > result) marginValue = result
+
+          results.push(result)
+        }
+        break
+
+      default:
+    }
+
+    const resultsLen = results.length
+
+    for (let i = 0; i < resultsLen; i++) {
+      const result = results[i]
+
+      if (result === marginValue) {
+        matchedIndexes.push(i)
+      }
+    }
+  } else {
+    for (let i = 0; i < matchListLen; i++) {
+      const result = resultProcessor(matchList[i])
+
+      if (checkIfMatched(result)) {
+        matchedIndexes.push(i)
+      }
     }
   }
+
+
+  /*+++++++++++++++++++++++
+   + Process return value +
+   +++++++++++++++++++++++*/
 
   if (!matchedIndexes.length) {
     switch (returnType) {
