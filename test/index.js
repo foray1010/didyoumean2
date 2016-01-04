@@ -42,7 +42,7 @@ test('returnType', (t) => {
 
   t.same(didYouMean(input, matchList, {
     returnType: returnTypeEnums.CLOSEST_FIRST_MATCH
-  }), matchList[5])
+  }), matchList[3])
 
   // t.same(didYouMean(input, matchList, {
   //   returnType: returnTypeEnums.CLOSEST_RANDOM_MATCH
@@ -55,22 +55,32 @@ test('returnType', (t) => {
 
 test('threshold', (t) => {
   t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.FIRST_MATCH,
     threshold: 0.3
   }), matchList[0])
 
   t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.FIRST_MATCH,
     threshold: 0.4
   }), matchList[1])
 
   t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.FIRST_MATCH,
     threshold: 0.5
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.FIRST_MATCH,
     threshold: 0.6
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.FIRST_MATCH,
     threshold: 0.7
   }), null)
+
+  t.same(didYouMean(input, matchList, {
+    returnType: returnTypeEnums.ALL_MATCHES,
+    threshold: 0.7
+  }), [])
 })
