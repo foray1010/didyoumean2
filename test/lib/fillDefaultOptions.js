@@ -11,6 +11,6 @@ const defaultOptions = {
   threshold: 0.4
 }
 
-test('test: without arguments', (t) => {
+test('without arguments', (t) => {
   t.same(fillDefaultOptions(), defaultOptions)
 })
