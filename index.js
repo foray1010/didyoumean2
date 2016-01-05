@@ -66,6 +66,7 @@ function didYouMean(input, matchList, options) {
       case PERCENTAGE:
         return (matchItem) => getEditDistancePercentage(input, matchItemProcessor(matchItem))
 
+      /* istanbul ignore next */
       default:
     }
   })()
@@ -85,6 +86,7 @@ function didYouMean(input, matchList, options) {
           checkMarginValue = 'max'
           break
 
+        /* istanbul ignore next */
         default:
       }
       break
@@ -99,6 +101,7 @@ function didYouMean(input, matchList, options) {
           checkIfMatched = (result) => result >= threshold
           break
 
+        /* istanbul ignore next */
         default:
       }
   }
@@ -150,6 +153,7 @@ function didYouMean(input, matchList, options) {
         }
         break
 
+      /* istanbul ignore next */
       default:
     }
 
@@ -201,6 +205,7 @@ function didYouMean(input, matchList, options) {
 
     // case FIRST_MATCH: // It is handled on above
 
+    /* istanbul ignore next */
     default:
   }
 }
