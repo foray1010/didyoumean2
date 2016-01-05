@@ -23,7 +23,7 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
  * @param {string} input - A string that you are not sure and want to match with `matchList`
  * @param {Object[]|string[]} matchList - A List for matching with `input`
  * @param {null|Object|undefined} options - An options that allows you to modify the behavior
- * @returns {string|string[]} A list of or single matched result(s)
+ * @returns {Array|Object|string} A list of or single matched result(s)
  */
 function didYouMean(input, matchList, options) {
   /*+++++++++++++++++++
