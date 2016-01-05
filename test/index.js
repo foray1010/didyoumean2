@@ -8,10 +8,11 @@ const didYouMean = require('..')
 const returnTypeEnums = require('../enums/returnTypeEnums')
 const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
 
+const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const CLOSEST_FIRST_MATCH = returnTypeEnums.CLOSEST_FIRST_MATCH
-const CLOSEST_RANDOM_MATCH = returnTypeEnums.CLOSEST_RANDOM_MATCH
+const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
@@ -51,37 +52,41 @@ test('matchPath', (t) => {
 })
 
 test('returnType', (t) => {
+  // test all-closest-matches
+  const allClosestMatchesResult = matchList.slice(3, matchList.length)
+
+  t.same(didYouMean(input, matchList, {
+    returnType: ALL_CLOSEST_MATCHES
+  }), allClosestMatchesResult)
+
+
   // test all-matches
-  let allMatchesResult = matchList.asMutable()
-  allMatchesResult.splice(0, 1)
-  allMatchesResult = Immutable(allMatchesResult)
+  const allMatchesResult = matchList.slice(1)
 
   t.same(didYouMean(input, matchList, {
     returnType: ALL_MATCHES
   }), allMatchesResult)
 
 
-  // test closest-first-match
+  // test first-closest-match
   t.same(didYouMean(input, matchList, {
-    returnType: CLOSEST_FIRST_MATCH
+    returnType: FIRST_CLOSEST_MATCH
   }), matchList[3])
-
-
-  // test closest-random-match
-  let matchListWithSingleClosestValue = matchList.asMutable()
-  matchListWithSingleClosestValue.push(input)
-  matchListWithSingleClosestValue = Immutable(matchListWithSingleClosestValue)
-
-  t.same(didYouMean(input, matchListWithSingleClosestValue, {
-    returnType: CLOSEST_RANDOM_MATCH,
-    threshold: 1
-  }), matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
 
 
   // test first-match
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH
   }), matchList[1])
+
+
+  // test random-closest-match
+  const matchListWithSingleClosestValue = matchList.concat(input)
+
+  t.same(didYouMean(input, matchListWithSingleClosestValue, {
+    returnType: RANDOM_CLOSEST_MATCH,
+    threshold: 1
+  }), matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
 })
 
 test('threshold: "edit-distance"', (t) => {
@@ -104,28 +109,28 @@ test('threshold: "edit-distance"', (t) => {
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
-    returnType: FIRST_MATCH,
-    threshold: 4,
-    thresholdType: EDIT_DISTANCE
-  }), matchList[3])
-
-  t.same(didYouMean(input, matchList, {
-    returnType: CLOSEST_FIRST_MATCH,
+    returnType: FIRST_CLOSEST_MATCH,
     threshold: 4,
     thresholdType: EDIT_DISTANCE
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 3,
+    threshold: 4,
     thresholdType: EDIT_DISTANCE
-  }), null)
+  }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: ALL_MATCHES,
     threshold: 3,
     thresholdType: EDIT_DISTANCE
   }), [])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 3,
+    thresholdType: EDIT_DISTANCE
+  }), null)
 })
 
 test('threshold: "percentage"', (t) => {
@@ -148,20 +153,26 @@ test('threshold: "percentage"', (t) => {
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
-    returnType: FIRST_MATCH,
+    returnType: FIRST_CLOSEST_MATCH,
     threshold: 0.6,
     thresholdType: PERCENTAGE
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
-    threshold: 0.7,
+    threshold: 0.6,
     thresholdType: PERCENTAGE
-  }), null)
+  }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: ALL_MATCHES,
     threshold: 0.7,
     thresholdType: PERCENTAGE
   }), [])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_MATCH,
+    threshold: 0.7,
+    thresholdType: PERCENTAGE
+  }), null)
 })
