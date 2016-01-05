@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp lint && ava --verbose"
+    "coverage": "nyc --reporter=lcov npm test",
+    "lint": "gulp lint",
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
