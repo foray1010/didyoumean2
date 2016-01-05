@@ -209,7 +209,7 @@ function didYouMean(input, matchList, options) {
     // case FIRST_MATCH: // It is handled on above
 
     case RANDOM_CLOSEST_MATCH:
-      return matchList[matchedIndexes[random(matchedIndexes.length - 1)]]
+      return matchList[matchedIndexes[Math.floor(Math.random() * matchedIndexes.length)]]
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:
