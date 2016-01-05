@@ -104,7 +104,7 @@ test('returnType', (t) => {
   }), matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
 })
 
-test('threshold: "edit-distance"', (t) => {
+test(`threshold: "${EDIT_DISTANCE}"`, (t) => {
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 7,
@@ -142,7 +142,7 @@ test('threshold: "edit-distance"', (t) => {
   }), null)
 })
 
-test('threshold: "similarity"', (t) => {
+test(`threshold: "${SIMILARITY}"`, (t) => {
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.3,
