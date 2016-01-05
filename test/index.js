@@ -110,6 +110,12 @@ test('threshold: "edit-distance"', (t) => {
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
+    returnType: CLOSEST_FIRST_MATCH,
+    threshold: 4,
+    thresholdType: EDIT_DISTANCE
+  }), matchList[3])
+
+  t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 3,
     thresholdType: EDIT_DISTANCE
