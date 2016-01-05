@@ -4,7 +4,7 @@ const get = require('lodash.get')
 const leven = require('leven')
 const random = require('lodash.random')
 
-const getEditDistancePercentage = require('./lib/getEditDistancePercentage')
+const getSimilarity = require('./lib/getSimilarity')
 const fillDefaultOptions = require('./lib/fillDefaultOptions')
 const returnTypeEnums = require('./enums/returnTypeEnums')
 const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
@@ -16,7 +16,7 @@ const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
+const SIMILARITY = thresholdTypeEnums.SIMILARITY
 
 /**
  * Main function for didyoumean2
@@ -64,16 +64,28 @@ function didYouMean(input, matchList, options) {
       case EDIT_DISTANCE:
         return (matchItem) => leven(input, matchItemProcessor(matchItem))
 
-      case PERCENTAGE:
-        return (matchItem) => getEditDistancePercentage(input, matchItemProcessor(matchItem))
+      case SIMILARITY:
+        return (matchItem) => getSimilarity(input, matchItemProcessor(matchItem))
 
       /* istanbul ignore next */ // handled by simpleSchema
       default:
     }
   })()
 
-
   let checkIfMatched // Validate if result is matched
+  switch (thresholdType) {
+    case EDIT_DISTANCE:
+      checkIfMatched = (result) => result <= threshold
+      break
+
+    case SIMILARITY:
+      checkIfMatched = (result) => result >= threshold
+      break
+
+    /* istanbul ignore next */ // handled by simpleSchema
+    default:
+  }
+
   let checkMarginValue // {string} Check for `max` or `min` result value
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
@@ -84,7 +96,7 @@ function didYouMean(input, matchList, options) {
           checkMarginValue = 'min'
           break
 
-        case PERCENTAGE:
+        case SIMILARITY:
           checkMarginValue = 'max'
           break
 
@@ -94,18 +106,6 @@ function didYouMean(input, matchList, options) {
       break
 
     default:
-      switch (thresholdType) {
-        case EDIT_DISTANCE:
-          checkIfMatched = (result) => result <= threshold
-          break
-
-        case PERCENTAGE:
-          checkIfMatched = (result) => result >= threshold
-          break
-
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
-      }
   }
 
 
@@ -164,9 +164,11 @@ function didYouMean(input, matchList, options) {
     for (let i = 0; i < resultsLen; i++) {
       const result = results[i]
 
-      // Just save the closest value
-      if (result === marginValue) {
-        matchedIndexes.push(i)
+      if (checkIfMatched(result)) {
+        // Just save the closest value
+        if (result === marginValue) {
+          matchedIndexes.push(i)
+        }
       }
     }
   } else {

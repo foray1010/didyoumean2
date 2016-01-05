@@ -11,7 +11,7 @@ const defaultOptions = {
   matchPath: '',
   returnType: returnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 0.4,
-  thresholdType: thresholdTypeEnums.PERCENTAGE
+  thresholdType: thresholdTypeEnums.SIMILARITY
 }
 
 test('without arguments', (t) => {

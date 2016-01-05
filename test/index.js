@@ -15,7 +15,7 @@ const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
+const SIMILARITY = thresholdTypeEnums.SIMILARITY
 
 const input = 'abcdefghij'
 const matchList = Immutable([
@@ -59,6 +59,11 @@ test('returnType', (t) => {
     returnType: ALL_CLOSEST_MATCHES
   }), allClosestMatchesResult)
 
+  t.same(didYouMean(input, matchList, {
+    returnType: ALL_CLOSEST_MATCHES,
+    threshold: 0.7
+  }), [])
+
 
   // test all-matches
   const allMatchesResult = matchList.slice(1)
@@ -67,11 +72,21 @@ test('returnType', (t) => {
     returnType: ALL_MATCHES
   }), allMatchesResult)
 
+  t.same(didYouMean(input, matchList, {
+    returnType: ALL_MATCHES,
+    threshold: 0.7
+  }), [])
+
 
   // test first-closest-match
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH
   }), matchList[3])
+
+  t.same(didYouMean(input, matchList, {
+    returnType: FIRST_CLOSEST_MATCH,
+    threshold: 0.7
+  }), null)
 
 
   // test first-match
@@ -121,58 +136,46 @@ test('threshold: "edit-distance"', (t) => {
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
-    returnType: ALL_MATCHES,
-    threshold: 3,
-    thresholdType: EDIT_DISTANCE
-  }), [])
-
-  t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 3,
     thresholdType: EDIT_DISTANCE
   }), null)
 })
 
-test('threshold: "percentage"', (t) => {
+test('threshold: "similarity"', (t) => {
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.3,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), matchList[0])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.4,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), matchList[1])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.5,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), matchList[2])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH,
     threshold: 0.6,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), matchList[3])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.6,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), matchList[3])
-
-  t.same(didYouMean(input, matchList, {
-    returnType: ALL_MATCHES,
-    threshold: 0.7,
-    thresholdType: PERCENTAGE
-  }), [])
 
   t.same(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.7,
-    thresholdType: PERCENTAGE
+    thresholdType: SIMILARITY
   }), null)
 })
