@@ -3,7 +3,7 @@
 const Immutable = require('seamless-immutable')
 const test = require('ava')
 
-const fillDefaultOptions = require('../../lib/fillDefaultOptions')
+const runOptionsSchema = require('../../lib/runOptionsSchema')
 const returnTypeEnums = require('../../enums/returnTypeEnums')
 const thresholdTypeEnums = require('../../enums/thresholdTypeEnums')
 
@@ -29,11 +29,11 @@ const defaultOptionsForEditDistance = Immutable({
 })
 
 test('without arguments', (t) => {
-  t.same(fillDefaultOptions(), defaultOptions)
+  t.same(runOptionsSchema(), defaultOptions)
 })
 
 test(`thresholdType: "${EDIT_DISTANCE}"`, (t) => {
-  t.same(fillDefaultOptions({
+  t.same(runOptionsSchema({
     thresholdType: EDIT_DISTANCE
   }), defaultOptionsForEditDistance)
 })
