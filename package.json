@@ -48,7 +48,7 @@
   "devDependencies": {
     "ava": "^0.9.1",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.1.1",
+    "eslint-config-airbnb": "2.1.1",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.1",
     "lodash.set": "^3.7.4",
