@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "coverage": "nyc --reporter=lcov npm test",
+    "coverage": "nyc --all --reporter=lcov npm test",
     "lint": "gulp lint",
     "test": "ava --verbose"
   },
@@ -53,5 +53,14 @@
     "gulp-eslint": "^1.1.1",
     "lodash.set": "^3.7.4",
     "seamless-immutable": "^4.1.1"
+  },
+  "config": {
+    "nyc": {
+      "exclude": [
+        "coverage",
+        "gulpfile.js",
+        "test"
+      ]
+    }
   }
 }
