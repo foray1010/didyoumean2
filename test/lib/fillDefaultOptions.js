@@ -9,7 +9,7 @@ const thresholdTypeEnums = require('../../enums/thresholdTypeEnums')
 const defaultOptions = {
   caseSensitive: false,
   matchPath: '',
-  returnType: returnTypeEnums.CLOSEST_FIRST_MATCH,
+  returnType: returnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 0.4,
   thresholdType: thresholdTypeEnums.PERCENTAGE
 }

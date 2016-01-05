@@ -9,10 +9,11 @@ const fillDefaultOptions = require('./lib/fillDefaultOptions')
 const returnTypeEnums = require('./enums/returnTypeEnums')
 const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
 
+const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const CLOSEST_FIRST_MATCH = returnTypeEnums.CLOSEST_FIRST_MATCH
-const CLOSEST_RANDOM_MATCH = returnTypeEnums.CLOSEST_RANDOM_MATCH
+const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const PERCENTAGE = thresholdTypeEnums.PERCENTAGE
@@ -75,8 +76,9 @@ function didYouMean(input, matchList, options) {
   let checkIfMatched // Validate if result is matched
   let checkMarginValue // {string} Check for `max` or `min` result value
   switch (returnType) {
-    case CLOSEST_FIRST_MATCH:
-    case CLOSEST_RANDOM_MATCH:
+    case ALL_CLOSEST_MATCHES:
+    case FIRST_CLOSEST_MATCH:
+    case RANDOM_CLOSEST_MATCH:
       switch (thresholdType) {
         case EDIT_DISTANCE:
           checkMarginValue = 'min'
@@ -185,6 +187,7 @@ function didYouMean(input, matchList, options) {
 
   if (!matchedIndexes.length) {
     switch (returnType) {
+      case ALL_CLOSEST_MATCHES:
       case ALL_MATCHES:
         return []
 
@@ -194,16 +197,17 @@ function didYouMean(input, matchList, options) {
   }
 
   switch (returnType) {
+    case ALL_CLOSEST_MATCHES:
     case ALL_MATCHES:
       return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
 
-    case CLOSEST_FIRST_MATCH:
+    case FIRST_CLOSEST_MATCH:
       return matchList[matchedIndexes[0]]
 
-    case CLOSEST_RANDOM_MATCH:
-      return matchList[matchedIndexes[random(matchedIndexes.length - 1)]]
-
     // case FIRST_MATCH: // It is handled on above
+
+    case RANDOM_CLOSEST_MATCH:
+      return matchList[matchedIndexes[random(matchedIndexes.length - 1)]]
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:
