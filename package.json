@@ -15,6 +15,7 @@
   "keywords": [
     "algo",
     "algorithm",
+    "closest",
     "compare",
     "comparison",
     "didyoumean",
@@ -23,6 +24,7 @@
     "distance",
     "edit",
     "fast",
+    "find",
     "fuzzy",
     "leven",
     "levenshtein",
@@ -31,8 +33,11 @@
     "mean",
     "similar",
     "similarity",
+    "suggest",
+    "suggestion",
     "string",
-    "text"
+    "text",
+    "word"
   ],
   "author": "foray1010",
   "license": "MIT",
