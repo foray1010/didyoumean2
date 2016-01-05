@@ -5,7 +5,7 @@ const leven = require('leven')
 const random = require('lodash.random')
 
 const getSimilarity = require('./lib/getSimilarity')
-const fillDefaultOptions = require('./lib/fillDefaultOptions')
+const runOptionsSchema = require('./lib/runOptionsSchema')
 const returnTypeEnums = require('./enums/returnTypeEnums')
 const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
 
@@ -30,7 +30,7 @@ function didYouMean(input, matchList, options) {
    + Initiate options +
    +++++++++++++++++++*/
 
-  options = fillDefaultOptions(options)
+  options = runOptionsSchema(options)
 
   const caseSensitive = options.caseSensitive
   const matchPath = options.matchPath
