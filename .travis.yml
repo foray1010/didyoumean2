@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "4.2"
+sudo: false
+
+branches:
+  only:
+    - "master"
+install:
+  - "npm install -g ava gulp nyc"
+  - "npm install"
+script:
+  - "npm run lint && npm run coverage"
+after_script:
+  - "bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN > /dev/null"
