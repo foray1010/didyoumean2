@@ -77,10 +77,10 @@ didYouMean(input, matchList[, options])
 #### `thresholdType {string}`
   - default: `'similarity'`
 
-| thresholdType     | Description                                                    |
-|-------------------|----------------------------------------------------------------|
-| `'edit-distance'` | Refer to [Levenshtein distance algorithm][], must be `integer` |
-| `'similarity'`    | `'edit-distance'` relative to length, must between `0` to `1`  |
+| thresholdType     | Description                                                                                                                               |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `'edit-distance'` | Refer to [Levenshtein distance algorithm][], must be `integer`, lower value means more similar                                            |
+| `'similarity'`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar |
 
 
 ## Test
