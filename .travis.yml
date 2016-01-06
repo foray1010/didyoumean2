@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - "4.2"
-sudo: false
 
 branches:
   only:
     - "master"
+
 install:
   - "npm install -g ava gulp nyc"
   - "npm install"
