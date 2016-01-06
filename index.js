@@ -2,7 +2,6 @@
 
 const get = require('lodash.get')
 const leven = require('leven')
-const random = require('lodash.random')
 
 const getSimilarity = require('./lib/getSimilarity')
 const runOptionsSchema = require('./lib/runOptionsSchema')
@@ -23,7 +22,7 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
  * @param {string} input - A string that you are not sure and want to match with `matchList`
  * @param {Object[]|string[]} matchList - A List for matching with `input`
  * @param {null|Object|undefined} options - An options that allows you to modify the behavior
- * @returns {Array|Object|string} A list of or single matched result(s)
+ * @returns {Array|null|Object|string} A list of or single matched result(s), return object if `match` is `{Object[]}`
  */
 function didYouMean(input, matchList, options) {
   /*+++++++++++++++++++
