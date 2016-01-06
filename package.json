@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">= 4.2"
+  },
   "scripts": {
     "coverage": "nyc --all --reporter=lcov npm test",
     "lint": "gulp lint",

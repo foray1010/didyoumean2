@@ -23,22 +23,9 @@ It is inspired by [didyoumean.js][].
 npm install didyoumean2
 ```
 
-for `node` version `>= 4.2`:
 ```js
 const didYouMean = require('didyoumean2')
 ```
-
-for `node` version `>= 0.10`:
-```js
-var didYouMean = require('didyoumean2/legacy.min')
-```
-
-for browsers:
-```html
-<script src="/didyoumean2/legacy.min.js"></script>
-```
-
-_for `<= IE8`, please polyfill using [es5-shim](https://github.com/es-shims/es5-shim)_
 
 
 ## Usage
