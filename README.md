@@ -3,6 +3,14 @@
 
 
 # didyoumean2
+[![Build Status](https://img.shields.io/travis/foray1010/didyoumean2.svg)](https://travis-ci.org/foray1010/didyoumean2)
+[![codecov.io](https://img.shields.io/codecov/c/github/foray1010/didyoumean2.svg)](https://codecov.io/github/foray1010/didyoumean2?branch=master)
+[![Dependency Status](https://img.shields.io/gemnasium/foray1010/didyoumean2.svg)](https://gemnasium.com/foray1010/didyoumean2)
+
+[![node](https://img.shields.io/node/v/didyoumean2.svg)]()
+[![npm](https://img.shields.io/npm/dm/didyoumean2.svg)]()
+[![npm](https://img.shields.io/npm/l/didyoumean2.svg)]()
+
 `didyoumean2` is a library for matching human-quality input to a list of potential matches using the [Levenshtein distance algorithm][].
 It is inspired by [didyoumean.js][].
 
