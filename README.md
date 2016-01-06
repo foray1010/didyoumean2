@@ -3,12 +3,10 @@
 
 
 # didyoumean2
-
 `didyoumean2` is a library for matching human-quality input to a list of potential matches using the [Levenshtein distance algorithm][].
 It is inspired by [didyoumean.js][].
 
 #### Why reinventing the wheel
-
 1. Based on [leven](https://github.com/sindresorhus/leven), the fastest JS implementation of the [Levenshtein distance algorithm][]
 
 2. ~100% faster than [didyoumean.js][]
@@ -25,12 +23,12 @@ It is inspired by [didyoumean.js][].
 npm install didyoumean2
 ```
 
-for `node` version >= `4.2`:
+for `node` version `>= 4.2`:
 ```js
 const didYouMean = require('didyoumean2')
 ```
 
-for `node` version >= `0.10`:
+for `node` version `>= 0.10`:
 ```js
 var didYouMean = require('didyoumean2/legacy.min')
 ```
@@ -58,13 +56,11 @@ didYouMean(input, matchList[, options])
 
 ### Options
 #### `caseSensitive {boolean}`
-
   - default: `false`
 
   - Perform case-sensitive matching
 
 #### `matchPath {string}`
-
   - default: `''`
 
   - If your `matchList` is an array of object, you must use `matchPath` to point to the string that you want to match
@@ -72,7 +68,6 @@ didYouMean(input, matchList[, options])
   - Refer to [lodash _.get](https://lodash.com/docs#get) for how to define the path
 
 #### `returnType {string}`
-
   - default: `'first-closest-match'`
 
 | returnType               | Description                                                       |
@@ -84,7 +79,6 @@ didYouMean(input, matchList[, options])
 | `'random-closest-match'` | Return a randomly pick up from `'all-closest-matches'`            |
 
 #### `threshold {integer|number}`
-
   - depends on `thresholdType`
 
   - type: ` {number}` (`similarity`) or ` {integer}` (`edit-distance`)
@@ -94,7 +88,6 @@ didYouMean(input, matchList[, options])
   - If the result is larger (`similarity`) or smaller (`edit-distance`) than or equal to the `threshold`, that result is matched
 
 #### `thresholdType {string}`
-
   - default: `'similarity'`
 
 | thresholdType     | Description                                                    |
