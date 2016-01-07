@@ -1,5 +1,7 @@
+<!--
 [didyoumean.js]: https://github.com/dcporter/didyoumean.js
 [Levenshtein distance algorithm]: https://en.wikipedia.org/wiki/Levenshtein_distance
+-->
 
 
 # didyoumean2
