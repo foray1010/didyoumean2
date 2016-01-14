@@ -16,8 +16,6 @@
     "url": "git+https://github.com/foray1010/didyoumean2.git"
   },
   "keywords": [
-    "algo",
-    "algorithm",
     "closest",
     "compare",
     "comparison",
@@ -26,14 +24,12 @@
     "difference",
     "distance",
     "edit",
-    "fast",
     "find",
     "fuzzy",
     "leven",
     "levenshtein",
     "match",
     "matching",
-    "mean",
     "similar",
     "similarity",
     "suggest",
