@@ -116,7 +116,7 @@ function didYouMean(input, matchList, options) {
   const matchListLen = matchList.length
 
   if (returnType === FIRST_MATCH) {
-    for (let i = 0; i < matchListLen; i++) {
+    for (let i = 0; i < matchListLen; i += 1) {
       const result = resultProcessor(matchList[i])
 
       // Return once matched, performance is main target in this returnType
@@ -133,7 +133,7 @@ function didYouMean(input, matchList, options) {
       case 'max':
         // Process result and save the largest result
         marginValue = 0
-        for (let i = 0; i < matchListLen; i++) {
+        for (let i = 0; i < matchListLen; i += 1) {
           const result = resultProcessor(matchList[i])
 
           if (marginValue < result) marginValue = result
@@ -145,7 +145,7 @@ function didYouMean(input, matchList, options) {
       case 'min':
         // Process result and save the smallest result
         marginValue = Infinity
-        for (let i = 0; i < matchListLen; i++) {
+        for (let i = 0; i < matchListLen; i += 1) {
           const result = resultProcessor(matchList[i])
 
           if (marginValue > result) marginValue = result
@@ -160,7 +160,7 @@ function didYouMean(input, matchList, options) {
 
     const resultsLen = results.length
 
-    for (let i = 0; i < resultsLen; i++) {
+    for (let i = 0; i < resultsLen; i += 1) {
       const result = results[i]
 
       if (checkIfMatched(result)) {
@@ -171,7 +171,7 @@ function didYouMean(input, matchList, options) {
       }
     }
   } else {
-    for (let i = 0; i < matchListLen; i++) {
+    for (let i = 0; i < matchListLen; i += 1) {
       const result = resultProcessor(matchList[i])
 
       // save all indexes of matched results
