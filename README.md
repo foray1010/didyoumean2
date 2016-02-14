@@ -1,9 +1,3 @@
-<!--
-[didyoumean.js]: https://github.com/dcporter/didyoumean.js
-[Levenshtein distance algorithm]: https://en.wikipedia.org/wiki/Levenshtein_distance
--->
-
-
 # didyoumean2
 [![Build Status](https://img.shields.io/travis/foray1010/didyoumean2.svg)](https://travis-ci.org/foray1010/didyoumean2)
 [![codecov.io](https://img.shields.io/codecov/c/github/foray1010/didyoumean2.svg)](https://codecov.io/github/foray1010/didyoumean2?branch=master)
@@ -13,13 +7,13 @@
 [![npm](https://img.shields.io/npm/dm/didyoumean2.svg)]()
 [![npm](https://img.shields.io/npm/l/didyoumean2.svg)]()
 
-`didyoumean2` is a library for matching human-quality input to a list of potential matches using the [Levenshtein distance algorithm][].
-It is inspired by [didyoumean.js][].
+`didyoumean2` is a library for matching human-quality input to a list of potential matches using the [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance).
+It is inspired by [didyoumean.js](https://github.com/dcporter/didyoumean.js).
 
 #### Why reinventing the wheel
-1. Based on [leven](https://github.com/sindresorhus/leven), the fastest JS implementation of the [Levenshtein distance algorithm][]
+1. Based on [leven](https://github.com/sindresorhus/leven), the fastest JS implementation of the [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance)
 
-2. ~100% faster than [didyoumean.js][]
+2. ~100% faster than [didyoumean.js](https://github.com/dcporter/didyoumean.js)
 
 3. Well tested with 100% coverage
 
@@ -87,10 +81,10 @@ didYouMean(input, matchList[, options])
 #### `thresholdType {string}`
   - default: `'similarity'`
 
-| thresholdType     | Description                                                                                                                               |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `'edit-distance'` | Refer to [Levenshtein distance algorithm][], must be `integer`, lower value means more similar                                            |
-| `'similarity'`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar |
+| thresholdType     | Description                                                                                                                                      |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| `'edit-distance'` | Refer to [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance), must be `integer`, lower value means more similar |
+| `'similarity'`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar        |
 
 
 ## Test
