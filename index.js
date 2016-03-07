@@ -68,6 +68,7 @@ function didYouMean(input, matchList, options) {
 
       /* istanbul ignore next */ // handled by simpleSchema
       default:
+        return null
     }
   })()
 
@@ -212,6 +213,7 @@ function didYouMean(input, matchList, options) {
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:
+      return null
   }
 }
 
