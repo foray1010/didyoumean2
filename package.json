@@ -1,6 +1,6 @@
 {
   "name": "didyoumean2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "main": "index.js",
   "engines": {
