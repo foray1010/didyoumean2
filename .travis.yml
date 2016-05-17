@@ -7,7 +7,6 @@ branches:
     - "master"
 
 install:
-  - "npm install -g ava gulp nyc"
   - "npm install"
 script:
   - "npm run lint && npm run coverage"

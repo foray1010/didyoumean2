@@ -90,21 +90,18 @@ didYouMean(input, matchList[, options])
 ## Test
 Unit test:
 ```sh
-npm install -g ava
 npm install
 npm test
 ```
 
 Coverage:
 ```sh
-npm install -g ava nyc
 npm install
 npm run coverage
 ```
 
 Linter:
 ```sh
-npm install -g gulp
 npm install
 npm run lint
 ```
