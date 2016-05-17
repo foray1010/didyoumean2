@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: "4.2"
+
+general:
+  branches:
+    only:
+      - "master"
+
+test:
+  pre:
+    - "npm run lint"
+  override:
+    - "npm run coverage"
+  post:
+    - "bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN > /dev/null"
