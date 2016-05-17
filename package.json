@@ -59,7 +59,6 @@
     "nyc": {
       "exclude": [
         "coverage",
-        "gulpfile.js",
         "test"
       ]
     }
