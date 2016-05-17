@@ -29,11 +29,11 @@ const defaultOptionsForEditDistance = Immutable({
 })
 
 test('without arguments', (t) => {
-  t.same(runOptionsSchema(), defaultOptions)
+  t.deepEqual(runOptionsSchema(), defaultOptions)
 })
 
 test(`thresholdType: "${EDIT_DISTANCE}"`, (t) => {
-  t.same(runOptionsSchema({
+  t.deepEqual(runOptionsSchema({
     thresholdType: EDIT_DISTANCE
   }), defaultOptionsForEditDistance)
 })

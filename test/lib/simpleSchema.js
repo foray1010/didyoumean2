@@ -6,7 +6,7 @@ const returnTypeEnums = require('../../enums/returnTypeEnums')
 const simpleSchema = require('../../lib/simpleSchema')
 
 test('check enum', (t) => {
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
       enums: returnTypeEnums
@@ -23,7 +23,7 @@ test('check enum', (t) => {
 
 test('check type', (t) => {
   // array
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema([], {
       type: 'array'
     })
@@ -37,7 +37,7 @@ test('check type', (t) => {
 
 
   // boolean
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema(false, {
       type: 'boolean'
     })
@@ -51,7 +51,7 @@ test('check type', (t) => {
 
 
   // number
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema(1, {
       type: 'number'
     })
@@ -65,7 +65,7 @@ test('check type', (t) => {
 
 
   // object
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema({}, {
       type: 'object'
     })
@@ -79,7 +79,7 @@ test('check type', (t) => {
 
 
   // string
-  t.doesNotThrow(() => {
+  t.notThrows(() => {
     simpleSchema('', {
       type: 'string'
     })
@@ -96,13 +96,13 @@ test('fill defaultValue', (t) => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined
-  t.same(simpleSchema(undefined, {
+  t.is(simpleSchema(undefined, {
     type: 'string',
     defaultValue: defaultValue
   }), defaultValue)
 
   // fill defaultValue when value is undefined
-  t.same(simpleSchema(null, {
+  t.is(simpleSchema(null, {
     type: 'string',
     defaultValue: defaultValue
   }), defaultValue)
