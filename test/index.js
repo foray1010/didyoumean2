@@ -28,15 +28,15 @@ const matchList = Immutable([
 ])
 
 test('without options', (t) => {
-  t.same(didYouMean(input, matchList), matchList[3])
+  t.is(didYouMean(input, matchList), matchList[3])
 })
 
 test('caseSensitive', (t) => {
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     caseSensitive: true
   }), matchList[4])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     caseSensitive: false
   }), matchList[3])
 })
@@ -46,7 +46,7 @@ test('matchPath', (t) => {
 
   const matchObjList = matchList.map((value) => set({}, matchPath, value))
 
-  t.same(didYouMean(input, matchObjList, {
+  t.deepEqual(didYouMean(input, matchObjList, {
     matchPath: matchPath
   }), matchObjList[3])
 })
@@ -55,11 +55,11 @@ test('returnType', (t) => {
   // test all-closest-matches
   const allClosestMatchesResult = matchList.slice(3, matchList.length)
 
-  t.same(didYouMean(input, matchList, {
+  t.deepEqual(didYouMean(input, matchList, {
     returnType: ALL_CLOSEST_MATCHES
   }), allClosestMatchesResult)
 
-  t.same(didYouMean(input, matchList, {
+  t.deepEqual(didYouMean(input, matchList, {
     returnType: ALL_CLOSEST_MATCHES,
     threshold: 0.7
   }), [])
@@ -68,29 +68,29 @@ test('returnType', (t) => {
   // test all-matches
   const allMatchesResult = matchList.slice(1)
 
-  t.same(didYouMean(input, matchList, {
+  t.deepEqual(didYouMean(input, matchList, {
     returnType: ALL_MATCHES
   }), allMatchesResult)
 
-  t.same(didYouMean(input, matchList, {
+  t.deepEqual(didYouMean(input, matchList, {
     returnType: ALL_MATCHES,
     threshold: 0.7
   }), [])
 
 
   // test first-closest-match
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH
   }), matchList[3])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH,
     threshold: 0.7
   }), null)
 
 
   // test first-match
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH
   }), matchList[1])
 
@@ -98,44 +98,44 @@ test('returnType', (t) => {
   // test random-closest-match
   const matchListWithSingleClosestValue = matchList.concat(input)
 
-  t.same(didYouMean(input, matchListWithSingleClosestValue, {
+  t.is(didYouMean(input, matchListWithSingleClosestValue, {
     returnType: RANDOM_CLOSEST_MATCH,
     threshold: 1
   }), matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
 })
 
 test(`threshold: "${EDIT_DISTANCE}"`, (t) => {
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 7,
     thresholdType: EDIT_DISTANCE
   }), matchList[0])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 6,
     thresholdType: EDIT_DISTANCE
   }), matchList[1])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 5,
     thresholdType: EDIT_DISTANCE
   }), matchList[2])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH,
     threshold: 4,
     thresholdType: EDIT_DISTANCE
   }), matchList[3])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 4,
     thresholdType: EDIT_DISTANCE
   }), matchList[3])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 3,
     thresholdType: EDIT_DISTANCE
@@ -143,37 +143,37 @@ test(`threshold: "${EDIT_DISTANCE}"`, (t) => {
 })
 
 test(`threshold: "${SIMILARITY}"`, (t) => {
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.3,
     thresholdType: SIMILARITY
   }), matchList[0])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.4,
     thresholdType: SIMILARITY
   }), matchList[1])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.5,
     thresholdType: SIMILARITY
   }), matchList[2])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_CLOSEST_MATCH,
     threshold: 0.6,
     thresholdType: SIMILARITY
   }), matchList[3])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.6,
     thresholdType: SIMILARITY
   }), matchList[3])
 
-  t.same(didYouMean(input, matchList, {
+  t.is(didYouMean(input, matchList, {
     returnType: FIRST_MATCH,
     threshold: 0.7,
     thresholdType: SIMILARITY
