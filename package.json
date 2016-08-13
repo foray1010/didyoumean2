@@ -52,7 +52,7 @@
     "ava": "^0.16.0",
     "eslint-config-foray1010": "^3.0.0",
     "lodash.set": "^4.0.0",
-    "nyc": "^7.0.0",
+    "nyc": "^8.0.0",
     "seamless-immutable": "^6.1.0"
   },
   "config": {
