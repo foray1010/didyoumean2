@@ -53,7 +53,7 @@
     "eslint-config-foray1010": "^3.0.0",
     "lodash.set": "^4.0.0",
     "nyc": "^10.0.0",
-    "seamless-immutable": "^6.1.0"
+    "seamless-immutable": "^7.0.0"
   },
   "config": {
     "nyc": {
