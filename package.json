@@ -1,20 +1,10 @@
 {
   "name": "didyoumean2",
   "version": "1.0.2",
-  "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
-  "main": "index.js",
   "engines": {
     "node": ">=4.2"
   },
-  "scripts": {
-    "coverage": "nyc --all --reporter=lcov npm test",
-    "lint": "eslint .",
-    "test": "cross-env NODE_ENV=test ava --verbose"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/foray1010/didyoumean2.git"
-  },
+  "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
     "closest",
     "compare",
@@ -38,12 +28,28 @@
     "text",
     "word"
   ],
-  "author": "foray1010",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/foray1010/didyoumean2/issues"
+  "author": "foray1010",
+  "homepage": "https://github.com/foray1010/didyoumean2",
+  "repository": "foray1010/didyoumean2",
+  "bugs": "https://github.com/foray1010/didyoumean2/issues",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc --all --reporter=lcov npm test",
+    "lint": "eslint .",
+    "test": "cross-env NODE_ENV=test ava --verbose"
   },
-  "homepage": "https://github.com/foray1010/didyoumean2#readme",
+  "config": {
+    "nyc": {
+      "exclude": [
+        "coverage",
+        "test"
+      ]
+    }
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "leven": "^2.0.0",
     "lodash.get": "^4.0.0"
@@ -54,14 +60,7 @@
     "eslint-config-foray1010": "^3.0.0",
     "lodash.set": "^4.0.0",
     "nyc": "^10.0.0",
+    "pre-commit": "^1.2.1",
     "seamless-immutable": "^7.0.0"
-  },
-  "config": {
-    "nyc": {
-      "exclude": [
-        "coverage",
-        "test"
-      ]
-    }
   }
 }
