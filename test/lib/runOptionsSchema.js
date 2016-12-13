@@ -1,6 +1,6 @@
 'use strict'
 
-const Immutable = require('seamless-immutable')
+const Immutable = require('seamless-immutable').static
 const test = require('ava')
 
 const runOptionsSchema = require('../../lib/runOptionsSchema')

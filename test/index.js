@@ -1,6 +1,6 @@
 'use strict'
 
-const Immutable = require('seamless-immutable')
+const Immutable = require('seamless-immutable').static
 const set = require('lodash.set')
 const test = require('ava')
 
