@@ -5,7 +5,7 @@ const test = require('ava')
 
 const getSimilarity = require(`${rootPath}/src/lib/getSimilarity`)
 
-test('basic', (t) => {
+test('same case', (t) => {
   t.is(getSimilarity('abcde', 'fghij'), 0)
   t.is(getSimilarity('holy', 'poly'), 3 / 4)
   t.is(getSimilarity('children', 'child'), 5 / 8)

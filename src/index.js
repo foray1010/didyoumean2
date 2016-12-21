@@ -1,10 +1,10 @@
 'use strict'
 
-const get = require('lodash/get')
 const leven = require('leven')
-const sample = require('lodash/sample')
 
 const getSimilarity = require('./lib/getSimilarity')
+const matchItemProcessor = require('./lib/matchItemProcessor')
+const resultProcessor = require('./lib/resultProcessor')
 const runOptionsSchema = require('./lib/runOptionsSchema')
 const returnTypeEnums = require('./enums/returnTypeEnums')
 const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
@@ -34,7 +34,6 @@ function didYouMean(input, matchList, options) {
   options = runOptionsSchema(options)
 
   const caseSensitive = options.caseSensitive
-  const matchPath = options.matchPath
   const returnType = options.returnType
   const threshold = options.threshold
   const thresholdType = options.thresholdType
@@ -48,65 +47,20 @@ function didYouMean(input, matchList, options) {
     input = input.toLowerCase()
   }
 
-  const scoreProcessor = (() => {
-    const matchItemProcessor = (matchItem) => {
-      if (matchPath) {
-        matchItem = get(matchItem, matchPath)
-      }
-
-      if (!caseSensitive) {
-        matchItem = matchItem.toLowerCase()
-      }
-
-      return matchItem
-    }
-
-    switch (thresholdType) {
-      case EDIT_DISTANCE:
-        return (matchItem) => leven(input, matchItemProcessor(matchItem))
-
-      case SIMILARITY:
-        return (matchItem) => getSimilarity(input, matchItemProcessor(matchItem))
-
-      /* istanbul ignore next */ // handled by simpleSchema
-      default:
-        return null
-    }
-  })()
-
   let checkIfMatched // Validate if score is matched
+  let scoreProcessor // Get score
   switch (thresholdType) {
     case EDIT_DISTANCE:
       checkIfMatched = (score) => score <= threshold
+      scoreProcessor = (matchItem) => leven(input, matchItemProcessor(matchItem, options))
       break
 
     case SIMILARITY:
       checkIfMatched = (score) => score >= threshold
+      scoreProcessor = (matchItem) => getSimilarity(input, matchItemProcessor(matchItem, options))
       break
 
     /* istanbul ignore next */ // handled by simpleSchema
-    default:
-  }
-
-  let checkMarginValue // {string} Check for `max` or `min` score value
-  switch (returnType) {
-    case ALL_CLOSEST_MATCHES:
-    case FIRST_CLOSEST_MATCH:
-    case RANDOM_CLOSEST_MATCH:
-      switch (thresholdType) {
-        case EDIT_DISTANCE:
-          checkMarginValue = 'min'
-          break
-
-        case SIMILARITY:
-          checkMarginValue = 'max'
-          break
-
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
-      }
-      break
-
     default:
   }
 
@@ -118,100 +72,118 @@ function didYouMean(input, matchList, options) {
   const matchedIndexes = []
   const matchListLen = matchList.length
 
-  if (returnType === FIRST_MATCH) {
-    for (let i = 0; i < matchListLen; i += 1) {
-      const score = scoreProcessor(matchList[i])
+  switch (returnType) {
+    case ALL_CLOSEST_MATCHES:
+    case FIRST_CLOSEST_MATCH:
+    case RANDOM_CLOSEST_MATCH: {
+      const scores = []
 
-      // Return once matched, performance is main target in this returnType
-      if (checkIfMatched(score)) {
-        return matchList[i]
+      let marginValue
+      switch (thresholdType) {
+        case EDIT_DISTANCE:
+          // Process score and save the smallest score
+          marginValue = Infinity
+          for (let i = 0; i < matchListLen; i += 1) {
+            const score = scoreProcessor(matchList[i])
+
+            if (marginValue > score) marginValue = score
+
+            scores.push(score)
+          }
+          break
+
+        case SIMILARITY:
+          // Process score and save the largest score
+          marginValue = 0
+          for (let i = 0; i < matchListLen; i += 1) {
+            const score = scoreProcessor(matchList[i])
+
+            if (marginValue < score) marginValue = score
+
+            scores.push(score)
+          }
+          break
+
+        /* istanbul ignore next */ // handled by simpleSchema
+        default:
       }
-    }
-  } else if (returnType === ALL_SORTED_MATCHES) {
-    const unsortedResults = []
-    for (let i = 0; i < matchListLen; i += 1) {
-      const score = scoreProcessor(matchList[i])
 
-      // save all indexes of matched scores
-      if (checkIfMatched(score)) {
-        unsortedResults.push({
-          score: score,
-          i: i
-        })
+      const scoresLen = scores.length
+      for (let i = 0; i < scoresLen; i += 1) {
+        const score = scores[i]
+
+        if (checkIfMatched(score)) {
+          // Just save the closest value
+          if (score === marginValue) {
+            matchedIndexes.push(i)
+          }
+        }
       }
+
+      break
     }
 
-    switch (thresholdType) {
-      case EDIT_DISTANCE:
-        unsortedResults.sort((a, b) => a.score - b.score)
-        break
+    case ALL_MATCHES:
+      for (let i = 0; i < matchListLen; i += 1) {
+        const score = scoreProcessor(matchList[i])
 
-      case SIMILARITY:
-        unsortedResults.sort((a, b) => b.score - a.score)
-        break
-
-      /* istanbul ignore next */ // handled by simpleSchema
-      default:
-    }
-
-    for (const unsortedResult of unsortedResults) {
-      matchedIndexes.push(unsortedResult.i)
-    }
-  } else if (checkMarginValue) {
-    const scores = []
-
-    let marginValue
-
-    switch (checkMarginValue) {
-      case 'max':
-        // Process score and save the largest score
-        marginValue = 0
-        for (let i = 0; i < matchListLen; i += 1) {
-          const score = scoreProcessor(matchList[i])
-
-          if (marginValue < score) marginValue = score
-
-          scores.push(score)
-        }
-        break
-
-      case 'min':
-        // Process score and save the smallest score
-        marginValue = Infinity
-        for (let i = 0; i < matchListLen; i += 1) {
-          const score = scoreProcessor(matchList[i])
-
-          if (marginValue > score) marginValue = score
-
-          scores.push(score)
-        }
-        break
-
-      /* istanbul ignore next */ // handled by simpleSchema
-      default:
-    }
-
-    const scoresLen = scores.length
-
-    for (let i = 0; i < scoresLen; i += 1) {
-      const score = scores[i]
-
-      if (checkIfMatched(score)) {
-        // Just save the closest value
-        if (score === marginValue) {
+        // save all indexes of matched scores
+        if (checkIfMatched(score)) {
           matchedIndexes.push(i)
         }
       }
-    }
-  } else {
-    for (let i = 0; i < matchListLen; i += 1) {
-      const score = scoreProcessor(matchList[i])
 
-      // save all indexes of matched scores
-      if (checkIfMatched(score)) {
-        matchedIndexes.push(i)
+      break
+
+    case ALL_SORTED_MATCHES: {
+      const unsortedResults = []
+      for (let i = 0; i < matchListLen; i += 1) {
+        const score = scoreProcessor(matchList[i])
+
+        // save all indexes of matched scores
+        if (checkIfMatched(score)) {
+          unsortedResults.push({
+            score: score,
+            index: i
+          })
+        }
       }
+
+      switch (thresholdType) {
+        case EDIT_DISTANCE:
+          unsortedResults.sort((a, b) => a.score - b.score)
+          break
+
+        case SIMILARITY:
+          unsortedResults.sort((a, b) => b.score - a.score)
+          break
+
+        /* istanbul ignore next */ // handled by simpleSchema
+        default:
+      }
+
+      for (const unsortedResult of unsortedResults) {
+        matchedIndexes.push(unsortedResult.index)
+      }
+
+      break
     }
+
+    case FIRST_MATCH:
+      for (let i = 0; i < matchListLen; i += 1) {
+        const score = scoreProcessor(matchList[i])
+
+        // Return once matched, performance is main target in this returnType
+        if (checkIfMatched(score)) {
+          matchedIndexes.push(i)
+          break
+        }
+      }
+
+      break
+
+    /* istanbul ignore next */ // handled by simpleSchema
+    default:
   }
 
 
@@ -219,36 +191,7 @@ function didYouMean(input, matchList, options) {
    + Process return value +
    +++++++++++++++++++++++*/
 
-  if (!matchedIndexes.length) {
-    switch (returnType) {
-      case ALL_CLOSEST_MATCHES:
-      case ALL_MATCHES:
-      case ALL_SORTED_MATCHES:
-        return []
-
-      default:
-        return null
-    }
-  }
-
-  switch (returnType) {
-    case ALL_CLOSEST_MATCHES:
-    case ALL_MATCHES:
-    case ALL_SORTED_MATCHES:
-      return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
-
-    case FIRST_CLOSEST_MATCH:
-      return matchList[matchedIndexes[0]]
-
-    // case FIRST_MATCH: // It is handled on above
-
-    case RANDOM_CLOSEST_MATCH:
-      return matchList[sample(matchedIndexes)]
-
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
-      return null
-  }
+  return resultProcessor(matchList, matchedIndexes, returnType)
 }
 
 module.exports = didYouMean
