@@ -10,7 +10,6 @@ const leven = require('leven')
  */
 function getSimilarity(a, b) {
   if (!a || !b) return 0
-
   if (a === b) return 1
 
   const editDistance = leven(a, b)
