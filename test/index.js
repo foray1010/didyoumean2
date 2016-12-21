@@ -1,12 +1,13 @@
 'use strict'
 
 const Immutable = require('seamless-immutable').static
+const rootPath = require('pkg-dir').sync(__dirname)
 const set = require('lodash.set')
 const test = require('ava')
 
-const didYouMean = require('..')
-const returnTypeEnums = require('../enums/returnTypeEnums')
-const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
+const didYouMean = require(rootPath)
+const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
+const thresholdTypeEnums = require(`${rootPath}/src/enums/thresholdTypeEnums`)
 
 const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES

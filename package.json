@@ -33,7 +33,7 @@
   "homepage": "https://github.com/foray1010/didyoumean2",
   "repository": "foray1010/didyoumean2",
   "bugs": "https://github.com/foray1010/didyoumean2/issues",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "coverage": "nyc --all --reporter=lcov npm test",
     "lint": "eslint .",
@@ -60,6 +60,7 @@
     "eslint-config-foray1010": "^3.0.0",
     "lodash.set": "^4.0.0",
     "nyc": "^10.0.0",
+    "pkg-dir": "^1.0.0",
     "pre-commit": "^1.2.1",
     "seamless-immutable": "^7.0.0"
   }

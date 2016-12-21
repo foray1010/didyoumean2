@@ -1,9 +1,10 @@
 'use strict'
 
+const rootPath = require('pkg-dir').sync(__dirname)
 const test = require('ava')
 
-const returnTypeEnums = require('../../enums/returnTypeEnums')
-const simpleSchema = require('../../lib/simpleSchema')
+const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
+const simpleSchema = require(`${rootPath}/src/lib/simpleSchema`)
 
 test('check enum', (t) => {
   t.notThrows(() => {
