@@ -1,7 +1,8 @@
 'use strict'
 
-const get = require('lodash.get')
+const get = require('lodash/get')
 const leven = require('leven')
+const sample = require('lodash/sample')
 
 const getSimilarity = require('./lib/getSimilarity')
 const runOptionsSchema = require('./lib/runOptionsSchema')
@@ -10,6 +11,7 @@ const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
 
 const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
+const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
@@ -46,7 +48,7 @@ function didYouMean(input, matchList, options) {
     input = input.toLowerCase()
   }
 
-  const resultProcessor = (() => {
+  const scoreProcessor = (() => {
     const matchItemProcessor = (matchItem) => {
       if (matchPath) {
         matchItem = get(matchItem, matchPath)
@@ -72,21 +74,21 @@ function didYouMean(input, matchList, options) {
     }
   })()
 
-  let checkIfMatched // Validate if result is matched
+  let checkIfMatched // Validate if score is matched
   switch (thresholdType) {
     case EDIT_DISTANCE:
-      checkIfMatched = (result) => result <= threshold
+      checkIfMatched = (score) => score <= threshold
       break
 
     case SIMILARITY:
-      checkIfMatched = (result) => result >= threshold
+      checkIfMatched = (score) => score >= threshold
       break
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:
   }
 
-  let checkMarginValue // {string} Check for `max` or `min` result value
+  let checkMarginValue // {string} Check for `max` or `min` score value
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
     case FIRST_CLOSEST_MATCH:
@@ -118,40 +120,70 @@ function didYouMean(input, matchList, options) {
 
   if (returnType === FIRST_MATCH) {
     for (let i = 0; i < matchListLen; i += 1) {
-      const result = resultProcessor(matchList[i])
+      const score = scoreProcessor(matchList[i])
 
       // Return once matched, performance is main target in this returnType
-      if (checkIfMatched(result)) {
+      if (checkIfMatched(score)) {
         return matchList[i]
       }
     }
+  } else if (returnType === ALL_SORTED_MATCHES) {
+    const unsortedResults = []
+    for (let i = 0; i < matchListLen; i += 1) {
+      const score = scoreProcessor(matchList[i])
+
+      // save all indexes of matched scores
+      if (checkIfMatched(score)) {
+        unsortedResults.push({
+          score: score,
+          i: i
+        })
+      }
+    }
+
+    switch (thresholdType) {
+      case EDIT_DISTANCE:
+        unsortedResults.sort((a, b) => a.score - b.score)
+        break
+
+      case SIMILARITY:
+        unsortedResults.sort((a, b) => b.score - a.score)
+        break
+
+      /* istanbul ignore next */ // handled by simpleSchema
+      default:
+    }
+
+    for (const unsortedResult of unsortedResults) {
+      matchedIndexes.push(unsortedResult.i)
+    }
   } else if (checkMarginValue) {
-    const results = []
+    const scores = []
 
     let marginValue
 
     switch (checkMarginValue) {
       case 'max':
-        // Process result and save the largest result
+        // Process score and save the largest score
         marginValue = 0
         for (let i = 0; i < matchListLen; i += 1) {
-          const result = resultProcessor(matchList[i])
+          const score = scoreProcessor(matchList[i])
 
-          if (marginValue < result) marginValue = result
+          if (marginValue < score) marginValue = score
 
-          results.push(result)
+          scores.push(score)
         }
         break
 
       case 'min':
-        // Process result and save the smallest result
+        // Process score and save the smallest score
         marginValue = Infinity
         for (let i = 0; i < matchListLen; i += 1) {
-          const result = resultProcessor(matchList[i])
+          const score = scoreProcessor(matchList[i])
 
-          if (marginValue > result) marginValue = result
+          if (marginValue > score) marginValue = score
 
-          results.push(result)
+          scores.push(score)
         }
         break
 
@@ -159,24 +191,24 @@ function didYouMean(input, matchList, options) {
       default:
     }
 
-    const resultsLen = results.length
+    const scoresLen = scores.length
 
-    for (let i = 0; i < resultsLen; i += 1) {
-      const result = results[i]
+    for (let i = 0; i < scoresLen; i += 1) {
+      const score = scores[i]
 
-      if (checkIfMatched(result)) {
+      if (checkIfMatched(score)) {
         // Just save the closest value
-        if (result === marginValue) {
+        if (score === marginValue) {
           matchedIndexes.push(i)
         }
       }
     }
   } else {
     for (let i = 0; i < matchListLen; i += 1) {
-      const result = resultProcessor(matchList[i])
+      const score = scoreProcessor(matchList[i])
 
-      // save all indexes of matched results
-      if (checkIfMatched(result)) {
+      // save all indexes of matched scores
+      if (checkIfMatched(score)) {
         matchedIndexes.push(i)
       }
     }
@@ -191,6 +223,7 @@ function didYouMean(input, matchList, options) {
     switch (returnType) {
       case ALL_CLOSEST_MATCHES:
       case ALL_MATCHES:
+      case ALL_SORTED_MATCHES:
         return []
 
       default:
@@ -201,6 +234,7 @@ function didYouMean(input, matchList, options) {
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
     case ALL_MATCHES:
+    case ALL_SORTED_MATCHES:
       return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
 
     case FIRST_CLOSEST_MATCH:
@@ -209,7 +243,7 @@ function didYouMean(input, matchList, options) {
     // case FIRST_MATCH: // It is handled on above
 
     case RANDOM_CLOSEST_MATCH:
-      return matchList[matchedIndexes[Math.floor(Math.random() * matchedIndexes.length)]]
+      return matchList[sample(matchedIndexes)]
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:

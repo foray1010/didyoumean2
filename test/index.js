@@ -2,7 +2,7 @@
 
 const Immutable = require('seamless-immutable').static
 const rootPath = require('pkg-dir').sync(__dirname)
-const set = require('lodash.set')
+const set = require('lodash/set')
 const test = require('ava')
 
 const didYouMean = require(rootPath)
@@ -11,6 +11,7 @@ const thresholdTypeEnums = require(`${rootPath}/src/enums/thresholdTypeEnums`)
 
 const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
+const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
 const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
@@ -77,6 +78,38 @@ test('returnType', (t) => {
     returnType: ALL_MATCHES,
     threshold: 0.7
   }), [])
+
+
+  // test all-sorted-matches
+  {
+    const allSortedMatchesResult = [
+      'ABCDEF****',
+      'abcde*g***',
+      'abcdef****',
+      'abcde*****',
+      'abcd******'
+    ]
+
+    t.deepEqual(didYouMean(input, matchList, {
+      returnType: ALL_SORTED_MATCHES
+    }), allSortedMatchesResult)
+  }
+
+  {
+    const allSortedMatchesResult = [
+      'ABCDEF****',
+      'abcde*g***',
+      'abcdef****',
+      'abcde*****',
+      'abcd******',
+      'abc*******'
+    ]
+
+    t.deepEqual(didYouMean(input, matchList, {
+      returnType: ALL_SORTED_MATCHES,
+      thresholdType: EDIT_DISTANCE
+    }), allSortedMatchesResult)
+  }
 
 
   // test first-closest-match
