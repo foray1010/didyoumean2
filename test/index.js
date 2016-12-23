@@ -2,7 +2,7 @@
 
 const Immutable = require('seamless-immutable').static
 const rootPath = require('pkg-dir').sync(__dirname)
-const set = require('lodash/set')
+const _set = require('lodash/set')
 const test = require('ava')
 
 const didYouMean = require(rootPath)
@@ -46,7 +46,7 @@ test('caseSensitive', (t) => {
 test('matchPath', (t) => {
   const matchPath = 'obj.array.0.obj2'
 
-  const matchObjList = matchList.map((value) => set({}, matchPath, value))
+  const matchObjList = matchList.map((value) => _set({}, matchPath, value))
 
   t.deepEqual(didYouMean(input, matchObjList, {
     matchPath: matchPath

@@ -1,6 +1,8 @@
 'use strict'
 
-const get = require('lodash/get')
+const _get = require('lodash/get')
+
+const normalizeString = require('./normalizeString')
 
 /**
  * Process matchItem according to options
@@ -9,18 +11,11 @@ const get = require('lodash/get')
  * @returns {string} - processed matchItem
  */
 function matchItemProcessor(matchItem, options) {
-  const caseSensitive = options.caseSensitive
   const matchPath = options.matchPath
 
-  if (matchPath) {
-    matchItem = get(matchItem, matchPath)
-  }
+  const matchItemStr = matchPath ? _get(matchItem, matchPath) : matchItem
 
-  if (!caseSensitive) {
-    matchItem = matchItem.toLowerCase()
-  }
-
-  return matchItem
+  return normalizeString(matchItemStr, options)
 }
 
 module.exports = matchItemProcessor

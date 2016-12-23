@@ -1,6 +1,6 @@
 'use strict'
 
-const sample = require('lodash/sample')
+const _sample = require('lodash/sample')
 
 const returnTypeEnums = require('../enums/returnTypeEnums')
 
@@ -34,7 +34,7 @@ function resultProcessor(matchList, matchedIndexes, returnType) {
     case RANDOM_CLOSEST_MATCH:
       if (!matchedIndexes.length) return null
 
-      return matchList[sample(matchedIndexes)]
+      return matchList[_sample(matchedIndexes)]
 
     /* istanbul ignore next */ // handled by simpleSchema
     default:

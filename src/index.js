@@ -4,6 +4,7 @@ const leven = require('leven')
 
 const getSimilarity = require('./lib/getSimilarity')
 const matchItemProcessor = require('./lib/matchItemProcessor')
+const normalizeString = require('./lib/normalizeString')
 const resultProcessor = require('./lib/resultProcessor')
 const runOptionsSchema = require('./lib/runOptionsSchema')
 const returnTypeEnums = require('./enums/returnTypeEnums')
@@ -33,7 +34,6 @@ function didYouMean(input, matchList, options) {
 
   options = runOptionsSchema(options)
 
-  const caseSensitive = options.caseSensitive
   const returnType = options.returnType
   const threshold = options.threshold
   const thresholdType = options.thresholdType
@@ -43,21 +43,29 @@ function didYouMean(input, matchList, options) {
    + Deal with options +
    ++++++++++++++++++++*/
 
-  if (!caseSensitive) {
-    input = input.toLowerCase()
-  }
+  const normalizedInput = normalizeString(input, options)
 
   let checkIfMatched // Validate if score is matched
   let scoreProcessor // Get score
   switch (thresholdType) {
     case EDIT_DISTANCE:
       checkIfMatched = (score) => score <= threshold
-      scoreProcessor = (matchItem) => leven(input, matchItemProcessor(matchItem, options))
+      scoreProcessor = (matchItem) => {
+        return leven(
+          normalizedInput,
+          matchItemProcessor(matchItem, options)
+        )
+      }
       break
 
     case SIMILARITY:
       checkIfMatched = (score) => score >= threshold
-      scoreProcessor = (matchItem) => getSimilarity(input, matchItemProcessor(matchItem, options))
+      scoreProcessor = (matchItem) => {
+        return getSimilarity(
+          normalizedInput,
+          matchItemProcessor(matchItem, options)
+        )
+      }
       break
 
     /* istanbul ignore next */ // handled by simpleSchema
