@@ -5,16 +5,6 @@ const test = require('ava')
 
 const matchItemProcessor = require(`${rootPath}/src/lib/matchItemProcessor`)
 
-test('caseSensitive', (t) => {
-  t.is(matchItemProcessor('AbC', {
-    caseSensitive: false
-  }), 'abc')
-
-  t.is(matchItemProcessor('AbC', {
-    caseSensitive: true
-  }), 'AbC')
-})
-
 test('matchPath', (t) => {
   t.is(matchItemProcessor({
     a: {
