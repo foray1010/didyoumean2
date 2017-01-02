@@ -52,6 +52,13 @@ didYouMean(input, matchList[, options])
 
   - Perform case-sensitive matching
 
+#### `deburr {boolean}`
+  - default: `false`
+
+  - Converting [Latin-1 Supplement](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table) and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A) letters to basic Latin letters and removing [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks)
+
+  - Refer to [lodash _.deburr](https://lodash.com/docs#deburr) for how it works
+
 #### `matchPath {string}`
   - default: `''`
 

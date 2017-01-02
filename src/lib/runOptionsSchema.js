@@ -23,6 +23,11 @@ function runOptionsSchema(options) {
     defaultValue: false
   })
 
+  options.deburr = simpleSchema(options.deburr, {
+    type: 'boolean',
+    defaultValue: false
+  })
+
   options.matchPath = simpleSchema(options.matchPath, {
     type: 'string',
     defaultValue: ''

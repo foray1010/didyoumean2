@@ -14,3 +14,29 @@ test('caseSensitive', (t) => {
     caseSensitive: true
   }), 'AbC')
 })
+
+test('deburr', (t) => {
+  t.is(
+    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+      deburr: true,
+      caseSensitive: true
+    }),
+    'THE QUICK BROWN ƑOX JUMPS OVER DE LAZY DOG'
+  )
+
+  t.is(
+    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+      deburr: true,
+      caseSensitive: false
+    }),
+    'the quick brown ƒox jumps over de lazy dog'
+  )
+
+  t.is(
+    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+      deburr: false,
+      caseSensitive: true
+    }),
+    'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG'
+  )
+})

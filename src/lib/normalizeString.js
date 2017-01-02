@@ -1,5 +1,7 @@
 'use strict'
 
+const _deburr = require('lodash/deburr')
+
 /**
  * Normalize a string
  * @param {string} str - any string
@@ -8,6 +10,11 @@
  */
 function normalizeString(str, options) {
   const caseSensitive = options.caseSensitive
+  const deburr = options.deburr
+
+  if (deburr) {
+    str = _deburr(str)
+  }
 
   if (!caseSensitive) {
     str = str.toLowerCase()
