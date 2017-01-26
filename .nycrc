@@ -2,7 +2,8 @@
   "all": true,
   "check-coverage": true,
   "exclude": [
-    "coverage"
+    "coverage",
+    "test"
   ],
   "reporter": [
     "lcov",
