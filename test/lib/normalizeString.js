@@ -40,3 +40,13 @@ test('deburr', (t) => {
     'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG'
   )
 })
+
+test('trimSpace', (t) => {
+  t.is(normalizeString('   abc   def  g ', {
+    trimSpace: false
+  }), '   abc   def  g ')
+
+  t.is(normalizeString('   abc   def  g ', {
+    trimSpace: true
+  }), 'abc def g')
+})
