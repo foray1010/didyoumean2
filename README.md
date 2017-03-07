@@ -104,20 +104,24 @@ didYouMean(input, matchList[, options])
 
 
 ## Test
+
+___Before all:___
+```sh
+npm install -g yarn
+yarn install
+```
+
 Unit test:
 ```sh
-npm install
-npm test
+yarn test
 ```
 
 Coverage:
 ```sh
-npm install
-npm run coverage
+yarn run coverage
 ```
 
 Linter:
 ```sh
-npm install
-npm run lint
+yarn run lint
 ```
