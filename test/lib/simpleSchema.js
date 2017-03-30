@@ -1,110 +1,109 @@
 'use strict'
 
 const rootPath = require('pkg-dir').sync(__dirname)
-const test = require('ava')
 
 const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
 const simpleSchema = require(`${rootPath}/src/lib/simpleSchema`)
 
-test('check enum', (t) => {
-  t.notThrows(() => {
+test('check enum', () => {
+  expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
       enums: returnTypeEnums
     })
-  }, RangeError)
+  }).not.toThrowError(RangeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
       enums: returnTypeEnums
     })
-  }, RangeError)
+  }).toThrowError(RangeError)
 })
 
-test('check type', (t) => {
+test('check type', () => {
   // array
-  t.notThrows(() => {
+  expect(() => {
     simpleSchema([], {
       type: 'array'
     })
-  }, TypeError)
+  }).not.toThrowError(TypeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema({}, {
       type: 'array'
     })
-  }, TypeError)
+  }).toThrowError(TypeError)
 
 
   // boolean
-  t.notThrows(() => {
+  expect(() => {
     simpleSchema(false, {
       type: 'boolean'
     })
-  }, TypeError)
+  }).not.toThrowError(TypeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema({}, {
       type: 'boolean'
     })
-  }, TypeError)
+  }).toThrowError(TypeError)
 
 
   // number
-  t.notThrows(() => {
+  expect(() => {
     simpleSchema(1, {
       type: 'number'
     })
-  }, TypeError)
+  }).not.toThrowError(TypeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema('', {
       type: 'number'
     })
-  }, TypeError)
+  }).toThrowError(TypeError)
 
 
   // object
-  t.notThrows(() => {
+  expect(() => {
     simpleSchema({}, {
       type: 'object'
     })
-  }, TypeError)
+  }).not.toThrowError(TypeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema([], {
       type: 'object'
     })
-  }, TypeError)
+  }).toThrowError(TypeError)
 
 
   // string
-  t.notThrows(() => {
+  expect(() => {
     simpleSchema('', {
       type: 'string'
     })
-  }, TypeError)
+  }).not.toThrowError(TypeError)
 
-  t.throws(() => {
+  expect(() => {
     simpleSchema(1, {
       type: 'string'
     })
-  }, TypeError)
+  }).toThrowError(TypeError)
 })
 
-test('fill defaultValue', (t) => {
+test('fill defaultValue', () => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined
-  t.is(simpleSchema(undefined, {
+  expect(simpleSchema(undefined, {
     type: 'string',
     defaultValue: defaultValue
-  }), defaultValue)
+  })).toBe(defaultValue)
 
   // fill defaultValue when value is undefined
-  t.is(simpleSchema(null, {
+  expect(simpleSchema(null, {
     type: 'string',
     defaultValue: defaultValue
-  }), defaultValue)
+  })).toBe(defaultValue)
 })

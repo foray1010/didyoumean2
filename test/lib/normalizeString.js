@@ -1,52 +1,42 @@
 'use strict'
 
 const rootPath = require('pkg-dir').sync(__dirname)
-const test = require('ava')
 
 const normalizeString = require(`${rootPath}/src/lib/normalizeString`)
 
-test('caseSensitive', (t) => {
-  t.is(normalizeString('AbC', {
+test('caseSensitive', () => {
+  expect(normalizeString('AbC', {
     caseSensitive: false
-  }), 'abc')
+  })).toBe('abc')
 
-  t.is(normalizeString('AbC', {
+  expect(normalizeString('AbC', {
     caseSensitive: true
-  }), 'AbC')
+  })).toBe('AbC')
 })
 
-test('deburr', (t) => {
-  t.is(
-    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
-      deburr: true,
-      caseSensitive: true
-    }),
-    'THE QUICK BROWN ƑOX JUMPS OVER DE LAZY DOG'
-  )
+test('deburr', () => {
+  expect(normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+    deburr: true,
+    caseSensitive: true
+  })).toBe('THE QUICK BROWN ƑOX JUMPS OVER DE LAZY DOG')
 
-  t.is(
-    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
-      deburr: true,
-      caseSensitive: false
-    }),
-    'the quick brown ƒox jumps over de lazy dog'
-  )
+  expect(normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+    deburr: true,
+    caseSensitive: false
+  })).toBe('the quick brown ƒox jumps over de lazy dog')
 
-  t.is(
-    normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
-      deburr: false,
-      caseSensitive: true
-    }),
-    'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG'
-  )
+  expect(normalizeString('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG', {
+    deburr: false,
+    caseSensitive: true
+  })).toBe('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG')
 })
 
-test('trimSpace', (t) => {
-  t.is(normalizeString('   abc   def  g ', {
+test('trimSpace', () => {
+  expect(normalizeString('   abc   def  g ', {
     trimSpace: false
-  }), '   abc   def  g ')
+  })).toBe('   abc   def  g ')
 
-  t.is(normalizeString('   abc   def  g ', {
+  expect(normalizeString('   abc   def  g ', {
     trimSpace: true
-  }), 'abc def g')
+  })).toBe('abc def g')
 })

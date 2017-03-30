@@ -1,0 +1,17 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!coverage/**"
+  ],
+  "coverageReporters": [
+    "lcov",
+    "text-summary"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx"
+  ],
+  "testRegex": "/test/.*.jsx?$"
+}

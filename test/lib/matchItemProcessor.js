@@ -1,26 +1,25 @@
 'use strict'
 
 const rootPath = require('pkg-dir').sync(__dirname)
-const test = require('ava')
 
 const matchItemProcessor = require(`${rootPath}/src/lib/matchItemProcessor`)
 
-test('matchPath', (t) => {
-  t.is(matchItemProcessor({
+test('matchPath', () => {
+  expect(matchItemProcessor({
     a: {
       b: 'AbC'
     }
   }, {
     caseSensitive: false,
     matchPath: 'a.b'
-  }), 'abc')
+  })).toBe('abc')
 
-  t.is(matchItemProcessor({
+  expect(matchItemProcessor({
     a: {
       b: 'AbC'
     }
   }, {
     caseSensitive: true,
     matchPath: 'a.b'
-  }), 'AbC')
+  })).toBe('AbC')
 })

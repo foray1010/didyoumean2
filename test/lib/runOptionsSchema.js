@@ -2,7 +2,6 @@
 
 const Immutable = require('seamless-immutable').static
 const rootPath = require('pkg-dir').sync(__dirname)
-const test = require('ava')
 
 const runOptionsSchema = require(`${rootPath}/src/lib/runOptionsSchema`)
 const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
@@ -33,12 +32,12 @@ const defaultOptionsForEditDistance = Immutable({
   trimSpace: false
 })
 
-test('without arguments', (t) => {
-  t.deepEqual(runOptionsSchema(), defaultOptions)
+test('without arguments', () => {
+  expect(runOptionsSchema()).toEqual(defaultOptions)
 })
 
-test(`thresholdType: "${EDIT_DISTANCE}"`, (t) => {
-  t.deepEqual(runOptionsSchema({
+test(`thresholdType: "${EDIT_DISTANCE}"`, () => {
+  expect(runOptionsSchema({
     thresholdType: EDIT_DISTANCE
-  }), defaultOptionsForEditDistance)
+  })).toEqual(defaultOptionsForEditDistance)
 })

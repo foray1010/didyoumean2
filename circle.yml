@@ -14,6 +14,6 @@ test:
   pre:
     - "yarn run lint"
   override:
-    - "yarn run coverage"
+    - "yarn test"
   post:
     - "bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN > /dev/null"
