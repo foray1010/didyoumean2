@@ -46,8 +46,8 @@
   },
   "devDependencies": {
     "cross-env": "^5.0.0",
-    "eslint": "^3.17.1",
-    "eslint-config-foray1010": "^4.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-foray1010": "^5.0.0",
     "husky": "^0.14.0",
     "jest": "^21.0.0",
     "np": "^2.11.0",
