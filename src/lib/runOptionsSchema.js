@@ -1,5 +1,6 @@
 'use strict'
 
+const _values = require('lodash/values')
 const returnTypeEnums = require('../enums/returnTypeEnums')
 const simpleSchema = require('./simpleSchema')
 const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
@@ -36,13 +37,13 @@ function runOptionsSchema(options) {
   options.returnType = simpleSchema(options.returnType, {
     type: 'string',
     default: returnTypeEnums.FIRST_CLOSEST_MATCH,
-    enum: returnTypeEnums
+    enum: _values(returnTypeEnums)
   })
 
   options.thresholdType = simpleSchema(options.thresholdType, {
     type: 'string',
     default: SIMILARITY,
-    enum: thresholdTypeEnums
+    enum: _values(thresholdTypeEnums)
   })
 
   switch (options.thresholdType) {

@@ -1,5 +1,6 @@
 'use strict'
 
+const _values = require('lodash/values')
 const rootPath = require('pkg-dir').sync(__dirname)
 
 const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
@@ -9,14 +10,14 @@ test('check enum', () => {
   expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
-      enum: returnTypeEnums
+      enum: _values(returnTypeEnums)
     })
   }).not.toThrowError(RangeError)
 
   expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
-      enum: returnTypeEnums
+      enum: _values(returnTypeEnums)
     })
   }).toThrowError(RangeError)
 })
@@ -97,7 +98,7 @@ test('check type', () => {
   }).toThrowError(TypeError)
 })
 
-test('fill defaultValue', () => {
+test('fill default value', () => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined

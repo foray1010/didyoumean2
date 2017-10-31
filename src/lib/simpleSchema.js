@@ -1,7 +1,5 @@
 'use strict'
 
-const _values = require('lodash/values')
-
 /**
  * A simple schema that check type, fill default value and check enum
  * @param {*} value - Any value that you want to validate
@@ -51,12 +49,8 @@ function simpleSchema(value, schema) {
    + Check enum +
    +++++++++++++*/
 
-  if (enums) {
-    const supportedValues = _values(enums)
-
-    if (supportedValues.indexOf(value) === -1) {
-      throw new RangeError(`${value} is not one of '${String(supportedValues)}'`)
-    }
+  if (enums && enums.indexOf(value) === -1) {
+    throw new RangeError(`${value} is not one of '${enums}'`)
   }
 
   /*+++++++++++++++++++++++
