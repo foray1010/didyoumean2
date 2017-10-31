@@ -10,7 +10,7 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
 
 /**
  * Run `simpleSchema` on `options`
- * @param {null|Object|undefined} matchList - An options that allows you to modify the behavior
+ * @param {null|Object|undefined} options - An options that allows you to modify the behavior
  * @return {Object} options with default values
  */
 function runOptionsSchema(options) {

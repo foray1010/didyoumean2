@@ -5,23 +5,19 @@ const deburr = require('lodash.deburr')
 /**
  * Normalize a string
  * @param {string} str - any string
- * @param {null|Object|undefined} options - options that allows you to modify the behavior
+ * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - normalized string
  */
 function normalizeString(str, options) {
-  const caseSensitive = options.caseSensitive
-  const isDeburr = options.deburr
-  const trimSpaces = options.trimSpaces
-
-  if (trimSpaces) {
+  if (options.trimSpaces) {
     str = str.trim().replace(/\s+/g, ' ')
   }
 
-  if (isDeburr) {
+  if (options.deburr) {
     str = deburr(str)
   }
 
-  if (!caseSensitive) {
+  if (!options.caseSensitive) {
     str = str.toLowerCase()
   }
 
