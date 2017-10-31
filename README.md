@@ -69,14 +69,13 @@ didYouMean(input, matchList[, options])
 #### `returnType {string}`
   - default: `'first-closest-match'`
 
-| returnType               | Description                                                       |
-|--------------------------|-------------------------------------------------------------------|
-| `'all-closest-matches'`  | Return all matches with the closest value to the `input` in array |
-| `'all-matches'`          | Return all matches in array                                       |
-| `'all-sorted-matches'`   | Return all matches in array, sorted from closest to furthest      |
-| `'first-closest-match'`  | Return first match from `'all-closest-matches'`                   |
-| `'first-match'`          | Return first match (__FASTEST__)                                  |
-| `'random-closest-match'` | Return a randomly pick up from `'all-closest-matches'`            |
+| returnType              | Description                                                       |
+|-------------------------|-------------------------------------------------------------------|
+| `'all-closest-matches'` | Return all matches with the closest value to the `input` in array |
+| `'all-matches'`         | Return all matches in array                                       |
+| `'all-sorted-matches'`  | Return all matches in array, sorted from closest to furthest      |
+| `'first-closest-match'` | Return first match from `'all-closest-matches'`                   |
+| `'first-match'`         | Return first match (__FASTEST__)                                  |
 
 #### `threshold {integer|number}`
   - depends on `thresholdType`

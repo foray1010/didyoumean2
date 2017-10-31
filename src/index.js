@@ -15,7 +15,6 @@ const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
 const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const SIMILARITY = thresholdTypeEnums.SIMILARITY
@@ -74,8 +73,7 @@ function didYouMean(input, matchList, options) {
 
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
-    case FIRST_CLOSEST_MATCH:
-    case RANDOM_CLOSEST_MATCH: {
+    case FIRST_CLOSEST_MATCH: {
       const scores = []
 
       let marginValue

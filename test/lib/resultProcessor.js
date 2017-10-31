@@ -11,7 +11,6 @@ const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
 const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const matchList = Immutable([
   'abc*******',
@@ -40,12 +39,6 @@ test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
 
     expect(resultProcessor(matchList, [], ENUM)).toEqual(null)
   }
-})
-
-test('RANDOM_CLOSEST_MATCH', () => {
-  expect(resultProcessor(matchList, [3], RANDOM_CLOSEST_MATCH)).toEqual('ABCDEF****')
-
-  expect(resultProcessor(matchList, [], RANDOM_CLOSEST_MATCH)).toEqual(null)
 })
 
 test('Wrong Enum', () => {

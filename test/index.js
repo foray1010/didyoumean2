@@ -13,7 +13,6 @@ const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
 const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const SIMILARITY = thresholdTypeEnums.SIMILARITY
@@ -146,16 +145,6 @@ test('returnType', () => {
       returnType: FIRST_MATCH
     })
   ).toBe(matchList[1])
-
-  // test random-closest-match
-  const matchListWithSingleClosestValue = matchList.concat(input)
-
-  expect(
-    didYouMean(input, matchListWithSingleClosestValue, {
-      returnType: RANDOM_CLOSEST_MATCH,
-      threshold: 1
-    })
-  ).toBe(matchListWithSingleClosestValue[matchListWithSingleClosestValue.length - 1])
 })
 
 test(`threshold: "${EDIT_DISTANCE}"`, () => {
