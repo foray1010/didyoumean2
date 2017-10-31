@@ -15,48 +15,48 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
 function runOptionsSchema(options) {
   options = simpleSchema(options, {
     type: 'object',
-    defaultValue: {}
+    default: {}
   })
 
   options.caseSensitive = simpleSchema(options.caseSensitive, {
     type: 'boolean',
-    defaultValue: false
+    default: false
   })
 
   options.deburr = simpleSchema(options.deburr, {
     type: 'boolean',
-    defaultValue: false
+    default: false
   })
 
   options.matchPath = simpleSchema(options.matchPath, {
     type: 'string',
-    defaultValue: ''
+    default: ''
   })
 
   options.returnType = simpleSchema(options.returnType, {
     type: 'string',
-    defaultValue: returnTypeEnums.FIRST_CLOSEST_MATCH,
-    enums: returnTypeEnums
+    default: returnTypeEnums.FIRST_CLOSEST_MATCH,
+    enum: returnTypeEnums
   })
 
   options.thresholdType = simpleSchema(options.thresholdType, {
     type: 'string',
-    defaultValue: SIMILARITY,
-    enums: thresholdTypeEnums
+    default: SIMILARITY,
+    enum: thresholdTypeEnums
   })
 
   switch (options.thresholdType) {
     case EDIT_DISTANCE:
       options.threshold = simpleSchema(options.threshold, {
         type: 'integer',
-        defaultValue: 20
+        default: 20
       })
       break
 
     case SIMILARITY:
       options.threshold = simpleSchema(options.threshold, {
         type: 'number',
-        defaultValue: 0.4
+        default: 0.4
       })
       break
 
@@ -66,7 +66,7 @@ function runOptionsSchema(options) {
 
   options.trimSpaces = simpleSchema(options.trimSpaces, {
     type: 'boolean',
-    defaultValue: true
+    default: true
   })
 
   return options

@@ -9,14 +9,14 @@ test('check enum', () => {
   expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
-      enums: returnTypeEnums
+      enum: returnTypeEnums
     })
   }).not.toThrowError(RangeError)
 
   expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
-      enums: returnTypeEnums
+      enum: returnTypeEnums
     })
   }).toThrowError(RangeError)
 })
@@ -98,12 +98,12 @@ test('fill defaultValue', () => {
   // fill defaultValue when value is undefined
   expect(simpleSchema(undefined, {
     type: 'string',
-    defaultValue: defaultValue
+    default: defaultValue
   })).toBe(defaultValue)
 
   // fill defaultValue when value is undefined
   expect(simpleSchema(null, {
     type: 'string',
-    defaultValue: defaultValue
+    default: defaultValue
   })).toBe(defaultValue)
 })

@@ -19,7 +19,7 @@ const defaultOptions = Immutable({
   returnType: FIRST_CLOSEST_MATCH,
   threshold: 0.4,
   thresholdType: SIMILARITY,
-  trimSpaces: false
+  trimSpaces: true
 })
 
 const defaultOptionsForEditDistance = Immutable({
@@ -29,7 +29,7 @@ const defaultOptionsForEditDistance = Immutable({
   returnType: FIRST_CLOSEST_MATCH,
   threshold: 20,
   thresholdType: EDIT_DISTANCE,
-  trimSpaces: false
+  trimSpaces: true
 })
 
 test('without arguments', () => {

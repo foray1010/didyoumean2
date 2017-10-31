@@ -9,8 +9,8 @@ const _values = require('lodash/values')
  * @return {*} Updated value
  */
 function simpleSchema(value, schema) {
-  const defaultValue = schema.defaultValue
-  const enums = schema.enums
+  const defaultValue = schema.default
+  const enums = schema.enum
   const type = schema.type
 
 
