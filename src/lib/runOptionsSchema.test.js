@@ -1,11 +1,10 @@
 'use strict'
 
-const Immutable = require('seamless-immutable').static
-const rootPath = require('pkg-dir').sync(__dirname)
+const Immutable = require('seamless-immutable')
 
-const runOptionsSchema = require(`${rootPath}/src/lib/runOptionsSchema`)
-const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
-const thresholdTypeEnums = require(`${rootPath}/src/enums/thresholdTypeEnums`)
+const runOptionsSchema = require('./runOptionsSchema')
+const returnTypeEnums = require('../enums/returnTypeEnums')
+const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
 
 const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
 

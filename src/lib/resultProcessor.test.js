@@ -1,10 +1,9 @@
 'use strict'
 
-const Immutable = require('seamless-immutable').static
-const rootPath = require('pkg-dir').sync(__dirname)
+const Immutable = require('seamless-immutable')
 
-const resultProcessor = require(`${rootPath}/src/lib/resultProcessor`)
-const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
+const resultProcessor = require('./resultProcessor')
+const returnTypeEnums = require('../enums/returnTypeEnums')
 
 const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
 const ALL_MATCHES = returnTypeEnums.ALL_MATCHES

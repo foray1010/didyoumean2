@@ -58,7 +58,6 @@
     "jest": "^21.0.0",
     "lint-staged": "^4.3.0",
     "np": "^2.11.0",
-    "pkg-dir": "^2.0.0",
     "prettier-eslint-cli": "^4.4.0",
     "seamless-immutable": "^7.0.0"
   }

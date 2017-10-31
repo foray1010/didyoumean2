@@ -1,8 +1,6 @@
 'use strict'
 
-const rootPath = require('pkg-dir').sync(__dirname)
-
-const normalizeString = require(`${rootPath}/src/lib/normalizeString`)
+const normalizeString = require('./normalizeString')
 
 test('caseSensitive', () => {
   expect(

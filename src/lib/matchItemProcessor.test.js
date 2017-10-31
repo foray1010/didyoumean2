@@ -1,8 +1,6 @@
 'use strict'
 
-const rootPath = require('pkg-dir').sync(__dirname)
-
-const matchItemProcessor = require(`${rootPath}/src/lib/matchItemProcessor`)
+const matchItemProcessor = require('./matchItemProcessor')
 
 test('matchPath', () => {
   expect(

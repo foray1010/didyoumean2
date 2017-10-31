@@ -1,8 +1,6 @@
 'use strict'
 
-const rootPath = require('pkg-dir').sync(__dirname)
-
-const getSimilarity = require(`${rootPath}/src/lib/getSimilarity`)
+const getSimilarity = require('./getSimilarity')
 
 test('same case', () => {
   expect(getSimilarity('abcde', 'fghij')).toBe(0)

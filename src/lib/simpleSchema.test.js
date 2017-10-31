@@ -1,10 +1,9 @@
 'use strict'
 
-const rootPath = require('pkg-dir').sync(__dirname)
 const values = require('ramda/src/values')
 
-const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
-const simpleSchema = require(`${rootPath}/src/lib/simpleSchema`)
+const returnTypeEnums = require('../enums/returnTypeEnums')
+const simpleSchema = require('./simpleSchema')
 
 test('check enum', () => {
   expect(() => {
