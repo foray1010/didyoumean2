@@ -110,17 +110,12 @@ npm install -g yarn
 yarn install
 ```
 
-Unit test:
+Unit test and coverage:
 ```sh
 yarn test
 ```
 
-Coverage:
-```sh
-yarn run coverage
-```
-
 Linter:
 ```sh
-yarn run lint
+yarn lint
 ```
