@@ -64,9 +64,9 @@ function runOptionsSchema(options) {
     default:
   }
 
-  options.trimSpace = simpleSchema(options.trimSpace, {
+  options.trimSpaces = simpleSchema(options.trimSpaces, {
     type: 'boolean',
-    defaultValue: false
+    defaultValue: true
   })
 
   return options

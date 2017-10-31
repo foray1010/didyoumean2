@@ -11,9 +11,9 @@ const _deburr = require('lodash/deburr')
 function normalizeString(str, options) {
   const caseSensitive = options.caseSensitive
   const deburr = options.deburr
-  const trimSpace = options.trimSpace
+  const trimSpaces = options.trimSpaces
 
-  if (trimSpace) {
+  if (trimSpaces) {
     str = str.trim().replace(/\s+/g, ' ')
   }
 

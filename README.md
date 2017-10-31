@@ -95,7 +95,7 @@ didYouMean(input, matchList[, options])
 | `'edit-distance'` | Refer to [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance), must be `integer`, lower value means more similar |
 | `'similarity'`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar        |
 
-#### `trimSpace {boolean}`
+#### `trimSpaces {boolean}`
   - default: `false` (will change to `true` in next major version)
 
   - Remove noises when matching

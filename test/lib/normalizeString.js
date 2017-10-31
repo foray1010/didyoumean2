@@ -31,12 +31,12 @@ test('deburr', () => {
   })).toBe('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG')
 })
 
-test('trimSpace', () => {
+test('trimSpaces', () => {
   expect(normalizeString('   abc   def  g ', {
-    trimSpace: false
+    trimSpaces: false
   })).toBe('   abc   def  g ')
 
   expect(normalizeString('   abc   def  g ', {
-    trimSpace: true
+    trimSpaces: true
   })).toBe('abc def g')
 })
