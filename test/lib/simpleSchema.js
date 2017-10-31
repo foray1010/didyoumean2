@@ -1,7 +1,7 @@
 'use strict'
 
-const _values = require('lodash/values')
 const rootPath = require('pkg-dir').sync(__dirname)
+const values = require('ramda/src/values')
 
 const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
 const simpleSchema = require(`${rootPath}/src/lib/simpleSchema`)
@@ -10,14 +10,14 @@ test('check enum', () => {
   expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
-      enum: _values(returnTypeEnums)
+      enum: values(returnTypeEnums)
     })
   }).not.toThrowError(RangeError)
 
   expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
-      enum: _values(returnTypeEnums)
+      enum: values(returnTypeEnums)
     })
   }).toThrowError(RangeError)
 })

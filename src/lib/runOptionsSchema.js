@@ -1,9 +1,9 @@
 'use strict'
 
-const _values = require('lodash/values')
 const returnTypeEnums = require('../enums/returnTypeEnums')
 const simpleSchema = require('./simpleSchema')
 const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
+const values = require('ramda/src/values')
 
 const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
 const SIMILARITY = thresholdTypeEnums.SIMILARITY
@@ -30,20 +30,20 @@ function runOptionsSchema(options) {
   })
 
   options.matchPath = simpleSchema(options.matchPath, {
-    type: 'string',
-    default: ''
+    type: 'array',
+    default: []
   })
 
   options.returnType = simpleSchema(options.returnType, {
     type: 'string',
     default: returnTypeEnums.FIRST_CLOSEST_MATCH,
-    enum: _values(returnTypeEnums)
+    enum: values(returnTypeEnums)
   })
 
   options.thresholdType = simpleSchema(options.thresholdType, {
     type: 'string',
     default: SIMILARITY,
-    enum: _values(thresholdTypeEnums)
+    enum: values(thresholdTypeEnums)
   })
 
   switch (options.thresholdType) {

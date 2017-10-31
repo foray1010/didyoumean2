@@ -1,6 +1,6 @@
 'use strict'
 
-const _set = require('lodash/set')
+const assocPath = require('ramda/src/assocPath')
 const Immutable = require('seamless-immutable').static
 const rootPath = require('pkg-dir').sync(__dirname)
 
@@ -46,9 +46,9 @@ test('caseSensitive', () => {
 })
 
 test('matchPath', () => {
-  const matchPath = 'obj.array.0.obj2'
+  const matchPath = ['obj', 'array', 0, 'obj2']
 
-  const matchObjList = matchList.map((value) => _set({}, matchPath, value))
+  const matchObjList = matchList.map((value) => assocPath(matchPath, value, {}))
 
   expect(
     didYouMean(input, matchObjList, {

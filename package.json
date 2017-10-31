@@ -47,7 +47,8 @@
   },
   "dependencies": {
     "leven": "^2.0.0",
-    "lodash": "^4.17.2"
+    "lodash.deburr": "^4.1.0",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "cross-env": "^5.0.0",

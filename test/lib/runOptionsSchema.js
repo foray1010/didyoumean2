@@ -15,7 +15,7 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
 const defaultOptions = Immutable({
   caseSensitive: false,
   deburr: false,
-  matchPath: '',
+  matchPath: [],
   returnType: FIRST_CLOSEST_MATCH,
   threshold: 0.4,
   thresholdType: SIMILARITY,
@@ -25,7 +25,7 @@ const defaultOptions = Immutable({
 const defaultOptionsForEditDistance = Immutable({
   caseSensitive: false,
   deburr: false,
-  matchPath: '',
+  matchPath: [],
   returnType: FIRST_CLOSEST_MATCH,
   threshold: 20,
   thresholdType: EDIT_DISTANCE,

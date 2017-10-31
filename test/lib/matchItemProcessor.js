@@ -14,7 +14,7 @@ test('matchPath', () => {
       },
       {
         caseSensitive: false,
-        matchPath: 'a.b'
+        matchPath: ['a', 'b']
       }
     )
   ).toBe('abc')
@@ -28,7 +28,7 @@ test('matchPath', () => {
       },
       {
         caseSensitive: true,
-        matchPath: 'a.b'
+        matchPath: ['a', 'b']
       }
     )
   ).toBe('AbC')

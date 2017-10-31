@@ -1,6 +1,6 @@
 'use strict'
 
-const _get = require('lodash/get')
+const path = require('ramda/src/path')
 
 const normalizeString = require('./normalizeString')
 
@@ -13,7 +13,7 @@ const normalizeString = require('./normalizeString')
 function matchItemProcessor(matchItem, options) {
   const matchPath = options.matchPath
 
-  const matchItemStr = matchPath ? _get(matchItem, matchPath) : matchItem
+  const matchItemStr = matchPath.length ? path(matchPath, matchItem) : matchItem
 
   return normalizeString(matchItemStr, options)
 }

@@ -1,6 +1,6 @@
 'use strict'
 
-const _deburr = require('lodash/deburr')
+const deburr = require('lodash.deburr')
 
 /**
  * Normalize a string
@@ -10,15 +10,15 @@ const _deburr = require('lodash/deburr')
  */
 function normalizeString(str, options) {
   const caseSensitive = options.caseSensitive
-  const deburr = options.deburr
+  const isDeburr = options.deburr
   const trimSpaces = options.trimSpaces
 
   if (trimSpaces) {
     str = str.trim().replace(/\s+/g, ' ')
   }
 
-  if (deburr) {
-    str = _deburr(str)
+  if (isDeburr) {
+    str = deburr(str)
   }
 
   if (!caseSensitive) {
