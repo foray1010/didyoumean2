@@ -13,7 +13,6 @@ function simpleSchema(value, schema) {
   const enums = schema.enum
   const type = schema.type
 
-
   /*+++++++++++++++++++++
    + Fill default value +
    +++++++++++++++++++++*/
@@ -21,7 +20,6 @@ function simpleSchema(value, schema) {
   if (value === null || value === undefined) {
     value = defaultValue
   }
-
 
   /*+++++++++++++
    + Check type +
@@ -49,7 +47,6 @@ function simpleSchema(value, schema) {
     throw new TypeError(`${value} is not '${type}'`)
   }
 
-
   /*+++++++++++++
    + Check enum +
    +++++++++++++*/
@@ -61,7 +58,6 @@ function simpleSchema(value, schema) {
       throw new RangeError(`${value} is not one of '${String(supportedValues)}'`)
     }
   }
-
 
   /*+++++++++++++++++++++++
    + Return updated value +

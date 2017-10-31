@@ -38,7 +38,6 @@ function didYouMean(input, matchList, options) {
   const threshold = options.threshold
   const thresholdType = options.thresholdType
 
-
   /*++++++++++++++++++++
    + Deal with options +
    ++++++++++++++++++++*/
@@ -51,27 +50,20 @@ function didYouMean(input, matchList, options) {
     case EDIT_DISTANCE:
       checkIfMatched = (score) => score <= threshold
       scoreProcessor = (matchItem) => {
-        return leven(
-          normalizedInput,
-          matchItemProcessor(matchItem, options)
-        )
+        return leven(normalizedInput, matchItemProcessor(matchItem, options))
       }
       break
 
     case SIMILARITY:
       checkIfMatched = (score) => score >= threshold
       scoreProcessor = (matchItem) => {
-        return getSimilarity(
-          normalizedInput,
-          matchItemProcessor(matchItem, options)
-        )
+        return getSimilarity(normalizedInput, matchItemProcessor(matchItem, options))
       }
       break
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+    // handled by simpleSchema
   }
-
 
   /*+++++++++++
    + Matching +
@@ -112,8 +104,8 @@ function didYouMean(input, matchList, options) {
           }
           break
 
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
+        /* istanbul ignore next */ default:
+        // handled by simpleSchema
       }
 
       const scoresLen = scores.length
@@ -166,8 +158,8 @@ function didYouMean(input, matchList, options) {
           unsortedResults.sort((a, b) => b.score - a.score)
           break
 
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
+        /* istanbul ignore next */ default:
+        // handled by simpleSchema
       }
 
       for (const unsortedResult of unsortedResults) {
@@ -190,10 +182,9 @@ function didYouMean(input, matchList, options) {
 
       break
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+    // handled by simpleSchema
   }
-
 
   /*+++++++++++++++++++++++
    + Process return value +

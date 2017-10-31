@@ -37,7 +37,9 @@ test('without arguments', () => {
 })
 
 test(`thresholdType: "${EDIT_DISTANCE}"`, () => {
-  expect(runOptionsSchema({
-    thresholdType: EDIT_DISTANCE
-  })).toEqual(defaultOptionsForEditDistance)
+  expect(
+    runOptionsSchema({
+      thresholdType: EDIT_DISTANCE
+    })
+  ).toEqual(defaultOptionsForEditDistance)
 })

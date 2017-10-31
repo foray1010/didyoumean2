@@ -4,7 +4,8 @@
   "engines": {
     "node": ">=4.2"
   },
-  "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
+  "description":
+    "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
     "closest",
     "compare",
@@ -37,8 +38,12 @@
   "scripts": {
     "lint": "eslint .",
     "np": "np",
-    "precommit": "yarn run lint",
+    "precommit": "lint-staged && yarn test",
     "test": "cross-env NODE_ENV=test jest --config .jestrc.json"
+  },
+  "lint-staged": {
+    "*.js": ["prettier-eslint --write", "eslint --fix", "git add"],
+    "*.json": ["prettier-eslint --write", "git add"]
   },
   "dependencies": {
     "leven": "^2.0.0",
@@ -50,8 +55,10 @@
     "eslint-config-foray1010": "^6.2.0",
     "husky": "^0.14.0",
     "jest": "^21.0.0",
+    "lint-staged": "^4.3.0",
     "np": "^2.11.0",
     "pkg-dir": "^2.0.0",
+    "prettier-eslint-cli": "^4.4.0",
     "seamless-immutable": "^7.0.0"
   }
 }

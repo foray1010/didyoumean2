@@ -24,80 +24,34 @@ const matchList = Immutable([
 
 test('ALL_CLOSEST_MATCHES, ALL_MATCHES and ALL_SORTED_MATCHES', () => {
   for (const ENUM of [ALL_CLOSEST_MATCHES, ALL_MATCHES, ALL_SORTED_MATCHES]) {
-    expect(resultProcessor(
-      matchList,
-      [
-        3,
-        4,
-        5
-      ],
-      ENUM
-    )).toEqual([
+    expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toEqual([
       'ABCDEF****',
       'abcde*g***',
       'abcdef****'
     ])
 
-    expect(resultProcessor(
-      matchList,
-      [],
-      ENUM
-    )).toEqual([])
+    expect(resultProcessor(matchList, [], ENUM)).toEqual([])
   }
 })
 
 test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
   for (const ENUM of [FIRST_CLOSEST_MATCH, FIRST_MATCH]) {
-    expect(resultProcessor(
-      matchList,
-      [
-        3,
-        4,
-        5
-      ],
-      ENUM
-    )).toEqual('ABCDEF****')
+    expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toEqual('ABCDEF****')
 
-    expect(resultProcessor(
-      matchList,
-      [],
-      ENUM
-    )).toEqual(null)
+    expect(resultProcessor(matchList, [], ENUM)).toEqual(null)
   }
 })
 
 test('RANDOM_CLOSEST_MATCH', () => {
-  expect(resultProcessor(
-    matchList,
-    [
-      3
-    ],
-    RANDOM_CLOSEST_MATCH
-  )).toEqual('ABCDEF****')
+  expect(resultProcessor(matchList, [3], RANDOM_CLOSEST_MATCH)).toEqual('ABCDEF****')
 
-  expect(resultProcessor(
-    matchList,
-    [],
-    RANDOM_CLOSEST_MATCH
-  )).toEqual(null)
+  expect(resultProcessor(matchList, [], RANDOM_CLOSEST_MATCH)).toEqual(null)
 })
 
 test('Wrong Enum', () => {
   const wrongEnum = ''
 
-  expect(resultProcessor(
-    matchList,
-    [
-      3,
-      4,
-      5
-    ],
-    wrongEnum
-  )).toEqual(null)
+  expect(resultProcessor(matchList, [3, 4, 5], wrongEnum)).toEqual(null)
 
-  expect(resultProcessor(
-    matchList,
-    [],
-    wrongEnum
-  )).toEqual(null)
+  expect(resultProcessor(matchList, [], wrongEnum)).toEqual(null)
 })

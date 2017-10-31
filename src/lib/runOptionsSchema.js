@@ -60,8 +60,8 @@ function runOptionsSchema(options) {
       })
       break
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+    // handled by simpleSchema
   }
 
   options.trimSpaces = simpleSchema(options.trimSpaces, {

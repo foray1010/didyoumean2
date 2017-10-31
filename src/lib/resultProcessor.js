@@ -36,8 +36,8 @@ function resultProcessor(matchList, matchedIndexes, returnType) {
 
       return matchList[_sample(matchedIndexes)]
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+      // handled by simpleSchema
       return null
   }
 }

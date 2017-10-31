@@ -30,11 +30,13 @@ test('check type', () => {
   }).not.toThrowError(TypeError)
 
   expect(() => {
-    simpleSchema({}, {
-      type: 'array'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'array'
+      }
+    )
   }).toThrowError(TypeError)
-
 
   // boolean
   expect(() => {
@@ -44,11 +46,13 @@ test('check type', () => {
   }).not.toThrowError(TypeError)
 
   expect(() => {
-    simpleSchema({}, {
-      type: 'boolean'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'boolean'
+      }
+    )
   }).toThrowError(TypeError)
-
 
   // number
   expect(() => {
@@ -63,12 +67,14 @@ test('check type', () => {
     })
   }).toThrowError(TypeError)
 
-
   // object
   expect(() => {
-    simpleSchema({}, {
-      type: 'object'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'object'
+      }
+    )
   }).not.toThrowError(TypeError)
 
   expect(() => {
@@ -76,7 +82,6 @@ test('check type', () => {
       type: 'object'
     })
   }).toThrowError(TypeError)
-
 
   // string
   expect(() => {
@@ -96,14 +101,18 @@ test('fill defaultValue', () => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined
-  expect(simpleSchema(undefined, {
-    type: 'string',
-    default: defaultValue
-  })).toBe(defaultValue)
+  expect(
+    simpleSchema(undefined, {
+      type: 'string',
+      default: defaultValue
+    })
+  ).toBe(defaultValue)
 
   // fill defaultValue when value is undefined
-  expect(simpleSchema(null, {
-    type: 'string',
-    default: defaultValue
-  })).toBe(defaultValue)
+  expect(
+    simpleSchema(null, {
+      type: 'string',
+      default: defaultValue
+    })
+  ).toBe(defaultValue)
 })
