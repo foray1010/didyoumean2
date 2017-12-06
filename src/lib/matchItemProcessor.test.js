@@ -1,6 +1,4 @@
-'use strict'
-
-const matchItemProcessor = require('./matchItemProcessor')
+import matchItemProcessor from './matchItemProcessor'
 
 test('matchPath', () => {
   expect(

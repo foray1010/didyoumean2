@@ -1,20 +1,15 @@
-'use strict'
+import Immutable from 'seamless-immutable'
+import * as R from 'ramda'
 
-const assocPath = require('ramda/src/assocPath')
-const Immutable = require('seamless-immutable')
-
-const didYouMean = require('./index')
-const returnTypeEnums = require('./enums/returnTypeEnums')
-const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
-
-const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
-const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-
-const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const SIMILARITY = thresholdTypeEnums.SIMILARITY
+import didYouMean from './index'
+import {
+  ALL_CLOSEST_MATCHES,
+  ALL_MATCHES,
+  ALL_SORTED_MATCHES,
+  FIRST_CLOSEST_MATCH,
+  FIRST_MATCH
+} from './enums/returnTypeEnums.json'
+import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
 
 const input = 'abcdefghij'
 const matchList = Immutable([
@@ -47,11 +42,11 @@ test('caseSensitive', () => {
 test('matchPath', () => {
   const matchPath = ['obj', 'array', 0, 'obj2']
 
-  const matchObjList = matchList.map((value) => assocPath(matchPath, value, {}))
+  const matchObjList = matchList.map((value) => R.assocPath(matchPath, value, {}))
 
   expect(
     didYouMean(input, matchObjList, {
-      matchPath: matchPath
+      matchPath
     })
   ).toEqual(matchObjList[3])
 })

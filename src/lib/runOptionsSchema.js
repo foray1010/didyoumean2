@@ -1,76 +1,67 @@
-'use strict'
+import * as R from 'ramda'
 
-const returnTypeEnums = require('../enums/returnTypeEnums')
-const simpleSchema = require('./simpleSchema')
-const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
-const values = require('ramda/src/values')
+import simpleSchema from './simpleSchema'
 
-const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const SIMILARITY = thresholdTypeEnums.SIMILARITY
+import returnTypeEnums from '../enums/returnTypeEnums.json'
+import thresholdTypeEnums from '../enums/thresholdTypeEnums.json'
 
 /**
  * Run `simpleSchema` on `options`
  * @param {null|Object|undefined} options - An options that allows you to modify the behavior
  * @return {Object} options with default values
  */
-function runOptionsSchema(options) {
-  options = simpleSchema(options, {
-    type: 'object',
-    default: {}
-  })
-
-  options.caseSensitive = simpleSchema(options.caseSensitive, {
-    type: 'boolean',
-    default: false
-  })
-
-  options.deburr = simpleSchema(options.deburr, {
-    type: 'boolean',
-    default: false
-  })
-
-  options.matchPath = simpleSchema(options.matchPath, {
-    type: 'array',
-    default: []
-  })
-
-  options.returnType = simpleSchema(options.returnType, {
-    type: 'string',
-    default: returnTypeEnums.FIRST_CLOSEST_MATCH,
-    enum: values(returnTypeEnums)
-  })
-
-  options.thresholdType = simpleSchema(options.thresholdType, {
-    type: 'string',
-    default: SIMILARITY,
-    enum: values(thresholdTypeEnums)
-  })
-
-  switch (options.thresholdType) {
-    case EDIT_DISTANCE:
-      options.threshold = simpleSchema(options.threshold, {
-        type: 'integer',
-        default: 20
+const runOptionsSchema = R.compose(
+  R.cond([
+    [
+      R.propEq('thresholdType', thresholdTypeEnums.EDIT_DISTANCE),
+      (options) => ({
+        ...options,
+        threshold: simpleSchema(options.threshold, {
+          type: 'integer',
+          default: 20
+        })
       })
-      break
-
-    case SIMILARITY:
-      options.threshold = simpleSchema(options.threshold, {
-        type: 'number',
-        default: 0.4
+    ],
+    [
+      R.propEq('thresholdType', thresholdTypeEnums.SIMILARITY),
+      (options) => ({
+        ...options,
+        threshold: simpleSchema(options.threshold, {
+          type: 'number',
+          default: 0.4
+        })
       })
-      break
-
-    /* istanbul ignore next */ default:
-    // handled by simpleSchema
-  }
-
-  options.trimSpaces = simpleSchema(options.trimSpaces, {
-    type: 'boolean',
-    default: true
+    ]
+  ]),
+  (options = {}) => ({
+    caseSensitive: simpleSchema(options.caseSensitive, {
+      type: 'boolean',
+      default: false
+    }),
+    deburr: simpleSchema(options.deburr, {
+      type: 'boolean',
+      default: false
+    }),
+    matchPath: simpleSchema(options.matchPath, {
+      type: 'array',
+      default: []
+    }),
+    returnType: simpleSchema(options.returnType, {
+      type: 'string',
+      default: returnTypeEnums.FIRST_CLOSEST_MATCH,
+      enum: R.values(returnTypeEnums)
+    }),
+    threshold: options.threshold,
+    thresholdType: simpleSchema(options.thresholdType, {
+      type: 'string',
+      default: thresholdTypeEnums.SIMILARITY,
+      enum: R.values(thresholdTypeEnums)
+    }),
+    trimSpaces: simpleSchema(options.trimSpaces, {
+      type: 'boolean',
+      default: true
+    })
   })
+)
 
-  return options
-}
-
-module.exports = runOptionsSchema
+export default runOptionsSchema

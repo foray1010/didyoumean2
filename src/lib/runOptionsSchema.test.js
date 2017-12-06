@@ -1,23 +1,16 @@
-'use strict'
+import Immutable from 'seamless-immutable'
 
-const Immutable = require('seamless-immutable')
-
-const runOptionsSchema = require('./runOptionsSchema')
-const returnTypeEnums = require('../enums/returnTypeEnums')
-const thresholdTypeEnums = require('../enums/thresholdTypeEnums')
-
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-
-const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const SIMILARITY = thresholdTypeEnums.SIMILARITY
+import returnTypeEnums from '../enums/returnTypeEnums.json'
+import runOptionsSchema from './runOptionsSchema'
+import thresholdTypeEnums from '../enums/thresholdTypeEnums.json'
 
 const defaultOptions = Immutable({
   caseSensitive: false,
   deburr: false,
   matchPath: [],
-  returnType: FIRST_CLOSEST_MATCH,
+  returnType: returnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 0.4,
-  thresholdType: SIMILARITY,
+  thresholdType: thresholdTypeEnums.SIMILARITY,
   trimSpaces: true
 })
 
@@ -25,9 +18,9 @@ const defaultOptionsForEditDistance = Immutable({
   caseSensitive: false,
   deburr: false,
   matchPath: [],
-  returnType: FIRST_CLOSEST_MATCH,
+  returnType: returnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 20,
-  thresholdType: EDIT_DISTANCE,
+  thresholdType: thresholdTypeEnums.EDIT_DISTANCE,
   trimSpaces: true
 })
 
@@ -35,10 +28,10 @@ test('without arguments', () => {
   expect(runOptionsSchema()).toEqual(defaultOptions)
 })
 
-test(`thresholdType: "${EDIT_DISTANCE}"`, () => {
+test(`thresholdType: "${thresholdTypeEnums.EDIT_DISTANCE}"`, () => {
   expect(
     runOptionsSchema({
-      thresholdType: EDIT_DISTANCE
+      thresholdType: thresholdTypeEnums.EDIT_DISTANCE
     })
   ).toEqual(defaultOptionsForEditDistance)
 })

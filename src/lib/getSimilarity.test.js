@@ -1,6 +1,4 @@
-'use strict'
-
-const getSimilarity = require('./getSimilarity')
+import getSimilarity from './getSimilarity'
 
 test('same case', () => {
   expect(getSimilarity('abcde', 'fghij')).toBe(0)

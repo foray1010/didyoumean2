@@ -1,15 +1,13 @@
-'use strict'
+import Immutable from 'seamless-immutable'
 
-const Immutable = require('seamless-immutable')
-
-const resultProcessor = require('./resultProcessor')
-const returnTypeEnums = require('../enums/returnTypeEnums')
-
-const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
-const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+import resultProcessor from './resultProcessor'
+import {
+  ALL_CLOSEST_MATCHES,
+  ALL_MATCHES,
+  ALL_SORTED_MATCHES,
+  FIRST_CLOSEST_MATCH,
+  FIRST_MATCH
+} from '../enums/returnTypeEnums.json'
 
 const matchList = Immutable([
   'abc*******',

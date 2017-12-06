@@ -1,3 +1,5 @@
 extends:
   - "eslint-config-foray1010"
   - "eslint-config-foray1010/rules/unit-test"
+parserOptions:
+  sourceType: "module"

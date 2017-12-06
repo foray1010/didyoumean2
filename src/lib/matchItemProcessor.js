@@ -1,8 +1,6 @@
-'use strict'
+import * as R from 'ramda'
 
-const path = require('ramda/src/path')
-
-const normalizeString = require('./normalizeString')
+import normalizeString from './normalizeString'
 
 /**
  * Process matchItem according to options
@@ -10,12 +8,12 @@ const normalizeString = require('./normalizeString')
  * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - processed matchItem
  */
-function matchItemProcessor(matchItem, options) {
+const matchItemProcessor = (matchItem, options) => {
   const matchPath = options.matchPath
 
-  const matchItemStr = matchPath.length ? path(matchPath, matchItem) : matchItem
+  const matchItemStr = matchPath.length ? R.path(matchPath, matchItem) : matchItem
 
   return normalizeString(matchItemStr, options)
 }
 
-module.exports = matchItemProcessor
+export default matchItemProcessor

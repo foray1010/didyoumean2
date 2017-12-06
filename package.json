@@ -52,6 +52,9 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
     "cross-env": "^5.0.0",
     "eslint": "^4.8.0",
     "eslint-config-foray1010": "^6.2.0",

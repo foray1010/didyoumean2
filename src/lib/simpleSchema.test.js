@@ -1,22 +1,20 @@
-'use strict'
+import * as R from 'ramda'
 
-const values = require('ramda/src/values')
-
-const returnTypeEnums = require('../enums/returnTypeEnums')
-const simpleSchema = require('./simpleSchema')
+import returnTypeEnums from '../enums/returnTypeEnums.json'
+import simpleSchema from './simpleSchema'
 
 test('check enum', () => {
   expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
-      enum: values(returnTypeEnums)
+      enum: R.values(returnTypeEnums)
     })
   }).not.toThrowError(RangeError)
 
   expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
-      enum: values(returnTypeEnums)
+      enum: R.values(returnTypeEnums)
     })
   }).toThrowError(RangeError)
 })

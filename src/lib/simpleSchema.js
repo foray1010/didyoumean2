@@ -1,23 +1,17 @@
-'use strict'
-
 /**
  * A simple schema that check type, fill default value and check enum
  * @param {*} value - Any value that you want to validate
  * @param {Object} schema - Schema
  * @return {*} Updated value
  */
-function simpleSchema(value, schema) {
-  const defaultValue = schema.default
-  const enums = schema.enum
-  const type = schema.type
+const simpleSchema = (value, schema) => {
+  const {default: defaultValue, enum: enums, type} = schema
 
   /*+++++++++++++++++++++
    + Fill default value +
    +++++++++++++++++++++*/
 
-  if (value === null || value === undefined) {
-    value = defaultValue
-  }
+  const valueWithDefault = value == null ? defaultValue : value
 
   /*+++++++++++++
    + Check type +
@@ -26,38 +20,38 @@ function simpleSchema(value, schema) {
   let isValid
   switch (type) {
     case 'array':
-      isValid = Array.isArray(value)
+      isValid = Array.isArray(valueWithDefault)
       break
 
     case 'integer':
-      isValid = typeof value === 'number' && !(value % 1)
+      isValid = typeof valueWithDefault === 'number' && !(valueWithDefault % 1)
       break
 
     case 'object':
-      isValid = typeof value === type && !Array.isArray(value)
+      isValid = typeof valueWithDefault === type && !Array.isArray(valueWithDefault)
       break
 
     default:
-      isValid = typeof value === type
+      isValid = typeof valueWithDefault === type
   }
 
   if (!isValid) {
-    throw new TypeError(`${value} is not '${type}'`)
+    throw new TypeError(`${valueWithDefault} is not '${type}'`)
   }
 
   /*+++++++++++++
    + Check enum +
    +++++++++++++*/
 
-  if (enums && enums.indexOf(value) === -1) {
-    throw new RangeError(`${value} is not one of '${enums}'`)
+  if (enums && enums.indexOf(valueWithDefault) === -1) {
+    throw new RangeError(`${valueWithDefault} is not one of '${enums}'`)
   }
 
   /*+++++++++++++++++++++++
    + Return updated value +
    +++++++++++++++++++++++*/
 
-  return value
+  return valueWithDefault
 }
 
-module.exports = simpleSchema
+export default simpleSchema

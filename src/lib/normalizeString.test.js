@@ -1,6 +1,4 @@
-'use strict'
-
-const normalizeString = require('./normalizeString')
+import normalizeString from './normalizeString'
 
 test('caseSensitive', () => {
   expect(

@@ -1,12 +1,10 @@
-'use strict'
-
-const returnTypeEnums = require('../enums/returnTypeEnums')
-
-const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
-const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
+import {
+  ALL_CLOSEST_MATCHES,
+  ALL_MATCHES,
+  ALL_SORTED_MATCHES,
+  FIRST_CLOSEST_MATCH,
+  FIRST_MATCH
+} from '../enums/returnTypeEnums.json'
 
 /**
  * Generate result
@@ -15,7 +13,7 @@ const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
  * @param {string} returnType
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-function resultProcessor(matchList, matchedIndexes, returnType) {
+const resultProcessor = (matchList, matchedIndexes, returnType) => {
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
     case ALL_MATCHES:
@@ -34,4 +32,4 @@ function resultProcessor(matchList, matchedIndexes, returnType) {
   }
 }
 
-module.exports = resultProcessor
+export default resultProcessor
