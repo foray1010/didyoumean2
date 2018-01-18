@@ -1,7 +1,6 @@
-import Immutable from 'seamless-immutable'
 import * as R from 'ramda'
+import Immutable from 'seamless-immutable'
 
-import didYouMean from './index'
 import {
   ALL_CLOSEST_MATCHES,
   ALL_MATCHES,
@@ -10,6 +9,7 @@ import {
   FIRST_MATCH
 } from './enums/returnTypeEnums.json'
 import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
+import didYouMean from './index'
 
 const input = 'abcdefghij'
 const matchList = Immutable([

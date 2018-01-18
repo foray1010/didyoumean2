@@ -1,9 +1,8 @@
 import * as R from 'ramda'
 
-import simpleSchema from './simpleSchema'
-
 import returnTypeEnums from '../enums/returnTypeEnums.json'
 import thresholdTypeEnums from '../enums/thresholdTypeEnums.json'
+import simpleSchema from './simpleSchema'
 
 /**
  * Run `simpleSchema` on `options`

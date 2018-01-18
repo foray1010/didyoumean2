@@ -1,6 +1,5 @@
 import Immutable from 'seamless-immutable'
 
-import resultProcessor from './resultProcessor'
 import {
   ALL_CLOSEST_MATCHES,
   ALL_MATCHES,
@@ -8,6 +7,7 @@ import {
   FIRST_CLOSEST_MATCH,
   FIRST_MATCH
 } from '../enums/returnTypeEnums.json'
+import resultProcessor from './resultProcessor'
 
 const matchList = Immutable([
   'abc*******',

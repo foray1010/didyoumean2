@@ -1,10 +1,5 @@
 import leven from 'leven'
 
-import getSimilarity from './lib/getSimilarity'
-import matchItemProcessor from './lib/matchItemProcessor'
-import normalizeString from './lib/normalizeString'
-import resultProcessor from './lib/resultProcessor'
-import runOptionsSchema from './lib/runOptionsSchema'
 import {
   ALL_CLOSEST_MATCHES,
   ALL_MATCHES,
@@ -13,6 +8,11 @@ import {
   FIRST_MATCH
 } from './enums/returnTypeEnums.json'
 import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
+import getSimilarity from './lib/getSimilarity'
+import matchItemProcessor from './lib/matchItemProcessor'
+import normalizeString from './lib/normalizeString'
+import resultProcessor from './lib/resultProcessor'
+import runOptionsSchema from './lib/runOptionsSchema'
 
 /**
  * Main function for didyoumean2

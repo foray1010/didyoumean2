@@ -1,8 +1,8 @@
 import Immutable from 'seamless-immutable'
 
 import returnTypeEnums from '../enums/returnTypeEnums.json'
-import runOptionsSchema from './runOptionsSchema'
 import thresholdTypeEnums from '../enums/thresholdTypeEnums.json'
+import runOptionsSchema from './runOptionsSchema'
 
 const defaultOptions = Immutable({
   caseSensitive: false,
