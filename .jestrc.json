@@ -1,6 +1,0 @@
-{
-  "collectCoverage": true,
-  "collectCoverageFrom": ["**/*.js", "!**/*.test.js", "!coverage/**"],
-  "coverageReporters": ["lcov", "text-summary"],
-  "moduleFileExtensions": ["js", "json"]
-}
