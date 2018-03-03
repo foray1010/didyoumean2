@@ -4,6 +4,7 @@
   "engines": {
     "node": ">=4.2"
   },
+  "sideEffects": false,
   "description":
     "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
