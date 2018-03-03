@@ -1,41 +1,12 @@
 {
   "name": "didyoumean2",
   "version": "1.3.0",
+  "license": "MIT",
+  "main": "src/index.js",
   "engines": {
     "node": ">=4.2"
   },
   "sideEffects": false,
-  "description":
-    "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
-  "keywords": [
-    "closest",
-    "compare",
-    "comparison",
-    "didyoumean",
-    "diff",
-    "difference",
-    "distance",
-    "edit",
-    "find",
-    "fuzzy",
-    "leven",
-    "levenshtein",
-    "match",
-    "matching",
-    "similar",
-    "similarity",
-    "suggest",
-    "suggestion",
-    "string",
-    "text",
-    "word"
-  ],
-  "license": "MIT",
-  "author": "foray1010",
-  "homepage": "https://github.com/foray1010/didyoumean2",
-  "repository": "foray1010/didyoumean2",
-  "bugs": "https://github.com/foray1010/didyoumean2/issues",
-  "main": "src/index.js",
   "scripts": {
     "ignore-sync": "ignore-sync",
     "lint": "eslint .",
@@ -68,5 +39,34 @@
     "lint-staged": "^7.0.0",
     "prettier-eslint-cli": "^4.4.0",
     "seamless-immutable": "^7.0.0"
-  }
+  },
+  "description":
+    "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
+  "keywords": [
+    "closest",
+    "compare",
+    "comparison",
+    "didyoumean",
+    "diff",
+    "difference",
+    "distance",
+    "edit",
+    "find",
+    "fuzzy",
+    "leven",
+    "levenshtein",
+    "match",
+    "matching",
+    "similar",
+    "similarity",
+    "suggest",
+    "suggestion",
+    "string",
+    "text",
+    "word"
+  ],
+  "author": "foray1010",
+  "homepage": "https://github.com/foray1010/didyoumean2",
+  "repository": "foray1010/didyoumean2",
+  "bugs": "https://github.com/foray1010/didyoumean2/issues"
 }
