@@ -38,7 +38,6 @@
   "scripts": {
     "ignore-sync": "ignore-sync",
     "lint": "eslint .",
-    "np": "np",
     "precommit": "lint-staged && yarn test",
     "test": "cross-env NODE_ENV=test jest"
   },
@@ -65,8 +64,7 @@
     "husky": "^0.14.0",
     "ignore-sync": "^1.0.0",
     "jest": "^22.0.0",
-    "lint-staged": "^6.0.0",
-    "np": "^2.11.0",
+    "lint-staged": "^7.0.0",
     "prettier-eslint-cli": "^4.4.0",
     "seamless-immutable": "^7.0.0"
   }
