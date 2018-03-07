@@ -1,7 +1,5 @@
 # didyoumean2
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/foray1010/didyoumean2.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://img.shields.io/circleci/project/foray1010/didyoumean2/master.svg)](https://circleci.com/gh/foray1010/didyoumean2/tree/master)
 [![codecov.io](https://img.shields.io/codecov/c/github/foray1010/didyoumean2.svg)](https://codecov.io/github/foray1010/didyoumean2?branch=master)
 [![Dependency Status](https://img.shields.io/gemnasium/foray1010/didyoumean2.svg)](https://gemnasium.com/foray1010/didyoumean2)
