@@ -30,6 +30,12 @@ const runOptionsSchema = R.compose(
           default: 0.4
         })
       })
+    ],
+    [
+      R.T,
+      () => {
+        throw new Error('unhandled `thresholdType`')
+      }
     ]
   ]),
   (options = {}) => ({
