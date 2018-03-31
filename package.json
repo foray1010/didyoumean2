@@ -8,10 +8,14 @@
   },
   "sideEffects": false,
   "scripts": {
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "ignore-sync": "ignore-sync",
     "lint": "eslint .",
     "precommit": "lint-staged && yarn test",
     "test": "cross-env NODE_ENV=test jest"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   },
   "jest": {
     "collectCoverage": true,
@@ -27,6 +31,8 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.0.0",
     "babel-preset-env": "^1.6.1",
