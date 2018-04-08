@@ -23,7 +23,8 @@
   },
   "lint-staged": {
     "*.js": ["prettier-eslint --write", "eslint --fix", "git add"],
-    "*.json": ["prettier-eslint --write", "git add"]
+    "*.json": ["prettier-eslint --write", "git add"],
+    "*.md": ["markdownlint"]
   },
   "dependencies": {
     "leven": "^2.0.0",
@@ -43,6 +44,7 @@
     "ignore-sync": "^1.0.0",
     "jest": "^22.0.0",
     "lint-staged": "^7.0.0",
+    "markdownlint-cli": "^0.8.1",
     "prettier-eslint-cli": "^4.4.0",
     "seamless-immutable": "^7.0.0"
   },
