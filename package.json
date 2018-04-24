@@ -12,19 +12,7 @@
     "ignore-sync": "ignore-sync",
     "lint": "eslint .",
     "precommit": "lint-staged && yarn test",
-    "test": "cross-env NODE_ENV=test jest"
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": ["lcov", "text-summary"]
-  },
-  "lint-staged": {
-    "*.js": ["prettier-eslint --write", "eslint --fix", "git add"],
-    "*.json": ["prettier-eslint --write", "git add"],
-    "*.md": ["markdownlint"]
+    "test": "cross-env NODE_ENV=test jest --config .jestrc.json"
   },
   "dependencies": {
     "leven": "^2.0.0",
