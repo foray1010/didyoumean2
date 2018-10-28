@@ -1,1 +1,1 @@
-extends: "eslint-config-foray1010/babel-node"
+extends: 'eslint-config-foray1010/babel-node'
