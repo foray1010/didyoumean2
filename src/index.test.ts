@@ -1,14 +1,8 @@
 import * as R from 'ramda'
 import Immutable from 'seamless-immutable'
 
-import {
-  ALL_CLOSEST_MATCHES,
-  ALL_MATCHES,
-  ALL_SORTED_MATCHES,
-  FIRST_CLOSEST_MATCH,
-  FIRST_MATCH
-} from './enums/returnTypeEnums.json'
-import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
+import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
+import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
 import didYouMean from './index'
 
 const input = 'abcdefghij'
@@ -57,13 +51,13 @@ test('returnType', () => {
 
   expect(
     didYouMean(input, matchList, {
-      returnType: ALL_CLOSEST_MATCHES
+      returnType: ReturnTypeEnums.ALL_CLOSEST_MATCHES
     })
   ).toEqual(allClosestMatchesResult)
 
   expect(
     didYouMean(input, matchList, {
-      returnType: ALL_CLOSEST_MATCHES,
+      returnType: ReturnTypeEnums.ALL_CLOSEST_MATCHES,
       threshold: 0.7
     })
   ).toEqual([])
@@ -73,13 +67,13 @@ test('returnType', () => {
 
   expect(
     didYouMean(input, matchList, {
-      returnType: ALL_MATCHES
+      returnType: ReturnTypeEnums.ALL_MATCHES
     })
   ).toEqual(allMatchesResult)
 
   expect(
     didYouMean(input, matchList, {
-      returnType: ALL_MATCHES,
+      returnType: ReturnTypeEnums.ALL_MATCHES,
       threshold: 0.7
     })
   ).toEqual([])
@@ -96,7 +90,7 @@ test('returnType', () => {
 
     expect(
       didYouMean(input, matchList, {
-        returnType: ALL_SORTED_MATCHES
+        returnType: ReturnTypeEnums.ALL_SORTED_MATCHES
       })
     ).toEqual(allSortedMatchesResult)
   }
@@ -113,8 +107,8 @@ test('returnType', () => {
 
     expect(
       didYouMean(input, matchList, {
-        returnType: ALL_SORTED_MATCHES,
-        thresholdType: EDIT_DISTANCE
+        returnType: ReturnTypeEnums.ALL_SORTED_MATCHES,
+        thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
       })
     ).toEqual(allSortedMatchesResult)
   }
@@ -122,13 +116,13 @@ test('returnType', () => {
   // test first-closest-match
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_CLOSEST_MATCH
+      returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH
     })
   ).toBe(matchList[3])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_CLOSEST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
       threshold: 0.7
     })
   ).toBe(null)
@@ -136,107 +130,107 @@ test('returnType', () => {
   // test first-match
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH
+      returnType: ReturnTypeEnums.FIRST_MATCH
     })
   ).toBe(matchList[1])
 })
 
-test(`threshold: "${EDIT_DISTANCE}"`, () => {
+test(`threshold: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 7,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(matchList[0])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 6,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(matchList[1])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 5,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(matchList[2])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_CLOSEST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
       threshold: 4,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(matchList[3])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 4,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(matchList[3])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 3,
-      thresholdType: EDIT_DISTANCE
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
     })
   ).toBe(null)
 })
 
-test(`threshold: "${SIMILARITY}"`, () => {
+test(`threshold: "${ThresholdTypeEnums.SIMILARITY}"`, () => {
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 0.3,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(matchList[0])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 0.4,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(matchList[1])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 0.5,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(matchList[2])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_CLOSEST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
       threshold: 0.6,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(matchList[3])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 0.6,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(matchList[3])
 
   expect(
     didYouMean(input, matchList, {
-      returnType: FIRST_MATCH,
+      returnType: ReturnTypeEnums.FIRST_MATCH,
       threshold: 0.7,
-      thresholdType: SIMILARITY
+      thresholdType: ThresholdTypeEnums.SIMILARITY
     })
   ).toBe(null)
 })

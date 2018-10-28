@@ -1,7 +1,11 @@
 import deburr from 'lodash.deburr'
 import * as R from 'ramda'
+import {Options} from '../types'
 
-const trimSpaces = R.compose(R.replace(/\s+/g, ' '), R.trim)
+const trimSpaces = R.compose(
+  R.replace(/\s+/g, ' '),
+  R.trim
+)
 
 /**
  * Normalize a string
@@ -9,17 +13,17 @@ const trimSpaces = R.compose(R.replace(/\s+/g, ' '), R.trim)
  * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - normalized string
  */
-const normalizeString = (str, options) => {
+const normalizeString = (str: string, options: Options): string => {
   return R.compose(
-    (s) => {
+    (s: string): string => {
       if (options.caseSensitive) return s
       return R.toLower(s)
     },
-    (s) => {
+    (s: string): string => {
       if (!options.deburr) return s
       return deburr(s)
     },
-    (s) => {
+    (s: string): string => {
       if (!options.trimSpaces) return s
       return trimSpaces(s)
     }

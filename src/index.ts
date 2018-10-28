@@ -1,18 +1,16 @@
 import leven from 'leven'
 
-import {
-  ALL_CLOSEST_MATCHES,
-  ALL_MATCHES,
-  ALL_SORTED_MATCHES,
-  FIRST_CLOSEST_MATCH,
-  FIRST_MATCH
-} from './enums/returnTypeEnums.json'
-import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
+import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
+import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
 import getSimilarity from './lib/getSimilarity'
 import matchItemProcessor from './lib/matchItemProcessor'
 import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
-import runOptionsSchema from './lib/runOptionsSchema'
+import {InputOptions} from './types'
+import fillDefaultOptions from './lib/fillDefaultOptions'
+
+const unknownReturnTypeError = new Error('unknown returnType')
+const unknownThresholdTypeError = new Error('unknown thresholdType')
 
 /**
  * Main function for didyoumean2
@@ -21,12 +19,16 @@ import runOptionsSchema from './lib/runOptionsSchema'
  * @param {null|Object|undefined} options - options that allows you to modify the behavior
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-const didYouMean = (input, matchList, options) => {
+const didYouMean = <T>(
+  input: string,
+  matchList: Array<T>,
+  options?: InputOptions
+): Array<T> | T | null => {
   /*+++++++++++++++++++
    + Initiate options +
    +++++++++++++++++++*/
 
-  const optionsWithDefaults = runOptionsSchema(options)
+  const optionsWithDefaults = fillDefaultOptions(options)
 
   const {returnType, threshold, thresholdType} = optionsWithDefaults
 
@@ -39,22 +41,20 @@ const didYouMean = (input, matchList, options) => {
   let checkIfMatched // Validate if score is matched
   let scoreProcessor // Get score
   switch (thresholdType) {
-    case EDIT_DISTANCE:
-      checkIfMatched = (score) => score <= threshold
-      scoreProcessor = (matchItem) => {
-        return leven(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
-      }
+    case ThresholdTypeEnums.EDIT_DISTANCE:
+      checkIfMatched = (score: number) => score <= threshold
+      scoreProcessor = (matchItem: T) =>
+        leven(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
       break
 
-    case SIMILARITY:
-      checkIfMatched = (score) => score >= threshold
-      scoreProcessor = (matchItem) => {
-        return getSimilarity(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
-      }
+    case ThresholdTypeEnums.SIMILARITY:
+      checkIfMatched = (score: number) => score >= threshold
+      scoreProcessor = (matchItem: T) =>
+        getSimilarity(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
       break
 
     /* istanbul ignore next */ default:
-    // handled by simpleSchema
+      throw unknownThresholdTypeError
   }
 
   /*+++++++++++
@@ -65,30 +65,32 @@ const didYouMean = (input, matchList, options) => {
   const matchListLen = matchList.length
 
   switch (returnType) {
-    case ALL_CLOSEST_MATCHES:
-    case FIRST_CLOSEST_MATCH: {
+    case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
+    case ReturnTypeEnums.FIRST_CLOSEST_MATCH: {
       const scores = []
 
       let marginValue
       switch (thresholdType) {
-        case EDIT_DISTANCE:
+        case ThresholdTypeEnums.EDIT_DISTANCE:
           // Process score and save the smallest score
           marginValue = Infinity
           for (let i = 0; i < matchListLen; i += 1) {
             const score = scoreProcessor(matchList[i])
 
+            // eslint-disable-next-line max-depth
             if (marginValue > score) marginValue = score
 
             scores.push(score)
           }
           break
 
-        case SIMILARITY:
+        case ThresholdTypeEnums.SIMILARITY:
           // Process score and save the largest score
           marginValue = 0
           for (let i = 0; i < matchListLen; i += 1) {
             const score = scoreProcessor(matchList[i])
 
+            // eslint-disable-next-line max-depth
             if (marginValue < score) marginValue = score
 
             scores.push(score)
@@ -96,25 +98,22 @@ const didYouMean = (input, matchList, options) => {
           break
 
         /* istanbul ignore next */ default:
-        // handled by simpleSchema
+          throw unknownThresholdTypeError
       }
 
       const scoresLen = scores.length
       for (let i = 0; i < scoresLen; i += 1) {
         const score = scores[i]
 
-        if (checkIfMatched(score)) {
-          // Just save the closest value
-          if (score === marginValue) {
-            matchedIndexes.push(i)
-          }
+        if (checkIfMatched(score) && score === marginValue) {
+          matchedIndexes.push(i)
         }
       }
 
       break
     }
 
-    case ALL_MATCHES:
+    case ReturnTypeEnums.ALL_MATCHES:
       for (let i = 0; i < matchListLen; i += 1) {
         const score = scoreProcessor(matchList[i])
 
@@ -126,7 +125,7 @@ const didYouMean = (input, matchList, options) => {
 
       break
 
-    case ALL_SORTED_MATCHES: {
+    case ReturnTypeEnums.ALL_SORTED_MATCHES: {
       const unsortedResults = []
       for (let i = 0; i < matchListLen; i += 1) {
         const score = scoreProcessor(matchList[i])
@@ -141,16 +140,16 @@ const didYouMean = (input, matchList, options) => {
       }
 
       switch (thresholdType) {
-        case EDIT_DISTANCE:
+        case ThresholdTypeEnums.EDIT_DISTANCE:
           unsortedResults.sort((a, b) => a.score - b.score)
           break
 
-        case SIMILARITY:
+        case ThresholdTypeEnums.SIMILARITY:
           unsortedResults.sort((a, b) => b.score - a.score)
           break
 
         /* istanbul ignore next */ default:
-        // handled by simpleSchema
+          throw unknownThresholdTypeError
       }
 
       for (const unsortedResult of unsortedResults) {
@@ -160,7 +159,7 @@ const didYouMean = (input, matchList, options) => {
       break
     }
 
-    case FIRST_MATCH:
+    case ReturnTypeEnums.FIRST_MATCH:
       for (let i = 0; i < matchListLen; i += 1) {
         const score = scoreProcessor(matchList[i])
 
@@ -174,7 +173,7 @@ const didYouMean = (input, matchList, options) => {
       break
 
     /* istanbul ignore next */ default:
-    // handled by simpleSchema
+      throw unknownReturnTypeError
   }
 
   /*+++++++++++++++++++++++

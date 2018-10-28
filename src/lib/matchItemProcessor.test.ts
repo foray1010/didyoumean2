@@ -1,4 +1,5 @@
 import matchItemProcessor from './matchItemProcessor'
+import fillDefaultOptions from './fillDefaultOptions'
 
 test('matchPath', () => {
   expect(
@@ -8,10 +9,10 @@ test('matchPath', () => {
           b: 'AbC'
         }
       },
-      {
+      fillDefaultOptions({
         caseSensitive: false,
         matchPath: ['a', 'b']
-      }
+      })
     )
   ).toBe('abc')
 
@@ -22,10 +23,10 @@ test('matchPath', () => {
           b: 'AbC'
         }
       },
-      {
+      fillDefaultOptions({
         caseSensitive: true,
         matchPath: ['a', 'b']
-      }
+      })
     )
   ).toBe('AbC')
 })

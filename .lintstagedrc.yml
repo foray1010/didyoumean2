@@ -1,7 +1,7 @@
 ignore:
   - 'CHANGELOG.md'
 linters:
-  '*.js':
+  '*.ts':
     - 'prettier-eslint --write'
     - 'eslint --fix'
     - 'git add'

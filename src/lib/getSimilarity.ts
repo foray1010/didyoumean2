@@ -6,7 +6,7 @@ import leven from 'leven'
  * @param {string} b - String from `matchList`
  * @return {number} similarity between `a` and `b`
  */
-const getSimilarity = (a, b) => {
+const getSimilarity = (a: string, b: string): number => {
   if (!a || !b) return 0
   if (a === b) return 1
 

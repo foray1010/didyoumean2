@@ -1,10 +1,4 @@
-import {
-  ALL_CLOSEST_MATCHES,
-  ALL_MATCHES,
-  ALL_SORTED_MATCHES,
-  FIRST_CLOSEST_MATCH,
-  FIRST_MATCH
-} from '../enums/returnTypeEnums.json'
+import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
 
 /**
  * Generate result
@@ -13,21 +7,23 @@ import {
  * @param {string} returnType
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-const resultProcessor = (matchList, matchedIndexes, returnType) => {
+const resultProcessor = <T>(
+  matchList: Array<T>,
+  matchedIndexes: Array<number>,
+  returnType: ReturnTypeEnums
+): Array<T> | T | null => {
   switch (returnType) {
-    case ALL_CLOSEST_MATCHES:
-    case ALL_MATCHES:
-    case ALL_SORTED_MATCHES:
+    case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
+    case ReturnTypeEnums.ALL_MATCHES:
+    case ReturnTypeEnums.ALL_SORTED_MATCHES:
       return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
 
-    case FIRST_CLOSEST_MATCH:
-    case FIRST_MATCH:
+    case ReturnTypeEnums.FIRST_CLOSEST_MATCH:
+    case ReturnTypeEnums.FIRST_MATCH:
       if (!matchedIndexes.length) return null
-
       return matchList[matchedIndexes[0]]
 
     /* istanbul ignore next */ default:
-      // handled by simpleSchema
       return null
   }
 }
