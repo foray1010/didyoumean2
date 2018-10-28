@@ -3,6 +3,7 @@ import * as R from 'ramda'
 import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from '../enums/ThresholdTypeEnums'
 import {InputOptions, Options} from '../types'
+import {unknownThresholdTypeError} from '../errors'
 
 type FillDefaultOptions = (options?: InputOptions) => Options
 const fillDefaultOptions: FillDefaultOptions = R.compose(
@@ -21,8 +22,9 @@ const fillDefaultOptions: FillDefaultOptions = R.compose(
     ],
     [
       R.T,
+      /* istanbul ignore next */
       () => {
-        throw new Error('unhandled `thresholdType`')
+        throw unknownThresholdTypeError
       }
     ]
   ]),

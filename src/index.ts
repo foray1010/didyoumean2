@@ -8,9 +8,7 @@ import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
 import {InputOptions} from './types'
 import fillDefaultOptions from './lib/fillDefaultOptions'
-
-const unknownReturnTypeError = new Error('unknown returnType')
-const unknownThresholdTypeError = new Error('unknown thresholdType')
+import {unknownReturnTypeError, unknownThresholdTypeError} from './errors'
 
 /**
  * Main function for didyoumean2
