@@ -1,15 +1,10 @@
-'use strict'
-
-const _sample = require('lodash/sample')
-
-const returnTypeEnums = require('../enums/returnTypeEnums')
-
-const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
-const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
+import {
+  ALL_CLOSEST_MATCHES,
+  ALL_MATCHES,
+  ALL_SORTED_MATCHES,
+  FIRST_CLOSEST_MATCH,
+  FIRST_MATCH
+} from '../enums/returnTypeEnums.json'
 
 /**
  * Generate result
@@ -18,7 +13,7 @@ const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
  * @param {string} returnType
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-function resultProcessor(matchList, matchedIndexes, returnType) {
+const resultProcessor = (matchList, matchedIndexes, returnType) => {
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
     case ALL_MATCHES:
@@ -31,15 +26,10 @@ function resultProcessor(matchList, matchedIndexes, returnType) {
 
       return matchList[matchedIndexes[0]]
 
-    case RANDOM_CLOSEST_MATCH:
-      if (!matchedIndexes.length) return null
-
-      return matchList[_sample(matchedIndexes)]
-
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+      // handled by simpleSchema
       return null
   }
 }
 
-module.exports = resultProcessor
+export default resultProcessor

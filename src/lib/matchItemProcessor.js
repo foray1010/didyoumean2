@@ -1,21 +1,19 @@
-'use strict'
+import * as R from 'ramda'
 
-const _get = require('lodash/get')
-
-const normalizeString = require('./normalizeString')
+import normalizeString from './normalizeString'
 
 /**
  * Process matchItem according to options
  * @param {Object|string} matchItem - Item for matching with `input`
- * @param {null|Object|undefined} options - options that allows you to modify the behavior
+ * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - processed matchItem
  */
-function matchItemProcessor(matchItem, options) {
+const matchItemProcessor = (matchItem, options) => {
   const matchPath = options.matchPath
 
-  const matchItemStr = matchPath ? _get(matchItem, matchPath) : matchItem
+  const matchItemStr = matchPath.length ? R.path(matchPath, matchItem) : matchItem
 
   return normalizeString(matchItemStr, options)
 }
 
-module.exports = matchItemProcessor
+export default matchItemProcessor

@@ -1,24 +1,18 @@
-'use strict'
+import leven from 'leven'
 
-const leven = require('leven')
-
-const getSimilarity = require('./lib/getSimilarity')
-const matchItemProcessor = require('./lib/matchItemProcessor')
-const normalizeString = require('./lib/normalizeString')
-const resultProcessor = require('./lib/resultProcessor')
-const runOptionsSchema = require('./lib/runOptionsSchema')
-const returnTypeEnums = require('./enums/returnTypeEnums')
-const thresholdTypeEnums = require('./enums/thresholdTypeEnums')
-
-const ALL_CLOSEST_MATCHES = returnTypeEnums.ALL_CLOSEST_MATCHES
-const ALL_MATCHES = returnTypeEnums.ALL_MATCHES
-const ALL_SORTED_MATCHES = returnTypeEnums.ALL_SORTED_MATCHES
-const FIRST_CLOSEST_MATCH = returnTypeEnums.FIRST_CLOSEST_MATCH
-const FIRST_MATCH = returnTypeEnums.FIRST_MATCH
-const RANDOM_CLOSEST_MATCH = returnTypeEnums.RANDOM_CLOSEST_MATCH
-
-const EDIT_DISTANCE = thresholdTypeEnums.EDIT_DISTANCE
-const SIMILARITY = thresholdTypeEnums.SIMILARITY
+import {
+  ALL_CLOSEST_MATCHES,
+  ALL_MATCHES,
+  ALL_SORTED_MATCHES,
+  FIRST_CLOSEST_MATCH,
+  FIRST_MATCH
+} from './enums/returnTypeEnums.json'
+import {EDIT_DISTANCE, SIMILARITY} from './enums/thresholdTypeEnums.json'
+import getSimilarity from './lib/getSimilarity'
+import matchItemProcessor from './lib/matchItemProcessor'
+import normalizeString from './lib/normalizeString'
+import resultProcessor from './lib/resultProcessor'
+import runOptionsSchema from './lib/runOptionsSchema'
 
 /**
  * Main function for didyoumean2
@@ -27,23 +21,20 @@ const SIMILARITY = thresholdTypeEnums.SIMILARITY
  * @param {null|Object|undefined} options - options that allows you to modify the behavior
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-function didYouMean(input, matchList, options) {
+const didYouMean = (input, matchList, options) => {
   /*+++++++++++++++++++
    + Initiate options +
    +++++++++++++++++++*/
 
-  options = runOptionsSchema(options)
+  const optionsWithDefaults = runOptionsSchema(options)
 
-  const returnType = options.returnType
-  const threshold = options.threshold
-  const thresholdType = options.thresholdType
-
+  const {returnType, threshold, thresholdType} = optionsWithDefaults
 
   /*++++++++++++++++++++
    + Deal with options +
    ++++++++++++++++++++*/
 
-  const normalizedInput = normalizeString(input, options)
+  const normalizedInput = normalizeString(input, optionsWithDefaults)
 
   let checkIfMatched // Validate if score is matched
   let scoreProcessor // Get score
@@ -51,27 +42,20 @@ function didYouMean(input, matchList, options) {
     case EDIT_DISTANCE:
       checkIfMatched = (score) => score <= threshold
       scoreProcessor = (matchItem) => {
-        return leven(
-          normalizedInput,
-          matchItemProcessor(matchItem, options)
-        )
+        return leven(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
       }
       break
 
     case SIMILARITY:
       checkIfMatched = (score) => score >= threshold
       scoreProcessor = (matchItem) => {
-        return getSimilarity(
-          normalizedInput,
-          matchItemProcessor(matchItem, options)
-        )
+        return getSimilarity(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
       }
       break
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+    // handled by simpleSchema
   }
-
 
   /*+++++++++++
    + Matching +
@@ -82,8 +66,7 @@ function didYouMean(input, matchList, options) {
 
   switch (returnType) {
     case ALL_CLOSEST_MATCHES:
-    case FIRST_CLOSEST_MATCH:
-    case RANDOM_CLOSEST_MATCH: {
+    case FIRST_CLOSEST_MATCH: {
       const scores = []
 
       let marginValue
@@ -112,8 +95,8 @@ function didYouMean(input, matchList, options) {
           }
           break
 
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
+        /* istanbul ignore next */ default:
+        // handled by simpleSchema
       }
 
       const scoresLen = scores.length
@@ -151,7 +134,7 @@ function didYouMean(input, matchList, options) {
         // save all indexes of matched scores
         if (checkIfMatched(score)) {
           unsortedResults.push({
-            score: score,
+            score,
             index: i
           })
         }
@@ -166,8 +149,8 @@ function didYouMean(input, matchList, options) {
           unsortedResults.sort((a, b) => b.score - a.score)
           break
 
-        /* istanbul ignore next */ // handled by simpleSchema
-        default:
+        /* istanbul ignore next */ default:
+        // handled by simpleSchema
       }
 
       for (const unsortedResult of unsortedResults) {
@@ -190,10 +173,9 @@ function didYouMean(input, matchList, options) {
 
       break
 
-    /* istanbul ignore next */ // handled by simpleSchema
-    default:
+    /* istanbul ignore next */ default:
+    // handled by simpleSchema
   }
-
 
   /*+++++++++++++++++++++++
    + Process return value +
@@ -202,4 +184,4 @@ function didYouMean(input, matchList, options) {
   return resultProcessor(matchList, matchedIndexes, returnType)
 }
 
-module.exports = didYouMean
+export default didYouMean

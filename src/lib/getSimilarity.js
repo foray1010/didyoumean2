@@ -1,6 +1,4 @@
-'use strict'
-
-const leven = require('leven')
+import leven from 'leven'
 
 /**
  * Using edit distance between `a` and `b` to calculate similarity
@@ -8,7 +6,7 @@ const leven = require('leven')
  * @param {string} b - String from `matchList`
  * @return {number} similarity between `a` and `b`
  */
-function getSimilarity(a, b) {
+const getSimilarity = (a, b) => {
   if (!a || !b) return 0
   if (a === b) return 1
 
@@ -18,4 +16,4 @@ function getSimilarity(a, b) {
   return (longestLength - editDistance) / longestLength
 }
 
-module.exports = getSimilarity
+export default getSimilarity

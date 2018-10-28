@@ -1,22 +1,20 @@
-'use strict'
+import * as R from 'ramda'
 
-const rootPath = require('pkg-dir').sync(__dirname)
-
-const returnTypeEnums = require(`${rootPath}/src/enums/returnTypeEnums`)
-const simpleSchema = require(`${rootPath}/src/lib/simpleSchema`)
+import returnTypeEnums from '../enums/returnTypeEnums.json'
+import simpleSchema from './simpleSchema'
 
 test('check enum', () => {
   expect(() => {
     simpleSchema(returnTypeEnums.ALL_MATCHES, {
       type: 'string',
-      enums: returnTypeEnums
+      enum: R.values(returnTypeEnums)
     })
   }).not.toThrowError(RangeError)
 
   expect(() => {
     simpleSchema('wrong enum', {
       type: 'string',
-      enums: returnTypeEnums
+      enum: R.values(returnTypeEnums)
     })
   }).toThrowError(RangeError)
 })
@@ -30,11 +28,13 @@ test('check type', () => {
   }).not.toThrowError(TypeError)
 
   expect(() => {
-    simpleSchema({}, {
-      type: 'array'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'array'
+      }
+    )
   }).toThrowError(TypeError)
-
 
   // boolean
   expect(() => {
@@ -44,11 +44,13 @@ test('check type', () => {
   }).not.toThrowError(TypeError)
 
   expect(() => {
-    simpleSchema({}, {
-      type: 'boolean'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'boolean'
+      }
+    )
   }).toThrowError(TypeError)
-
 
   // number
   expect(() => {
@@ -63,12 +65,14 @@ test('check type', () => {
     })
   }).toThrowError(TypeError)
 
-
   // object
   expect(() => {
-    simpleSchema({}, {
-      type: 'object'
-    })
+    simpleSchema(
+      {},
+      {
+        type: 'object'
+      }
+    )
   }).not.toThrowError(TypeError)
 
   expect(() => {
@@ -76,7 +80,6 @@ test('check type', () => {
       type: 'object'
     })
   }).toThrowError(TypeError)
-
 
   // string
   expect(() => {
@@ -92,18 +95,22 @@ test('check type', () => {
   }).toThrowError(TypeError)
 })
 
-test('fill defaultValue', () => {
+test('fill default value', () => {
   const defaultValue = '123'
 
   // fill defaultValue when value is undefined
-  expect(simpleSchema(undefined, {
-    type: 'string',
-    defaultValue: defaultValue
-  })).toBe(defaultValue)
+  expect(
+    simpleSchema(undefined, {
+      type: 'string',
+      default: defaultValue
+    })
+  ).toBe(defaultValue)
 
   // fill defaultValue when value is undefined
-  expect(simpleSchema(null, {
-    type: 'string',
-    defaultValue: defaultValue
-  })).toBe(defaultValue)
+  expect(
+    simpleSchema(null, {
+      type: 'string',
+      default: defaultValue
+    })
+  ).toBe(defaultValue)
 })

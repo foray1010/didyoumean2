@@ -1,31 +1,29 @@
-'use strict'
+import deburr from 'lodash.deburr'
+import * as R from 'ramda'
 
-const _deburr = require('lodash/deburr')
+const trimSpaces = R.compose(R.replace(/\s+/g, ' '), R.trim)
 
 /**
  * Normalize a string
  * @param {string} str - any string
- * @param {null|Object|undefined} options - options that allows you to modify the behavior
+ * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - normalized string
  */
-function normalizeString(str, options) {
-  const caseSensitive = options.caseSensitive
-  const deburr = options.deburr
-  const trimSpace = options.trimSpace
-
-  if (trimSpace) {
-    str = str.trim().replace(/\s+/g, ' ')
-  }
-
-  if (deburr) {
-    str = _deburr(str)
-  }
-
-  if (!caseSensitive) {
-    str = str.toLowerCase()
-  }
-
-  return str
+const normalizeString = (str, options) => {
+  return R.compose(
+    (s) => {
+      if (options.caseSensitive) return s
+      return R.toLower(s)
+    },
+    (s) => {
+      if (!options.deburr) return s
+      return deburr(s)
+    },
+    (s) => {
+      if (!options.trimSpaces) return s
+      return trimSpaces(s)
+    }
+  )(str)
 }
 
-module.exports = normalizeString
+export default normalizeString
