@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
     "esModuleInterop": true,
-    "lib": ["ES2017"],
+    "lib": ["ES2018"],
     "outDir": "dist",
     "resolveJsonModule": true,
     "sourceMap": true,
-    "strict": true
+    "strict": true,
+    "target": "ES5"
   },
   "files": ["src/index.ts"]
 }
