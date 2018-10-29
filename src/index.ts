@@ -182,3 +182,4 @@ const didYouMean = <T>(
 }
 
 export default didYouMean
+export {ReturnTypeEnums, ThresholdTypeEnums}

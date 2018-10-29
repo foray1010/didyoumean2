@@ -29,7 +29,18 @@ npm install didyoumean2
 ```
 
 ```js
-const didYouMean = require('didyoumean2')
+const didYouMean = require('didyoumean2').default
+// or if you are using TypeScript or ES module
+import didYouMean from 'didyoumean2'
+
+// you can also access to Enums via:
+const {
+  default: didYouMean,
+  ReturnTypeEnums,
+  ThresholdTypeEnums
+} = require('didyoumean2')
+// or
+import didYouMean, {ReturnTypeEnums, ThresholdTypeEnums} from 'didyoumean2'
 ```
 
 ## Usage
@@ -72,15 +83,15 @@ didYouMean(input, matchList[, options])
 
 #### `returnType {string}`
 
-- default: `'first-closest-match'`
+- default: `ReturnTypeEnums.FIRST_CLOSEST_MATCH`
 
-| returnType              | Description                                                       |
-|-------------------------|-------------------------------------------------------------------|
-| `'all-closest-matches'` | Return all matches with the closest value to the `input` in array |
-| `'all-matches'`         | Return all matches in array                                       |
-| `'all-sorted-matches'`  | Return all matches in array, sorted from closest to furthest      |
-| `'first-closest-match'` | Return first match from `'all-closest-matches'`                   |
-| `'first-match'`         | Return first match (__FASTEST__)                                  |
+| returnType                            | Description                                                       |
+|---------------------------------------|-------------------------------------------------------------------|
+| `ReturnTypeEnums.ALL_CLOSEST_MATCHES` | Return all matches with the closest value to the `input` in array |
+| `ReturnTypeEnums.ALL_MATCHES`         | Return all matches in array                                       |
+| `ReturnTypeEnums.ALL_SORTED_MATCHES`  | Return all matches in array, sorted from closest to furthest      |
+| `ReturnTypeEnums.FIRST_CLOSEST_MATCH` | Return first match from `ReturnTypeEnums.ALL_CLOSEST_MATCHES`     |
+| `ReturnTypeEnums.FIRST_MATCH`         | Return first match (__FASTEST__)                                  |
 
 #### `threshold {integer|number}`
 
@@ -94,12 +105,12 @@ didYouMean(input, matchList[, options])
 
 #### `thresholdType {string}`
 
-- default: `'similarity'`
+- default: `ThresholdTypeEnums.SIMILARITY`
 
-| thresholdType     | Description                                                                                                                                      |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| `'edit-distance'` | Refer to [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance), must be `integer`, lower value means more similar |
-| `'similarity'`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar        |
+| thresholdType                      | Description                                                                                                                                      |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ThresholdTypeEnums.EDIT_DISTANCE` | Refer to [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance), must be `integer`, lower value means more similar |
+| `ThresholdTypeEnums.SIMILARITY`    | `l = max(input.length, matchItem.length), similarity = (l - editDistance) / l`, `number` from `0` to `1`, higher value means more similar        |
 
 #### `trimSpaces {boolean}`
 
