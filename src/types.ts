@@ -1,8 +1,6 @@
 import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
 
-export type Maybe<T> = T | void
-
 export type InputOptions = {
   caseSensitive?: boolean
   deburr?: boolean
