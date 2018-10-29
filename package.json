@@ -1,6 +1,6 @@
 {
   "name": "didyoumean2",
-  "version": "2.0.0-0",
+  "version": "2.0.0-1",
   "license": "MIT",
   "main": "dist/index.js",
   "engines": {
