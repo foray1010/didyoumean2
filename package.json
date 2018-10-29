@@ -2,7 +2,7 @@
   "name": "didyoumean2",
   "version": "2.0.0-0",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=4.2"
   },
