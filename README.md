@@ -103,7 +103,7 @@ didYouMean(input, matchList[, options])
 
 #### `trimSpaces {boolean}`
 
-- default: `false` (will change to `true` in next major version)
+- default: `true`
 
 - Remove noises when matching
 
