@@ -1569,9 +1569,9 @@ eslint-config-airbnb@17.1.0:
     object.entries "^1.0.4"
 
 eslint-config-foray1010@^6.2.0:
-  version "6.17.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-foray1010/-/eslint-config-foray1010-6.17.3.tgz#d667b9ea7f0f7587203fe1fc10df1cb07213cb04"
-  integrity sha512-4np1Mqzmb22GtWKo0iM3NcNjU+bv1GMFyv+JoMeOxeOTLV5WCc97m4pmNawezIeZL8zghxa2YGAePYtcD8Ldyg==
+  version "6.17.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-foray1010/-/eslint-config-foray1010-6.17.4.tgz#f749d1f7c4778289da46cd7351af3767550623b5"
+  integrity sha512-LtOVD4FG4Q4xV5CyhNPeFCvaN99qjvLbTkvYssCOTt8HeHZZipd8SgKXvFX/ZRdJdvnYojEiACSRJFzlVCbOuw==
   dependencies:
     app-root-path "^2.0.1"
     babel-eslint "^10.0.1"
@@ -1580,12 +1580,12 @@ eslint-config-foray1010@^6.2.0:
     eslint-plugin-flowtype "^3.1.1"
     eslint-plugin-fp "^2.3.0"
     eslint-plugin-import "^2.14.0"
-    eslint-plugin-jest "^21.13.0"
+    eslint-plugin-jest "^22.0.0"
     eslint-plugin-jsx-a11y "^6.1.1"
     eslint-plugin-node "^8.0.0"
     eslint-plugin-ramda "^2.5.0"
     eslint-plugin-react "^7.11.0"
-    eslint-plugin-typescript "^0.12.0"
+    eslint-plugin-typescript "^0.13.0"
     typescript-eslint-parser "^20.0.0"
 
 eslint-import-resolver-node@^0.3.1:
@@ -1652,10 +1652,10 @@ eslint-plugin-import@^2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jest@^21.13.0:
-  version "21.26.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.26.2.tgz#5b24413970e83e2c5b87c5c047a08a4881783605"
-  integrity sha512-SCTBC6q182D4qQlQAN81D351jdte/YwTMo4f+l19Gvh1VemaNZP7ak3MLLvw6xkL9dO2FxVjCLk5DCdl1KfdLw==
+eslint-plugin-jest@^22.0.0:
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.0.1.tgz#796af66d2f86a1cb4193d4baefca9d2479c06e6c"
+  integrity sha512-thHQBWZefGO0yhjj8QA1iZ7V9S9LVk6nBK9s8B52Mg//Ly9OppFSGrrIruJ3hzgLpsLx6iIP/8/a8CfI8ESvRA==
 
 eslint-plugin-jsx-a11y@^6.1.1:
   version "6.1.2"
@@ -1703,10 +1703,10 @@ eslint-plugin-react@^7.11.0:
     jsx-ast-utils "^2.0.1"
     prop-types "^15.6.2"
 
-eslint-plugin-typescript@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-typescript/-/eslint-plugin-typescript-0.12.0.tgz#e23d58cb27fe28e89fc641a1f20e8d862cb99aef"
-  integrity sha512-2+DNE8nTvdNkhem/FBJXLPSeMDOZL68vHHNfTbM+PBc5iAuwBe8xLSQubwKxABqSZDwUHg+mwGmv5c2NlImi0Q==
+eslint-plugin-typescript@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-typescript/-/eslint-plugin-typescript-0.13.0.tgz#07fa9a166dee1daff14716c70fb8fb7c6583d852"
+  integrity sha512-dN8EwZfkOobYJ6VCFJ0Kd39OLSectdJlkG5L+VmA2BtMunZALQus6XLx21Gkj6vmfmUDk6uEGCB7JCszhvZoTA==
   dependencies:
     requireindex "~1.1.0"
 
