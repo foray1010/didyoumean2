@@ -31,7 +31,7 @@
     "eslint": "^5.8.0",
     "eslint-config-foray1010": "^6.2.0",
     "husky": "^1.1.2",
-    "ignore-sync": "^1.0.0",
+    "ignore-sync": "^2.0.0",
     "jest": "^23.6.0",
     "lint-staged": "^7.0.0",
     "markdownlint-cli": "^0.13.0",
