@@ -287,9 +287,9 @@
   integrity sha512-m8IcEWgJZTb47UARqp2d58f+C8yDxpTC6ElU/muO0z1bYhdgf6LHcO2SE9f1Mt3SJnKCh6GtjKEC99hq6vPnDA==
 
 "@types/seamless-immutable@^7.1.3":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@types/seamless-immutable/-/seamless-immutable-7.1.4.tgz#1f1ee3e4dd330ca7b00e6c931417a2882212cb69"
-  integrity sha512-yjH8mCCQHZuIJua876pJiQmNxT14GkvAAEkn91ITth8qT/ry5nnttIXEc4uGC4BjqippYZcwLcnUMF0SJgAwkA==
+  version "7.1.5"
+  resolved "https://registry.yarnpkg.com/@types/seamless-immutable/-/seamless-immutable-7.1.5.tgz#5aa6632a2156b434dfbb11d8a90ea678c58987a7"
+  integrity sha512-MVjSHt8mZ9lPKK35Nz5uU9OoE2UUtdOO4GdBSS7MF4DbYKx6SD3iHTFLPPo80BKpwruP6+SX0Obsx73i2KGR6A==
 
 JSONStream@^1.0.4:
   version "1.3.5"
