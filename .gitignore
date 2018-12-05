@@ -75,10 +75,13 @@ typings/
 .vuepress/dist
 
 # Serverless directories
-.serverless
+.serverless/
 
 # FuseBox cache
 .fusebox/
+
+#DynamoDB Local files 
+.dynamodb/ 
 
 # General
 .DS_Store

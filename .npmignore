@@ -75,10 +75,13 @@ typings/
 .vuepress/dist
 
 # Serverless directories
-.serverless
+.serverless/
 
 # FuseBox cache
 .fusebox/
+
+#DynamoDB Local files 
+.dynamodb/ 
 
 # General
 .DS_Store
@@ -146,6 +149,7 @@ $RECYCLE.BIN/
 *.lnk
 
 __mocks__/
+src/
 .*
 *.test.js
 circle.yml

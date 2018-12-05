@@ -6,6 +6,7 @@ Global/Windows.gitignore
 
 [inline]
 __mocks__/
+src/
 .*
 *.test.js
 circle.yml
