@@ -18,6 +18,8 @@ It is inspired by [didyoumean.js](https://github.com/dcporter/didyoumean.js).
 
 1. Well tested with 100% coverage
 
+1. Static type checking with [TypeScript](https://github.com/Microsoft/TypeScript)
+
 1. More control on what kind of matches you want to return
 
 1. Support matching object's `path` instead of just `key`
