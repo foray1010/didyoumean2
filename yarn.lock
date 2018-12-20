@@ -282,9 +282,9 @@
   integrity sha512-xyf2m6tRbz8qQKcxYZa7PA4SllYcay+eh25DN3jmNYY6gSTL7Htc/bttVdkqj2wfJGbeWlQiX8pIyJpKU+tubw==
 
 "@types/ramda@^0.25.40":
-  version "0.25.44"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.44.tgz#3e442ed487844a4fc33efed357d514940ef1b7fe"
-  integrity sha512-LaaBuiDSTo4FlsgNMpKoIgnbq85PP/blpptQgNijtR/H5iXhtBtByCLUElIEuSVxyno1h0yfHYqDooa+C1spIg==
+  version "0.25.45"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.45.tgz#e13456709bb4f2c5fcbfa6dcac8240eff75fe816"
+  integrity sha512-J+xlbNyag7wgYRSuvRwu9zZY7t0vM4KMUVHxWLUMegqlz9+97v6jYo2JlvfsVC3qtulx7PKenFKzWCWsdVSCDw==
 
 "@types/seamless-immutable@^7.1.3":
   version "7.1.5"
