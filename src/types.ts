@@ -1,7 +1,7 @@
 import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
 
-export type InputOptions = {
+export interface InputOptions {
   caseSensitive?: boolean
   deburr?: boolean
   matchPath?: Array<number | string>
@@ -11,7 +11,7 @@ export type InputOptions = {
   trimSpaces?: boolean
 }
 
-export type Options = {
+export interface Options {
   caseSensitive: boolean
   deburr: boolean
   matchPath: Array<number | string>
