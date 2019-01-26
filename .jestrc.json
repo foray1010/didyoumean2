@@ -1,9 +1,4 @@
 {
   "collectCoverage": true,
-  "coverageReporters": ["lcov", "text-summary"],
-  "moduleFileExtensions": ["js", "ts"],
-  "testRegex": ".*\\.test\\.ts$",
-  "transform": {
-    "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-  }
+  "coverageReporters": ["lcov", "text-summary"]
 }

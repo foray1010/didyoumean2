@@ -1,6 +1,9 @@
 ignore:
   - 'CHANGELOG.md'
 linters:
+  '.babelrc':
+    - 'prettier-eslint --parser json --write'
+    - 'git add'
   '*.ts':
     - 'prettier-eslint --write'
     - 'eslint --fix'
