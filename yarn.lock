@@ -852,10 +852,10 @@
   resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.47.tgz#904f2ee46149af42902fe7dc01867e32798e8b37"
   integrity sha512-+ffSU83+PR4/cZtNTkUcFkg70sK4GePle7p5h05bQ37ycPumOx/TBpU52bt36GKDlds6tCqXheqPvgC52MMLug==
 
-"@types/seamless-immutable@7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@types/seamless-immutable/-/seamless-immutable-7.1.5.tgz#5aa6632a2156b434dfbb11d8a90ea678c58987a7"
-  integrity sha512-MVjSHt8mZ9lPKK35Nz5uU9OoE2UUtdOO4GdBSS7MF4DbYKx6SD3iHTFLPPo80BKpwruP6+SX0Obsx73i2KGR6A==
+"@types/seamless-immutable@7.1.6":
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/@types/seamless-immutable/-/seamless-immutable-7.1.6.tgz#f578c2b8365f413c84a057263577d6f47f1341d9"
+  integrity sha512-sglWmIH/RIN14Lquz8/vlOyG8hUk4xVUeSnuwFq1bSIygglDUs2WQogjyBjIocjpU+QTfooyxrJZyAvyrfk1XA==
 
 "@typescript-eslint/eslint-plugin@^1.0.0":
   version "1.1.0"

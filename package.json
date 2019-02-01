@@ -29,7 +29,7 @@
     "@types/leven": "2.1.1",
     "@types/lodash.deburr": "4.1.4",
     "@types/ramda": "0.25.47",
-    "@types/seamless-immutable": "7.1.5",
+    "@types/seamless-immutable": "7.1.6",
     "cross-env": "5.2.0",
     "eslint": "5.10.0",
     "eslint-config-foray1010": "6.19.0",
