@@ -1,10 +1,8 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", ":assignAndReview(foray1010)", ":automergeMinor"],
   "node": {
     "supportPolicy": ["lts_active"]
   },
   "semanticCommits": true,
-  "prCreation": "not-pending",
-  "assignees": ["@foray1010"],
-  "reviewers": ["@foray1010"]
+  "prCreation": "not-pending"
 }
