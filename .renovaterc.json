@@ -1,0 +1,10 @@
+{
+  "extends": ["config:base"],
+  "node": {
+    "supportPolicy": ["lts_active"]
+  },
+  "semanticCommits": true,
+  "prCreation": "not-pending",
+  "assignees": ["@foray1010"],
+  "reviewers": ["@foray1010"]
+}
