@@ -40,7 +40,7 @@
     "markdownlint-cli": "0.13.0",
     "prettier-eslint-cli": "4.7.1",
     "seamless-immutable": "7.1.4",
-    "typescript": "3.2.4"
+    "typescript": "3.3.1"
   },
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
