@@ -61,6 +61,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -80,8 +81,8 @@ typings/
 # FuseBox cache
 .fusebox/
 
-#DynamoDB Local files 
-.dynamodb/ 
+# DynamoDB Local files
+.dynamodb/
 
 # General
 .DS_Store
@@ -153,4 +154,5 @@ src/
 .*
 *.test.js
 circle.yml
+tsconfig.json
 yarn.lock

@@ -10,4 +10,5 @@ src/
 .*
 *.test.js
 circle.yml
+tsconfig.json
 yarn.lock
