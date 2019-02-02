@@ -17,7 +17,7 @@ import {unknownReturnTypeError, unknownThresholdTypeError} from './errors'
  * @param {null|Object|undefined} options - options that allows you to modify the behavior
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-const didYouMean = <T>(
+const didYouMean = <T extends object | string>(
   input: string,
   matchList: Array<T>,
   options?: InputOptions
