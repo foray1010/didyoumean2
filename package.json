@@ -8,6 +8,7 @@
   },
   "sideEffects": false,
   "scripts": {
+    "ci": "yarn lint && yarn test",
     "dev": "tsc --watch",
     "ignore-sync": "ignore-sync",
     "lint": "eslint '**/*.ts'",
