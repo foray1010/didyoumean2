@@ -1,16 +1,14 @@
-import Immutable from 'seamless-immutable'
-
 import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
 import resultProcessor from './resultProcessor'
 
-const matchList = Immutable([
+const matchList = [
   'abc*******',
   'abcd******',
   'abcde*****',
   'ABCDEF****',
   'abcde*g***',
   'abcdef****'
-])
+]
 
 test('ALL_CLOSEST_MATCHES, ALL_MATCHES and ALL_SORTED_MATCHES', () => {
   for (const ENUM of [

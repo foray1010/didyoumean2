@@ -31,7 +31,6 @@
     "@types/leven": "2.1.1",
     "@types/lodash.deburr": "4.1.4",
     "@types/ramda": "0.25.47",
-    "@types/seamless-immutable": "7.1.6",
     "cross-env": "5.2.0",
     "eslint": "5.13.0",
     "eslint-config-foray1010": "6.19.0",
@@ -41,7 +40,6 @@
     "lint-staged": "8.1.1",
     "markdownlint-cli": "0.13.0",
     "prettier-eslint-cli": "4.7.1",
-    "seamless-immutable": "7.1.4",
     "typescript": "3.3.1"
   },
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",

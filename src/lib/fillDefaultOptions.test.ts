@@ -1,10 +1,8 @@
-import Immutable from 'seamless-immutable'
-
 import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from '../enums/ThresholdTypeEnums'
 import fillDefaultOptions from './fillDefaultOptions'
 
-const defaultOptions = Immutable({
+const defaultOptions = {
   caseSensitive: false,
   deburr: false,
   matchPath: [],
@@ -12,9 +10,9 @@ const defaultOptions = Immutable({
   threshold: 0.4,
   thresholdType: ThresholdTypeEnums.SIMILARITY,
   trimSpaces: true
-})
+}
 
-const defaultOptionsForEditDistance = Immutable({
+const defaultOptionsForEditDistance = {
   caseSensitive: false,
   deburr: false,
   matchPath: [],
@@ -22,7 +20,7 @@ const defaultOptionsForEditDistance = Immutable({
   threshold: 20,
   thresholdType: ThresholdTypeEnums.EDIT_DISTANCE,
   trimSpaces: true
-})
+}
 
 test('without arguments', () => {
   expect(fillDefaultOptions()).toEqual(defaultOptions)

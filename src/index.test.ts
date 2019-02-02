@@ -1,19 +1,18 @@
 import * as R from 'ramda'
-import Immutable from 'seamless-immutable'
 
 import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
 import didYouMean from './index'
 
 const input = 'abcdefghij'
-const matchList = Immutable([
+const matchList = [
   'abc*******',
   'abcd******',
   'abcde*****',
   'ABCDEF****',
   'abcde*g***',
   'abcdef****'
-])
+]
 
 test('without options', () => {
   expect(didYouMean(input, matchList)).toBe(matchList[3])
