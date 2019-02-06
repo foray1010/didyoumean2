@@ -14,7 +14,7 @@
     "lint": "eslint '**/*.ts'",
     "prepublishOnly": "shx rm -rf dist/ && tsc",
     "test": "cross-env NODE_ENV=test jest --config .jestrc.json",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit --project ./tsconfig.typecheck.json"
   },
   "dependencies": {
     "leven": "^2.0.0",

@@ -10,6 +10,5 @@
     "strict": true,
     "target": "ES5"
   },
-  "files": ["src/index.ts"],
-  "include": ["src/**/*.ts"]
+  "files": ["src/index.ts"]
 }
