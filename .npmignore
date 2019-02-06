@@ -154,4 +154,5 @@ src/
 .*
 *.test.js
 tsconfig.json
+tsconfig.typecheck.json
 yarn.lock
