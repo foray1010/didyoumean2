@@ -9,7 +9,7 @@ import {Options} from '../types'
  * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - processed matchItem
  */
-const matchItemProcessor = (matchItem: any, options: Options): string => {
+const matchItemProcessor = (matchItem: object | string, options: Options): string => {
   const matchPath = options.matchPath
 
   const matchItemStr: string =
