@@ -854,10 +854,10 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.117.tgz#695a7f514182771a1e0f4345d189052ee33c8778"
   integrity sha512-xyf2m6tRbz8qQKcxYZa7PA4SllYcay+eh25DN3jmNYY6gSTL7Htc/bttVdkqj2wfJGbeWlQiX8pIyJpKU+tubw==
 
-"@types/ramda@0.25.47":
-  version "0.25.47"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.47.tgz#904f2ee46149af42902fe7dc01867e32798e8b37"
-  integrity sha512-+ffSU83+PR4/cZtNTkUcFkg70sK4GePle7p5h05bQ37ycPumOx/TBpU52bt36GKDlds6tCqXheqPvgC52MMLug==
+"@types/ramda@0.25.48":
+  version "0.25.48"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.48.tgz#775fc56ae469394146edfff5996b201851bc39b6"
+  integrity sha512-tsNbe/ov4iweH8ADzQF0UN7TApU8iofYeZDZvfSyXQhfiZ2C2hUC3CN9EK0nYGIVqN+Ll5XelKHATDc50t3dlA==
 
 "@typescript-eslint/eslint-plugin@^1.0.0":
   version "1.1.0"
