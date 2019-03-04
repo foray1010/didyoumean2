@@ -905,10 +905,10 @@
   resolved "https://registry.yarnpkg.com/@types/leven/-/leven-2.1.1.tgz#7cdc02ec636f80dc0bb0a53d8ee7eff2d8e8e1d8"
   integrity sha512-f74SsCQnQzm244o5LHZgSLijrwG5e9BgkMHGbDlQThfh42q5RG4c+RNzUvZ347wAlQYD9kwu64qSNylxZdKs6w==
 
-"@types/lodash.deburr@4.1.5":
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/@types/lodash.deburr/-/lodash.deburr-4.1.5.tgz#1c6c01874dcc7e16af9e85ccfcd59f390bfa7a1b"
-  integrity sha512-1EwpeigD3tW6r4kQX8IFSvIn2pxExFKxIW84oNcyQzqJlJdBFvsjKJpdtNk4lYxFvOwMMnoz0z+lZRrPG/B0vg==
+"@types/lodash.deburr@4.1.6":
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.deburr/-/lodash.deburr-4.1.6.tgz#18b3bebd941c4b622cd2278fed18017dfc32ce3f"
+  integrity sha512-LsdZUIBM/YDQ4+w4/PSq2KTRRuCmBic48vzzKD7PHw1uIsKMWizwDtk0fMdqYmo9/iLMhHiFh2ol0eqhjT0VTg==
   dependencies:
     "@types/lodash" "*"
 
