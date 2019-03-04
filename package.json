@@ -29,7 +29,7 @@
     "@commitlint/config-conventional": "7.5.0",
     "@types/jest": "24.0.9",
     "@types/leven": "2.1.1",
-    "@types/lodash.deburr": "4.1.5",
+    "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.25.51",
     "eslint": "5.15.0",
     "eslint-config-foray1010": "7.1.2",
