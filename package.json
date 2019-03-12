@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit --project ./tsconfig.typecheck.json"
   },
   "dependencies": {
-    "leven": "^2.0.0",
+    "leven": "^3.0.0",
     "lodash.deburr": "^4.1.0",
     "ramda": "^0.26.1"
   },
