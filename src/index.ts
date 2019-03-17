@@ -2,13 +2,13 @@ import leven from 'leven'
 
 import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
+import {unknownReturnTypeError, unknownThresholdTypeError} from './errors'
+import fillDefaultOptions from './lib/fillDefaultOptions'
 import getSimilarity from './lib/getSimilarity'
 import matchItemProcessor from './lib/matchItemProcessor'
 import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
 import {InputOptions} from './types'
-import fillDefaultOptions from './lib/fillDefaultOptions'
-import {unknownReturnTypeError, unknownThresholdTypeError} from './errors'
 
 /**
  * Main function for didyoumean2

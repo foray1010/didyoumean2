@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 
-import normalizeString from './normalizeString'
 import {Options} from '../types'
+import normalizeString from './normalizeString'
 
 /**
  * Process matchItem according to options

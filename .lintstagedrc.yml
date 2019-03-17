@@ -5,6 +5,7 @@ linters:
     - 'prettier-eslint --parser json --write'
     - 'git add'
   '*.ts':
+    - 'import-sort --write'
     - 'prettier-eslint --write'
     - 'eslint --fix'
     - 'jest --bail --findRelatedTests --config .jestrc.json'

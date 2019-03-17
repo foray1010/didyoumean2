@@ -2,8 +2,8 @@ import * as R from 'ramda'
 
 import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
 import {ThresholdTypeEnums} from '../enums/ThresholdTypeEnums'
-import {InputOptions, Options} from '../types'
 import {unknownThresholdTypeError} from '../errors'
+import {InputOptions, Options} from '../types'
 
 type FillDefaultOptions = (options?: InputOptions) => Options
 const fillDefaultOptions: FillDefaultOptions = R.compose(

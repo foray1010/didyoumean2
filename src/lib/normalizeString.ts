@@ -1,5 +1,6 @@
 import deburr from 'lodash.deburr'
 import * as R from 'ramda'
+
 import {Options} from '../types'
 
 const trimSpaces = R.compose(
