@@ -11,7 +11,7 @@
     "ci": "yarn lint && yarn typecheck && yarn test",
     "dev": "shx rm -rf dist/ && tsc --watch",
     "ignore-sync": "ignore-sync",
-    "lint": "eslint '**/*.ts'",
+    "lint": "eslint --ext ts .",
     "prepublishOnly": "shx rm -rf dist/ && tsc",
     "test": "jest --config .jestrc.json",
     "typecheck": "tsc --noEmit --project ./tsconfig.typecheck.json"
