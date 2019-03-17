@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file. See [standa
 ## [2.0.4](https://github.com/foray1010/didyoumean2/compare/v2.0.3...v2.0.4) (2019-03-17)
 
 
+### Bug Fixes
+
+* Revert "fix(deps): update dependency leven to v3 ([#132](https://github.com/foray1010/didyoumean2/issues/132)))" ([b500e58](https://github.com/foray1010/didyoumean2/commit/b500e58)) as leven v3 doesn't support node 4
+
+
+
 
 ## [2.0.3](https://github.com/foray1010/didyoumean2/compare/v2.0.2...v2.0.3) (2019-03-17)
 
