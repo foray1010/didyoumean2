@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit --project ./tsconfig.typecheck.json"
   },
   "dependencies": {
-    "leven": "^2.0.0",
+    "leven": "^3.0.0",
     "lodash.deburr": "^4.1.0",
     "ramda": "^0.26.1"
   },
@@ -28,7 +28,6 @@
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
     "@types/jest": "24.0.11",
-    "@types/leven": "2.1.1",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.5",
     "eslint": "5.15.3",
