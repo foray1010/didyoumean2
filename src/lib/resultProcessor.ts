@@ -8,8 +8,8 @@ import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
 const resultProcessor = <T>(
-  matchList: Array<T>,
-  matchedIndexes: Array<number>,
+  matchList: ReadonlyArray<T>,
+  matchedIndexes: ReadonlyArray<number>,
   returnType: ReturnTypeEnums
 ): Array<T> | T | null => {
   switch (returnType) {

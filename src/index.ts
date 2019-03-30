@@ -19,7 +19,7 @@ import {InputOptions} from './types'
  */
 const didYouMean = <T extends object | string>(
   input: string,
-  matchList: Array<T>,
+  matchList: ReadonlyArray<T>,
   options?: InputOptions
 ): Array<T> | T | null => {
   /*+++++++++++++++++++
