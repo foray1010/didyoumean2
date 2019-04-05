@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [3.0.0](https://github.com/foray1010/didyoumean2/compare/v2.0.4...v3.0.0) (2019-04-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency leven to v3 ([#132](https://github.com/foray1010/didyoumean2/issues/132)) ([0e489ec](https://github.com/foray1010/didyoumean2/commit/0e489ec))
+
+
+### chore
+
+* only support node >= 6.9 ([8bff8be](https://github.com/foray1010/didyoumean2/commit/8bff8be))
+
+
+### Features
+
+* accept readonly arguments ([c182207](https://github.com/foray1010/didyoumean2/commit/c182207))
+
+
+### BREAKING CHANGES
+
+* require TypeScript >=3.4
+* drop node >= 4.2 < 6.9
+
+
+
 ## [2.0.4](https://github.com/foray1010/didyoumean2/compare/v2.0.3...v2.0.4) (2019-03-17)
 
 
