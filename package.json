@@ -8,13 +8,14 @@
   },
   "sideEffects": false,
   "scripts": {
-    "ci": "yarn lint && yarn typecheck && yarn test",
+    "ci": "npm-run-all -p lint type:* test",
     "dev": "shx rm -rf dist/ && tsc --watch",
     "ignore-sync": "ignore-sync",
     "lint": "eslint --ext ts .",
     "prepublishOnly": "shx rm -rf dist/ && tsc",
     "test": "jest --config .jestrc.json",
-    "typecheck": "tsc --noEmit --project ./tsconfig.typecheck.json"
+    "type:check": "tsc --noEmit --project ./tsconfig.typecheck.json",
+    "type:coverage": "type-coverage --strict --at-least 94 --detail --ignore-catch"
   },
   "dependencies": {
     "leven": "^3.1.0",
@@ -40,8 +41,10 @@
     "jest": "24.7.1",
     "lint-staged": "8.1.5",
     "markdownlint-cli": "0.15.0",
+    "npm-run-all": "4.1.5",
     "prettier-eslint-cli": "4.7.1",
     "shx": "0.3.2",
+    "type-coverage": "1.14.0",
     "typescript": "3.4.5"
   },
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
