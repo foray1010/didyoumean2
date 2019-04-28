@@ -32,7 +32,7 @@
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.8",
     "eslint": "5.16.0",
-    "eslint-config-foray1010": "7.2.0",
+    "eslint-config-foray1010": "7.3.0",
     "husky": "2.1.0",
     "ignore-sync": "2.0.0",
     "import-sort-cli": "6.0.0",
