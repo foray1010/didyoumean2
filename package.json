@@ -28,7 +28,7 @@
     "@babel/preset-typescript": "7.3.3",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
-    "@types/jest": "24.0.11",
+    "@types/jest": "24.0.12",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.8",
     "eslint": "5.16.0",
