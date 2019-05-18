@@ -1,20 +1,19 @@
-ignore:
-  - 'CHANGELOG.md'
-linters:
-  '.babelrc':
-    - 'prettier-eslint --parser json --write'
-    - 'git add'
-  '*.ts':
-    - 'import-sort --write'
-    - 'prettier-eslint --write'
-    - 'eslint --fix'
-    - 'jest --bail --findRelatedTests --config .jestrc.json'
-    - 'git add'
-  '*.{json,yaml,yml}':
-    - 'prettier-eslint --write'
-    - 'git add'
-  '*.md':
-    - 'markdownlint'
-  '*ignore-sync':
-    - 'ignore-sync'
-    - 'git add'
+'.babelrc':
+  - 'prettier-eslint --parser json --write'
+  - 'git add'
+'*.ts':
+  - 'import-sort --write'
+  - 'prettier-eslint --write'
+  - 'eslint --fix'
+  - 'jest --bail --findRelatedTests --config .jestrc.json'
+  - 'git add'
+'*.{json,yaml,yml}':
+  - 'prettier-eslint --write'
+  - 'git add'
+'*.md':
+  - 'prettier-eslint --write'
+  - 'markdownlint'
+  - 'git add'
+'*ignore-sync':
+  - 'ignore-sync'
+  - 'git add'
