@@ -4,7 +4,7 @@
   "schedule": ["after 2am and before 6am"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": "after 2am and before 6am on Monday"
+    "schedule": ["after 2am and before 6am on Monday"]
   },
   "node": {
     "supportPolicy": ["lts_active"]
