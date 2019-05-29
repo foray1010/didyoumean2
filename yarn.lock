@@ -3123,19 +3123,7 @@ glob-to-regexp@^0.3.0:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
   integrity sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=
 
-glob@7.1.3:
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
-  integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@~7.1.2:
+glob@7.1.4, glob@^7.0.0, glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@~7.1.2:
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
   integrity sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
@@ -6826,22 +6814,22 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-coverage-core@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.0.1.tgz#5f0be8487e0c28220bb350507b7f2c255f845626"
-  integrity sha512-0EHUwGxcrE6ELc6wkRXLksikbZKaqmaPvVD23eYXHOVxTNdS+b1HmN508hFJrys1Haz3avYxduQEfg3i+2yDVQ==
+type-coverage-core@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.0.2.tgz#59eb26761b09c305472b4e1e04c3be7e0b64f1c4"
+  integrity sha512-C7MCQMcjNX/kQZ4BhdBIL9SpEjqpYp8gTaR1qk5d78h8CA0cmtZxsCThK5GH6Zx9hYMvWTVN/hu0FMPCIiTrfw==
   dependencies:
-    glob "7.1.3"
+    glob "7.1.4"
     tslib "1"
     tsutils "3"
 
-type-coverage@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.0.1.tgz#c2a88fcb63d883a42beaf9899298dfa8100b53e8"
-  integrity sha512-swCLVLCm4XxRiQaI950tr+nts7pR+3vJMbdQPa/JWCycQO1+AmGA9Sv8N2aaDD5f7cRT6ICB8h4dPXcUmJY3oA==
+type-coverage@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.0.2.tgz#ed5c39fe887de6346b70fa9086b996524cf80c4b"
+  integrity sha512-MORDwE6t66oWoG/Y/yOwoo1HKv1P+EYiz5ZFg0GaoJCGUUp8TjVAoObuiRYk0VZwETOf91zKkeuQRiEn5EOtrQ==
   dependencies:
     minimist "1.2.0"
-    type-coverage-core "^2.0.1"
+    type-coverage-core "^2.0.2"
 
 type-fest@^0.4.1:
   version "0.4.1"
