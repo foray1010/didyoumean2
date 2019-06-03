@@ -4,6 +4,7 @@
     "declarationMap": true,
     "esModuleInterop": true,
     "lib": ["ES2018"],
+    "moduleResolution": "node",
     "outDir": "dist",
     "resolveJsonModule": true,
     "sourceMap": true,
