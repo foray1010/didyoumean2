@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationMap": true,
+    "declarationDir": "dist-dts",
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "lib": ["ES2018"],
+    "lib": ["es2018"],
     "moduleResolution": "node",
-    "outDir": "dist",
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
