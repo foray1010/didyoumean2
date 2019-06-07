@@ -1,6 +1,21 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.1.0](https://github.com/foray1010/didyoumean2/compare/v3.0.0...v3.1.0) (2019-06-07)
+
+### Build System
+
+- set moduleResolution to node ([e7e6fb4](https://github.com/foray1010/didyoumean2/commit/e7e6fb4))
+
+### Features
+
+- provide esm build ([8e9a755](https://github.com/foray1010/didyoumean2/commit/8e9a755))
+- provide umd build ([ab96a8c](https://github.com/foray1010/didyoumean2/commit/ab96a8c))
+
+### Tests
+
+- add type-coverage to ensure typescript coverage ([a19cf85](https://github.com/foray1010/didyoumean2/commit/a19cf85))
 
 ## [3.0.0](https://github.com/foray1010/didyoumean2/compare/v2.0.4...v3.0.0) (2019-04-05)
 
