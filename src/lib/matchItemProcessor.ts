@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+import pathOr from 'ramda/src/pathOr'
 
 import {Options} from '../types'
 import normalizeString from './normalizeString'
@@ -10,10 +10,10 @@ import normalizeString from './normalizeString'
  * @returns {string} - processed matchItem
  */
 const matchItemProcessor = (matchItem: object | string, options: Options): string => {
-  const matchPath = options.matchPath
+  const {matchPath} = options
 
   const matchItemStr: string =
-    Array.isArray(matchPath) && matchPath.length ? R.pathOr('', matchPath, matchItem) : matchItem
+    Array.isArray(matchPath) && matchPath.length ? pathOr('', matchPath, matchItem) : matchItem
 
   return normalizeString(matchItemStr, options)
 }

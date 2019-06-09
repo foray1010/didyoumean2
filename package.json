@@ -28,7 +28,7 @@
     "prepublishOnly": "yarn ci",
     "test": "jest --config .jestrc.json",
     "type:check": "tsc --noEmit --project ./tsconfig.typecheck.json",
-    "type:coverage": "type-coverage --strict --at-least 94 --detail --ignore-catch"
+    "type:coverage": "type-coverage --strict --at-least 93 --detail --ignore-catch"
   },
   "dependencies": {
     "leven": "^3.1.0",
