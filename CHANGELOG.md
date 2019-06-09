@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/foray1010/didyoumean2/compare/v3.1.0...v3.1.1) (2019-06-09)
+
+### Build System
+
+- greatly reduce bundle size by rely less on ramda ([69ec2b6](https://github.com/foray1010/didyoumean2/commit/69ec2b6))
+
 ## [3.1.0](https://github.com/foray1010/didyoumean2/compare/v3.0.0...v3.1.0) (2019-06-07)
 
 ### Build System
