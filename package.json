@@ -49,7 +49,7 @@
     "@types/rollup-plugin-json": "3.0.2",
     "eslint": "5.16.0",
     "eslint-config-foray1010": "7.3.0",
-    "husky": "2.5.0",
+    "husky": "2.6.0",
     "ignore-sync": "2.0.1",
     "import-sort-cli": "6.0.0",
     "import-sort-parser-typescript": "6.0.0",
