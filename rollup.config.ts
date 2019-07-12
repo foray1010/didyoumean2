@@ -4,7 +4,6 @@ import commonjs from 'rollup-plugin-commonjs'
 import dts from 'rollup-plugin-dts'
 import json from 'rollup-plugin-json'
 import resolve from 'rollup-plugin-node-resolve'
-// @ts-ignore
 import {terser} from 'rollup-plugin-terser'
 
 export default [
