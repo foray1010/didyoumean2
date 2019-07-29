@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/foray1010/didyoumean2/compare/v3.1.1...v3.1.2) (2019-07-29)
+
+### Bug Fixes
+
+- do not throw error when matched item is not string ([656f555](https://github.com/foray1010/didyoumean2/commit/656f555))
+
 ### [3.1.1](https://github.com/foray1010/didyoumean2/compare/v3.1.0...v3.1.1) (2019-06-09)
 
 ### Build System
