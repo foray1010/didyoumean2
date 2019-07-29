@@ -29,4 +29,17 @@ test('matchPath', () => {
       })
     )
   ).toBe('AbC')
+
+  expect(
+    matchItemProcessor(
+      {
+        a: {
+          b: 123
+        }
+      },
+      fillDefaultOptions({
+        matchPath: ['a', 'b']
+      })
+    )
+  ).toBe('')
 })
