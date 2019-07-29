@@ -12,8 +12,11 @@ import normalizeString from './normalizeString'
 const matchItemProcessor = (matchItem: object | string, options: Options): string => {
   const {matchPath} = options
 
-  const matchItemStr: string =
+  const matchItemStr =
     Array.isArray(matchPath) && matchPath.length ? pathOr('', matchPath, matchItem) : matchItem
+  if (typeof matchItemStr !== 'string') {
+    return ''
+  }
 
   return normalizeString(matchItemStr, options)
 }
