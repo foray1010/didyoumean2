@@ -1022,7 +1022,7 @@
   dependencies:
     size-limit "2.0.2"
 
-"@size-limit/preset-small-lib@^2.0.2":
+"@size-limit/preset-small-lib@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-2.0.2.tgz#83bb278682533861a407b5dbe31c88cb7c03c005"
   integrity sha512-Fzf45N3eMoAk5jgt3wA8x0Ad7Uri+VS4qtmrwASZCTUgQ8pgij4uVx5PSdW1Gyym9dQGmwXA2Q0kiAbXXyEh/w==
