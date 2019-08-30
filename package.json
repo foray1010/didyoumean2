@@ -48,7 +48,7 @@
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.21",
     "@types/rollup-plugin-json": "3.0.2",
-    "eslint": "6.2.2",
+    "eslint": "6.3.0",
     "eslint-config-foray1010": "8.0.0",
     "husky": "3.0.4",
     "ignore-sync": "2.0.1",
