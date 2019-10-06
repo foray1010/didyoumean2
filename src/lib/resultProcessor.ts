@@ -16,7 +16,7 @@ const resultProcessor = <T>(
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
     case ReturnTypeEnums.ALL_MATCHES:
     case ReturnTypeEnums.ALL_SORTED_MATCHES:
-      return matchedIndexes.map((matchedIndex) => matchList[matchedIndex])
+      return matchedIndexes.map(matchedIndex => matchList[matchedIndex])
 
     case ReturnTypeEnums.FIRST_CLOSEST_MATCH:
     case ReturnTypeEnums.FIRST_MATCH:
