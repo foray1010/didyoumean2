@@ -7845,10 +7845,10 @@ rollup-plugin-commonjs@10.1.0:
     resolve "^1.11.0"
     rollup-pluginutils "^2.8.1"
 
-rollup-plugin-dts@1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-dts/-/rollup-plugin-dts-1.1.7.tgz#b823295b1b9ffb1f358456c3e669eefa2562437e"
-  integrity sha512-a0Td+PHzfxuFVFTNwA0OPiWf6b8JPpLoutKld3Jc/JaGNlXmfFMQ8AxmK+ScQ/kPcfnjVivZpxw2XpkENzginA==
+rollup-plugin-dts@1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-dts/-/rollup-plugin-dts-1.1.10.tgz#c02af1e41ce0373761a5d91821879f37fd3ccf52"
+  integrity sha512-BYbT8cvlRW7YxDPaMZ0MWgW1LgD/ys6ZmDVWwxMJemBDUUR/hqIo7JAxtMJPlqcHtB5c3UKWZuB1WVXX1sYZkQ==
   optionalDependencies:
     "@babel/code-frame" "^7.5.5"
 
