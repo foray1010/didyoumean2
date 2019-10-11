@@ -1,4 +1,4 @@
-import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
 import resultProcessor from './resultProcessor'
 
 const matchList = [
@@ -7,19 +7,19 @@ const matchList = [
   'abcde*****',
   'ABCDEF****',
   'abcde*g***',
-  'abcdef****'
+  'abcdef****',
 ]
 
 test('ALL_CLOSEST_MATCHES, ALL_MATCHES and ALL_SORTED_MATCHES', () => {
   for (const ENUM of [
     ReturnTypeEnums.ALL_CLOSEST_MATCHES,
     ReturnTypeEnums.ALL_MATCHES,
-    ReturnTypeEnums.ALL_SORTED_MATCHES
+    ReturnTypeEnums.ALL_SORTED_MATCHES,
   ]) {
     expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toEqual([
       'ABCDEF****',
       'abcde*g***',
-      'abcdef****'
+      'abcdef****',
     ])
 
     expect(resultProcessor(matchList, [], ENUM)).toEqual([])
@@ -27,7 +27,10 @@ test('ALL_CLOSEST_MATCHES, ALL_MATCHES and ALL_SORTED_MATCHES', () => {
 })
 
 test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
-  for (const ENUM of [ReturnTypeEnums.FIRST_CLOSEST_MATCH, ReturnTypeEnums.FIRST_MATCH]) {
+  for (const ENUM of [
+    ReturnTypeEnums.FIRST_CLOSEST_MATCH,
+    ReturnTypeEnums.FIRST_MATCH,
+  ]) {
     expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toEqual('ABCDEF****')
 
     expect(resultProcessor(matchList, [], ENUM)).toEqual(null)

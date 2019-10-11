@@ -1,14 +1,14 @@
 import leven from 'leven'
 
-import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
-import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
-import {unknownReturnTypeError, unknownThresholdTypeError} from './errors'
+import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
+import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
+import { unknownReturnTypeError, unknownThresholdTypeError } from './errors'
 import fillDefaultOptions from './lib/fillDefaultOptions'
 import getSimilarity from './lib/getSimilarity'
 import matchItemProcessor from './lib/matchItemProcessor'
 import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
-import {InputOptions} from './types'
+import { InputOptions } from './types'
 
 /**
  * Main function for didyoumean2
@@ -20,7 +20,7 @@ import {InputOptions} from './types'
 const didYouMean = <T extends object | string>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options?: InputOptions
+  options?: InputOptions,
 ): Array<T> | T | null => {
   /*+++++++++++++++++++
    + Initiate options +
@@ -28,7 +28,7 @@ const didYouMean = <T extends object | string>(
 
   const optionsWithDefaults = fillDefaultOptions(options)
 
-  const {returnType, threshold, thresholdType} = optionsWithDefaults
+  const { returnType, threshold, thresholdType } = optionsWithDefaults
 
   /*++++++++++++++++++++
    + Deal with options +
@@ -42,13 +42,19 @@ const didYouMean = <T extends object | string>(
     case ThresholdTypeEnums.EDIT_DISTANCE:
       checkIfMatched = (score: number) => score <= threshold
       scoreProcessor = (matchItem: T) =>
-        leven(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
+        leven(
+          normalizedInput,
+          matchItemProcessor(matchItem, optionsWithDefaults),
+        )
       break
 
     case ThresholdTypeEnums.SIMILARITY:
       checkIfMatched = (score: number) => score >= threshold
       scoreProcessor = (matchItem: T) =>
-        getSimilarity(normalizedInput, matchItemProcessor(matchItem, optionsWithDefaults))
+        getSimilarity(
+          normalizedInput,
+          matchItemProcessor(matchItem, optionsWithDefaults),
+        )
       break
 
     /* istanbul ignore next */ default:
@@ -132,7 +138,7 @@ const didYouMean = <T extends object | string>(
         if (checkIfMatched(score)) {
           unsortedResults.push({
             score,
-            index: i
+            index: i,
           })
         }
       }
@@ -182,4 +188,4 @@ const didYouMean = <T extends object | string>(
 }
 
 export default didYouMean
-export {ReturnTypeEnums, ThresholdTypeEnums}
+export { ReturnTypeEnums, ThresholdTypeEnums }

@@ -6,18 +6,18 @@ test('caseSensitive', () => {
     normalizeString(
       'AbC',
       fillDefaultOptions({
-        caseSensitive: false
-      })
-    )
+        caseSensitive: false,
+      }),
+    ),
   ).toBe('abc')
 
   expect(
     normalizeString(
       'AbC',
       fillDefaultOptions({
-        caseSensitive: true
-      })
-    )
+        caseSensitive: true,
+      }),
+    ),
   ).toBe('AbC')
 })
 
@@ -27,9 +27,9 @@ test('deburr', () => {
       'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG',
       fillDefaultOptions({
         deburr: true,
-        caseSensitive: true
-      })
-    )
+        caseSensitive: true,
+      }),
+    ),
   ).toBe('THE QUICK BROWN ƑOX JUMPS OVER DE LAZY DOG')
 
   expect(
@@ -37,9 +37,9 @@ test('deburr', () => {
       'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG',
       fillDefaultOptions({
         deburr: true,
-        caseSensitive: false
-      })
-    )
+        caseSensitive: false,
+      }),
+    ),
   ).toBe('the quick brown ƒox jumps over de lazy dog')
 
   expect(
@@ -47,9 +47,9 @@ test('deburr', () => {
       'THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG',
       fillDefaultOptions({
         deburr: false,
-        caseSensitive: true
-      })
-    )
+        caseSensitive: true,
+      }),
+    ),
   ).toBe('THÈ QÛÌÇK BRÒWÑ ƑÓX JÚMPŠ ØVËR ÐË LÅŽŸ DÕG')
 })
 
@@ -58,17 +58,17 @@ test('trimSpaces', () => {
     normalizeString(
       '   abc   def  g ',
       fillDefaultOptions({
-        trimSpaces: false
-      })
-    )
+        trimSpaces: false,
+      }),
+    ),
   ).toBe('   abc   def  g ')
 
   expect(
     normalizeString(
       '   abc   def  g ',
       fillDefaultOptions({
-        trimSpaces: true
-      })
-    )
+        trimSpaces: true,
+      }),
+    ),
   ).toBe('abc def g')
 })

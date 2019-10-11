@@ -827,6 +827,11 @@
     eslint-plugin-react-hooks "^2.1.2"
     typescript "^3.6.3"
 
+"@foray1010/prettierrc@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettierrc/-/prettierrc-1.0.1.tgz#0ea59f69e576cdb6f527040c8604e4c39f99ad13"
+  integrity sha512-w1xS53XpL/PlIHKbEy2J2Ym2qYYNf8zjAhozptLMoIZlCyRwwP5i+fNyfGZL2yQlBy1XSdXjq0Rk1wuUAXddSg==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"

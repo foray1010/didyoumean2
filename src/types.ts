@@ -1,5 +1,5 @@
-import {ReturnTypeEnums} from './enums/ReturnTypeEnums'
-import {ThresholdTypeEnums} from './enums/ThresholdTypeEnums'
+import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
+import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
 
 export type Options = Readonly<{
   caseSensitive: boolean

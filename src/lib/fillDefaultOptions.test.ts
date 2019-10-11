@@ -1,5 +1,5 @@
-import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
-import {ThresholdTypeEnums} from '../enums/ThresholdTypeEnums'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
+import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
 import fillDefaultOptions from './fillDefaultOptions'
 
 const defaultOptions = {
@@ -9,7 +9,7 @@ const defaultOptions = {
   returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 0.4,
   thresholdType: ThresholdTypeEnums.SIMILARITY,
-  trimSpaces: true
+  trimSpaces: true,
 }
 
 const defaultOptionsForEditDistance = {
@@ -19,7 +19,7 @@ const defaultOptionsForEditDistance = {
   returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 20,
   thresholdType: ThresholdTypeEnums.EDIT_DISTANCE,
-  trimSpaces: true
+  trimSpaces: true,
 }
 
 test('without arguments', () => {
@@ -29,7 +29,7 @@ test('without arguments', () => {
 test(`thresholdType: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
   expect(
     fillDefaultOptions({
-      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE
-    })
+      thresholdType: ThresholdTypeEnums.EDIT_DISTANCE,
+    }),
   ).toEqual(defaultOptionsForEditDistance)
 })

@@ -6,40 +6,40 @@ test('matchPath', () => {
     matchItemProcessor(
       {
         a: {
-          b: 'AbC'
-        }
+          b: 'AbC',
+        },
       },
       fillDefaultOptions({
         caseSensitive: false,
-        matchPath: ['a', 'b']
-      })
-    )
+        matchPath: ['a', 'b'],
+      }),
+    ),
   ).toBe('abc')
 
   expect(
     matchItemProcessor(
       {
         a: {
-          b: 'AbC'
-        }
+          b: 'AbC',
+        },
       },
       fillDefaultOptions({
         caseSensitive: true,
-        matchPath: ['a', 'b']
-      })
-    )
+        matchPath: ['a', 'b'],
+      }),
+    ),
   ).toBe('AbC')
 
   expect(
     matchItemProcessor(
       {
         a: {
-          b: 123
-        }
+          b: 123,
+        },
       },
       fillDefaultOptions({
-        matchPath: ['a', 'b']
-      })
-    )
+        matchPath: ['a', 'b'],
+      }),
+    ),
   ).toBe('')
 })

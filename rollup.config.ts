@@ -4,7 +4,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import dts from 'rollup-plugin-dts'
 import json from 'rollup-plugin-json'
 import resolve from 'rollup-plugin-node-resolve'
-import {terser} from 'rollup-plugin-terser'
+import { terser } from 'rollup-plugin-terser'
 
 export default [
   {
@@ -14,28 +14,28 @@ export default [
         exports: 'named',
         file: 'dist/index.cjs.js',
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
       },
       {
         exports: 'named',
         file: 'dist/index.esm.js',
         format: 'esm',
-        sourcemap: true
-      }
+        sourcemap: true,
+      },
     ],
     plugins: [
       babel({
-        extensions: ['.ts']
+        extensions: ['.ts'],
       }),
       commonjs({
-        extensions: ['.ts']
+        extensions: ['.ts'],
       }),
       json(),
-      terser()
+      terser(),
     ],
     watch: {
-      clearScreen: false
-    }
+      clearScreen: false,
+    },
   },
   {
     input: 'src/index.ts',
@@ -44,23 +44,23 @@ export default [
       file: 'dist/index.umd.js',
       format: 'umd',
       name: 'didYouMean',
-      sourcemap: true
+      sourcemap: true,
     },
     plugins: [
       babel({
-        extensions: ['.ts']
+        extensions: ['.ts'],
       }),
       commonjs({
-        extensions: ['.js', '.ts']
+        extensions: ['.js', '.ts'],
       }),
       resolve(),
       json(),
-      terser()
-    ]
+      terser(),
+    ],
   },
   {
     input: 'dist-dts/index.d.ts',
-    output: {file: 'dist/index.d.ts'},
-    plugins: [dts()]
-  }
+    output: { file: 'dist/index.d.ts' },
+    plugins: [dts()],
+  },
 ]

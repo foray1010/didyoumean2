@@ -1,7 +1,7 @@
-import {ReturnTypeEnums} from '../enums/ReturnTypeEnums'
-import {ThresholdTypeEnums} from '../enums/ThresholdTypeEnums'
-import {unknownThresholdTypeError} from '../errors'
-import {InputOptions, Options} from '../types'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
+import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
+import { unknownThresholdTypeError } from '../errors'
+import { InputOptions, Options } from '../types'
 
 const fillDefaultOptions = (options?: InputOptions): Options => {
   const optionsWithDefaultValues = {
@@ -11,20 +11,20 @@ const fillDefaultOptions = (options?: InputOptions): Options => {
     returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
     thresholdType: ThresholdTypeEnums.SIMILARITY,
     trimSpaces: true,
-    ...options
+    ...options,
   }
 
   switch (optionsWithDefaultValues.thresholdType) {
     case ThresholdTypeEnums.EDIT_DISTANCE:
       return {
         threshold: 20,
-        ...optionsWithDefaultValues
+        ...optionsWithDefaultValues,
       }
 
     case ThresholdTypeEnums.SIMILARITY:
       return {
         threshold: 0.4,
-        ...optionsWithDefaultValues
+        ...optionsWithDefaultValues,
       }
 
     /* istanbul ignore next */
