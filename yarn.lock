@@ -811,10 +811,10 @@
   dependencies:
     find-up "^4.0.0"
 
-"@foray1010/eslint-config@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-1.2.3.tgz#2a9f73236de46fb4981946118d35213b21cd9ef5"
-  integrity sha512-mwA0YaoiwUb+9N2oCBKNqloGG9GTyPnij+9MRMRDvUv+EVsL56yvNeY7q2i6wb7JRr9loOVII3pdqSEWg9dfqQ==
+"@foray1010/eslint-config@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-1.3.0.tgz#72ec8acaad933bfa4d50e383a4ec05952294312d"
+  integrity sha512-04ELFtCYej9TzkLmHi82URNWQZDNaMNokKtHCBZEJ0+/6Q4d9yFhtIMiPrXi7tJP0XDyz+P8aQkPISfQ0fOv5Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.3.2"
     "@typescript-eslint/parser" "^2.3.2"
@@ -827,10 +827,10 @@
     eslint-plugin-react-hooks "^2.1.2"
     typescript "^3.6.3"
 
-"@foray1010/prettierrc@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/prettierrc/-/prettierrc-1.0.1.tgz#0ea59f69e576cdb6f527040c8604e4c39f99ad13"
-  integrity sha512-w1xS53XpL/PlIHKbEy2J2Ym2qYYNf8zjAhozptLMoIZlCyRwwP5i+fNyfGZL2yQlBy1XSdXjq0Rk1wuUAXddSg==
+"@foray1010/prettierrc@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettierrc/-/prettierrc-1.1.0.tgz#ede7ee39c6c5c5b79c8b812051b6f3a968776cf4"
+  integrity sha512-feGfnWAkHJyc6GRtqqFdtOfeVlQZ3cHcqERaGeZFU0AeX9nw/vxbBmZ8Jd13ojREU3LnSx6ysVjynErDvOYegQ==
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
@@ -5492,10 +5492,10 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-lint-staged@9.4.1:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-9.4.1.tgz#60c0f85745bd398e6460aa7f5adb3cad3a2b862c"
-  integrity sha512-zFRbo1bAJEVf1m33paTTjDVfy2v3lICCqHfmQSgNoI+lWpi7HPG5y/R2Y7Whdce+FKxlZYs/U1sDSx8+nmQdDA==
+lint-staged@9.4.2:
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-9.4.2.tgz#14cb577a9512f520691f8b5aefce6a8f7ead6c04"
+  integrity sha512-OFyGokJSWTn2M6vngnlLXjaHhi8n83VIZZ5/1Z26SULRUWgR3ITWpAEQC9Pnm3MC/EpCxlwts/mQWDHNji2+zA==
   dependencies:
     chalk "^2.4.2"
     commander "^2.20.0"

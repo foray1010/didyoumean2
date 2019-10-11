@@ -5,5 +5,5 @@ Global/Linux.gitignore
 Global/Windows.gitignore
 
 [inline]
+build/dts/
 dist/
-dist-dts/

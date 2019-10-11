@@ -1,17 +1,17 @@
 '.babelrc':
-  - 'prettier --parser json --write'
+  - 'yarn prettier --parser json --write'
   - 'git add'
 '*.ts':
   - 'import-sort --write'
-  - 'prettier --write'
-  - 'eslint --fix'
+  - 'yarn prettier --write'
+  - 'yarn eslint --fix'
   - 'jest --bail --findRelatedTests --config .jestrc.json'
   - 'git add'
 '*.{json,yaml,yml}':
-  - 'prettier --write'
+  - 'yarn prettier --write'
   - 'git add'
 '*.md':
-  - 'prettier --write'
+  - 'yarn prettier --write'
   - 'markdownlint'
   - 'git add'
 '*ignore-sync':

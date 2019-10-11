@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "dist-dts",
+    "declarationDir": "build/dts",
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "lib": ["es2018"],

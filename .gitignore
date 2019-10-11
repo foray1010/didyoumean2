@@ -58,6 +58,12 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
 # Optional REPL history
 .node_repl_history
 
@@ -80,6 +86,10 @@ typings/
 # nuxt.js build output
 .nuxt
 
+# gatsby files
+.cache/
+public
+
 # vuepress build output
 .vuepress/dist
 
@@ -91,6 +101,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# TernJS port file
+.tern-port
 
 # General
 .DS_Store
@@ -158,5 +171,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+build/dts/
 dist/
-dist-dts/

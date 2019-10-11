@@ -59,7 +59,7 @@ export default [
     ],
   },
   {
-    input: 'dist-dts/index.d.ts',
+    input: 'build/dts/index.d.ts',
     output: { file: 'dist/index.d.ts' },
     plugins: [dts()],
   },
