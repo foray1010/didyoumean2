@@ -72,7 +72,7 @@
     "rollup-plugin-terser": "5.1.2",
     "shx": "0.3.2",
     "type-coverage": "2.3.0",
-    "typescript": "3.6.3"
+    "typescript": "3.6.4"
   },
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
