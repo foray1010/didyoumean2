@@ -22,7 +22,7 @@
     "dev": "npm-run-all -p dev:*",
     "dev:build": "rollup -c rollup.config.ts --watch",
     "dev:types": "tsc --watch",
-    "eslint": "eslint --ext=js,mjs,ts,tsx --ignore-path=node_modules/@foray1010/eslint-config/eslintignore",
+    "eslint": "eslint --ext=cjs,js,mjs,ts,tsx --ignore-path=node_modules/@foray1010/eslint-config/eslintignore",
     "lint": "npm-run-all -p lint:*",
     "lint:js": "yarn eslint .",
     "lint:md": "yarn remark .",
