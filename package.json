@@ -1,18 +1,44 @@
 {
   "name": "didyoumean2",
   "version": "3.1.2",
+  "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
+  "keywords": [
+    "closest",
+    "compare",
+    "comparison",
+    "didyoumean",
+    "diff",
+    "difference",
+    "distance",
+    "edit",
+    "find",
+    "fuzzy",
+    "leven",
+    "levenshtein",
+    "match",
+    "matching",
+    "similar",
+    "similarity",
+    "string",
+    "suggest",
+    "suggestion",
+    "text",
+    "typescript",
+    "word"
+  ],
+  "homepage": "https://github.com/foray1010/didyoumean2",
+  "bugs": "https://github.com/foray1010/didyoumean2/issues",
+  "repository": "foray1010/didyoumean2",
   "license": "MIT",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "unpkg": "dist/index.umd.js",
-  "typings": "dist/index.d.ts",
-  "sideEffects": false,
+  "author": "foray1010",
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=6.9"
-  },
+  "sideEffects": false,
+  "main": "dist/index.cjs.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "prebuild": "yarn clean:build",
     "build": "tsc && rollup -c rollup.config.ts",
@@ -73,36 +99,11 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-terser": "5.1.2",
     "shx": "0.3.2",
+    "sort-package-json": "1.22.1",
     "type-coverage": "2.3.0",
     "typescript": "3.6.4"
   },
-  "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
-  "keywords": [
-    "closest",
-    "compare",
-    "comparison",
-    "didyoumean",
-    "diff",
-    "difference",
-    "distance",
-    "edit",
-    "find",
-    "fuzzy",
-    "leven",
-    "levenshtein",
-    "match",
-    "matching",
-    "similar",
-    "similarity",
-    "string",
-    "suggest",
-    "suggestion",
-    "text",
-    "typescript",
-    "word"
-  ],
-  "author": "foray1010",
-  "homepage": "https://github.com/foray1010/didyoumean2",
-  "repository": "foray1010/didyoumean2",
-  "bugs": "https://github.com/foray1010/didyoumean2/issues"
+  "engines": {
+    "node": ">=6.9"
+  }
 }
