@@ -811,11 +811,19 @@
   dependencies:
     find-up "^4.0.0"
 
-"@foray1010/eslint-config@1.8.3":
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-1.8.3.tgz#781f8b83d7353cb5db15f0e07ad14cd1b87e833a"
-  integrity sha512-fHi46UrhqhIv2povyvbA2lH1A3DmeZZWtzSJ3etCpBHUFueIMjFsW6Hlyefbx07kcFVS2dqq7VJL441GxwjC5g==
+"@foray1010/common-presets-utils@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/common-presets-utils/-/common-presets-utils-1.1.0.tgz#9f599bb73a359395acc67dc90cc11af9e872a069"
+  integrity sha512-SICTZzN0HcorHmo9dySpOEn3cDIhfjU8p/xQEoX2IF7EbQNQosvu2T1hUyHk171RxU1h2dobrszR09iTO0NoDQ==
   dependencies:
+    read-pkg-up "^7.0.0"
+
+"@foray1010/eslint-config@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-1.9.0.tgz#5ae6c495179e53ba670fdae5552e50dd1c2086a5"
+  integrity sha512-iotsBoL410LfkwA2kjSOgCxjAorkyoN3AqQVgpfT8xvNMcmVlwwugcaL+Dkxh7lZYcd8qdUiRP9F9ZI4NhaBww==
+  dependencies:
+    "@foray1010/common-presets-utils" "^1.1.0"
     "@typescript-eslint/eslint-plugin" "^2.3.2"
     "@typescript-eslint/parser" "^2.3.2"
     confusing-browser-globals "^1.0.9"
@@ -826,8 +834,6 @@
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-react "^7.16.0"
     eslint-plugin-react-hooks "^2.1.2"
-    read-pkg-up "^7.0.0"
-    typescript "^3.6.3"
 
 "@foray1010/import-sort-config@1.2.1":
   version "1.2.1"
@@ -9827,7 +9833,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.6.4, typescript@^3.2.4, typescript@^3.6.3:
+typescript@3.6.4, typescript@^3.2.4:
   version "3.6.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
   integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
