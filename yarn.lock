@@ -857,10 +857,10 @@
     import-sort-parser-typescript "^6.0.0"
     import-sort-style-module "^6.0.0"
 
-"@foray1010/prettier-config@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-1.5.1.tgz#2f725b4b41b82ca47b951a595a39279a078507cc"
-  integrity sha512-OTyUJQeTuh4z0xemDe+2T8aVu7i52j/zZYGLjGjpkCnMtIG7XJ2SY/u5j/zMuFiK3bXE9RSeYli5zOK0+23aAg==
+"@foray1010/prettier-config@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-2.0.0.tgz#7b6830a5d422d7431a0d92d495a0206d9d2cb32a"
+  integrity sha512-b6DmML8sYf5VKaOqfdBi1uxIth3yDdjJqTYxUMB1QtbyjWgCfKB4x/hiLO3s/MpByjUd1wm9wCKP7vshHHlgtQ==
 
 "@foray1010/remark-preset@1.1.2":
   version "1.1.2"
