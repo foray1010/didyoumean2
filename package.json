@@ -75,7 +75,7 @@
     "@foray1010/prettier-config": "2.0.0",
     "@foray1010/remark-preset": "1.1.2",
     "@size-limit/preset-small-lib": "2.2.0",
-    "@types/jest": "24.0.22",
+    "@types/jest": "24.0.23",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.33",
     "@types/rollup-plugin-json": "3.0.2",
