@@ -1239,12 +1239,12 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/ramda@0.26.33":
-  version "0.26.33"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.33.tgz#5fd1f22381ccf913a3627beb16f468fb57f82d94"
-  integrity sha512-sUCQmKfAWmlbb6PpFqvndbGgTf0bCcmHLJqMYw8ErVS0UoZTTiz952aFedJhV+JERiVH7poh33358c7p0AAN8A==
+"@types/ramda@0.26.34":
+  version "0.26.34"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.34.tgz#e65df964a077e9eb97c412483446681a23e56def"
+  integrity sha512-5x+oE6PzERYl4IPqjj8DwvlLAz2DiQGv0KMuWM3a1byqQ8k8ebmGWw5TAtpVtDwdQEhs1KVdCtOaLy0iwuqwdQ==
   dependencies:
-    ts-toolbelt "^4.7.7"
+    ts-toolbelt "^4.10.7"
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -9803,10 +9803,10 @@ ts-lib-utils@^2.2.0:
     glob "7"
     tslib "1"
 
-ts-toolbelt@^4.7.7:
-  version "4.10.4"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.10.4.tgz#2fd6f59e7240c673040bef2dca096a46502f655e"
-  integrity sha512-f4eRXJbDo0xdwO7c0qWGM/ct3O72kc0VW+llCiQmrhDu8SEJ4JJtlCE5JCmPTb0pCTjqXtfu8HJx148Fw9W6mw==
+ts-toolbelt@^4.10.7:
+  version "4.10.8"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.10.8.tgz#f04a0b5bc7bccd52246d65b6bd99b7d4d340e7bf"
+  integrity sha512-ExcghPTsrsfAgcxZ30YT9jXySjd1j6wtV/xcyxDaNCM75w7vkxH8wuuHG1gYv9v2sfiV6F/7LL0lH0QagleHLw==
 
 tslib@1, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
