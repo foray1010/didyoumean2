@@ -77,7 +77,7 @@
     "@size-limit/preset-small-lib": "2.2.1",
     "@types/jest": "24.0.23",
     "@types/lodash.deburr": "4.1.6",
-    "@types/ramda": "0.26.34",
+    "@types/ramda": "0.26.36",
     "@types/rollup-plugin-json": "3.0.2",
     "eslint": "6.6.0",
     "husky": "3.1.0",
