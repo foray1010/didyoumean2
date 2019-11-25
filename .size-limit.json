@@ -1,14 +1,14 @@
 [
   {
     "path": "dist/index.cjs.js",
-    "limit": "2797 B"
+    "limit": "2800 B"
   },
   {
     "path": "dist/index.esm.js",
-    "limit": "2790 B"
+    "limit": "2794 B"
   },
   {
     "path": "dist/index.umd.js",
-    "limit": "2735 B"
+    "limit": "2740 B"
   }
 ]
