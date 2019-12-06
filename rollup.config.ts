@@ -1,8 +1,8 @@
+import resolve from '@rollup/plugin-node-resolve'
 // @ts-ignore
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import dts from 'rollup-plugin-dts'
-import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 
 export default [
