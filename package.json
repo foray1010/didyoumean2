@@ -79,7 +79,7 @@
     "@types/jest": "24.0.24",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.38",
-    "eslint": "6.7.2",
+    "eslint": "6.8.0",
     "husky": "3.1.0",
     "ignore-sync": "2.0.1",
     "import-sort-cli": "6.0.0",
