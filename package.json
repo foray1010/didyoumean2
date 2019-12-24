@@ -96,7 +96,7 @@
     "shx": "0.3.2",
     "sort-package-json": "1.31.0",
     "type-coverage": "2.3.1",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "engines": {
     "node": ">=10.13"
