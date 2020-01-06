@@ -1,5 +1,4 @@
 '*.{js,ts}':
-  - 'import-sort --write'
   - 'yarn prettier --write'
   - 'yarn eslint --fix'
   - 'jest --bail --findRelatedTests --config .jestrc.json'
