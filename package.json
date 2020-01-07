@@ -73,7 +73,7 @@
     "@foray1010/eslint-config": "2.1.0",
     "@foray1010/prettier-config": "3.0.0",
     "@foray1010/remark-preset": "2.0.0",
-    "@rollup/plugin-node-resolve": "6.0.0",
+    "@rollup/plugin-node-resolve": "6.1.0",
     "@size-limit/preset-small-lib": "2.2.4",
     "@types/jest": "24.0.25",
     "@types/lodash.deburr": "4.1.6",
