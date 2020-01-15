@@ -92,7 +92,7 @@
     "rollup-plugin-dts": "1.2.0",
     "rollup-plugin-terser": "5.2.0",
     "shx": "0.3.2",
-    "sort-package-json": "1.35.0",
+    "sort-package-json": "1.39.0",
     "type-coverage": "2.4.0",
     "typescript": "3.7.4"
   },
