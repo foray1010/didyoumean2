@@ -1177,26 +1177,25 @@
   dependencies:
     type-detect "4.0.8"
 
-"@size-limit/file@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-3.0.1.tgz#5818f7fe91bf8401e9bf3c5bdc3fb329273b9e6f"
-  integrity sha512-5yiTePQvd/oLM7qPjBdD4YIRjbn1lbJWJ+101/W6wOJlCjapLg3Tsil9HYcF54z3pM45K02ZuOeqY2Ev9N663g==
+"@size-limit/file@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.0.0.tgz#ca62d84347f23ff3e153e90703c9b7ffa9dd8da3"
+  integrity sha512-v10KakpBmstJjbFp6yrhSpntNCDIvf4S/T7O8tmEkMC+lvifaQlEzBFQdW9Hbg/OZ0kkzxOJlmlWrJ/QWsf2Lg==
   dependencies:
     semver "7.1.1"
-    size-limit "3.0.1"
 
-"@size-limit/preset-small-lib@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-3.0.1.tgz#eccc416ef9c6d209b963f3f19d8f03708f861262"
-  integrity sha512-XdjfeJDNqwbUBn4bEG/TN+8oXDWgyWa7FPPAX4sUVcMz4ZTq7NhRSTVNWnx05/ZxecJbZJ/eNFVnV486v6hrcw==
+"@size-limit/preset-small-lib@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-4.0.0.tgz#aaebb1f4fc1df935c986538e657657566ceb76de"
+  integrity sha512-A2PpsFq8lfn8goMXl8UB5Jl4xTguEw8Kx8bAy24f+YqYMasPjzG4zwR04A+JsFon2Zk581ybf7/4lDEwh+2RuA==
   dependencies:
-    "@size-limit/file" "3.0.1"
-    "@size-limit/webpack" "3.0.1"
+    "@size-limit/file" "4.0.0"
+    "@size-limit/webpack" "4.0.0"
 
-"@size-limit/webpack@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-3.0.1.tgz#d822e6448aa76dfe15719b58fee34d5870d44825"
-  integrity sha512-HA8JwcGVvi1fibQ7wwv92MQgZkOGTYWcjgLW4d1TyNrlYBJGq86G5cmaCAHgFxNTzKFkxMXnMUfN/PDZO76pYA==
+"@size-limit/webpack@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/webpack/-/webpack-4.0.0.tgz#ec043d8f3fbbef2a3cb42b6d030480eb88eee0f4"
+  integrity sha512-HastKn2I/g0mW23rtkWWTy8cTpdpjEjDpZ+LqmMI6IdRwh/LF0YYm2v3JqbW/xvwHuz/bP96Upf9vX6+KvkQFA==
   dependencies:
     css-loader "^3.4.2"
     escape-string-regexp "^2.0.0"
@@ -1205,7 +1204,6 @@
     optimize-css-assets-webpack-plugin "^5.0.3"
     pnp-webpack-plugin "^1.6.0"
     rimraf "^3.0.1"
-    size-limit "3.0.1"
     style-loader "^1.1.3"
     webpack "^4.41.5"
     webpack-bundle-analyzer "^3.6.0"
@@ -2211,7 +2209,7 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bytes@3.1.0, bytes@^3.1.0:
+bytes@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
@@ -2435,11 +2433,6 @@ ci-info@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
-
-ci-job-number@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-0.3.1.tgz#4354e45bb3ed5a7301f09358d2876d510d4a570e"
-  integrity sha512-OfY2Cg+mTqZz7lWOxONGbAXVZNNWPSiyGtOpAjYHEVTXIae8lGCOg3cDfJpPh8zcl+2CqItOsxbvH6ueV+QOmw==
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -3862,7 +3855,7 @@ fast-diff@^1.1.2:
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
-fast-glob@^3.0.3, fast-glob@^3.1.1:
+fast-glob@^3.0.3:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.1.1.tgz#87ee30e9e9f3eb40d6f254a7997655da753d7c82"
   integrity sha512-nTCREpBY8w8r+boyFYAx21iL6faSsQynliPHM4Uf56SbkyohCNxpVPEH9xrF5TXKy+IsjkPUHDKiUkzBVRXn9g==
@@ -4303,18 +4296,6 @@ globby@10.0.1:
     merge2 "^1.2.3"
     slash "^3.0.0"
 
-globby@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.0.tgz#56fd0e9f0d4f8fb0c456f1ab0dee96e1380bc154"
-  integrity sha512-iuehFnR3xu5wBBtm4xi0dMe92Ob87ufyu/dHwpDYfbcpYpIbrO5OnS8M1vWvrBhSGEJ3/Ecj7gnX76P8YxpPEg==
-  dependencies:
-    array-union "^2.1.0"
-    dir-glob "^3.0.1"
-    fast-glob "^3.1.1"
-    ignore "^5.1.4"
-    merge2 "^1.3.0"
-    slash "^3.0.0"
-
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
@@ -4581,7 +4562,7 @@ ignore@^4.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
-ignore@^5.0.0, ignore@^5.1.1, ignore@^5.1.2, ignore@^5.1.4:
+ignore@^5.0.0, ignore@^5.1.1, ignore@^5.1.2:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
@@ -7558,7 +7539,7 @@ read-pkg-up@^3.0.0:
     find-up "^2.0.0"
     read-pkg "^3.0.0"
 
-read-pkg-up@^7.0.0, read-pkg-up@^7.0.1:
+read-pkg-up@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-7.0.1.tgz#f3a6135758459733ae2b95638056e1854e7ef507"
   integrity sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==
@@ -8927,18 +8908,6 @@ sisteransi@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.4.tgz#386713f1ef688c7c0304dc4c0632898941cad2e3"
   integrity sha512-/ekMoM4NJ59ivGSfKapeG+FWtrmWvA1p6FBZwXrqojw90vJu8lBmrTxCMuBCydKtkaUe2zt4PlxeTKpjwMbyig==
-
-size-limit@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-3.0.1.tgz#568ff0ad0aed486be2839118d84224834af98a35"
-  integrity sha512-WtOoEIA9vYVDswFSOH5mJRKkCJG3Pe04Xy6AHRZ2B3gl4nxMuexoEeFB4XAqmyHDsP/+7dV2UNxceGGjNfBLBw==
-  dependencies:
-    bytes "^3.1.0"
-    chalk "^3.0.0"
-    ci-job-number "^0.3.1"
-    cosmiconfig "^6.0.0"
-    globby "^11.0.0"
-    read-pkg-up "^7.0.1"
 
 slash@^3.0.0:
   version "3.0.0"
