@@ -31,14 +31,14 @@
   "repository": "foray1010/didyoumean2",
   "license": "MIT",
   "author": "foray1010",
-  "files": [
-    "dist"
-  ],
   "sideEffects": false,
   "main": "dist/index.cjs.js",
   "unpkg": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "yarn clean:build",
     "build": "tsc && rollup -c rollup.config.ts",
@@ -92,6 +92,7 @@
     "rollup-plugin-dts": "1.2.1",
     "rollup-plugin-terser": "5.2.0",
     "shx": "0.3.2",
+    "size-limit": "4.0.0",
     "sort-package-json": "1.39.1",
     "type-coverage": "2.4.0",
     "typescript": "3.7.5"
