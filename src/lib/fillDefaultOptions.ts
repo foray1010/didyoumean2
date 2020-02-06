@@ -6,7 +6,7 @@ import { InputOptions, Options } from '../types'
 const fillDefaultOptions = (options?: InputOptions): Options => {
   const optionsWithDefaultValues = {
     caseSensitive: false,
-    deburr: false,
+    deburr: true,
     matchPath: [],
     returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
     thresholdType: ThresholdTypeEnums.SIMILARITY,

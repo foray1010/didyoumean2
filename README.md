@@ -37,9 +37,9 @@ import didYouMean from 'didyoumean2'
 
 // you can also access to Enums via:
 const {
-    default: didYouMean,
-    ReturnTypeEnums,
-    ThresholdTypeEnums,
+  default: didYouMean,
+  ReturnTypeEnums,
+  ThresholdTypeEnums,
 } = require('didyoumean2')
 // or
 import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from 'didyoumean2'
@@ -51,41 +51,41 @@ import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from 'didyoumean2'
 didYouMean(input, matchList[, options])
 ```
 
--   `input {string}`: A string that you are not sure and want to match with `matchList`
+- `input {string}`: A string that you are not sure and want to match with `matchList`
 
--   `matchList {Object[]|string[]}`: A List for matching with `input`
+- `matchList {Object[]|string[]}`: A List for matching with `input`
 
--   `options {Object}`(optional): An options that allows you to modify the behavior
+- `options {Object}`(optional): An options that allows you to modify the behavior
 
--   `@return {Array|null|Object|string}`: A list of or single matched result(s), return object if `match` is `{Object[]}`
+- `@return {Array|null|Object|string}`: A list of or single matched result(s), return object if `match` is `{Object[]}`
 
 ### Options
 
 #### `caseSensitive {boolean}`
 
--   default: `false`
+- default: `false`
 
--   Perform case-sensitive matching
+- Perform case-sensitive matching
 
 #### `deburr {boolean}`
 
--   default: `false`
+- default: `true`
 
--   Perform [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) insensitive matching
+- Perform [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) insensitive matching
 
--   Refer to [lodash \_.deburr](https://lodash.com/docs#deburr) for how it works
+- Refer to [lodash \_.deburr](https://lodash.com/docs#deburr) for how it works
 
 #### `matchPath {Array}`
 
--   default: `[]`
+- default: `[]`
 
--   If your `matchList` is an array of object, you must use `matchPath` to point to the string that you want to match
+- If your `matchList` is an array of object, you must use `matchPath` to point to the string that you want to match
 
--   Refer to [ramda R.path](http://ramdajs.com/docs/#path) for how to define the path, e.g. `['obj', 'array', 0, 'key']`
+- Refer to [ramda R.path](http://ramdajs.com/docs/#path) for how to define the path, e.g. `['obj', 'array', 0, 'key']`
 
 #### `returnType {string}`
 
--   default: `ReturnTypeEnums.FIRST_CLOSEST_MATCH`
+- default: `ReturnTypeEnums.FIRST_CLOSEST_MATCH`
 
 | returnType                            | Description                                                       |
 | ------------------------------------- | ----------------------------------------------------------------- |
@@ -97,17 +97,17 @@ didYouMean(input, matchList[, options])
 
 #### `threshold {integer|number}`
 
--   depends on `thresholdType`
+- depends on `thresholdType`
 
--   type: `{number}` (`similarity`) or `{integer}` (`edit-distance`)
+- type: `{number}` (`similarity`) or `{integer}` (`edit-distance`)
 
--   default: `0.4` (`similarity`) or `20` (`edit-distance`)
+- default: `0.4` (`similarity`) or `20` (`edit-distance`)
 
--   If the result is larger (`similarity`) or smaller (`edit-distance`) than or equal to the `threshold`, that result is matched
+- If the result is larger (`similarity`) or smaller (`edit-distance`) than or equal to the `threshold`, that result is matched
 
 #### `thresholdType {string}`
 
--   default: `ThresholdTypeEnums.SIMILARITY`
+- default: `ThresholdTypeEnums.SIMILARITY`
 
 | thresholdType                      | Description                                                                                                                                      |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -116,11 +116,11 @@ didYouMean(input, matchList[, options])
 
 #### `trimSpaces {boolean}`
 
--   default: `true`
+- default: `true`
 
--   Remove noises when matching
+- Remove noises when matching
 
--   Trim all starting and ending spaces, and concatenate all continuous spaces to one space
+- Trim all starting and ending spaces, and concatenate all continuous spaces to one space
 
 ## Test
 

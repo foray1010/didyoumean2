@@ -4,7 +4,7 @@ import fillDefaultOptions from './fillDefaultOptions'
 
 const defaultOptions = {
   caseSensitive: false,
-  deburr: false,
+  deburr: true,
   matchPath: [],
   returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 0.4,
@@ -14,7 +14,7 @@ const defaultOptions = {
 
 const defaultOptionsForEditDistance = {
   caseSensitive: false,
-  deburr: false,
+  deburr: true,
   matchPath: [],
   returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
   threshold: 20,
