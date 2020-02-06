@@ -42,4 +42,15 @@ test('matchPath', () => {
       }),
     ),
   ).toBe('')
+
+  expect(
+    matchItemProcessor(
+      {
+        a: null,
+      },
+      fillDefaultOptions({
+        matchPath: ['a', 'b'],
+      }),
+    ),
+  ).toBe('')
 })

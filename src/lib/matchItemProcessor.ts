@@ -1,7 +1,17 @@
-import pathOr from 'ramda/src/pathOr'
-
 import { Options } from '../types'
 import normalizeString from './normalizeString'
+
+const getMatchItemStr = (
+  matchItem: object | string,
+  matchPath: Options['matchPath'],
+): string => {
+  const matchItemStr =
+    Array.isArray(matchPath) && matchPath.length
+      ? matchPath.reduce((acc: any, path) => acc?.[path], matchItem)
+      : matchItem
+  if (typeof matchItemStr !== 'string') return ''
+  return matchItemStr
+}
 
 /**
  * Process matchItem according to options
@@ -15,13 +25,7 @@ const matchItemProcessor = (
 ): string => {
   const { matchPath } = options
 
-  const matchItemStr =
-    Array.isArray(matchPath) && matchPath.length
-      ? pathOr('', matchPath, matchItem)
-      : matchItem
-  if (typeof matchItemStr !== 'string') {
-    return ''
-  }
+  const matchItemStr = getMatchItemStr(matchItem, matchPath)
 
   return normalizeString(matchItemStr, options)
 }
