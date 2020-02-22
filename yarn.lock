@@ -2434,10 +2434,10 @@ ci-info@^2.0.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-ci-job-number@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-0.3.1.tgz#4354e45bb3ed5a7301f09358d2876d510d4a570e"
-  integrity sha512-OfY2Cg+mTqZz7lWOxONGbAXVZNNWPSiyGtOpAjYHEVTXIae8lGCOg3cDfJpPh8zcl+2CqItOsxbvH6ueV+QOmw==
+ci-job-number@^1.0.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-1.2.1.tgz#42d3c730f227a4128bb0180911d62a818e709254"
+  integrity sha512-LZP3CjLaY/jpHNXN9qZ59w160LteXlq5ClabIcqjDNsABY34h7VemHvfSySuviP257fsHPXsEZ9s6JDP/c/luA==
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -8930,14 +8930,14 @@ sisteransi@^1.0.4:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.4.tgz#386713f1ef688c7c0304dc4c0632898941cad2e3"
   integrity sha512-/ekMoM4NJ59ivGSfKapeG+FWtrmWvA1p6FBZwXrqojw90vJu8lBmrTxCMuBCydKtkaUe2zt4PlxeTKpjwMbyig==
 
-size-limit@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.0.1.tgz#7e001ea7f113a25a0d863ac2dac4b3f81269242f"
-  integrity sha512-UwXXuMeyoUx3BbCBdsnSEQFg4G4yj0ViItvFCq46LOWbDQOXJU8rx7LwQEbu9lte7fDHQy+BkZS8PxKNXbju9A==
+size-limit@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.0.2.tgz#fad45d0a99c55fc443903666c1bda601417508cc"
+  integrity sha512-Pk6Ckqio81mUq/D88nRG9EqmMRS8GIuQU3dayVFQtFw9a8Q+HZ9XKZmZTE8tHsKXtXviaVxuRF98vkuBQctxbg==
   dependencies:
     bytes "^3.1.0"
     chalk "^3.0.0"
-    ci-job-number "^0.3.1"
+    ci-job-number "^1.0.0"
     cosmiconfig "^6.0.0"
     globby "^11.0.0"
     read-pkg-up "^7.0.1"
