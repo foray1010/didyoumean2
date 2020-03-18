@@ -73,7 +73,7 @@
     "@foray1010/prettier-config": "3.0.0",
     "@foray1010/remark-preset": "2.0.1",
     "@rollup/plugin-node-resolve": "7.1.1",
-    "@size-limit/preset-small-lib": "4.3.1",
+    "@size-limit/preset-small-lib": "4.4.0",
     "@types/jest": "25.1.4",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.26.43",
