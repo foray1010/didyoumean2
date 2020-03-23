@@ -64,9 +64,9 @@
     "lodash.deburr": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.8.7",
-    "@babel/preset-env": "7.8.7",
-    "@babel/preset-typescript": "7.8.3",
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "@babel/preset-typescript": "7.9.0",
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@foray1010/eslint-config": "2.1.0",
