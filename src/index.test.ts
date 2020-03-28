@@ -35,7 +35,9 @@ test('caseSensitive', () => {
 test('matchPath', () => {
   const matchPath = ['obj', 'array', 0, 'obj2']
 
-  const matchObjList = matchList.map(value => R.assocPath(matchPath, value, {}))
+  const matchObjList = matchList.map((value) =>
+    R.assocPath(matchPath, value, {}),
+  )
 
   expect(
     didYouMean(input, matchObjList, {

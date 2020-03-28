@@ -936,19 +936,19 @@
   dependencies:
     find-up "^4.0.0"
 
-"@foray1010/common-presets-utils@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/common-presets-utils/-/common-presets-utils-2.0.0.tgz#4def5bb3bf95cd21296dddfb2b4625e93dda8f25"
-  integrity sha512-vLBDVf8z+hEfQU81Yp/5L8Pr4hAILl32OSD7JJ1elzLmLyTvWgDm0oha0ccI39grzvZK1dvGS4XYjbzwgtc2KQ==
+"@foray1010/common-presets-utils@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/common-presets-utils/-/common-presets-utils-2.0.1.tgz#7d04ca401eb8cdc83fd8bc153b90adb2b31d07ce"
+  integrity sha512-pTAi0bv/rh8eGZUHd8de7+W+/uIbYY/mus1iaDbQCnxMzU3sll9Z5SJlHiRF2Pdouxx9ksDSu99KvsdzFiohWQ==
   dependencies:
     read-pkg-up "^7.0.0"
 
-"@foray1010/eslint-config@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.1.0.tgz#3d1eb90b21e3892b0ea62c10fbdfe95e4ee7aaf7"
-  integrity sha512-Ae+wNMhlXijDMVMV8SV9Tb7BTBt4OEF+86aueQyyAezVmoqdc/uYJWjbdvn4SeTokuF3LKpwR1+yhHYRCjUWWw==
+"@foray1010/eslint-config@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.2.0.tgz#aa9ab1520fa4794bdc3e92b0b6d6d2092f35e03b"
+  integrity sha512-khTa2tN87vbyCtF5yuWv7glFvpG9FgtbVvwOxOAVOC0EzXH49KngpdCWe5d4Mv7ynqfPn9Krun7JvohsOD1afA==
   dependencies:
-    "@foray1010/common-presets-utils" "^2.0.0"
+    "@foray1010/common-presets-utils" "^2.0.1"
     "@typescript-eslint/eslint-plugin" "^2.3.2"
     "@typescript-eslint/parser" "^2.3.2"
     confusing-browser-globals "^1.0.9"
@@ -961,10 +961,10 @@
     eslint-plugin-react-hooks "^2.1.2"
     eslint-plugin-simple-import-sort "^5.0.0"
 
-"@foray1010/prettier-config@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-3.0.0.tgz#ed71bf696a87737e2d10acf599c8c18f5a420b97"
-  integrity sha512-Ii7n37kTslhvX3rHStcXqknOS7bwPlObERfSmbsCqizEraN6znJA99zE88uqoaTTbuom61gLjWpj1z0+JgU+9Q==
+"@foray1010/prettier-config@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.0.0.tgz#c5e4475e0c00f4a1994958699cecb8dcc1becc1b"
+  integrity sha512-yfsfVLfo1fxF9AXS3D5UzSxFpXeKZQLIVRJNs8GiXRfPaGycgYriJ+rAB0LXZfYhasqnehFKAGs2i9on1tkFww==
 
 "@foray1010/remark-preset@2.0.1":
   version "2.0.1"
@@ -4194,7 +4194,6 @@ fsevents@^1.2.7:
   dependencies:
     bindings "^1.5.0"
     nan "^2.12.1"
-    node-pre-gyp "*"
 
 fsevents@^2.1.2, fsevents@~2.1.2:
   version "2.1.2"
