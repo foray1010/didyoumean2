@@ -943,10 +943,10 @@
   dependencies:
     read-pkg-up "^7.0.0"
 
-"@foray1010/eslint-config@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.2.0.tgz#aa9ab1520fa4794bdc3e92b0b6d6d2092f35e03b"
-  integrity sha512-khTa2tN87vbyCtF5yuWv7glFvpG9FgtbVvwOxOAVOC0EzXH49KngpdCWe5d4Mv7ynqfPn9Krun7JvohsOD1afA==
+"@foray1010/eslint-config@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.2.1.tgz#cb6b66b7b9cbf6e8e0e1253a5de1583888bc6cdf"
+  integrity sha512-aJmnyzAzUmmHybujXj5egg2qksaW7L8LqftmigIq04d0LPvieC9FslWCyjSNpRe9BZQlHRUWlrLRBcRnflXTaQ==
   dependencies:
     "@foray1010/common-presets-utils" "^2.0.1"
     "@typescript-eslint/eslint-plugin" "^2.3.2"
@@ -958,7 +958,7 @@
     eslint-plugin-node "^11.0.0"
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-react "^7.16.0"
-    eslint-plugin-react-hooks "^2.1.2"
+    eslint-plugin-react-hooks "^3.0.0"
     eslint-plugin-simple-import-sort "^5.0.0"
 
 "@foray1010/prettier-config@4.0.0":
@@ -3590,10 +3590,10 @@ eslint-plugin-prettier@^3.1.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^2.1.2:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.5.1.tgz#4ef5930592588ce171abeb26f400c7fbcbc23cd0"
-  integrity sha512-Y2c4b55R+6ZzwtTppKwSmK/Kar8AdLiC2f9NADCuxbcTgPPg41Gyqa6b9GppgXSvCtkRw43ZE86CT5sejKC6/g==
+eslint-plugin-react-hooks@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
+  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
 
 eslint-plugin-react@^7.16.0:
   version "7.19.0"
