@@ -966,10 +966,10 @@
   resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.0.0.tgz#c5e4475e0c00f4a1994958699cecb8dcc1becc1b"
   integrity sha512-yfsfVLfo1fxF9AXS3D5UzSxFpXeKZQLIVRJNs8GiXRfPaGycgYriJ+rAB0LXZfYhasqnehFKAGs2i9on1tkFww==
 
-"@foray1010/remark-preset@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-2.0.1.tgz#644cd3bb01bf595487e28a8ac00facaf0bdc5756"
-  integrity sha512-/gTuO/h57ETxFu56c1Gcuv5e0xdTnPNRRcVAjdrtSauBPk5FGfESKkFCT2ngFMErbEwsAtY4zRVqcl+TApuR2g==
+"@foray1010/remark-preset@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.0.0.tgz#58758b4f2a3b6185403abc18957f62c2b8642af1"
+  integrity sha512-ED+9vpBU3C7L98g0TVv7Mb8a/gPSegVncNAcg6S3d91Tc4raO43XWFpwapAHoP81kQ+qo8vNdfowPpqRbW82Jw==
   dependencies:
     remark-preset-lint-consistent "^2.0.3"
     remark-preset-lint-markdown-style-guide "^2.1.3"
