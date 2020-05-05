@@ -1021,19 +1021,19 @@
   dependencies:
     find-up "^4.0.0"
 
-"@foray1010/common-presets-utils@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/common-presets-utils/-/common-presets-utils-2.0.1.tgz#7d04ca401eb8cdc83fd8bc153b90adb2b31d07ce"
-  integrity sha512-pTAi0bv/rh8eGZUHd8de7+W+/uIbYY/mus1iaDbQCnxMzU3sll9Z5SJlHiRF2Pdouxx9ksDSu99KvsdzFiohWQ==
+"@foray1010/common-presets-utils@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@foray1010/common-presets-utils/-/common-presets-utils-2.0.2.tgz#4079a8f9789a06e4916b2df59db58e5897ae8a2c"
+  integrity sha512-Xm0Z7yoEpmwXGRNfcpVdpq1pd4wHdDtTnmIU+Svt51zdqLtLg97L1fGHslub15usu0hgrR1dnz5AE2Ct/lrf4A==
   dependencies:
     read-pkg-up "^7.0.0"
 
-"@foray1010/eslint-config@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.2.1.tgz#cb6b66b7b9cbf6e8e0e1253a5de1583888bc6cdf"
-  integrity sha512-aJmnyzAzUmmHybujXj5egg2qksaW7L8LqftmigIq04d0LPvieC9FslWCyjSNpRe9BZQlHRUWlrLRBcRnflXTaQ==
+"@foray1010/eslint-config@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-2.3.1.tgz#3eb1f842084d845a93922c86a711e26fc3a44e41"
+  integrity sha512-D7SX7i4sGSiKncQA2iLI0CFsOVZ5TreCTgmp96bWziFTQpI1UJohGl9JWAKCZ0kYzd2PgE1CxbbNJfvrl8Lq3g==
   dependencies:
-    "@foray1010/common-presets-utils" "^2.0.1"
+    "@foray1010/common-presets-utils" "^2.0.2"
     "@typescript-eslint/eslint-plugin" "^2.3.2"
     "@typescript-eslint/parser" "^2.3.2"
     confusing-browser-globals "^1.0.9"
@@ -1043,18 +1043,19 @@
     eslint-plugin-node "^11.0.0"
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-react "^7.16.0"
-    eslint-plugin-react-hooks "^3.0.0"
+    eslint-plugin-react-hooks "^4.0.0"
     eslint-plugin-simple-import-sort "^5.0.0"
+    eslint-plugin-testing-library "^3.1.0"
 
-"@foray1010/prettier-config@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.0.0.tgz#c5e4475e0c00f4a1994958699cecb8dcc1becc1b"
-  integrity sha512-yfsfVLfo1fxF9AXS3D5UzSxFpXeKZQLIVRJNs8GiXRfPaGycgYriJ+rAB0LXZfYhasqnehFKAGs2i9on1tkFww==
+"@foray1010/prettier-config@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.0.1.tgz#4ffa5739b1bcfd1896a6a577e53c946c78388bbf"
+  integrity sha512-uhiy45PGuU6Tke/bN+9KVG5NUtB/85DAqcAIiQHqUbsMYnozTZ4rxmR0y4tfeZqrfWoF7XMxiLoebgHiAVpcXQ==
 
-"@foray1010/remark-preset@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.0.1.tgz#7f461cc21a8b688e48ff6ef1333835d45133fd05"
-  integrity sha512-kldpkylVeGntDHi3uRvpot17LzmJbfHpjWxp1FAcxFAktd0+8VjDGR2wtWgpc2jf1iIiTiDXCTaOBnsJ4rUw4w==
+"@foray1010/remark-preset@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.0.2.tgz#cc714c31e7ce923718891ea808e4e2f5927c4c20"
+  integrity sha512-o9nQaCez0SWecK/9CMNQhpP6IwDtlqPGkxaDIjh7O9QZphkLVOCQwH5NTxfEObfvhbmzITe4Cb8+fQ2dyuE2rQ==
   dependencies:
     remark-preset-lint-consistent "^3.0.0"
     remark-preset-lint-markdown-style-guide "^3.0.0"
@@ -1513,6 +1514,16 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
+"@typescript-eslint/experimental-utils@^2.29.0":
+  version "2.31.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.31.0.tgz#a9ec514bf7fd5e5e82bc10dcb6a86d58baae9508"
+  integrity sha512-MI6IWkutLYQYTQgZ48IVnRXmLR/0Q6oAyJgiOror74arUMh7EWjJkADfirZhRsUMHeLJ85U2iySDwHTSnNi9vA==
+  dependencies:
+    "@types/json-schema" "^7.0.3"
+    "@typescript-eslint/typescript-estree" "2.31.0"
+    eslint-scope "^5.0.0"
+    eslint-utils "^2.0.0"
+
 "@typescript-eslint/parser@^2.3.2":
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.28.0.tgz#bb761286efd2b0714761cab9d0ee5847cf080385"
@@ -1527,6 +1538,19 @@
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.28.0.tgz#d34949099ff81092c36dc275b6a1ea580729ba00"
   integrity sha512-HDr8MP9wfwkiuqzRVkuM3BeDrOC4cKbO5a6BymZBHUt5y/2pL0BXD6I/C/ceq2IZoHWhcASk+5/zo+dwgu9V8Q==
+  dependencies:
+    debug "^4.1.1"
+    eslint-visitor-keys "^1.1.0"
+    glob "^7.1.6"
+    is-glob "^4.0.1"
+    lodash "^4.17.15"
+    semver "^6.3.0"
+    tsutils "^3.17.1"
+
+"@typescript-eslint/typescript-estree@2.31.0":
+  version "2.31.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.31.0.tgz#ac536c2d46672aa1f27ba0ec2140d53670635cfd"
+  integrity sha512-vxW149bXFXXuBrAak0eKHOzbcu9cvi6iNcJDzEtOkRwGHxJG15chiAQAwhLOsk+86p9GTr/TziYvw+H9kMaIgA==
   dependencies:
     debug "^4.1.1"
     eslint-visitor-keys "^1.1.0"
@@ -3710,10 +3734,10 @@ eslint-plugin-prettier@^3.1.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
-  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
+eslint-plugin-react-hooks@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.0.tgz#81196b990043cde339e25c6662aeebe32ac52d01"
+  integrity sha512-YKBY+kilK5wrwIdQnCF395Ya6nDro3EAMoe+2xFkmyklyhF16fH83TrQOo9zbZIDxBsXFgBbywta/0JKRNFDkw==
 
 eslint-plugin-react@^7.16.0:
   version "7.19.0"
@@ -3737,6 +3761,13 @@ eslint-plugin-simple-import-sort@^5.0.0:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-5.0.2.tgz#43b5c4ab5affa2dd8481ef40216c71723becd2e2"
   integrity sha512-YPEGo7DbMANQ01d2OXlREcaHRszsW8LoUQ9mIjI7gXSdwpnWKfogtzL6FiBfDf1teCBx+AdcjcfDXSKpmhTWeA==
+
+eslint-plugin-testing-library@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-3.1.0.tgz#52e3387c22a07873a5ac9bbdfe8bffe3c4b052af"
+  integrity sha512-N2T2w57lLcrl/1OBnN8b+Bv6lAzIETO2kde5chwN9egcfZnVkwaVh4D6GbgNe5vOkTE7dVj8nLP5Y8NHqwp/ew==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "^2.29.0"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
