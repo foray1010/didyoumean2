@@ -1,12 +1,15 @@
-import resolve from '@rollup/plugin-node-resolve'
 // @ts-ignore
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
+import babel from '@rollup/plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
+import packageJson from './package.json'
+
 export default [
   {
+    external: Object.keys(packageJson.dependencies),
     input: 'src/index.ts',
     output: [
       {
@@ -24,10 +27,12 @@ export default [
     ],
     plugins: [
       babel({
-        extensions: ['.ts'],
+        babelHelpers: 'runtime',
+        extensions: ['.js', '.ts'],
+        plugins: ['@babel/plugin-transform-runtime'],
       }),
       commonjs({
-        extensions: ['.ts'],
+        extensions: ['.js', '.ts'],
       }),
       terser(),
     ],
@@ -46,7 +51,8 @@ export default [
     },
     plugins: [
       babel({
-        extensions: ['.ts'],
+        babelHelpers: 'bundled',
+        extensions: ['.js', '.ts'],
       }),
       commonjs({
         extensions: ['.js', '.ts'],
