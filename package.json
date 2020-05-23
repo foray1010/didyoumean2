@@ -97,7 +97,7 @@
     "size-limit": "4.5.0",
     "sort-package-json": "1.42.2",
     "type-coverage": "2.6.1",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   },
   "engines": {
     "node": ">=10.13"
