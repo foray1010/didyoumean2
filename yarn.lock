@@ -1299,10 +1299,10 @@
   dependencies:
     find-up "^4.0.0"
 
-"@foray1010/babel-preset@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.0.0.tgz#6dad4fd0f68cbd1e000e89ed2e16ae936257e335"
-  integrity sha512-APrve5wEPYUbyAgkk6l8DYaBxtrMgZrz9GKOyQBWvzX66WxcQGx21WXAqWwpXtSCYlMFf9rOtrDFh+TqLwSgEw==
+"@foray1010/babel-preset@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.0.1.tgz#6cd669ca26b992c06c23bacfd3f5abba004a2c14"
+  integrity sha512-KZLbYmE7m9iyM3jHGlniq8Om0qMvlt99q9/sQ8Joj+mhWuOlEdvkOqX+20Sanp4FF0P5MULOKye86CbjDW6vMQ==
   dependencies:
     "@babel/plugin-transform-react-constant-elements" "^7.6.3"
     "@babel/plugin-transform-react-inline-elements" "^7.2.0"
