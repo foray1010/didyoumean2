@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-typescript'],
+  presets: ['@foray1010/babel-preset'],
 }

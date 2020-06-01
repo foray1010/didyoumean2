@@ -60,17 +60,15 @@
     "type:coverage": "type-coverage --strict --at-least 92 --detail --ignore-catch"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.6",
+    "@babel/runtime": "^7.10.2",
     "leven": "^3.1.0",
     "lodash.deburr": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
-    "@babel/plugin-transform-runtime": "7.9.6",
-    "@babel/preset-env": "7.9.6",
-    "@babel/preset-typescript": "7.9.0",
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
+    "@foray1010/babel-preset": "5.0.0",
     "@foray1010/eslint-config": "2.3.2",
     "@foray1010/prettier-config": "4.0.1",
     "@foray1010/remark-preset": "3.0.2",

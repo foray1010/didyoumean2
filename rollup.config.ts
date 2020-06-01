@@ -1,5 +1,5 @@
 // @ts-ignore
-import babel from '@rollup/plugin-babel'
+import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import dts from 'rollup-plugin-dts'
@@ -16,12 +16,14 @@ export default [
         exports: 'named',
         file: 'dist/index.cjs.js',
         format: 'cjs',
+        plugins: [getBabelOutputPlugin()],
         sourcemap: true,
       },
       {
         exports: 'named',
         file: 'dist/index.esm.js',
         format: 'esm',
+        plugins: [getBabelOutputPlugin()],
         sourcemap: true,
       },
     ],
@@ -29,7 +31,6 @@ export default [
       babel({
         babelHelpers: 'runtime',
         extensions: ['.js', '.ts'],
-        plugins: ['@babel/plugin-transform-runtime'],
       }),
       commonjs({
         extensions: ['.js', '.ts'],
@@ -51,8 +52,10 @@ export default [
     },
     plugins: [
       babel({
-        babelHelpers: 'bundled',
+        babelHelpers: 'runtime',
         extensions: ['.js', '.ts'],
+        // https://github.com/rollup/plugins/issues/381
+        skipPreflightCheck: true,
       }),
       commonjs({
         extensions: ['.js', '.ts'],
