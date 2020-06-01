@@ -8,7 +8,7 @@ import getSimilarity from './lib/getSimilarity'
 import matchItemProcessor from './lib/matchItemProcessor'
 import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
-import { InputOptions } from './types'
+import type { InputOptions } from './types'
 
 /**
  * Main function for didyoumean2

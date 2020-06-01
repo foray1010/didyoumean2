@@ -1,7 +1,7 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
 import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
 import { unknownThresholdTypeError } from '../errors'
-import { InputOptions, Options } from '../types'
+import type { InputOptions, Options } from '../types'
 
 const fillDefaultOptions = (options?: InputOptions): Options => {
   const optionsWithDefaultValues = {
