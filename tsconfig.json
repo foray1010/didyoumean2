@@ -4,6 +4,7 @@
     "declarationDir": "build/dts",
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
+    "importsNotUsedAsValues": "error",
     "lib": ["es2018"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
