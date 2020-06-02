@@ -17,7 +17,7 @@ import type { InputOptions } from './types'
  * @param {null|Object|undefined} options - options that allows you to modify the behavior
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-const didYouMean = <T extends object | string>(
+const didYouMean = <T extends Record<string, unknown> | string>(
   input: string,
   matchList: ReadonlyArray<T>,
   options?: InputOptions,

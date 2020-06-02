@@ -2,12 +2,12 @@ import type { Options } from '../types'
 import normalizeString from './normalizeString'
 
 const getMatchItemStr = (
-  matchItem: object | string,
+  matchItem: Record<string, unknown> | string,
   matchPath: Options['matchPath'],
 ): string => {
   const matchItemStr =
     Array.isArray(matchPath) && matchPath.length
-      ? matchPath.reduce((acc: any, path) => acc?.[path], matchItem)
+      ? matchPath.reduce<any>((acc, path) => acc?.[path], matchItem)
       : matchItem
   if (typeof matchItemStr !== 'string') return ''
   return matchItemStr
@@ -20,7 +20,7 @@ const getMatchItemStr = (
  * @returns {string} - processed matchItem
  */
 const matchItemProcessor = (
-  matchItem: object | string,
+  matchItem: Record<string, unknown> | string,
   options: Options,
 ): string => {
   const { matchPath } = options
