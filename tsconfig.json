@@ -1,15 +1,7 @@
 {
+  "extends": "@foray1010/tsconfig",
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "build/dts",
-    "emitDeclarationOnly": true,
-    "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
-    "lib": ["es2018"],
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "strict": true,
-    "target": "ES5"
+    "declarationDir": "build/dts"
   },
   "files": ["src/index.ts"]
 }
