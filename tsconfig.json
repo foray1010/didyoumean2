@@ -1,7 +1,3 @@
 {
-  "extends": "@foray1010/tsconfig",
-  "compilerOptions": {
-    "declarationDir": "build/dts"
-  },
-  "files": ["src/index.ts"]
+  "extends": "@foray1010/tsconfig"
 }
