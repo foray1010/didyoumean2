@@ -91,7 +91,7 @@
     "shx": "0.3.2",
     "size-limit": "4.5.0",
     "sort-package-json": "1.44.0",
-    "type-coverage": "2.7.1",
+    "type-coverage": "2.7.2",
     "typescript": "3.9.5"
   },
   "engines": {
