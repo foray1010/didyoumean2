@@ -1113,10 +1113,10 @@
   dependencies:
     read-pkg-up "^7.0.0"
 
-"@foray1010/eslint-config@3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-3.0.4.tgz#3a5fd6068682bfbb03d0d0615636fdd13a885c0b"
-  integrity sha512-AwJAl549AqGELY7xEn8khmFm36UBXjshWt2rRbWCtyAsdl8fAOMvbIwR4Kf3M3JU+pCefPmMGEtdCql1MwBK8A==
+"@foray1010/eslint-config@3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-3.0.5.tgz#b455d0474105fae16218634fcfec5039c8ea1527"
+  integrity sha512-KM/ZEYljPk1i68RafJos1+xKLmJ1fhrUG/TAP5YXfij7vf/uVEHSwK5svF7Nwu7MnsHCcT9ZU4F7slSSAQ5xYw==
   dependencies:
     "@foray1010/common-presets-utils" "^2.1.0"
     "@typescript-eslint/eslint-plugin" "^3.0.0"
@@ -1147,10 +1147,10 @@
     remark-preset-lint-recommended "^4.0.0"
     remark-preset-prettier "^0.4.0"
 
-"@foray1010/tsconfig@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-2.0.0.tgz#9ceb4d6582e4c68d95b46d0b2dc33d60886538e1"
-  integrity sha512-GCAt0+jbsJXKg1YuVsz583vgtIAT1y4ToYR5+m3K1Yh+KKIIbZRhq05Bz8ZKXd0oz/rcHw/fJl1XXI4XX5NHKA==
+"@foray1010/tsconfig@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-2.0.1.tgz#ff28479df60c046ae3cdabbd0965e412163955aa"
+  integrity sha512-4VVGX/ExSSW5PGcxklz0kofWrJy3N0OQzy1GhSIVRcJIS+H6cQD/HY36sqezs8GFcGJMNsnz0YfdPwvvyQJSIg==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
