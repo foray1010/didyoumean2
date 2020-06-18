@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/foray1010/didyoumean2/compare/v4.0.0...v4.1.0) (2020-06-18)
+
+### Features
+
+- return different type depends on options.returnType ([1a2c0ce](https://github.com/foray1010/didyoumean2/commit/1a2c0cea00f9a16d3ae505677685e92244d487e4))
+
+### Bug Fixes
+
+- do not use object type as eslint adviced ([27315f6](https://github.com/foray1010/didyoumean2/commit/27315f629db8e8ad99540cc36d49ec1b52c736a9))
+
 ## [4.0.0](https://github.com/foray1010/didyoumean2/compare/v3.1.2...v4.0.0) (2020-02-06)
 
 ### ⚠ BREAKING CHANGES
