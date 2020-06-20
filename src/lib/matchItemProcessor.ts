@@ -1,13 +1,16 @@
-import type { Options } from '../types'
+import type { MatchItem, Options } from '../types'
 import normalizeString from './normalizeString'
 
 const getMatchItemStr = (
-  matchItem: Record<string, unknown> | string,
+  matchItem: MatchItem,
   matchPath: Options['matchPath'],
 ): string => {
   const matchItemStr =
-    Array.isArray(matchPath) && matchPath.length
-      ? matchPath.reduce<any>((acc, path) => acc?.[path], matchItem)
+    matchPath.length > 0
+      ? matchPath.reduce<unknown>(
+          (acc, prop) => (acc as any)?.[prop],
+          matchItem,
+        )
       : matchItem
   if (typeof matchItemStr !== 'string') return ''
   return matchItemStr
@@ -19,10 +22,7 @@ const getMatchItemStr = (
  * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - processed matchItem
  */
-const matchItemProcessor = (
-  matchItem: Record<string, unknown> | string,
-  options: Options,
-): string => {
+const matchItemProcessor = (matchItem: MatchItem, options: Options): string => {
   const { matchPath } = options
 
   const matchItemStr = getMatchItemStr(matchItem, matchPath)

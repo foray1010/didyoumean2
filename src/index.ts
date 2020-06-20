@@ -8,7 +8,7 @@ import getSimilarity from './lib/getSimilarity'
 import matchItemProcessor from './lib/matchItemProcessor'
 import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
-import type { InputOptions } from './types'
+import type { MatchItem, Options } from './types'
 
 /**
  * Main function for didyoumean2
@@ -17,29 +17,31 @@ import type { InputOptions } from './types'
  * @param {null|Object|undefined} options - options that allows you to modify the behavior
  * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
  */
-function didYouMean<T extends Record<string, unknown> | string>(
+function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options?: InputOptions & {
-    returnType?:
-      | ReturnTypeEnums.FIRST_CLOSEST_MATCH
-      | ReturnTypeEnums.FIRST_MATCH
-  },
+  options?: Partial<Options> &
+    Readonly<{
+      returnType?:
+        | ReturnTypeEnums.FIRST_CLOSEST_MATCH
+        | ReturnTypeEnums.FIRST_MATCH
+    }>,
 ): T | null
-function didYouMean<T extends Record<string, unknown> | string>(
+function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options: InputOptions & {
-    returnType:
-      | ReturnTypeEnums.ALL_CLOSEST_MATCHES
-      | ReturnTypeEnums.ALL_MATCHES
-      | ReturnTypeEnums.ALL_SORTED_MATCHES
-  },
+  options: Partial<Options> &
+    Readonly<{
+      returnType:
+        | ReturnTypeEnums.ALL_CLOSEST_MATCHES
+        | ReturnTypeEnums.ALL_MATCHES
+        | ReturnTypeEnums.ALL_SORTED_MATCHES
+    }>,
 ): Array<T>
-function didYouMean<T extends Record<string, unknown> | string>(
+function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options?: InputOptions,
+  options?: Partial<Options>,
 ): Array<T> | T | null {
   /*+++++++++++++++++++
    + Initiate options +
@@ -55,8 +57,8 @@ function didYouMean<T extends Record<string, unknown> | string>(
 
   const normalizedInput = normalizeString(input, optionsWithDefaults)
 
-  let checkIfMatched // Validate if score is matched
-  let scoreProcessor // Get score
+  let checkIfMatched: (score: number) => boolean // Validate if score is matched
+  let scoreProcessor: (matchItem: T) => number // Get score
   switch (thresholdType) {
     case ThresholdTypeEnums.EDIT_DISTANCE:
       checkIfMatched = (score: number) => score <= threshold
@@ -84,15 +86,15 @@ function didYouMean<T extends Record<string, unknown> | string>(
    + Matching +
    +++++++++++*/
 
-  const matchedIndexes = []
+  const matchedIndexes: number[] = []
   const matchListLen = matchList.length
 
   switch (returnType) {
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
     case ReturnTypeEnums.FIRST_CLOSEST_MATCH: {
-      const scores = []
+      const scores: number[] = []
 
-      let marginValue
+      let marginValue: number
       switch (thresholdType) {
         case ThresholdTypeEnums.EDIT_DISTANCE:
           // Process score and save the smallest score
@@ -149,7 +151,10 @@ function didYouMean<T extends Record<string, unknown> | string>(
       break
 
     case ReturnTypeEnums.ALL_SORTED_MATCHES: {
-      const unsortedResults = []
+      const unsortedResults: Array<{
+        score: number
+        index: number
+      }> = []
       for (let i = 0; i < matchListLen; i += 1) {
         const score = scoreProcessor(matchList[i])
 

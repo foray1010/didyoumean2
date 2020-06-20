@@ -1,9 +1,9 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
 import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
 import { unknownThresholdTypeError } from '../errors'
-import type { InputOptions, Options } from '../types'
+import type { Options } from '../types'
 
-const fillDefaultOptions = (options?: InputOptions): Options => {
+const fillDefaultOptions = (options?: Partial<Options>): Options => {
   const optionsWithDefaultValues = {
     caseSensitive: false,
     deburr: true,
@@ -27,7 +27,6 @@ const fillDefaultOptions = (options?: InputOptions): Options => {
         ...optionsWithDefaultValues,
       }
 
-    /* istanbul ignore next */
     default:
       throw unknownThresholdTypeError
   }

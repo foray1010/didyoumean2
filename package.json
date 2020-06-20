@@ -41,7 +41,7 @@
   ],
   "scripts": {
     "prebuild": "yarn clean:build",
-    "build": "tsc --project tsconfig.build.json && rollup -c rollup.config.ts",
+    "build": "tsc --project tsconfig.build.json && rollup -c",
     "ci": "npm-run-all -p 'lint:*' 'type:*' && yarn test && yarn build && size-limit",
     "clean:build": "shx rm -rf dist/ build/dts/",
     "eslint": "eslint --ext=cjs,js,mjs,ts,tsx --ignore-path=node_modules/@foray1010/eslint-config/eslintignore",
@@ -53,7 +53,7 @@
     "remark": "remark --frail --ignore-path=node_modules/@foray1010/remark-preset/remarkignore --ignore-path-resolve-from=cwd",
     "test": "jest --config .jestrc.json",
     "type:check": "tsc",
-    "type:coverage": "type-coverage --strict --at-least 96 --detail --ignore-catch"
+    "type:coverage": "type-coverage --strict --at-least 99 --detail --ignore-catch"
   },
   "dependencies": {
     "@babel/runtime": "^7.10.2",
@@ -91,6 +91,7 @@
     "shx": "0.3.2",
     "size-limit": "4.5.0",
     "sort-package-json": "1.44.0",
+    "ts-node": "8.10.2",
     "type-coverage": "2.7.2",
     "typescript": "3.9.5"
   },

@@ -1,4 +1,5 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
+import { unknownReturnTypeError } from '../errors'
 
 /**
  * Generate result
@@ -23,8 +24,8 @@ const resultProcessor = <T>(
       if (!matchedIndexes.length) return null
       return matchList[matchedIndexes[0]]
 
-    /* istanbul ignore next */ default:
-      return null
+    default:
+      throw unknownReturnTypeError
   }
 }
 

@@ -2,12 +2,13 @@
 import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
+import type { RollupOptions } from 'rollup'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
 import packageJson from './package.json'
 
-export default [
+const rollupOptions: RollupOptions[] = [
   {
     external: Object.keys(packageJson.dependencies),
     input: 'src/index.ts',
@@ -70,3 +71,5 @@ export default [
     plugins: [dts()],
   },
 ]
+
+export default rollupOptions

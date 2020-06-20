@@ -1,6 +1,8 @@
 import type { ReturnTypeEnums } from './enums/ReturnTypeEnums'
 import type { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
 
+export type MatchItem = Record<string, unknown> | string
+
 export type Options = Readonly<{
   caseSensitive: boolean
   deburr: boolean
@@ -10,5 +12,3 @@ export type Options = Readonly<{
   thresholdType: ThresholdTypeEnums
   trimSpaces: boolean
 }>
-
-export type InputOptions = Partial<Options>
