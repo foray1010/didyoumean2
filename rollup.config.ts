@@ -6,23 +6,27 @@ import type { RollupOptions } from 'rollup'
 import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
-import packageJson from './package.json'
+import pkg from './package.json'
+
+const outputDir = 'dist'
 
 const rollupOptions: RollupOptions[] = [
   {
-    external: Object.keys(packageJson.dependencies),
+    external: Object.keys(pkg.dependencies),
     input: 'src/index.ts',
     output: [
       {
+        dir: outputDir,
+        entryFileNames: '[name].[format].js',
         exports: 'named',
-        file: 'dist/index.cjs.js',
         format: 'cjs',
         plugins: [getBabelOutputPlugin()],
         sourcemap: true,
       },
       {
+        dir: outputDir,
+        entryFileNames: '[name].esm.js',
         exports: 'named',
-        file: 'dist/index.esm.js',
         format: 'esm',
         plugins: [getBabelOutputPlugin()],
         sourcemap: true,
@@ -45,8 +49,9 @@ const rollupOptions: RollupOptions[] = [
   {
     input: 'src/index.ts',
     output: {
+      dir: outputDir,
+      entryFileNames: '[name].[format].js',
       exports: 'named',
-      file: 'dist/index.umd.js',
       format: 'umd',
       name: 'didYouMean',
       sourcemap: true,
@@ -67,7 +72,10 @@ const rollupOptions: RollupOptions[] = [
   },
   {
     input: 'build/dts/index.d.ts',
-    output: { file: 'dist/index.d.ts' },
+    output: {
+      dir: outputDir,
+      entryFileNames: '[name].ts',
+    },
     plugins: [dts()],
   },
 ]
