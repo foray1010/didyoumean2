@@ -21,6 +21,7 @@ const rollupOptions: RollupOptions[] = [
         exports: 'named',
         format: 'cjs',
         plugins: [getBabelOutputPlugin()],
+        preferConst: true,
         sourcemap: true,
       },
       {
