@@ -71,7 +71,7 @@
     "@foray1010/tsconfig": "2.0.1",
     "@rollup/plugin-babel": "5.0.3",
     "@rollup/plugin-commonjs": "13.0.0",
-    "@rollup/plugin-node-resolve": "8.0.1",
+    "@rollup/plugin-node-resolve": "8.1.0",
     "@size-limit/preset-small-lib": "4.5.1",
     "@types/jest": "26.0.0",
     "@types/lodash.deburr": "4.1.6",
