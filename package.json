@@ -75,7 +75,7 @@
     "@size-limit/preset-small-lib": "4.5.3",
     "@types/jest": "26.0.4",
     "@types/lodash.deburr": "4.1.6",
-    "@types/ramda": "0.27.7",
+    "@types/ramda": "0.27.10",
     "eslint": "7.4.0",
     "husky": "4.2.5",
     "ignore-sync": "2.0.1",
