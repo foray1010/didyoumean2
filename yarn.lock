@@ -834,7 +834,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.10.4"
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/preset-env@^7.10.2":
+"@babel/preset-env@^7.11.0":
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.11.0.tgz#860ee38f2ce17ad60480c2021ba9689393efb796"
   integrity sha512-2u1/k7rG/gTh02dylX2kL3S0IJNF+J6bfDSp4DI2Ma8QN6Y9x9pmAax59fsCk6QUQG0yqH47yJWA+u1I1LccAg==
@@ -1129,16 +1129,15 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.1.tgz#d97ebc35d20eed6d8458361cbca5c7cb85d45184"
   integrity sha512-SXY8bCQ1qacJ8AUTUxjabY8G6OjSmMPLN9MBCzGaKOjpPNX6z8zbXTbk9oU3GHZLtcxweWLCi2n49IRS4iQlwg==
 
-"@foray1010/babel-preset@5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.2.0.tgz#2cb5b0b24689a1345180e7cd32783f28cc189bb2"
-  integrity sha512-iDGq74sgIJjOUAP3zF3NArxowX7Auqwx84peak+ZjbDewff43Qr1cy95qLqzTTLvuJ+t9mWXu18p3UlP8h/naA==
+"@foray1010/babel-preset@5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.2.1.tgz#3010ecfc4835805a5f5717b25f9f5a8790db3fd9"
+  integrity sha512-rdeZAXsE9g5XnWIrw6/yuqkQPx3C5i5ggyW6XH1NZTFCrQ2WSjecQH2+Pk8IY2J0kxa+OTNN1UrBkafGnzm/sA==
   dependencies:
-    "@babel/plugin-proposal-export-namespace-from" "^7.10.4"
     "@babel/plugin-transform-react-constant-elements" "^7.6.3"
     "@babel/plugin-transform-react-inline-elements" "^7.2.0"
     "@babel/plugin-transform-runtime" "^7.9.6"
-    "@babel/preset-env" "^7.10.2"
+    "@babel/preset-env" "^7.11.0"
     "@babel/preset-react" "^7.6.3"
     "@babel/preset-typescript" "^7.10.1"
     "@foray1010/common-presets-utils" "^2.1.1"
@@ -1180,10 +1179,10 @@
   dependencies:
     prettier-plugin-packagejson "^2.2.5"
 
-"@foray1010/remark-preset@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.1.0.tgz#cbac34ffea32a5f82f3367f001e99836a2de7089"
-  integrity sha512-HbEULGphOoVuxMTpuSy3u4UcGb9yo+GWf810VqLPWu/0cAqPwTSGW3Ni45CiJ16sLz3mNuZMntxmFoHHHj/fuw==
+"@foray1010/remark-preset@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.2.0.tgz#86fe7ce3d4f72ad554603107ca3e9c8f67d6f50b"
+  integrity sha512-0B9bTURdFjp0TTN51GglCh6xmbQGYHZvAymFc3ZwdXwsDBM8gaJWUau0hyM8bj2AmhEkbPPOefnGmGcrM7anag==
   dependencies:
     remark-lint-no-dead-urls "^1.0.2"
     remark-preset-lint-consistent "^3.0.0"
