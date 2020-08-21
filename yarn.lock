@@ -1191,10 +1191,10 @@
     remark-preset-prettier "^0.4.0"
     remark-validate-links "^10.0.2"
 
-"@foray1010/tsconfig@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-2.1.0.tgz#46022ad6b4da8520cdd80305f75e5ca1bc442f0d"
-  integrity sha512-5rXXsimuQqp5FBifXOlJJfAcg46CU8w0s4OsGX+WmO3IYJXE2SrFMWuvbrP2tmGpYDGh43hXwunH09hwyzgCmg==
+"@foray1010/tsconfig@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-3.0.0.tgz#9584261e9aadd8020030ca5b509d26da17d5df61"
+  integrity sha512-q/5Kp5TSsOuq6wnXkSMVUa3SAMarnlDNG+oXdme8G6Q8J4FCJa6Ex1Un6mJpkEcL6s3anKxrjptNLptiHDQ32Q==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"

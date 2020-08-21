@@ -68,7 +68,7 @@
     "@foray1010/eslint-config": "3.7.1",
     "@foray1010/prettier-config": "4.1.0",
     "@foray1010/remark-preset": "3.2.0",
-    "@foray1010/tsconfig": "2.1.0",
+    "@foray1010/tsconfig": "3.0.0",
     "@rollup/plugin-babel": "5.2.0",
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
