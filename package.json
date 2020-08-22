@@ -68,7 +68,7 @@
     "@foray1010/eslint-config": "3.7.1",
     "@foray1010/prettier-config": "4.1.0",
     "@foray1010/remark-preset": "3.2.0",
-    "@foray1010/tsconfig": "2.1.0",
+    "@foray1010/tsconfig": "3.0.0",
     "@rollup/plugin-babel": "5.2.0",
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
@@ -86,13 +86,13 @@
     "ramda": "0.27.1",
     "remark-cli": "8.0.1",
     "rollup": "2.23.1",
-    "rollup-plugin-dts": "1.4.10",
+    "rollup-plugin-dts": "1.4.11",
     "rollup-plugin-terser": "7.0.0",
     "shx": "0.3.2",
     "size-limit": "4.5.6",
-    "ts-node": "8.10.2",
-    "type-coverage": "2.9.0",
-    "typescript": "3.9.7"
+    "ts-node": "9.0.0",
+    "type-coverage": "2.10.0",
+    "typescript": "4.0.2"
   },
   "engines": {
     "node": ">=10.13"

@@ -1,9 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "declarationDir": "build/dts",
     "emitDeclarationOnly": true,
-    "noEmit": false
+    "noEmit": false,
+    "outDir": "build/dts"
   },
   "files": ["src/index.ts"]
 }
