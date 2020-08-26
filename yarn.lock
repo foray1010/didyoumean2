@@ -1127,10 +1127,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.2.tgz#d05f66db03e3a3638a654e8badf2deb489eb220d"
   integrity sha512-r3fwVbVH+M8W0qYlBBZFsUwKe6NT5qvz+EmU7sr8VeN1cQ63z+3cfXyTo7WGGEMEgKiT0jboNAK3b1FZp8k9LQ==
 
-"@foray1010/babel-preset@5.2.3":
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.2.3.tgz#d4af7a103dee2d1a8267782a9a6a891f5103f913"
-  integrity sha512-pt7cse6kb6wEWms4rw552QQF1L2vxsF2WYC2ybYw+XePrsVZp76CcrYNkmCndSLE6hZi8No/a7Sh0GVt5bekmA==
+"@foray1010/babel-preset@5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@foray1010/babel-preset/-/babel-preset-5.2.4.tgz#da6dfb57175d9f0fc2d29b974efc383395258395"
+  integrity sha512-ceNiZ9Y7PLzJ/+fgmZP9WJErGUaJh9Z4Ev21vBIO9FaVD11lIzR4M4PpuxPk2TfixY6sMhLquvNT6EYHscmvsg==
   dependencies:
     "@babel/plugin-transform-react-constant-elements" "^7.6.3"
     "@babel/plugin-transform-react-inline-elements" "^7.2.0"
@@ -1150,10 +1150,10 @@
   dependencies:
     read-pkg-up "^7.0.0"
 
-"@foray1010/eslint-config@3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-3.7.1.tgz#bb3974dce7f10462e3506ef8a65cf28bd3f0ea52"
-  integrity sha512-cJ9HcL0m8JTr58kLyoOyFbfZsbkdRvwi7X+kn3SVP0O/B7P7OFHddJ+Tx/L4BWoar9yQ2ZwgsCgxCqXsc83pNQ==
+"@foray1010/eslint-config@3.8.1":
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/eslint-config/-/eslint-config-3.8.1.tgz#fac1cf9a45052a1430be55280ae7c859ce5e628c"
+  integrity sha512-84ongjAmMtBhZDEcch0sMyanSBaa8YOtaOMwo4GdD42bLcQG8+ptp5zFO5cd242mmWQJSRMmKqXVPmawAw5paA==
   dependencies:
     "@foray1010/common-presets-utils" "^2.1.1"
     "@typescript-eslint/eslint-plugin" "^3.0.0"
@@ -1170,17 +1170,17 @@
     eslint-plugin-simple-import-sort "^5.0.0"
     eslint-plugin-testing-library "^3.1.0"
 
-"@foray1010/prettier-config@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.1.0.tgz#87eca1e0f526642898b4830117372b57d36fc92b"
-  integrity sha512-rFaEl6DHK4jwKXNGJEL96Sbcz0Yyea//wS3yxZMVgzIl7o0hfuz7tv33PgC5F1dn2BOxjTsWAiwl1LFC2Mu6Fg==
+"@foray1010/prettier-config@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/prettier-config/-/prettier-config-4.1.1.tgz#1f3e21d4f249cb5bfe0482449bbff82102cc7ffa"
+  integrity sha512-XMhwa4cjyRcatu5GW0V61ID8q87WquSsMxoVIO7cCfnTeL2NYQbeZU+d73VY3SLc23ZbdqsyA3JbvYhoys9tTg==
   dependencies:
     prettier-plugin-packagejson "^2.2.5"
 
-"@foray1010/remark-preset@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.2.0.tgz#86fe7ce3d4f72ad554603107ca3e9c8f67d6f50b"
-  integrity sha512-0B9bTURdFjp0TTN51GglCh6xmbQGYHZvAymFc3ZwdXwsDBM8gaJWUau0hyM8bj2AmhEkbPPOefnGmGcrM7anag==
+"@foray1010/remark-preset@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/remark-preset/-/remark-preset-3.2.1.tgz#30560373d99416e9e13dd63d7a52efca7fa195f2"
+  integrity sha512-JLGPjQPklz6hkrFXYMzVyJrSzOYswZrJOHM3PI51nK6XFipZI8irYJgr/E1o0nrdta9qhk6U4ILzoklw4o+/1g==
   dependencies:
     remark-lint-no-dead-urls "^1.0.2"
     remark-preset-lint-consistent "^3.0.0"
@@ -1189,10 +1189,10 @@
     remark-preset-prettier "^0.4.0"
     remark-validate-links "^10.0.2"
 
-"@foray1010/tsconfig@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-3.0.0.tgz#9584261e9aadd8020030ca5b509d26da17d5df61"
-  integrity sha512-q/5Kp5TSsOuq6wnXkSMVUa3SAMarnlDNG+oXdme8G6Q8J4FCJa6Ex1Un6mJpkEcL6s3anKxrjptNLptiHDQ32Q==
+"@foray1010/tsconfig@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@foray1010/tsconfig/-/tsconfig-3.0.1.tgz#ad38d893bb1d3431d4470fc097dd7efdb00c39da"
+  integrity sha512-c/RfpAyzVZQslJiY0LhDVS5GE9e6PEZVrkw0Zh8zV3BanCNMqQ0osU2+XbKvWszhAPGz/QYhElFhB0MmzQHElg==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
