@@ -1,7 +1,7 @@
 [
   {
     "path": "dist/index.cjs.js",
-    "limit": "2166 B"
+    "limit": "2180 B"
   },
   {
     "path": "dist/index.esm.js",
