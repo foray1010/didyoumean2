@@ -76,7 +76,7 @@
     "@types/jest": "26.0.13",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.27.17",
-    "eslint": "7.8.1",
+    "eslint": "7.9.0",
     "husky": "4.3.0",
     "ignore-sync": "2.0.1",
     "jest": "26.4.2",
