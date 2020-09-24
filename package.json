@@ -70,7 +70,7 @@
     "@foray1010/remark-preset": "3.2.1",
     "@foray1010/tsconfig": "3.0.1",
     "@rollup/plugin-babel": "5.2.1",
-    "@rollup/plugin-commonjs": "15.0.0",
+    "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@size-limit/preset-small-lib": "4.6.0",
     "@types/jest": "26.0.14",
