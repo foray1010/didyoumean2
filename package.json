@@ -73,7 +73,7 @@
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@size-limit/preset-small-lib": "4.6.0",
-    "@types/jest": "26.0.14",
+    "@types/jest": "26.0.15",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.27.29",
     "eslint": "7.11.0",
