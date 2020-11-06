@@ -81,7 +81,7 @@ didYouMean(input, matchList[, options])
 
 - If your `matchList` is an array of object, you must use `matchPath` to point to the string that you want to match
 
-- Refer to [ramda R.path](http://ramdajs.com/docs/#path) for how to define the path, e.g. `['obj', 'array', 0, 'key']`
+- Refer to [ramda R.path](https://ramdajs.com/docs/#path) for how to define the path, e.g. `['obj', 'array', 0, 'key']`
 
 #### `returnType {string}`
 
