@@ -1,5 +1,0 @@
-{
-  "collectCoverage": true,
-  "collectCoverageFrom": ["<rootDir>/src/**/*.ts"],
-  "coverageReporters": ["lcov", "text-summary"]
-}
