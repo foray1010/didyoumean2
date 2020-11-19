@@ -18,6 +18,7 @@ const getMatchItemStr = (
 
 /**
  * Process matchItem according to options
+ *
  * @param {Object|string} matchItem - Item for matching with `input`
  * @param {Object} options - options that allows you to modify the behavior
  * @returns {string} - processed matchItem

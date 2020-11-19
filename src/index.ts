@@ -10,13 +10,6 @@ import normalizeString from './lib/normalizeString'
 import resultProcessor from './lib/resultProcessor'
 import type { MatchItem, Options } from './types'
 
-/**
- * Main function for didyoumean2
- * @param {string} input - string that you are not sure and want to match with `matchList`
- * @param {Object[]|string[]} matchList - List for matching with `input`
- * @param {null|Object|undefined} options - options that allows you to modify the behavior
- * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
- */
 function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
@@ -38,6 +31,14 @@ function didYouMean<T extends MatchItem>(
         | ReturnTypeEnums.ALL_SORTED_MATCHES
     }>,
 ): Array<T>
+/**
+ * Main function for didyoumean2
+ *
+ * @param {string} input - string that you are not sure and want to match with `matchList`
+ * @param {Object[]|string[]} matchList - List for matching with `input`
+ * @param {null|Object|undefined} options - options that allows you to modify the behavior
+ * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
+ */
 function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,

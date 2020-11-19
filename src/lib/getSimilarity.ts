@@ -2,9 +2,10 @@ import leven from 'leven'
 
 /**
  * Using edit distance between `a` and `b` to calculate similarity
+ *
  * @param {string} a - `input`
  * @param {string} b - String from `matchList`
- * @return {number} similarity between `a` and `b`
+ * @returns {number} similarity between `a` and `b`
  */
 const getSimilarity = (a: string, b: string): number => {
   if (!a || !b) return 0
