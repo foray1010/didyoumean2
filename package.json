@@ -75,7 +75,7 @@
     "@rollup/plugin-babel": "5.2.2",
     "@rollup/plugin-commonjs": "17.0.0",
     "@rollup/plugin-node-resolve": "11.0.0",
-    "@size-limit/preset-small-lib": "4.9.0",
+    "@size-limit/preset-small-lib": "4.9.1",
     "@types/jest": "26.0.16",
     "@types/lodash.deburr": "4.1.6",
     "@types/ramda": "0.27.32",
@@ -93,7 +93,7 @@
     "rollup-plugin-dts": "2.0.0",
     "rollup-plugin-terser": "7.0.2",
     "shx": "0.3.3",
-    "size-limit": "4.9.0",
+    "size-limit": "4.9.1",
     "ts-node": "9.1.0",
     "type-coverage": "2.14.6",
     "typescript": "4.1.2"
