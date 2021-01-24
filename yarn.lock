@@ -7571,14 +7571,13 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pinst@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/pinst/-/pinst-2.1.1.tgz#cba4a49bdbfdeaedc88bd4e01bcd1ee6e4641333"
-  integrity sha512-n8P1bTw2B3Ff/wkG2yP7HN3wBIkobfkuNS5WNhsUrM+/QTSJUZc2n/WPUSxONRjaXMffmjCNDTjwDy0ptVHlbw==
+pinst@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/pinst/-/pinst-2.1.2.tgz#3d6050496166caed7b26bfc5eed5fa93bf9246b3"
+  integrity sha512-xjiVEDHUx2bGXxU3+wnadIG0Nf/b/mulut74itQytv5Xy3fhBQgI1hW0P/wrynPZ7NJXYoNhg+uhT2h27G35XA==
   dependencies:
     load-json-file "^6.2.0"
     lodash.mapkeys "^4.6.0"
-    meow "^8.0.0"
     write-json-file "^4.3.0"
 
 pirates@^4.0.1:
