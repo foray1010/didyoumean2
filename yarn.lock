@@ -4623,6 +4623,11 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
+fromentries@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/fromentries/-/fromentries-1.3.2.tgz#e4bca6808816bf8f93b52750f1127f5a6fd86e3a"
+  integrity sha512-cHEpEQHUg0f8XdtZCc2ZAhrHzKzT0MrFUTcvx+hfxYu7rGMDc5SKoXFh+n4YigxsHXRzc6OrCshdR1bWH6HHyg==
+
 fs-extra@^9.0.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
@@ -6323,16 +6328,6 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-load-json-file@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-6.2.0.tgz#5c7770b42cafa97074ca2848707c61662f4251a1"
-  integrity sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==
-  dependencies:
-    graceful-fs "^4.1.15"
-    parse-json "^5.0.0"
-    strip-bom "^4.0.0"
-    type-fest "^0.6.0"
-
 load-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/load-plugin/-/load-plugin-3.0.0.tgz#8f3ce57cf4e5111639911012487bc1c2ba3d0e6c"
@@ -6403,11 +6398,6 @@ lodash.deburr@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
   integrity sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=
-
-lodash.mapkeys@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.mapkeys/-/lodash.mapkeys-4.6.0.tgz#df2cfa231d7c57c7a8ad003abdad5d73d3ea5195"
-  integrity sha1-3yz6Ix18V8eorQA6va1dc9PqUZU=
 
 lodash.memoize@4.1.2, lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -7574,13 +7564,12 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pinst@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/pinst/-/pinst-2.1.2.tgz#3d6050496166caed7b26bfc5eed5fa93bf9246b3"
-  integrity sha512-xjiVEDHUx2bGXxU3+wnadIG0Nf/b/mulut74itQytv5Xy3fhBQgI1hW0P/wrynPZ7NJXYoNhg+uhT2h27G35XA==
+pinst@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/pinst/-/pinst-2.1.4.tgz#f951567ac350b5a6d920bca0d53f558df15a27e4"
+  integrity sha512-T44k87is/GiSjONFxSl/uL6yGqwVpojdnUfbYzNeatDTM8uRCoCEQjuQ0g1oW6XENfbdO2XKtMfdGlDSQ19MJA==
   dependencies:
-    load-json-file "^6.2.0"
-    lodash.mapkeys "^4.6.0"
+    fromentries "^1.3.2"
     write-json-file "^4.3.0"
 
 pirates@^4.0.1:
