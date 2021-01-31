@@ -2571,9 +2571,9 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.12.2, browserslist@^4.14.5, browserslist@^4.16.1:
-  version "4.16.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.2.tgz#f79d67cd37e8d80ff0835fe7bc456e406fb1582c"
-  integrity sha512-oi5WJ1XukqFwgGsMxja1dySAzyWaXZqWSEWDedulO5M63JDw1rgGQbegfVZvxQyXLwkHm44xUbLsgP8C1iHeNg==
+  version "4.16.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.3.tgz#340aa46940d7db878748567c5dea24a48ddf3717"
+  integrity sha512-vIyhWmIkULaq04Gt93txdh+j02yX/JzlyhLYbV3YQCn/zvES3JnY7TifHHvvr1w5hTDluNKMkV05cs4vy8Q7sw==
   dependencies:
     caniuse-lite "^1.0.30001181"
     colorette "^1.2.1"
