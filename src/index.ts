@@ -103,7 +103,6 @@ function didYouMean<T extends MatchItem>(
           for (let i = 0; i < matchListLen; i += 1) {
             const score = scoreProcessor(matchList[i])
 
-            // eslint-disable-next-line max-depth
             if (marginValue > score) marginValue = score
 
             scores.push(score)
@@ -116,7 +115,6 @@ function didYouMean<T extends MatchItem>(
           for (let i = 0; i < matchListLen; i += 1) {
             const score = scoreProcessor(matchList[i])
 
-            // eslint-disable-next-line max-depth
             if (marginValue < score) marginValue = score
 
             scores.push(score)
