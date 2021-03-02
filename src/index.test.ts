@@ -1,5 +1,3 @@
-import * as R from 'ramda'
-
 import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
 import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
 import didYouMean from './index'
@@ -35,9 +33,17 @@ test('caseSensitive', () => {
 test('matchPath', () => {
   const matchPath = ['obj', 'array', 0, 'obj2']
 
-  const matchObjList = matchList.map((value) =>
-    R.assocPath(matchPath, value, {}),
-  )
+  const matchObjList = matchList.map((value) => {
+    return {
+      obj: {
+        array: [
+          {
+            obj2: value,
+          },
+        ],
+      },
+    }
+  })
 
   expect(
     didYouMean(input, matchObjList, {

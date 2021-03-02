@@ -1713,13 +1713,6 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@types/ramda@0.27.38":
-  version "0.27.38"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.38.tgz#797d5cdc9e00482e665dfea28142bb6c3c5f11e7"
-  integrity sha512-tZoQ0lv1WKkrpBHemL8yCkI9p8kUk/1PSMwhl0eeyqMQjD+2ePUtVLV8PpNS9Kq3OktObwOx9I3k+HumxTviRg==
-  dependencies:
-    ts-toolbelt "^6.15.1"
-
 "@types/resolve@1.17.1":
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-1.17.1.tgz#3afd6ad8967c77e4376c598a82ddd58f46ec45d6"
@@ -9955,11 +9948,6 @@ ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
-
-ts-toolbelt@^6.15.1:
-  version "6.15.5"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
-  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"
