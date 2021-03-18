@@ -39,7 +39,7 @@ test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
 })
 
 test('unknown returnType', () => {
-  // @ts-expect-error
+  // @ts-expect-error: test incorrect returnType
   expect(() => resultProcessor(matchList, [], 'unknown')).toThrowError(
     unknownReturnTypeError,
   )
