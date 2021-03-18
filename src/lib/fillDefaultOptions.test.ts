@@ -38,7 +38,7 @@ test(`thresholdType: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
 test('unknown thresholdType', () => {
   expect(() =>
     fillDefaultOptions({
-      // @ts-expect-error
+      // @ts-expect-error: test incorrect thresholdType
       thresholdType: 'unknown',
     }),
   ).toThrowError(unknownThresholdTypeError)
