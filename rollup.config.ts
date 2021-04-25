@@ -31,6 +31,14 @@ const rollupOptions: RollupOptions[] = [
         plugins: [getBabelOutputPlugin()],
         sourcemap: true,
       },
+      {
+        dir: outputDir,
+        entryFileNames: '[name].mjs',
+        exports: 'named',
+        format: 'esm',
+        plugins: [getBabelOutputPlugin()],
+        sourcemap: true,
+      },
     ],
     plugins: [
       babel({

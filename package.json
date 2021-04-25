@@ -33,10 +33,14 @@
   "license": "MIT",
   "author": "foray1010",
   "sideEffects": false,
-  "main": "dist/index.cjs.js",
-  "unpkg": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs.js"
+  },
+  "main": "./dist/index.cjs.js",
+  "unpkg": "./dist/index.umd.js",
+  "module": "./dist/index.esm.js",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
