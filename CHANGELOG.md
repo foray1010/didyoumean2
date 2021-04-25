@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/foray1010/didyoumean2/compare/v4.1.0...v4.2.0) (2021-04-25)
+
+### Features
+
+- add mjs export ([0ef2b51](https://github.com/foray1010/didyoumean2/commit/0ef2b516ab7cbf90aa94499d883819394d6e4d2f))
+
 ## [4.1.0](https://github.com/foray1010/didyoumean2/compare/v4.0.0...v4.1.0) (2020-06-18)
 
 ### Features
