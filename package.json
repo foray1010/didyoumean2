@@ -42,7 +42,8 @@
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "*.md"
   ],
   "scripts": {
     "prebuild": "yarn clean:build",
