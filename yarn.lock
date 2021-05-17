@@ -4928,10 +4928,10 @@ iferr@^0.1.5:
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
   integrity sha1-xg7taebY/bazEEofy8ocGS3FtQE=
 
-ignore-sync@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ignore-sync/-/ignore-sync-3.1.0.tgz#8b5e6ab6d4ea369e99dfaf34c9b02165d801673c"
-  integrity sha512-WDnxiNMSICYQxDm0KxyKstKgl6sdA3D9wbIiIyWQorKdXq78tY7htGt8anQKPSaubFf9ZqpYHynEx9dGMMyF8g==
+ignore-sync@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ignore-sync/-/ignore-sync-4.0.0.tgz#5baee3398c1aaa5610286a350f935e18e63c6be2"
+  integrity sha512-dIXlfOFX1mEjQePLTV1xJC+Xw4H8QX6/dOMpoV+C0oC+tq9fgt7iMa6DRIXzw6uVTL1uqEkBs1KR6TIRmAqY7w==
   dependencies:
     axios "0.21.1"
     fast-glob "3.2.5"
