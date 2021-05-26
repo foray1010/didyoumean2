@@ -1,4 +1,4 @@
-import leven from 'leven'
+import { distance } from 'fastest-levenshtein'
 
 import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
 import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
@@ -64,7 +64,7 @@ function didYouMean<T extends MatchItem>(
     case ThresholdTypeEnums.EDIT_DISTANCE:
       checkIfMatched = (score: number) => score <= threshold
       scoreProcessor = (matchItem: T) =>
-        leven(
+        distance(
           normalizedInput,
           matchItemProcessor(matchItem, optionsWithDefaults),
         )

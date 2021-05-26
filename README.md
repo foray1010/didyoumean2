@@ -12,7 +12,7 @@ It is inspired by [didyoumean.js](https://github.com/dcporter/didyoumean.js).
 
 ## Why reinventing the wheel
 
-1. Based on [leven](https://github.com/sindresorhus/leven), the fastest JS implementation of the [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance)
+1. Based on [fastest-levenshtein](https://github.com/ka-weihe/fastest-levenshtein), the fastest JS implementation of the [Levenshtein distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance)
 
 1. ~100% faster than [didyoumean.js](https://github.com/dcporter/didyoumean.js)
 

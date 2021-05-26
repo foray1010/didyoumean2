@@ -1,4 +1,4 @@
-import leven from 'leven'
+import { distance } from 'fastest-levenshtein'
 
 /**
  * Using edit distance between `a` and `b` to calculate similarity
@@ -11,7 +11,7 @@ const getSimilarity = (a: string, b: string): number => {
   if (!a || !b) return 0
   if (a === b) return 1
 
-  const editDistance = leven(a, b)
+  const editDistance = distance(a, b)
   const longestLength = Math.max(a.length, b.length)
 
   return (longestLength - editDistance) / longestLength
