@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/foray1010/didyoumean2/compare/v4.2.0...v5.0.0) (2021-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop node 10
+
+* drop node 10 ([f676176](https://github.com/foray1010/didyoumean2/commit/f676176de6a2e54918198544909806996e4aec23))
+
 ## [4.2.0](https://github.com/foray1010/didyoumean2/compare/v4.1.0...v4.2.0) (2021-04-25)
 
 ### Features
