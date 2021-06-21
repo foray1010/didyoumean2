@@ -47,7 +47,7 @@
   ],
   "scripts": {
     "prebuild": "yarn clean:build",
-    "build": "tsc --project tsconfig.build.json && rollup -c",
+    "build": "tsc --project tsconfig.build.json && rollup --configPlugin \"babel={ babelHelpers: 'runtime', extensions: ['.js', '.ts'] }\" -c",
     "ci": "npm-run-all -p 'lint:*' 'type:*' && yarn test && size-limit",
     "clean:build": "shx rm -rf dist/ build/dts/",
     "eslint": "eslint --ext=cjs,js,mjs,ts,tsx --ignore-path=node_modules/@foray1010/eslint-config/eslintignore",
@@ -92,7 +92,7 @@
     "pinst": "2.1.6",
     "prettier": "2.3.1",
     "remark-cli": "9.0.0",
-    "rollup": "2.51.2",
+    "rollup": "2.52.1",
     "rollup-plugin-dts": "3.0.1",
     "rollup-plugin-terser": "7.0.2",
     "shx": "0.3.3",
