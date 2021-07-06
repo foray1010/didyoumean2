@@ -84,7 +84,7 @@
     "@types/jest": "26.0.23",
     "@types/lodash.deburr": "4.1.6",
     "eslint": "7.30.0",
-    "husky": "6.0.0",
+    "husky": "7.0.1",
     "ignore-sync": "4.0.0",
     "jest": "27.0.6",
     "lint-staged": "11.0.0",
