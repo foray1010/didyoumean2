@@ -73,7 +73,7 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "@foray1010/babel-preset": "7.0.1",
-    "@foray1010/eslint-config": "5.0.3",
+    "@foray1010/eslint-config": "5.0.4",
     "@foray1010/prettier-config": "5.0.1",
     "@foray1010/remark-preset": "4.0.1",
     "@foray1010/tsconfig": "5.0.1",
