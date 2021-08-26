@@ -7,10 +7,7 @@ const getMatchItemStr = (
 ): string => {
   const matchItemStr =
     matchPath.length > 0
-      ? matchPath.reduce<unknown>(
-          (acc, prop) => (acc as any)?.[prop],
-          matchItem,
-        )
+      ? matchPath.reduce<any>((acc, prop) => acc?.[prop], matchItem)
       : matchItem
   if (typeof matchItemStr !== 'string') return ''
   return matchItemStr
