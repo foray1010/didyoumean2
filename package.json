@@ -97,7 +97,7 @@
     "rollup-plugin-terser": "7.0.2",
     "shx": "0.3.4",
     "size-limit": "7.0.8",
-    "ts-node": "10.6.0",
+    "ts-node": "10.7.0",
     "type-coverage": "2.21.0",
     "typescript": "4.6.2"
   },
