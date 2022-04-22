@@ -1799,10 +1799,10 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash.deburr@4.1.6":
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.deburr/-/lodash.deburr-4.1.6.tgz#18b3bebd941c4b622cd2278fed18017dfc32ce3f"
-  integrity sha512-LsdZUIBM/YDQ4+w4/PSq2KTRRuCmBic48vzzKD7PHw1uIsKMWizwDtk0fMdqYmo9/iLMhHiFh2ol0eqhjT0VTg==
+"@types/lodash.deburr@4.1.7":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.deburr/-/lodash.deburr-4.1.7.tgz#7d0b870fe36b52111470f2e506827e374395ecfb"
+  integrity sha512-mEhqJ5z6W8eP1oAfPho8UKcycutVuWjMfRguktDLTk+9mn+bSdbN4uPfUtUbRNnxjGsYmRwwPThTtkwvnuU+Fg==
   dependencies:
     "@types/lodash" "*"
 
