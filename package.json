@@ -83,7 +83,7 @@
     "@size-limit/preset-small-lib": "7.0.8",
     "@types/jest": "27.4.1",
     "@types/lodash.deburr": "4.1.7",
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "husky": "7.0.2",
     "ignore-sync": "5.0.1",
     "jest": "28.0.0",
