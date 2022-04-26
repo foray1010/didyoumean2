@@ -32,15 +32,15 @@ test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
     ReturnTypeEnums.FIRST_CLOSEST_MATCH,
     ReturnTypeEnums.FIRST_MATCH,
   ]) {
-    expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toEqual('ABCDEF****')
+    expect(resultProcessor(matchList, [3, 4, 5], ENUM)).toBe('ABCDEF****')
 
-    expect(resultProcessor(matchList, [], ENUM)).toEqual(null)
+    expect(resultProcessor(matchList, [], ENUM)).toBeNull()
   }
 })
 
 test('unknown returnType', () => {
   // @ts-expect-error: test incorrect returnType
-  expect(() => resultProcessor(matchList, [], 'unknown')).toThrowError(
+  expect(() => resultProcessor(matchList, [], 'unknown')).toThrow(
     unknownReturnTypeError,
   )
 })
