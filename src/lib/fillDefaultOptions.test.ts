@@ -41,5 +41,5 @@ test('unknown thresholdType', () => {
       // @ts-expect-error: test incorrect thresholdType
       thresholdType: 'unknown',
     }),
-  ).toThrowError(unknownThresholdTypeError)
+  ).toThrow(unknownThresholdTypeError)
 })

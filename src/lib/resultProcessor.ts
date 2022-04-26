@@ -4,10 +4,10 @@ import { unknownReturnTypeError } from '../errors'
 /**
  * Generate result
  *
- * @param {Object[]|string[]} matchList - List for matching with `input`
+ * @param {object[] | string[]} matchList - List for matching with `input`
  * @param {number[]} matchedIndexes - indexes of matchList that need to be returned as result
  * @param {ReturnTypeEnums} returnType - how the result will response to user
- * @returns {Array|null|Object|string} - matched result(s), return object if `match` is `{Object[]}`
+ * @returns {Array | null | object | string} - matched result(s), return object if `match` is `{Object[]}`
  */
 const resultProcessor = <T>(
   matchList: ReadonlyArray<T>,

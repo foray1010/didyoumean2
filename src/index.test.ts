@@ -132,7 +132,7 @@ test('returnType', () => {
       returnType: ReturnTypeEnums.FIRST_CLOSEST_MATCH,
       threshold: 0.7,
     }),
-  ).toBe(null)
+  ).toBeNull()
 
   // test first-match
   expect(
@@ -189,7 +189,7 @@ test(`threshold: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
       threshold: 3,
       thresholdType: ThresholdTypeEnums.EDIT_DISTANCE,
     }),
-  ).toBe(null)
+  ).toBeNull()
 })
 
 test(`threshold: "${ThresholdTypeEnums.SIMILARITY}"`, () => {
@@ -239,5 +239,5 @@ test(`threshold: "${ThresholdTypeEnums.SIMILARITY}"`, () => {
       threshold: 0.7,
       thresholdType: ThresholdTypeEnums.SIMILARITY,
     }),
-  ).toBe(null)
+  ).toBeNull()
 })
