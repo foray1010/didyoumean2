@@ -6,5 +6,4 @@ const config: Config = {
   coverageReporters: ['lcov', 'text-summary'],
   testMatch: ['**/*.{spec,test}.{cjs,cts,js,mjs,mts,ts,tsx}'],
 }
-
 export default config
