@@ -13,7 +13,7 @@ const resultProcessor = <T>(
   matchList: ReadonlyArray<T>,
   matchedIndexes: ReadonlyArray<number>,
   returnType: ReturnTypeEnums,
-): Array<T> | T | null => {
+): ReadonlyArray<T> | T | null => {
   switch (returnType) {
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
     case ReturnTypeEnums.ALL_MATCHES:

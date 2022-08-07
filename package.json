@@ -84,6 +84,7 @@
     "@types/jest": "28.1.6",
     "@types/lodash.deburr": "4.1.7",
     "eslint": "8.21.0",
+    "eslint-plugin-functional": "4.2.2",
     "husky": "8.0.1",
     "ignore-sync": "5.0.1",
     "jest": "28.1.3",
