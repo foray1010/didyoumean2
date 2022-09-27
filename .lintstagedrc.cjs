@@ -7,8 +7,6 @@ module.exports = {
     'jest --bail --findRelatedTests --passWithNoTests',
   ],
   '*.{json,yaml,yml}': 'yarn prettier --write',
-  '*.{markdown,md}'(filenames) {
-    return [`yarn prettier --write ${filenames.join(' ')}`, 'yarn remark .']
-  },
+  '*.{markdown,md}': ['yarn prettier --write', 'yarn remark'],
   '*ignore-sync': 'ignore-sync',
 }
