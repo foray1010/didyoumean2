@@ -3,12 +3,12 @@ import type { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
 
 export type MatchItem = Record<string, unknown> | string
 
-export type Options = Readonly<{
-  caseSensitive: boolean
-  deburr: boolean
-  matchPath: ReadonlyArray<number | string>
-  returnType: ReturnTypeEnums
-  threshold: number
-  thresholdType: ThresholdTypeEnums
-  trimSpaces: boolean
-}>
+export type Options = {
+  readonly caseSensitive: boolean
+  readonly deburr: boolean
+  readonly matchPath: ReadonlyArray<number | string>
+  readonly returnType: ReturnTypeEnums
+  readonly threshold: number
+  readonly thresholdType: ThresholdTypeEnums
+  readonly trimSpaces: boolean
+}

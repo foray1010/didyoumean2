@@ -13,23 +13,22 @@ import type { MatchItem, Options } from './types'
 function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options?: Partial<Options> &
-    Readonly<{
-      returnType?:
-        | ReturnTypeEnums.FIRST_CLOSEST_MATCH
-        | ReturnTypeEnums.FIRST_MATCH
-    }>,
+  options?: Partial<Options> & {
+    readonly returnType?:
+      | ReturnTypeEnums.FIRST_CLOSEST_MATCH
+      | ReturnTypeEnums.FIRST_MATCH
+  },
 ): T | null
 function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
-  options: Partial<Options> &
-    Readonly<{
-      returnType:
-        | ReturnTypeEnums.ALL_CLOSEST_MATCHES
-        | ReturnTypeEnums.ALL_MATCHES
-        | ReturnTypeEnums.ALL_SORTED_MATCHES
-    }>,
+  options: Partial<Options> & {
+    readonly returnType:
+      | ReturnTypeEnums.ALL_CLOSEST_MATCHES
+      | ReturnTypeEnums.ALL_MATCHES
+      | ReturnTypeEnums.ALL_SORTED_MATCHES
+  },
+  // eslint-disable-next-line functional/prefer-readonly-type
 ): Array<T>
 /**
  * Main function for didyoumean2

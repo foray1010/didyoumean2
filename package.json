@@ -64,19 +64,19 @@
     "type:coverage": "type-coverage --strict --at-least 99 --detail --ignore-catch"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.2",
+    "@babel/runtime": "^7.19.0",
     "fastest-levenshtein": "^1.0.12",
     "lodash.deburr": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.19.1",
+    "@babel/core": "7.19.3",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@foray1010/babel-preset": "9.1.0",
-    "@foray1010/eslint-config": "7.4.1",
-    "@foray1010/jest-preset": "2.0.1",
-    "@foray1010/prettier-config": "7.0.4",
-    "@foray1010/remark-preset": "7.0.3",
+    "@foray1010/babel-preset": "9.1.1",
+    "@foray1010/eslint-config": "7.6.0",
+    "@foray1010/jest-preset": "2.0.2",
+    "@foray1010/prettier-config": "7.0.5",
+    "@foray1010/remark-preset": "7.0.4",
     "@foray1010/tsconfig": "8.0.2",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "22.0.2",

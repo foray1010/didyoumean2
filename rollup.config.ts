@@ -9,7 +9,7 @@ import pkg from './package.json'
 
 const outputDir = 'dist'
 
-const rollupOptions: RollupOptions[] = [
+const rollupOptions: readonly RollupOptions[] = [
   {
     external: Object.keys(pkg.dependencies),
     input: 'src/index.ts',
