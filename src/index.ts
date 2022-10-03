@@ -98,7 +98,7 @@ function didYouMean<T extends MatchItem>(
       switch (thresholdType) {
         case ThresholdTypeEnums.EDIT_DISTANCE:
           // Process score and save the smallest score
-          marginValue = Infinity
+          marginValue = Number.POSITIVE_INFINITY
           for (let i = 0; i < matchListLen; i += 1) {
             const score = scoreProcessor(matchList[i])
 
