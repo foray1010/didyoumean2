@@ -87,7 +87,6 @@ function didYouMean<T extends MatchItem>(
    +++++++++++*/
 
   const matchedIndexes: number[] = []
-  const matchListLen = matchList.length
 
   switch (returnType) {
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
@@ -99,8 +98,8 @@ function didYouMean<T extends MatchItem>(
         case ThresholdTypeEnums.EDIT_DISTANCE:
           // Process score and save the smallest score
           marginValue = Number.POSITIVE_INFINITY
-          for (let i = 0; i < matchListLen; i += 1) {
-            const score = scoreProcessor(matchList[i])
+          for (const matchItem of matchList) {
+            const score = scoreProcessor(matchItem)
 
             if (marginValue > score) marginValue = score
 
@@ -111,8 +110,8 @@ function didYouMean<T extends MatchItem>(
         case ThresholdTypeEnums.SIMILARITY:
           // Process score and save the largest score
           marginValue = 0
-          for (let i = 0; i < matchListLen; i += 1) {
-            const score = scoreProcessor(matchList[i])
+          for (const matchItem of matchList) {
+            const score = scoreProcessor(matchItem)
 
             if (marginValue < score) marginValue = score
 
@@ -124,10 +123,7 @@ function didYouMean<T extends MatchItem>(
           throw unknownThresholdTypeError
       }
 
-      const scoresLen = scores.length
-      for (let i = 0; i < scoresLen; i += 1) {
-        const score = scores[i]
-
+      for (const [i, score] of scores.entries()) {
         if (checkIfMatched(score) && score === marginValue) {
           matchedIndexes.push(i)
         }
@@ -137,8 +133,8 @@ function didYouMean<T extends MatchItem>(
     }
 
     case ReturnTypeEnums.ALL_MATCHES:
-      for (let i = 0; i < matchListLen; i += 1) {
-        const score = scoreProcessor(matchList[i])
+      for (const [i, matchItem] of matchList.entries()) {
+        const score = scoreProcessor(matchItem)
 
         // save all indexes of matched scores
         if (checkIfMatched(score)) {
@@ -150,11 +146,11 @@ function didYouMean<T extends MatchItem>(
 
     case ReturnTypeEnums.ALL_SORTED_MATCHES: {
       const unsortedResults: Array<{
-        score: number
-        index: number
+        readonly score: number
+        readonly index: number
       }> = []
-      for (let i = 0; i < matchListLen; i += 1) {
-        const score = scoreProcessor(matchList[i])
+      for (const [i, matchItem] of matchList.entries()) {
+        const score = scoreProcessor(matchItem)
 
         // save all indexes of matched scores
         if (checkIfMatched(score)) {
@@ -186,8 +182,8 @@ function didYouMean<T extends MatchItem>(
     }
 
     case ReturnTypeEnums.FIRST_MATCH:
-      for (let i = 0; i < matchListLen; i += 1) {
-        const score = scoreProcessor(matchList[i])
+      for (const [i, matchItem] of matchList.entries()) {
+        const score = scoreProcessor(matchItem)
 
         // Return once matched, performance is main target in this returnType
         if (checkIfMatched(score)) {
