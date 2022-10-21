@@ -1,7 +1,7 @@
-import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
-import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
-import { unknownThresholdTypeError } from '../errors'
-import fillDefaultOptions from './fillDefaultOptions'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
+import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums.js'
+import { unknownThresholdTypeError } from '../errors.js'
+import fillDefaultOptions from './fillDefaultOptions.js'
 
 const defaultOptions = {
   caseSensitive: false,

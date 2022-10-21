@@ -1,5 +1,5 @@
-import type { ReturnTypeEnums } from './enums/ReturnTypeEnums'
-import type { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
+import type { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
+import type { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
 
 export type MatchItem = Record<string, unknown> | string
 

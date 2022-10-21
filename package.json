@@ -33,6 +33,7 @@
   "license": "MIT",
   "author": "foray1010",
   "sideEffects": false,
+  "type": "module",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
@@ -73,11 +74,11 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@foray1010/babel-preset": "9.2.0",
-    "@foray1010/eslint-config": "7.12.0",
-    "@foray1010/jest-preset": "2.0.2",
+    "@foray1010/eslint-config": "8.0.0",
+    "@foray1010/jest-preset": "2.1.0",
     "@foray1010/prettier-config": "7.0.5",
     "@foray1010/remark-preset": "7.0.4",
-    "@foray1010/tsconfig": "8.1.0",
+    "@foray1010/tsconfig": "9.1.0",
     "@rollup/plugin-babel": "6.0.0",
     "@rollup/plugin-commonjs": "23.0.0",
     "@rollup/plugin-node-resolve": "15.0.0",

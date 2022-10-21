@@ -1,5 +1,5 @@
-import fillDefaultOptions from './fillDefaultOptions'
-import normalizeString from './normalizeString'
+import fillDefaultOptions from './fillDefaultOptions.js'
+import normalizeString from './normalizeString.js'
 
 test('caseSensitive', () => {
   expect(

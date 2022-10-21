@@ -1,4 +1,4 @@
-import getSimilarity from './getSimilarity'
+import getSimilarity from './getSimilarity.js'
 
 test('same case', () => {
   expect(getSimilarity('abcde', 'fghij')).toBe(0)

@@ -1,5 +1,5 @@
-import fillDefaultOptions from './fillDefaultOptions'
-import matchItemProcessor from './matchItemProcessor'
+import fillDefaultOptions from './fillDefaultOptions.js'
+import matchItemProcessor from './matchItemProcessor.js'
 
 test('matchPath', () => {
   expect(

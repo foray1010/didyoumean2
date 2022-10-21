@@ -1,6 +1,6 @@
 import deburr from 'lodash.deburr'
 
-import type { Options } from '../types'
+import type { Options } from '../types.js'
 
 /**
  * Normalize a string

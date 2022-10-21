@@ -1,7 +1,7 @@
-import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
-import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums'
-import { unknownThresholdTypeError } from '../errors'
-import type { Options } from '../types'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
+import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums.js'
+import { unknownThresholdTypeError } from '../errors.js'
+import type { Options } from '../types.js'
 
 const fillDefaultOptions = (options?: Partial<Options>): Options => {
   const optionsWithDefaultValues = {

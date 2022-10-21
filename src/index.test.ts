@@ -1,6 +1,6 @@
-import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
-import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
-import didYouMean from './index'
+import { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
+import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
+import didYouMean from './index.js'
 
 const input = 'abcdefghij'
 const matchList = [

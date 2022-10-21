@@ -29,6 +29,7 @@ const rollupOptions: readonly RollupOptions[] = [
         exports: 'named',
         format: 'esm',
         plugins: [getBabelOutputPlugin()],
+        preferConst: true,
         sourcemap: true,
       },
     ],
@@ -38,6 +39,9 @@ const rollupOptions: readonly RollupOptions[] = [
         extensions: ['.js', '.ts'],
       }),
       commonjs({
+        include: '**/node_modules/**',
+      }),
+      resolve({
         extensions: ['.js', '.ts'],
       }),
       terser(),
@@ -64,9 +68,11 @@ const rollupOptions: readonly RollupOptions[] = [
         skipPreflightCheck: true,
       }),
       commonjs({
+        include: '**/node_modules/**',
+      }),
+      resolve({
         extensions: ['.js', '.ts'],
       }),
-      resolve(),
       terser(),
     ],
   },

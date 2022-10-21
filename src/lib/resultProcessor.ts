@@ -1,5 +1,5 @@
-import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
-import { unknownReturnTypeError } from '../errors'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
+import { unknownReturnTypeError } from '../errors.js'
 
 /**
  * Generate result

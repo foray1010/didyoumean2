@@ -1,6 +1,6 @@
-import { ReturnTypeEnums } from '../enums/ReturnTypeEnums'
-import { unknownReturnTypeError } from '../errors'
-import resultProcessor from './resultProcessor'
+import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
+import { unknownReturnTypeError } from '../errors.js'
+import resultProcessor from './resultProcessor.js'
 
 const matchList = [
   'abc*******',

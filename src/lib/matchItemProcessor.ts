@@ -1,5 +1,5 @@
-import type { MatchItem, Options } from '../types'
-import normalizeString from './normalizeString'
+import type { MatchItem, Options } from '../types.js'
+import normalizeString from './normalizeString.js'
 
 const getMatchItemStr = (
   matchItem: MatchItem,

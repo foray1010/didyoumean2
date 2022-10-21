@@ -1,14 +1,14 @@
 import { distance } from 'fastest-levenshtein'
 
-import { ReturnTypeEnums } from './enums/ReturnTypeEnums'
-import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums'
-import { unknownReturnTypeError, unknownThresholdTypeError } from './errors'
-import fillDefaultOptions from './lib/fillDefaultOptions'
-import getSimilarity from './lib/getSimilarity'
-import matchItemProcessor from './lib/matchItemProcessor'
-import normalizeString from './lib/normalizeString'
-import resultProcessor from './lib/resultProcessor'
-import type { MatchItem, Options } from './types'
+import { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
+import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
+import { unknownReturnTypeError, unknownThresholdTypeError } from './errors.js'
+import fillDefaultOptions from './lib/fillDefaultOptions.js'
+import getSimilarity from './lib/getSimilarity.js'
+import matchItemProcessor from './lib/matchItemProcessor.js'
+import normalizeString from './lib/normalizeString.js'
+import resultProcessor from './lib/resultProcessor.js'
+import type { MatchItem, Options } from './types.js'
 
 function didYouMean<T extends MatchItem>(
   input: string,
