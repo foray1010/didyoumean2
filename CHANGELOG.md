@@ -4,12 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [5.0.0](https://github.com/foray1010/didyoumean2/compare/v4.2.0...v5.0.0) (2021-05-27)
 
-
 ### ⚠ BREAKING CHANGES
 
-* drop node 10
-
-* drop node 10 ([f676176](https://github.com/foray1010/didyoumean2/commit/f676176de6a2e54918198544909806996e4aec23))
+- drop node 10 ([f676176](https://github.com/foray1010/didyoumean2/commit/f676176de6a2e54918198544909806996e4aec23))
 
 ## [4.2.0](https://github.com/foray1010/didyoumean2/compare/v4.1.0...v4.2.0) (2021-04-25)
 
@@ -38,7 +35,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 - default enable deburr ([16a0a56](https://github.com/foray1010/didyoumean2/commit/16a0a5613481475047bdb92a2d17aa5fa29a42b8))
 
-* require nodejs 10 ([d22ea95](https://github.com/foray1010/didyoumean2/commit/d22ea9592c7c3b663383506f8ed8738ee821f378))
+- require nodejs 10 ([d22ea95](https://github.com/foray1010/didyoumean2/commit/d22ea9592c7c3b663383506f8ed8738ee821f378))
 
 ### [3.1.2](https://github.com/foray1010/didyoumean2/compare/v3.1.1...v3.1.2) (2019-07-29)
 
