@@ -1,2 +1,2 @@
-export const unknownReturnTypeError = new Error('unknown returnType')
-export const unknownThresholdTypeError = new Error('unknown thresholdType')
+export const unknownReturnTypeError = new TypeError('unknown returnType')
+export const unknownThresholdTypeError = new TypeError('unknown thresholdType')
