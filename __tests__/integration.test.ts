@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from 'didyoumean2'
 
 const input = 'abcdefghij'
