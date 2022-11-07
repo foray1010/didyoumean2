@@ -1,5 +1,4 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
-import { unknownReturnTypeError } from '../errors.js'
 
 /**
  * Generate result
@@ -26,9 +25,6 @@ const resultProcessor = <T>(
       if (matchedIndex === undefined) return null
       return matchList[matchedIndex]!
     }
-
-    default:
-      throw unknownReturnTypeError
   }
 }
 

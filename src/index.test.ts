@@ -142,6 +142,16 @@ test('returnType', () => {
   ).toBe(matchList[1])
 })
 
+test.each([undefined, 'unknown'])('invalid returnType: %s', (returnType) => {
+  // should throw on unknown returnType
+  expect(() => {
+    didYouMean(input, matchList, {
+      // @ts-expect-error wrong returnType for testing
+      returnType,
+    })
+  }).toThrow(new TypeError('unknown returnType'))
+})
+
 test(`threshold: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
   expect(
     didYouMean(input, matchList, {
@@ -241,3 +251,16 @@ test(`threshold: "${ThresholdTypeEnums.SIMILARITY}"`, () => {
     }),
   ).toBeNull()
 })
+
+test.each([undefined, 'unknown'])(
+  'invalid thresholdType: %s',
+  (thresholdType) => {
+    // should throw on unknown thresholdType
+    expect(() => {
+      didYouMean(input, matchList, {
+        // @ts-expect-error wrong thresholdType for testing
+        thresholdType,
+      })
+    }).toThrow(new TypeError('unknown thresholdType'))
+  },
+)

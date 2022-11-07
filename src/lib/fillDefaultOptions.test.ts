@@ -1,6 +1,5 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
 import { ThresholdTypeEnums } from '../enums/ThresholdTypeEnums.js'
-import { unknownThresholdTypeError } from '../errors.js'
 import fillDefaultOptions from './fillDefaultOptions.js'
 
 const defaultOptions = {
@@ -33,13 +32,4 @@ test(`thresholdType: "${ThresholdTypeEnums.EDIT_DISTANCE}"`, () => {
       thresholdType: ThresholdTypeEnums.EDIT_DISTANCE,
     }),
   ).toEqual(defaultOptionsForEditDistance)
-})
-
-test('unknown thresholdType', () => {
-  expect(() =>
-    fillDefaultOptions({
-      // @ts-expect-error: test incorrect thresholdType
-      thresholdType: 'unknown',
-    }),
-  ).toThrow(unknownThresholdTypeError)
 })

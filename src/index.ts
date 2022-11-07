@@ -2,7 +2,6 @@ import { distance } from 'fastest-levenshtein'
 
 import { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
 import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
-import { unknownReturnTypeError, unknownThresholdTypeError } from './errors.js'
 import fillDefaultOptions from './lib/fillDefaultOptions.js'
 import getSimilarity from './lib/getSimilarity.js'
 import matchItemProcessor from './lib/matchItemProcessor.js'
@@ -77,9 +76,6 @@ function didYouMean<T extends MatchItem>(
           matchItemProcessor(matchItem, optionsWithDefaults),
         )
       break
-
-    /* istanbul ignore next */ default:
-      throw unknownThresholdTypeError
   }
 
   /*+++++++++++
@@ -118,9 +114,6 @@ function didYouMean<T extends MatchItem>(
             scores.push(score)
           }
           break
-
-        /* istanbul ignore next */ default:
-          throw unknownThresholdTypeError
       }
 
       for (const [i, score] of scores.entries()) {
@@ -169,9 +162,6 @@ function didYouMean<T extends MatchItem>(
         case ThresholdTypeEnums.SIMILARITY:
           unsortedResults.sort((a, b) => b.score - a.score)
           break
-
-        /* istanbul ignore next */ default:
-          throw unknownThresholdTypeError
       }
 
       for (const unsortedResult of unsortedResults) {
@@ -193,9 +183,6 @@ function didYouMean<T extends MatchItem>(
       }
 
       break
-
-    /* istanbul ignore next */ default:
-      throw unknownReturnTypeError
   }
 
   /*+++++++++++++++++++++++

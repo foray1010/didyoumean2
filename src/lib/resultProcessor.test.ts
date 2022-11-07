@@ -1,5 +1,4 @@
 import { ReturnTypeEnums } from '../enums/ReturnTypeEnums.js'
-import { unknownReturnTypeError } from '../errors.js'
 import resultProcessor from './resultProcessor.js'
 
 const matchList = [
@@ -36,11 +35,4 @@ test('FIRST_CLOSEST_MATCH and FIRST_MATCH', () => {
 
     expect(resultProcessor(matchList, [], ENUM)).toBeNull()
   }
-})
-
-test('unknown returnType', () => {
-  // @ts-expect-error: test incorrect returnType
-  expect(() => resultProcessor(matchList, [], 'unknown')).toThrow(
-    unknownReturnTypeError,
-  )
 })
