@@ -1,7 +1,7 @@
 # didyoumean2
 
 [![Build Status](https://img.shields.io/circleci/project/foray1010/didyoumean2/master.svg)](https://circleci.com/gh/foray1010/didyoumean2/tree/master)
-[![codecov.io](https://img.shields.io/codecov/c/github/foray1010/didyoumean2.svg)](https://codecov.io/github/foray1010/didyoumean2?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/foray1010/didyoumean2.svg)](https://codecov.io/gh/foray1010/didyoumean2)
 
 [![node](https://img.shields.io/node/v/didyoumean2.svg)](https://www.npmjs.com/package/didyoumean2)
 [![npm](https://img.shields.io/npm/dm/didyoumean2.svg)](https://www.npmjs.com/package/didyoumean2)
