@@ -13,7 +13,7 @@ const normalizeString = (str: string, options: Options): string => {
   let s = str
 
   if (options.trimSpaces) {
-    s = s.trim().replace(/\s+/g, ' ')
+    s = s.trim().replaceAll(/\s+/g, ' ')
   }
 
   if (options.deburr) {

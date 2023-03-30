@@ -193,4 +193,6 @@ function didYouMean<T extends MatchItem>(
 }
 
 export default didYouMean
-export { ReturnTypeEnums, ThresholdTypeEnums }
+
+export { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
+export { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
