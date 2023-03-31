@@ -1,4 +1,4 @@
-import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from 'didyoumean2'
+import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from '..'
 
 const input = 'abcdefghij'
 const matchList = [

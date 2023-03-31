@@ -45,6 +45,14 @@ const {
 import didYouMean, { ReturnTypeEnums, ThresholdTypeEnums } from 'didyoumean2'
 ```
 
+## Development Setup
+
+We are using [corepack](https://nodejs.org/api/corepack.html) to manage the `yarn` version
+
+```bash
+corepack enable
+```
+
 ## Usage
 
 ```js
