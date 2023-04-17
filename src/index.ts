@@ -27,8 +27,8 @@ function didYouMean<T extends MatchItem>(
       | ReturnTypeEnums.ALL_MATCHES
       | ReturnTypeEnums.ALL_SORTED_MATCHES
   },
-  // eslint-disable-next-line functional/prefer-readonly-type
-): Array<T>
+  // eslint-disable-next-line functional/prefer-immutable-types
+): T[]
 /**
  * Main function for didyoumean2
  *
@@ -41,6 +41,7 @@ function didYouMean<T extends MatchItem>(
   input: string,
   matchList: ReadonlyArray<T>,
   options?: Partial<Options>,
+  // eslint-disable-next-line functional/prefer-immutable-types
 ): Array<T> | T | null {
   /*+++++++++++++++++++
    + Initiate options +
@@ -82,11 +83,13 @@ function didYouMean<T extends MatchItem>(
    + Matching +
    +++++++++++*/
 
+  // eslint-disable-next-line functional/prefer-immutable-types
   const matchedIndexes: number[] = []
 
   switch (returnType) {
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
     case ReturnTypeEnums.FIRST_CLOSEST_MATCH: {
+      // eslint-disable-next-line functional/prefer-immutable-types
       const scores: number[] = []
 
       let marginValue: number
@@ -138,10 +141,11 @@ function didYouMean<T extends MatchItem>(
       break
 
     case ReturnTypeEnums.ALL_SORTED_MATCHES: {
-      const unsortedResults: Array<{
-        readonly score: number
-        readonly index: number
-      }> = []
+      // eslint-disable-next-line functional/prefer-immutable-types
+      const unsortedResults: Readonly<{
+        score: number
+        index: number
+      }>[] = []
       for (const [i, matchItem] of matchList.entries()) {
         const score = scoreProcessor(matchItem)
 

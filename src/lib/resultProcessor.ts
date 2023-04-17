@@ -12,6 +12,7 @@ const resultProcessor = <T>(
   matchList: ReadonlyArray<T>,
   matchedIndexes: ReadonlyArray<number>,
   returnType: ReturnTypeEnums,
+  // eslint-disable-next-line functional/prefer-immutable-types
 ): Array<T> | T | null => {
   switch (returnType) {
     case ReturnTypeEnums.ALL_CLOSEST_MATCHES:
