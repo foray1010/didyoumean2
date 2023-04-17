@@ -6,7 +6,7 @@ import dts from 'rollup-plugin-dts'
 import { terser } from 'rollup-plugin-terser'
 
 const outputDir = 'dist'
-const commonOutputOptions: OutputOptions = {
+const commonOutputOptions: Readonly<OutputOptions> = {
   dir: outputDir,
   exports: 'named',
   generatedCode: {
