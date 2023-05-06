@@ -3571,14 +3571,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.1.2":
-  version: 1.3.6
-  resolution: "axios@npm:1.3.6"
+"axios@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "axios@npm:1.4.0"
   dependencies:
     follow-redirects: ^1.15.0
     form-data: ^4.0.0
     proxy-from-env: ^1.1.0
-  checksum: c90497ebf738723654a6e80147dc294186ad9d7b08f95f5a22fd48f826c7e06a576229b8dff3137195ca627349a4312e00fa78e4f1c499250b9860596adef44a
+  checksum: 7fb6a4313bae7f45e89d62c70a800913c303df653f19eafec88e56cea2e3821066b8409bc68be1930ecca80e861c52aa787659df0ffec6ad4d451c7816b9386b
   languageName: node
   linkType: hard
 
@@ -4535,7 +4535,7 @@ __metadata:
     eslint: 8.39.0
     fastest-levenshtein: ^1.0.12
     husky: 8.0.3
-    ignore-sync: 6.0.2
+    ignore-sync: 7.0.0
     jest: 29.5.0
     lint-staged: 13.2.2
     lodash.deburr: ^4.1.0
@@ -6192,17 +6192,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore-sync@npm:6.0.2":
-  version: 6.0.2
-  resolution: "ignore-sync@npm:6.0.2"
+"ignore-sync@npm:7.0.0":
+  version: 7.0.0
+  resolution: "ignore-sync@npm:7.0.0"
   dependencies:
-    axios: ^1.1.2
+    axios: ^1.4.0
     fast-glob: ^3.2.12
     ignore: ^5.2.0
-    ramda: ^0.28.0
+    ramda: ^0.29.0
   bin:
     ignore-sync: src/bin.js
-  checksum: 0be1b650faf6b680084dbbdfa2a9173859a032571f7adf649e59dc586a9562de6ac6483473142fbc089ee9027b2e193ed3ea94ed3c317bc423829af106f9703b
+  checksum: 75f47ced761d4de3bc738754bc13c2a994308d87db7a4fbf8cc23388d4bcd9d74dbb0120c4b06856aa7104bdf89eca2c6644dd7981195829698d2b9858fc4d92
   languageName: node
   linkType: hard
 
@@ -9357,10 +9357,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:^0.28.0":
-  version: 0.28.0
-  resolution: "ramda@npm:0.28.0"
-  checksum: 44ea6e5010bba70151b6a92d8114a91915e8b5a16105cce65fae58c9d7386b812c429645e35f21141d7087568550ce383bc10ee1a65cdec951f4b69ea457e6a4
+"ramda@npm:^0.29.0":
+  version: 0.29.0
+  resolution: "ramda@npm:0.29.0"
+  checksum: 9ab26c06eb7545cbb7eebcf75526d6ee2fcaae19e338f165b2bf32772121e7b28192d6664d1ba222ff76188ba26ab307342d66e805dbb02c860560adc4d5dd57
   languageName: node
   linkType: hard
 

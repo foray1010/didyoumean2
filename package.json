@@ -86,7 +86,7 @@
     "@types/lodash.deburr": "4.1.7",
     "eslint": "8.39.0",
     "husky": "8.0.3",
-    "ignore-sync": "6.0.2",
+    "ignore-sync": "7.0.0",
     "jest": "29.5.0",
     "lint-staged": "13.2.2",
     "node-notifier": "10.0.1",
