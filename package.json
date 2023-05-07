@@ -102,7 +102,7 @@
     "type-coverage": "2.25.0",
     "typescript": "5.0.4"
   },
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.5.1",
   "engines": {
     "node": "^16.14.0 || >=18.12.0"
   }
