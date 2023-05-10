@@ -4560,7 +4560,7 @@ __metadata:
     pinst: 3.0.0
     prettier: 2.8.8
     remark-cli: 11.0.0
-    rollup: 3.21.3
+    rollup: 3.21.5
     rollup-plugin-dts: 5.3.0
     rollup-plugin-terser: 7.0.2
     shx: 0.3.4
@@ -10701,9 +10701,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.21.3":
-  version: 3.21.3
-  resolution: "rollup@npm:3.21.3"
+"rollup@npm:3.21.5":
+  version: 3.21.5
+  resolution: "rollup@npm:3.21.5"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -10711,7 +10711,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 430c0c66f1480586ccea77b190524efb6a3af3da5308c7bc77eca3160c3f387c9a56ebb3eef5bfb24f683764bdfdd3dafdea175d215e4b875bbde752619bec12
+  checksum: dfe2e4002fbfbc0a67591595f137c23082c639b1a790854ebe8611264b945e77caaf8c8ec9365faf9580f5df9cb9a954915443df020dc2ee391c477659484cf0
   languageName: node
   linkType: hard
 
