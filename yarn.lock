@@ -4565,7 +4565,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     shx: 0.3.4
     size-limit: 8.2.4
-    type-coverage: 2.25.0
+    type-coverage: 2.25.3
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -8335,12 +8335,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:3 || 4 || 5 || 6 || 7, minimatch@npm:^7.4.2":
-  version: 7.4.6
-  resolution: "minimatch@npm:7.4.6"
+"minimatch@npm:6 || 7 || 8 || 9":
+  version: 9.0.0
+  resolution: "minimatch@npm:9.0.0"
   dependencies:
     brace-expansion: ^2.0.1
-  checksum: 1a6c8d22618df9d2a88aabeef1de5622eb7b558e9f8010be791cb6b0fa6e102d39b11c28d75b855a1e377b12edc7db8ff12a99c20353441caa6a05e78deb5da9
+  checksum: 7bd57899edd1d1b0560f50b5b2d1ea4ad2a366c5a2c8e0a943372cf2f200b64c256bae45a87a80915adbce27fa36526264296ace0da57b600481fe5ea3e372e5
   languageName: node
   linkType: hard
 
@@ -8359,6 +8359,15 @@ __metadata:
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 7564208ef81d7065a370f788d337cd80a689e981042cb9a1d0e6580b6c6a8c9279eba80010516e258835a988363f99f54a6f711a315089b8b42694f5da9d0d77
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^7.4.2":
+  version: 7.4.6
+  resolution: "minimatch@npm:7.4.6"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 1a6c8d22618df9d2a88aabeef1de5622eb7b558e9f8010be791cb6b0fa6e102d39b11c28d75b855a1e377b12edc7db8ff12a99c20353441caa6a05e78deb5da9
   languageName: node
   linkType: hard
 
@@ -11606,30 +11615,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-coverage-core@npm:^2.25.0":
-  version: 2.25.0
-  resolution: "type-coverage-core@npm:2.25.0"
+"type-coverage-core@npm:^2.25.3":
+  version: 2.25.3
+  resolution: "type-coverage-core@npm:2.25.3"
   dependencies:
     fast-glob: 3
-    minimatch: 3 || 4 || 5 || 6 || 7
+    minimatch: 6 || 7 || 8 || 9
     normalize-path: 3
     tslib: 1 || 2
     tsutils: 3
   peerDependencies:
     typescript: 2 || 3 || 4 || 5
-  checksum: 021511226afaf0921970ae69d13d66c8bc9ec8e48deedc1327eeee00a9890e278702cb1b259d4d60a579ed7007511055c47255bd2c4664fe9ea01a4750737c82
+  checksum: f227be9284ebcf95f356eb47c172f2f44c693d95fa8a956ff606b1a41fab8d3a1c2d9cb8aa30365ff43e7ed78cbe793d49287606c7708d7494b9b145d3388cea
   languageName: node
   linkType: hard
 
-"type-coverage@npm:2.25.0":
-  version: 2.25.0
-  resolution: "type-coverage@npm:2.25.0"
+"type-coverage@npm:2.25.3":
+  version: 2.25.3
+  resolution: "type-coverage@npm:2.25.3"
   dependencies:
     minimist: 1
-    type-coverage-core: ^2.25.0
+    type-coverage-core: ^2.25.3
   bin:
     type-coverage: bin/type-coverage
-  checksum: f9b88254e2b0b4ac96b8e709bf3482535d78974bd83b10495cab6d2e255ed9ad1adb09078f4f9a15bd105ee8966003abcc6fc48c65dd620d2121d5c4369fdb2d
+  checksum: a6e55f82d506dcf89d20320afea3e5bb7349fd7c0d72c39f7243be0c8d6bc5e801aecabf02260309ec6d07b93e35d800a752757235cd91e2b93ac1f186aeacc3
   languageName: node
   linkType: hard
 
