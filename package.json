@@ -99,7 +99,7 @@
     "rollup-plugin-terser": "7.0.2",
     "shx": "0.3.4",
     "size-limit": "8.2.4",
-    "type-coverage": "2.25.3",
+    "type-coverage": "2.26.0",
     "typescript": "5.0.4"
   },
   "packageManager": "yarn@3.5.1",
