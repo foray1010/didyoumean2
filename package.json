@@ -82,7 +82,7 @@
     "@rollup/plugin-commonjs": "24.0.1",
     "@rollup/plugin-node-resolve": "15.0.1",
     "@size-limit/preset-small-lib": "8.2.4",
-    "@types/jest": "29.5.1",
+    "@types/jest": "29.5.2",
     "@types/lodash.deburr": "4.1.7",
     "eslint": "8.41.0",
     "husky": "8.0.3",
