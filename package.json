@@ -100,7 +100,7 @@
     "shx": "0.3.4",
     "size-limit": "8.2.6",
     "type-coverage": "2.26.0",
-    "typescript": "5.1.3"
+    "typescript": "5.1.6"
   },
   "packageManager": "yarn@3.6.1",
   "engines": {
