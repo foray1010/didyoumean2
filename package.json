@@ -80,7 +80,7 @@
     "@foray1010/tsconfig": "11.0.1",
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-commonjs": "24.0.1",
-    "@rollup/plugin-node-resolve": "15.2.0",
+    "@rollup/plugin-node-resolve": "15.2.1",
     "@rollup/plugin-terser": "0.4.3",
     "@size-limit/preset-small-lib": "8.2.6",
     "@types/jest": "29.5.3",
