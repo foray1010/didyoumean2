@@ -4502,7 +4502,7 @@ __metadata:
     rollup-plugin-dts: 5.3.1
     shx: 0.3.4
     size-limit: 8.2.6
-    type-coverage: 2.26.0
+    type-coverage: 2.26.2
     typescript: 5.1.6
   languageName: unknown
   linkType: soft
@@ -11573,9 +11573,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-coverage-core@npm:^2.26.0":
-  version: 2.26.1
-  resolution: "type-coverage-core@npm:2.26.1"
+"type-coverage-core@npm:^2.26.2":
+  version: 2.26.2
+  resolution: "type-coverage-core@npm:2.26.2"
   dependencies:
     fast-glob: 3
     minimatch: 6 || 7 || 8 || 9
@@ -11584,19 +11584,19 @@ __metadata:
     tsutils: 3
   peerDependencies:
     typescript: 2 || 3 || 4 || 5
-  checksum: 4afd4db0eea45067c4643d531247ebccc1be767c51ece02a5a339fd1883304352f09c7861fb677f6ffd913c0fc5449c1e01c1690523215fdfa71b3b38d700a61
+  checksum: 657a1abb2b894f7032ef5c8e90eabf37a2f733db175fe313cb6913f6883c07dc08a8702dd9aa92bc766eb4f97bfa14c3cbd40d591cfb82a52e73b97b1bafccfe
   languageName: node
   linkType: hard
 
-"type-coverage@npm:2.26.0":
-  version: 2.26.0
-  resolution: "type-coverage@npm:2.26.0"
+"type-coverage@npm:2.26.2":
+  version: 2.26.2
+  resolution: "type-coverage@npm:2.26.2"
   dependencies:
     minimist: 1
-    type-coverage-core: ^2.26.0
+    type-coverage-core: ^2.26.2
   bin:
     type-coverage: bin/type-coverage
-  checksum: a635e3144eed389eb08dea6c0f0bb20d25895c17085a1d6f68959b82debd76454871bc4460b27ead7426e8d1e2e7c6d23278de7f1cc6fd71e1a9853d282fb954
+  checksum: e7c8bd901ef2fa39b82fcedf25e533a757a4f9cf415f9017fc7bee4896c27b51ee8744019987a5aef6494f8ab48041a3a5d03148af260ca0adaf9ba9937af172
   languageName: node
   linkType: hard
 
