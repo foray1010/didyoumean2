@@ -81,6 +81,14 @@ const rollupOptions: readonly RollupOptions[] = [
     },
     plugins: [dts()],
   },
+  {
+    input: 'build/dts/index.d.ts',
+    output: {
+      dir: outputDir,
+      entryFileNames: '[name].mts',
+    },
+    plugins: [dts()],
+  },
 ]
 
 export default rollupOptions
