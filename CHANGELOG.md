@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/foray1010/didyoumean2/compare/v6.0.0...v6.0.1) (2023-09-07)
+
+### Bug Fixes
+
+- **types:** add mts types declaration file ([6881520](https://github.com/foray1010/didyoumean2/commit/68815207e0fb3a29ee93b3cb4e5dc58101c7e712))
+
 ## [6.0.0](https://github.com/foray1010/didyoumean2/compare/v5.0.0...v6.0.0) (2023-09-07)
 
 ### ⚠ BREAKING CHANGES
