@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/foray1010/didyoumean2/compare/v5.0.0...v6.0.0) (2023-09-07)
+
+### ⚠ BREAKING CHANGES
+
+- require node `^16.14.0 || >=18.12.0`
+- drop nodejs 14.17 and 18.11
+- drop node.js v12 and v17
+- only support node ^12.22.0 || ^14.17.0 || >=16.13.0
+
+### Bug Fixes
+
+- compatible with typescript node16 module resolution ([734187d](https://github.com/foray1010/didyoumean2/commit/734187ddc0db49b8269ba930cf8215767f2205c4))
+- use TypeError for unknown returnType/thresholdType errors ([7fd3e3e](https://github.com/foray1010/didyoumean2/commit/7fd3e3ef4a0e93131efe021577569f3dd84a246a))
+
+- bump node version requirement ([e656c70](https://github.com/foray1010/didyoumean2/commit/e656c70029b3f46ddc76f82ec79f6f267bd2980a))
+- drop node.js v12 and v17 ([e56e7d4](https://github.com/foray1010/didyoumean2/commit/e56e7d4c26b49826fb1c9bec2ac74a8575f299f9))
+- drop nodejs 14.17 and 18.11 ([a9d907e](https://github.com/foray1010/didyoumean2/commit/a9d907e207841a4352f56cd448208b2ca4196385))
+- require node `^16.14.0 || >=18.12.0` ([7e04b0b](https://github.com/foray1010/didyoumean2/commit/7e04b0bf963f94ed80bcbec45249054fc6f11aeb))
+
 ## [5.0.0](https://github.com/foray1010/didyoumean2/compare/v4.2.0...v5.0.0) (2021-05-27)
 
 ### ⚠ BREAKING CHANGES
