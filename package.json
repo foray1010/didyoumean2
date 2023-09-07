@@ -105,7 +105,7 @@
     "type-coverage": "2.26.2",
     "typescript": "5.1.6"
   },
-  "packageManager": "yarn@3.6.2",
+  "packageManager": "yarn@3.6.3",
   "engines": {
     "node": "^16.14.0 || >=18.12.0"
   }
