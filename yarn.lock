@@ -4666,7 +4666,7 @@ __metadata:
     prettier: 3.0.3
     remark-cli: 11.0.0
     rollup: 3.29.1
-    rollup-plugin-dts: 5.3.1
+    rollup-plugin-dts: 6.0.2
     shx: 0.3.4
     size-limit: 9.0.0
     type-coverage: 2.26.2
@@ -7935,7 +7935,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.30.2":
+"magic-string@npm:^0.30.3":
   version: 0.30.3
   resolution: "magic-string@npm:0.30.3"
   dependencies:
@@ -10815,19 +10815,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-dts@npm:5.3.1":
-  version: 5.3.1
-  resolution: "rollup-plugin-dts@npm:5.3.1"
+"rollup-plugin-dts@npm:6.0.2":
+  version: 6.0.2
+  resolution: "rollup-plugin-dts@npm:6.0.2"
   dependencies:
-    "@babel/code-frame": ^7.22.5
-    magic-string: ^0.30.2
+    "@babel/code-frame": ^7.22.13
+    magic-string: ^0.30.3
   peerDependencies:
-    rollup: ^3.0
-    typescript: ^4.1 || ^5.0
+    rollup: ^3.25
+    typescript: ^4.5 || ^5.0
   dependenciesMeta:
     "@babel/code-frame":
       optional: true
-  checksum: 75785646f7d4b049ec16c7b568ee9e8632c26d1e64fa87294b97a288e857e6e0f0d2731add08f1d674a680e554ad45159cb40c75e6585456982338fbb5940a77
+  checksum: 0f36a4a485f958c9f510900499453b223962d8305a944352f05f391411c7a1350b2468e9ef134bc83ff1a5f98bcca553e238f8c99c138305d257e238e1a21b3f
   languageName: node
   linkType: hard
 
