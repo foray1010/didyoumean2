@@ -2125,9 +2125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foray1010/eslint-config@npm:11.0.1":
-  version: 11.0.1
-  resolution: "@foray1010/eslint-config@npm:11.0.1"
+"@foray1010/eslint-config@npm:11.0.2":
+  version: 11.0.2
+  resolution: "@foray1010/eslint-config@npm:11.0.2"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": ^4.0.0
     "@eslint/js": ^8.44.0
@@ -2161,7 +2161,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: ffc955ec13070f24ad2f199fe09e6ca4dd0816676e5d09fed11adea56ce2f01d280b6f5177be28016838f61fd09b6f189bb9a13e360b4b4fd984b9edad584af2
+  checksum: abd9ed75af5cec41ea2360366339de93050380823403cdbf34ab728804cd7d396fd9ad9dbc688535232fe03e3928e22fa299331438ad3f1df06cd69832be44b4
   languageName: node
   linkType: hard
 
@@ -2205,12 +2205,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foray1010/tsconfig@npm:11.0.1":
-  version: 11.0.1
-  resolution: "@foray1010/tsconfig@npm:11.0.1"
+"@foray1010/tsconfig@npm:11.0.2":
+  version: 11.0.2
+  resolution: "@foray1010/tsconfig@npm:11.0.2"
   peerDependencies:
     typescript: ^5.0.2
-  checksum: 726e5016c018558928412cb96e2e12f18a756e33f01fe3491c4624a780d73c6e34cf7b40bd46c28b6c65d37594b89169ce9243f970f5838333c19bf274461f42
+  checksum: 1e155c459b237d75e46e96e5663dded85b7659ace72daa74f8047e4c76d8604202f22008cb9f272146603a25afe6b03e25098e8f59711786b82000f317bf3cf4
   languageName: node
   linkType: hard
 
@@ -4674,11 +4674,11 @@ __metadata:
     "@commitlint/cli": 17.7.1
     "@commitlint/config-conventional": 17.7.0
     "@foray1010/babel-preset": 10.0.0
-    "@foray1010/eslint-config": 11.0.1
+    "@foray1010/eslint-config": 11.0.2
     "@foray1010/jest-preset": 4.0.0
     "@foray1010/prettier-config": 10.0.0
     "@foray1010/remark-preset": 9.0.0
-    "@foray1010/tsconfig": 11.0.1
+    "@foray1010/tsconfig": 11.0.2
     "@rollup/plugin-babel": 6.0.3
     "@rollup/plugin-commonjs": 24.0.1
     "@rollup/plugin-node-resolve": 15.2.1
