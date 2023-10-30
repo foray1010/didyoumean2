@@ -1606,13 +1606,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:18.1.0":
-  version: 18.1.0
-  resolution: "@commitlint/cli@npm:18.1.0"
+"@commitlint/cli@npm:18.2.0":
+  version: 18.2.0
+  resolution: "@commitlint/cli@npm:18.2.0"
   dependencies:
     "@commitlint/format": "npm:^18.1.0"
     "@commitlint/lint": "npm:^18.1.0"
-    "@commitlint/load": "npm:^18.1.0"
+    "@commitlint/load": "npm:^18.2.0"
     "@commitlint/read": "npm:^18.1.0"
     "@commitlint/types": "npm:^18.1.0"
     execa: "npm:^5.0.0"
@@ -1622,7 +1622,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: eb81079308624aa3456dd214b712fc797478a5dd61d070297515d51a0d62cdcf76fd84d31c74b8ef9b1ff758d3477e8ed9b3173f9d3585e424b48233b0c45603
+  checksum: 4df8d4a9791fbe1e6c0b8eddb195e3031607c5573dc676d8009cade4b130fe923b6d3edb83f3c661dd912c0a8d94b7c9523fb9267e893b37d880130957aa9426
   languageName: node
   linkType: hard
 
@@ -1698,7 +1698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^18.1.0":
+"@commitlint/load@npm:^18.2.0":
   version: 18.2.0
   resolution: "@commitlint/load@npm:18.2.0"
   dependencies:
@@ -4735,7 +4735,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.23.2"
     "@babel/runtime": "npm:^7.19.0"
-    "@commitlint/cli": "npm:18.1.0"
+    "@commitlint/cli": "npm:18.2.0"
     "@commitlint/config-conventional": "npm:18.1.0"
     "@foray1010/babel-preset": "npm:10.0.0"
     "@foray1010/eslint-config": "npm:11.0.3"
