@@ -2694,39 +2694,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/esbuild@npm:10.0.1":
-  version: 10.0.1
-  resolution: "@size-limit/esbuild@npm:10.0.1"
+"@size-limit/esbuild@npm:10.0.2":
+  version: 10.0.2
+  resolution: "@size-limit/esbuild@npm:10.0.2"
   dependencies:
     esbuild: "npm:^0.19.5"
     nanoid: "npm:^5.0.2"
   peerDependencies:
-    size-limit: 10.0.1
-  checksum: 47819622e63cf21ba871f3bc55729429e9349d5795ce2709c24bb822d015e976425cba3063c7b3ce9c9fddcc3d443d89f610895e83537e7055c436853d7434d9
+    size-limit: 10.0.2
+  checksum: f6180c9efb50d523371d061968ed485fb94b377d7b6ddefff9e2abf0438b9aff2c016d888f732a7ab2b028ce4fb782c84b4f60264b1564bd25cd4900ef9aaa10
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:10.0.1":
-  version: 10.0.1
-  resolution: "@size-limit/file@npm:10.0.1"
+"@size-limit/file@npm:10.0.2":
+  version: 10.0.2
+  resolution: "@size-limit/file@npm:10.0.2"
   dependencies:
     semver: "npm:7.5.4"
   peerDependencies:
-    size-limit: 10.0.1
-  checksum: f22109673ad1f43f91b56574ac3cbb58bb6b5405e8af4449d47ea9c348da3c0bcb5c620047231f639db9a33015c03196cec2b249360ab17ec7781bdbfa989b72
+    size-limit: 10.0.2
+  checksum: 9a6bc2ad29a8e72ba7af37dcacb36b759be62a3b05c1ce1de493ad2389874ea102edbad63d19b5f3013a9bf76bb322f71d6a67f5ffb1ccada7cdfaefd8537e3d
   languageName: node
   linkType: hard
 
-"@size-limit/preset-small-lib@npm:10.0.1":
-  version: 10.0.1
-  resolution: "@size-limit/preset-small-lib@npm:10.0.1"
+"@size-limit/preset-small-lib@npm:10.0.2":
+  version: 10.0.2
+  resolution: "@size-limit/preset-small-lib@npm:10.0.2"
   dependencies:
-    "@size-limit/esbuild": "npm:10.0.1"
-    "@size-limit/file": "npm:10.0.1"
-    size-limit: "npm:10.0.1"
+    "@size-limit/esbuild": "npm:10.0.2"
+    "@size-limit/file": "npm:10.0.2"
+    size-limit: "npm:10.0.2"
   peerDependencies:
-    size-limit: 10.0.1
-  checksum: eb034d4164531dad8aac53e10ac82b56ed035f661be7ee01e15fe374fd22b46091adab73430d0fac5d724c6b01d362b1861478492b022e8a171bedd0666ec427
+    size-limit: 10.0.2
+  checksum: 8ba97ccf6582c00036ed0cdce1b9b62680863296b6d12824d3e3a265d8d07a687566b698aa0d022f0a119d4ebae72bf09cbfc0f56c5e1cab8763425abb174773
   languageName: node
   linkType: hard
 
@@ -4515,7 +4515,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:25.0.7"
     "@rollup/plugin-node-resolve": "npm:15.2.3"
     "@rollup/plugin-terser": "npm:0.4.4"
-    "@size-limit/preset-small-lib": "npm:10.0.1"
+    "@size-limit/preset-small-lib": "npm:10.0.2"
     "@types/jest": "npm:29.5.7"
     "@types/lodash.deburr": "npm:4.1.8"
     eslint: "npm:8.52.0"
@@ -4533,7 +4533,7 @@ __metadata:
     rollup: "npm:4.1.5"
     rollup-plugin-dts: "npm:6.1.0"
     shx: "npm:0.3.4"
-    size-limit: "npm:10.0.1"
+    size-limit: "npm:10.0.2"
     type-coverage: "npm:2.27.0"
     typescript: "npm:5.2.2"
   languageName: unknown
@@ -11251,9 +11251,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:10.0.1":
-  version: 10.0.1
-  resolution: "size-limit@npm:10.0.1"
+"size-limit@npm:10.0.2":
+  version: 10.0.2
+  resolution: "size-limit@npm:10.0.2"
   dependencies:
     bytes-iec: "npm:^3.1.1"
     chokidar: "npm:^3.5.3"
@@ -11263,7 +11263,7 @@ __metadata:
     picocolors: "npm:^1.0.0"
   bin:
     size-limit: bin.js
-  checksum: 9b374e1aa01439f6bf53d8e0988743158f03253c46c7f4fac37f5b1100d731f191d3de88cfc3fb1ed3adf0cfbf90e02f2622c2030fbd0a64623fa1fff7708b6f
+  checksum: 755f2c879413f51a7b2176bfc7985443e065d345267dca15ea8afe53737e2acf13e50dda460432008f24755da059eb6181b763fc10a8450ec4186386286fdac1
   languageName: node
   linkType: hard
 
