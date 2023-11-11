@@ -2913,12 +2913,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash.deburr@npm:4.1.8":
-  version: 4.1.8
-  resolution: "@types/lodash.deburr@npm:4.1.8"
+"@types/lodash.deburr@npm:4.1.9":
+  version: 4.1.9
+  resolution: "@types/lodash.deburr@npm:4.1.9"
   dependencies:
     "@types/lodash": "npm:*"
-  checksum: 70ffcb411ad9feae54f947a517ec98fa390268748992e38d3a4ffc47ee443039f0d3b9c8e827273811ff7ffb33b7a83de9572651b4d9f202a062f205af483d50
+  checksum: 55b27105aab323138dccc6316bd251845a578f8a78fb5edfe4db03435d48f47398fdec44e127f78edc535ff7d28541d98cde0fd30b7ef15768f6a544dcebe036
   languageName: node
   linkType: hard
 
@@ -4524,7 +4524,7 @@ __metadata:
     "@rollup/plugin-terser": "npm:0.4.4"
     "@size-limit/preset-small-lib": "npm:10.0.2"
     "@types/jest": "npm:29.5.8"
-    "@types/lodash.deburr": "npm:4.1.8"
+    "@types/lodash.deburr": "npm:4.1.9"
     eslint: "npm:8.53.0"
     fastest-levenshtein: "npm:^1.0.12"
     husky: "npm:8.0.3"
