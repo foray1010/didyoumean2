@@ -87,7 +87,7 @@
     "@rollup/plugin-terser": "0.4.4",
     "@size-limit/preset-small-lib": "10.0.2",
     "@types/jest": "29.5.8",
-    "@types/lodash.deburr": "4.1.8",
+    "@types/lodash.deburr": "4.1.9",
     "eslint": "8.53.0",
     "husky": "8.0.3",
     "ignore-sync": "7.0.1",
