@@ -18,7 +18,7 @@ const commonOutputOptions: Readonly<OutputOptions> = {
 
 const rollupOptions: readonly RollupOptions[] = [
   {
-    external: /\/node_modules\//,
+    external: /\/node_modules\//u,
     input: 'src/index.ts',
     output: [
       {
