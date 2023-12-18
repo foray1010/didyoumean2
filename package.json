@@ -72,7 +72,7 @@
     "lodash.deburr": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.23.5",
+    "@babel/core": "7.23.6",
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
     "@foray1010/babel-preset": "10.0.0",
