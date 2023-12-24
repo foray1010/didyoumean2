@@ -4574,7 +4574,7 @@ __metadata:
     rollup-plugin-dts: "npm:6.1.0"
     shx: "npm:0.3.4"
     size-limit: "npm:11.0.1"
-    type-coverage: "npm:2.27.0"
+    type-coverage: "npm:2.27.1"
     typescript: "npm:5.3.3"
   languageName: unknown
   linkType: soft
@@ -12044,9 +12044,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-coverage-core@npm:^2.26.3":
-  version: 2.26.3
-  resolution: "type-coverage-core@npm:2.26.3"
+"type-coverage-core@npm:^2.27.1":
+  version: 2.27.1
+  resolution: "type-coverage-core@npm:2.27.1"
   dependencies:
     fast-glob: "npm:3"
     minimatch: "npm:6 || 7 || 8 || 9"
@@ -12055,19 +12055,19 @@ __metadata:
     tsutils: "npm:3"
   peerDependencies:
     typescript: 2 || 3 || 4 || 5
-  checksum: 1b567438333cd79378bc37e842d1a8cdaa3c255e36385704e61bcc69eb4ce4a3edf161ed6ace3d7a7a536db1aa347a20bd20eefe48f5c0650fbfb827ac063003
+  checksum: 76270bf63d718b09066c097a09b49a98bd2518d615d42d963c8620f1545345c81efbdd295388df1eef53e3b07d68130f1c22026462ebdb67d66c2473f054259f
   languageName: node
   linkType: hard
 
-"type-coverage@npm:2.27.0":
-  version: 2.27.0
-  resolution: "type-coverage@npm:2.27.0"
+"type-coverage@npm:2.27.1":
+  version: 2.27.1
+  resolution: "type-coverage@npm:2.27.1"
   dependencies:
     minimist: "npm:1"
-    type-coverage-core: "npm:^2.26.3"
+    type-coverage-core: "npm:^2.27.1"
   bin:
     type-coverage: bin/type-coverage
-  checksum: de59e613a0c9629f5ecff75d789bd51f1278c0436bf348451201a62fa1a97a91b8b1c4345a0338743a209c0a83e843433bd12635b00cf60e97a16cc20c651c85
+  checksum: 3652416f2785375e395919763404314d507e43bbf7c28f5faec74be6ca762823082fa0723de68111a5b227b433f161cdc7472d906bb709870c205640ace91192
   languageName: node
   linkType: hard
 
