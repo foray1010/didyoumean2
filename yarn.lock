@@ -1510,15 +1510,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:18.4.3":
-  version: 18.4.3
-  resolution: "@commitlint/cli@npm:18.4.3"
+"@commitlint/cli@npm:18.4.4":
+  version: 18.4.4
+  resolution: "@commitlint/cli@npm:18.4.4"
   dependencies:
-    "@commitlint/format": "npm:^18.4.3"
-    "@commitlint/lint": "npm:^18.4.3"
-    "@commitlint/load": "npm:^18.4.3"
-    "@commitlint/read": "npm:^18.4.3"
-    "@commitlint/types": "npm:^18.4.3"
+    "@commitlint/format": "npm:^18.4.4"
+    "@commitlint/lint": "npm:^18.4.4"
+    "@commitlint/load": "npm:^18.4.4"
+    "@commitlint/read": "npm:^18.4.4"
+    "@commitlint/types": "npm:^18.4.4"
     execa: "npm:^5.0.0"
     lodash.isfunction: "npm:^3.0.9"
     resolve-from: "npm:5.0.0"
@@ -1526,16 +1526,16 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: c412eada9d27444c73703c7e8365c3be3ea9b0e7ac76b670c1b7afbec3d65f420a2c68c75255112c7a4fb2575cb61ead9c809dd67862b4f8c0bc76f68aa79022
+  checksum: 2bbd5120852596f5eb7006993e225abb78aee5216d1737a4bca8ffee68273a6b8a1cf5a86a620677c6c554bba1bdb9af35c00c51078c012b9e6a012fbbce874f
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:18.4.3":
-  version: 18.4.3
-  resolution: "@commitlint/config-conventional@npm:18.4.3"
+"@commitlint/config-conventional@npm:18.4.4":
+  version: 18.4.4
+  resolution: "@commitlint/config-conventional@npm:18.4.4"
   dependencies:
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 13977d8c9cbac31c172ead77c36da5fd88c980438a9811e2b5447f994442200daf8d2d37c5ffef9f5b6afef100513a2ac1e3ec94ba667d7a62fce117e57a16b1
+  checksum: d8eaf10632799e092eccf3bd7c0d294bf9ad5fd1e4a9d7932043a03623c5495db31083410279199b2f480436bebe34a311f5710e842800ff600b1e2cfdd3808e
   languageName: node
   linkType: hard
 
@@ -1570,7 +1570,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^18.4.3":
+"@commitlint/format@npm:^18.4.4":
   version: 18.4.4
   resolution: "@commitlint/format@npm:18.4.4"
   dependencies:
@@ -1590,7 +1590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^18.4.3":
+"@commitlint/lint@npm:^18.4.4":
   version: 18.4.4
   resolution: "@commitlint/lint@npm:18.4.4"
   dependencies:
@@ -1602,7 +1602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^18.4.3":
+"@commitlint/load@npm:^18.4.4":
   version: 18.4.4
   resolution: "@commitlint/load@npm:18.4.4"
   dependencies:
@@ -1639,7 +1639,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/read@npm:^18.4.3":
+"@commitlint/read@npm:^18.4.4":
   version: 18.4.4
   resolution: "@commitlint/read@npm:18.4.4"
   dependencies:
@@ -1694,7 +1694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^18.4.3, @commitlint/types@npm:^18.4.4":
+"@commitlint/types@npm:^18.4.4":
   version: 18.4.4
   resolution: "@commitlint/types@npm:18.4.4"
   dependencies:
@@ -4479,8 +4479,8 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.23.7"
     "@babel/runtime": "npm:^7.23.2"
-    "@commitlint/cli": "npm:18.4.3"
-    "@commitlint/config-conventional": "npm:18.4.3"
+    "@commitlint/cli": "npm:18.4.4"
+    "@commitlint/config-conventional": "npm:18.4.4"
     "@foray1010/babel-preset": "npm:10.0.0"
     "@foray1010/eslint-config": "npm:12.1.0"
     "@foray1010/jest-preset": "npm:5.1.0"
