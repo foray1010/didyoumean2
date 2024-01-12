@@ -1455,11 +1455,11 @@ __metadata:
   linkType: hard
 
 "@babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.8.4":
-  version: 7.23.7
-  resolution: "@babel/runtime@npm:7.23.7"
+  version: 7.23.8
+  resolution: "@babel/runtime@npm:7.23.8"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
-  checksum: 3e304133ee55b0750e03e53cb4efb47fb2bdcdb5795f85bbffa10595196c34b9be60eb65bd6d833c87f49fc827f0365f86f95f51d85b188004d3128bb5129c93
+  checksum: ba5e8fbb32ef04f6cab5e89c54a0497c2fde7b730595cc1af93496270314f13ff2c6a9360fdb2f0bdd4d6b376752ce3cf85642bd6b876969a6a62954934c2df8
   languageName: node
   linkType: hard
 
