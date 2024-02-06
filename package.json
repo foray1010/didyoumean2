@@ -86,7 +86,7 @@
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-terser": "0.4.4",
     "@size-limit/preset-small-lib": "11.0.2",
-    "@types/jest": "29.5.11",
+    "@types/jest": "29.5.12",
     "@types/lodash.deburr": "4.1.9",
     "eslint": "8.56.0",
     "husky": "9.0.10",
