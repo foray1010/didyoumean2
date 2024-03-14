@@ -76,7 +76,7 @@
     "@commitlint/cli": "19.0.3",
     "@commitlint/config-conventional": "19.0.3",
     "@foray1010/babel-preset": "10.0.0",
-    "@foray1010/eslint-config": "12.2.0",
+    "@foray1010/eslint-config": "12.2.1",
     "@foray1010/jest-preset": "5.1.0",
     "@foray1010/prettier-config": "11.0.1",
     "@foray1010/remark-preset": "10.0.0",
