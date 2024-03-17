@@ -230,7 +230,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-plugin-utils@npm:^7.0.0, @babel/helper-plugin-utils@npm:^7.10.4, @babel/helper-plugin-utils@npm:^7.12.13, @babel/helper-plugin-utils@npm:^7.14.5, @babel/helper-plugin-utils@npm:^7.18.6, @babel/helper-plugin-utils@npm:^7.19.0, @babel/helper-plugin-utils@npm:^7.22.5, @babel/helper-plugin-utils@npm:^7.24.0, @babel/helper-plugin-utils@npm:^7.8.0, @babel/helper-plugin-utils@npm:^7.8.3":
+"@babel/helper-plugin-utils@npm:^7.0.0, @babel/helper-plugin-utils@npm:^7.10.4, @babel/helper-plugin-utils@npm:^7.12.13, @babel/helper-plugin-utils@npm:^7.14.5, @babel/helper-plugin-utils@npm:^7.18.6, @babel/helper-plugin-utils@npm:^7.22.5, @babel/helper-plugin-utils@npm:^7.24.0, @babel/helper-plugin-utils@npm:^7.8.0, @babel/helper-plugin-utils@npm:^7.8.3":
   version: 7.24.0
   resolution: "@babel/helper-plugin-utils@npm:7.24.0"
   checksum: 10c0/90f41bd1b4dfe7226b1d33a4bb745844c5c63e400f9e4e8bf9103a7ceddd7d425d65333b564d9daba3cebd105985764d51b4bd4c95822b97c2e3ac1201a8a5da
@@ -1084,7 +1084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-constant-elements@npm:^7.18.12":
+"@babel/plugin-transform-react-constant-elements@npm:^7.23.3":
   version: 7.23.3
   resolution: "@babel/plugin-transform-react-constant-elements@npm:7.23.3"
   dependencies:
@@ -1106,7 +1106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-inline-elements@npm:^7.12.3":
+"@babel/plugin-transform-react-inline-elements@npm:^7.23.3":
   version: 7.23.3
   resolution: "@babel/plugin-transform-react-inline-elements@npm:7.23.3"
   dependencies:
@@ -1179,7 +1179,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:^7.19.6":
+"@babel/plugin-transform-runtime@npm:^7.23.3":
   version: 7.24.0
   resolution: "@babel/plugin-transform-runtime@npm:7.24.0"
   dependencies:
@@ -1312,7 +1312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.19.4":
+"@babel/preset-env@npm:^7.23.3":
   version: 7.24.0
   resolution: "@babel/preset-env@npm:7.24.0"
   dependencies:
@@ -1415,7 +1415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.13.13":
+"@babel/preset-react@npm:^7.23.3":
   version: 7.23.3
   resolution: "@babel/preset-react@npm:7.23.3"
   dependencies:
@@ -1431,7 +1431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.13.0":
+"@babel/preset-typescript@npm:^7.23.3":
   version: 7.23.3
   resolution: "@babel/preset-typescript@npm:7.23.3"
   dependencies:
@@ -1915,34 +1915,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foray1010/babel-preset@npm:10.0.0":
-  version: 10.0.0
-  resolution: "@foray1010/babel-preset@npm:10.0.0"
+"@foray1010/babel-preset@npm:12.0.2":
+  version: 12.0.2
+  resolution: "@foray1010/babel-preset@npm:12.0.2"
   dependencies:
-    "@babel/helper-plugin-utils": "npm:^7.19.0"
-    "@babel/plugin-transform-react-constant-elements": "npm:^7.18.12"
-    "@babel/plugin-transform-react-inline-elements": "npm:^7.12.3"
-    "@babel/plugin-transform-runtime": "npm:^7.19.6"
-    "@babel/preset-env": "npm:^7.19.4"
-    "@babel/preset-react": "npm:^7.13.13"
-    "@babel/preset-typescript": "npm:^7.13.0"
-    "@foray1010/common-presets-utils": "npm:^6.0.0"
+    "@babel/helper-plugin-utils": "npm:^7.22.5"
+    "@babel/plugin-transform-react-constant-elements": "npm:^7.23.3"
+    "@babel/plugin-transform-react-inline-elements": "npm:^7.23.3"
+    "@babel/plugin-transform-runtime": "npm:^7.23.3"
+    "@babel/preset-env": "npm:^7.23.3"
+    "@babel/preset-react": "npm:^7.23.3"
+    "@babel/preset-typescript": "npm:^7.23.3"
+    "@foray1010/common-presets-utils": "npm:^8.0.0"
     babel-plugin-transform-react-remove-prop-types: "npm:^0.4.24"
-    browserslist: "npm:^4.21.4"
-    semver: "npm:^7.3.5"
+    browserslist: "npm:^4.22.1"
+    semver: "npm:^7.5.4"
   peerDependencies:
     "@babel/core": ^7.0.0
     "@babel/runtime": ^7.9.6
-  checksum: 10c0/81115a3514de1f462303417558144848130e3b957f50395590f8878f53ec538b449f1d230475739c4fdca62d01f4cfa708eabbf93b2b5d82d4a9864761c59202
-  languageName: node
-  linkType: hard
-
-"@foray1010/common-presets-utils@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@foray1010/common-presets-utils@npm:6.0.0"
-  dependencies:
-    read-pkg-up: "npm:^7.0.1"
-  checksum: 10c0/8082c6b1b2696283e45078aab9c935abc2649f55c25d93fd61af6a04d91367aa60263a0489c1345b21f498916c1938b7ac120e03074696a30020b6e36897c45d
+  checksum: 10c0/82f21dc3260871c7ee66fd1bae4cc1126a494e54a16ca562e666a4a7a08c1d282fab92fbd954eff25e0a790bc714821ed43212de2ee15817ff7b2d761701107b
   languageName: node
   linkType: hard
 
@@ -3839,7 +3830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.21.10, browserslist@npm:^4.21.4, browserslist@npm:^4.22.2, browserslist@npm:^4.22.3":
+"browserslist@npm:^4.21.10, browserslist@npm:^4.22.1, browserslist@npm:^4.22.2, browserslist@npm:^4.22.3":
   version: 4.23.0
   resolution: "browserslist@npm:4.23.0"
   dependencies:
@@ -4530,7 +4521,7 @@ __metadata:
     "@babel/runtime": "npm:^7.23.2"
     "@commitlint/cli": "npm:19.1.0"
     "@commitlint/config-conventional": "npm:19.1.0"
-    "@foray1010/babel-preset": "npm:10.0.0"
+    "@foray1010/babel-preset": "npm:12.0.2"
     "@foray1010/eslint-config": "npm:12.2.1"
     "@foray1010/jest-preset": "npm:5.1.0"
     "@foray1010/prettier-config": "npm:11.0.1"
