@@ -3964,6 +3964,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:4.1.2, chalk@npm:^4.0.0":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
+  dependencies:
+    ansi-styles: "npm:^4.1.0"
+    supports-color: "npm:^7.1.0"
+  checksum: 10c0/4a3fef5cc34975c898ffe77141450f679721df9dde00f6c304353fa9c8b571929123b26a0e4617bde5018977eb655b31970c297b91b63ee83bb82aeb04666880
+  languageName: node
+  linkType: hard
+
 "chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -3972,16 +3982,6 @@ __metadata:
     escape-string-regexp: "npm:^1.0.5"
     supports-color: "npm:^5.3.0"
   checksum: 10c0/e6543f02ec877732e3a2d1c3c3323ddb4d39fbab687c23f526e25bd4c6a9bf3b83a696e8c769d078e04e5754921648f7821b2a2acfd16c550435fd630026e073
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^4.0.0":
-  version: 4.1.2
-  resolution: "chalk@npm:4.1.2"
-  dependencies:
-    ansi-styles: "npm:^4.1.0"
-    supports-color: "npm:^7.1.0"
-  checksum: 10c0/4a3fef5cc34975c898ffe77141450f679721df9dde00f6c304353fa9c8b571929123b26a0e4617bde5018977eb655b31970c297b91b63ee83bb82aeb04666880
   languageName: node
   linkType: hard
 
@@ -4616,7 +4616,7 @@ __metadata:
     rollup-plugin-dts: "npm:6.1.1"
     shx: "npm:0.3.4"
     size-limit: "npm:11.1.4"
-    type-coverage: "npm:2.28.2"
+    type-coverage: "npm:2.29.0"
     typescript: "npm:5.4.5"
   languageName: unknown
   linkType: soft
@@ -11714,15 +11714,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-coverage@npm:2.28.2":
-  version: 2.28.2
-  resolution: "type-coverage@npm:2.28.2"
+"type-coverage@npm:2.29.0":
+  version: 2.29.0
+  resolution: "type-coverage@npm:2.29.0"
   dependencies:
+    chalk: "npm:4.1.2"
     minimist: "npm:1"
     type-coverage-core: "npm:^2.28.1"
   bin:
     type-coverage: bin/type-coverage
-  checksum: 10c0/215665a2b205bc04b2f35e40ede73dd0d19eeecdc01fc3dc67b7c5497498abc9583965930b0a4c573132180ed253c2fe72b833d91c5cdb095209a052ac11df7c
+  checksum: 10c0/75f0d63571bb5157876ea947cc09c2e5ad14a5e44f1d2d8430f61137b24618feb2519060d01dfae89dbc39caf82bb2e65b66ea186ddbb788c20d5ea1cc5e1d10
   languageName: node
   linkType: hard
 
