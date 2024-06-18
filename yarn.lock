@@ -1986,9 +1986,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foray1010/eslint-config@npm:12.2.3":
-  version: 12.2.3
-  resolution: "@foray1010/eslint-config@npm:12.2.3"
+"@foray1010/eslint-config@npm:12.2.4":
+  version: 12.2.4
+  resolution: "@foray1010/eslint-config@npm:12.2.4"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.1.0"
     "@eslint/js": "npm:^8.53.0"
@@ -1998,7 +1998,7 @@ __metadata:
     confusing-browser-globals: "npm:^1.0.11"
     eslint-config-prettier: "npm:^9.0.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
-    eslint-plugin-compat: "npm:^4.2.0"
+    eslint-plugin-compat: "npm:^5.0.0"
     eslint-plugin-deprecation: "npm:^3.0.0"
     eslint-plugin-functional: "npm:^6.0.0"
     eslint-plugin-import: "npm:^2.29.0"
@@ -2011,8 +2011,8 @@ __metadata:
     eslint-plugin-regexp: "npm:^2.1.1"
     eslint-plugin-simple-import-sort: "npm:^12.0.0"
     eslint-plugin-testing-library: "npm:^6.1.2"
-    eslint-plugin-unicorn: "npm:^53.0.0"
-    globals: "npm:^15.0.0"
+    eslint-plugin-unicorn: "npm:^54.0.0"
+    globals: "npm:^15.4.0"
   peerDependencies:
     "@testing-library/dom": ^10.0.0
     eslint: ^8.52.0
@@ -2023,7 +2023,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/3f300801a1fb5b69e743ea3ef16a766aaf3c7bbaf5e9470f1705fb4ce481ece49d14dcc2a5ccb2484acff84ce0230047191e864bb82732fc4eabc16df3eeb3df
+  checksum: 10c0/7e501b9cb97fb6b17afd39407a375cb9618f69de73d2a022e9841da28a7b164b8c19e999315774671dd607112a1b270b179f58aa9d6adb8c9ffb5d6b3079ed2b
   languageName: node
   linkType: hard
 
@@ -2424,7 +2424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:^5.2.34, @mdn/browser-compat-data@npm:^5.3.13":
+"@mdn/browser-compat-data@npm:^5.2.34, @mdn/browser-compat-data@npm:^5.5.19":
   version: 5.5.33
   resolution: "@mdn/browser-compat-data@npm:5.5.33"
   checksum: 10c0/33cefcd8c9caf3b33cae9627d7cd21e6cf9a6fa1973dc7b0492856a72b52239670f2ea075daa636e36eee24d69e782a9c4fb32a570c153ba4a8d73c3c0ae17f3
@@ -3799,7 +3799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.21.10, browserslist@npm:^4.21.4, browserslist@npm:^4.22.2, browserslist@npm:^4.23.0":
+"browserslist@npm:^4.21.4, browserslist@npm:^4.22.2, browserslist@npm:^4.23.0":
   version: 4.23.1
   resolution: "browserslist@npm:4.23.1"
   dependencies:
@@ -3912,7 +3912,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001524, caniuse-lite@npm:^1.0.30001629":
+"caniuse-lite@npm:^1.0.30001605, caniuse-lite@npm:^1.0.30001629":
   version: 1.0.30001636
   resolution: "caniuse-lite@npm:1.0.30001636"
   checksum: 10c0/e5f965b4da7bae1531fd9f93477d015729ff9e3fa12670ead39a9e6cdc4c43e62c272d47857c5cc332e7b02d697cb3f2f965a1030870ac7476da60c2fc81ee94
@@ -4550,7 +4550,7 @@ __metadata:
     "@commitlint/cli": "npm:19.3.0"
     "@commitlint/config-conventional": "npm:19.2.2"
     "@foray1010/babel-preset": "npm:10.0.0"
-    "@foray1010/eslint-config": "npm:12.2.3"
+    "@foray1010/eslint-config": "npm:12.2.4"
     "@foray1010/jest-preset": "npm:5.1.0"
     "@foray1010/prettier-config": "npm:11.0.1"
     "@foray1010/remark-preset": "npm:10.0.1"
@@ -5054,20 +5054,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-compat@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "eslint-plugin-compat@npm:4.2.0"
+"eslint-plugin-compat@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "eslint-plugin-compat@npm:5.0.0"
   dependencies:
-    "@mdn/browser-compat-data": "npm:^5.3.13"
+    "@mdn/browser-compat-data": "npm:^5.5.19"
     ast-metadata-inferer: "npm:^0.8.0"
-    browserslist: "npm:^4.21.10"
-    caniuse-lite: "npm:^1.0.30001524"
+    browserslist: "npm:^4.23.0"
+    caniuse-lite: "npm:^1.0.30001605"
     find-up: "npm:^5.0.0"
+    globals: "npm:^13.24.0"
     lodash.memoize: "npm:^4.1.2"
-    semver: "npm:^7.5.4"
+    semver: "npm:^7.6.0"
   peerDependencies:
     eslint: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/d5452650522b4a1e7f68365550fdf1049050469ee6f7cf772f222391fda775bb5a3a73da044f0b454ef8c87a636fd078ed46f9fba574bc2bafe441f612e70cda
+  checksum: 10c0/07c0a90e601dffec0ea31c2c85c32679ab13238c030936d25fa57433e8c37566428249ee4fee6f98a107d8fc90214000ac4e6d4eaf646bd34bb96248bc5112e3
   languageName: node
   linkType: hard
 
@@ -5291,9 +5292,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^53.0.0":
-  version: 53.0.0
-  resolution: "eslint-plugin-unicorn@npm:53.0.0"
+"eslint-plugin-unicorn@npm:^54.0.0":
+  version: 54.0.0
+  resolution: "eslint-plugin-unicorn@npm:54.0.0"
   dependencies:
     "@babel/helper-validator-identifier": "npm:^7.24.5"
     "@eslint-community/eslint-utils": "npm:^4.4.0"
@@ -5313,7 +5314,7 @@ __metadata:
     strip-indent: "npm:^3.0.0"
   peerDependencies:
     eslint: ">=8.56.0"
-  checksum: 10c0/da48048c21a68dd5410ed1f8abb1a80a7dabb5cf751e690dae435cb5359b3150f92682722bdb2e07258689ad1fdceaa9bd2dd08f211aaeb7ed19c62b98a32db5
+  checksum: 10c0/cca557df20f31f6a072de6eba28129ed68fff059bef7ba2d373be650bef46ba899aeba89b2be5a309657e638400eb9ae0d0cd7e2f900c22eca0a6b8e2d0f4661
   languageName: node
   linkType: hard
 
@@ -6008,7 +6009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.19.0":
+"globals@npm:^13.19.0, globals@npm:^13.24.0":
   version: 13.24.0
   resolution: "globals@npm:13.24.0"
   dependencies:
@@ -6028,6 +6029,13 @@ __metadata:
   version: 15.5.0
   resolution: "globals@npm:15.5.0"
   checksum: 10c0/f13c3cb0c6d49b9d23e447b86e33ca6139753087060c3063863c0dd2b5d79f4a114c48d20e321916e6c3701adb3f6b67d6ac8d8ed2bae6da45482c968532d4e2
+  languageName: node
+  linkType: hard
+
+"globals@npm:^15.4.0":
+  version: 15.6.0
+  resolution: "globals@npm:15.6.0"
+  checksum: 10c0/ba488ec5bd770336a3e1ffec3f718077768aec99e16f30c33c0eeaed09e0b93fa06a24fc0d3844d1d81a678c86d22f04547703e87e2e4353601eddcb800479ec
   languageName: node
   linkType: hard
 
