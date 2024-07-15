@@ -54,7 +54,6 @@
     "build": "yarn clean:build && tsc --project tsconfig.build.json && rollup --configPlugin \"babel={ babelHelpers: 'runtime', extensions: ['.js', '.ts'] }\" -c",
     "ci": "yarn build && npm-run-all -p 'lint:*' 'type:*' && yarn test && size-limit",
     "clean:build": "shx rm -rf dist/ build/dts/",
-    "postinstall": "husky",
     "lint": "npm-run-all -p 'lint:*'",
     "lint:js": "eslint .",
     "lint:md": "yarn remark .",
@@ -64,7 +63,8 @@
     "remark": "remark --frail --ignore-path=node_modules/@foray1010/remark-preset/remarkignore --ignore-path-resolve-from=cwd --silently-ignore",
     "test": "jest",
     "type:check": "tsc",
-    "type:coverage": "type-coverage --strict --at-least 99 --detail --ignore-catch"
+    "type:coverage": "type-coverage --strict --at-least 99 --detail --ignore-catch",
+    "prepare": "husky"
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
@@ -89,13 +89,12 @@
     "@types/jest": "29.5.12",
     "@types/lodash.deburr": "4.1.9",
     "eslint": "8.57.0",
-    "husky": "9.0.11",
+    "husky": "^9.0.11",
     "ignore-sync": "7.0.1",
     "jest": "29.7.0",
     "lint-staged": "15.2.7",
     "node-notifier": "10.0.1",
     "npm-run-all2": "6.2.2",
-    "pinst": "3.0.0",
     "prettier": "3.3.2",
     "remark-cli": "12.0.1",
     "rollup": "4.18.0",
