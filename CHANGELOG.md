@@ -4,25 +4,22 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [7.0.0](https://github.com/foray1010/didyoumean2/compare/v6.0.1...v7.0.0) (2024-07-21)
 
-
 ### ⚠ BREAKING CHANGES
 
-* only support conditional exports for entry point
-* drop support for umd build
-* require node `^18.12.0 || >=20.9.0`
+- only support conditional exports for entry point
+- drop support for umd build
+- require node `^18.12.0 || >=20.9.0`
 
 ### Bug Fixes
 
-* temporarily remove husky as failed to install by npm 10.4.0 ([c300cc1](https://github.com/foray1010/didyoumean2/commit/c300cc106bf733c610e9e6ebb615970003efcd8e))
+- temporarily remove husky as failed to install by npm 10.4.0 ([c300cc1](https://github.com/foray1010/didyoumean2/commit/c300cc106bf733c610e9e6ebb615970003efcd8e))
 
-
-* require node `^18.12.0 || >=20.9.0` ([3ebb83e](https://github.com/foray1010/didyoumean2/commit/3ebb83e5274188a5fd8b3d843f6ece0e28a1dc2a))
-
+- require node `^18.12.0 || >=20.9.0` ([3ebb83e](https://github.com/foray1010/didyoumean2/commit/3ebb83e5274188a5fd8b3d843f6ece0e28a1dc2a))
 
 ### build
 
-* drop support for umd build ([3933072](https://github.com/foray1010/didyoumean2/commit/3933072bfdef689b98869d4820b9673bcbb28df2))
-* only support conditional exports for entry point ([f6c23c1](https://github.com/foray1010/didyoumean2/commit/f6c23c1f1495e24e8a637f310003231142155cc4))
+- drop support for umd build ([3933072](https://github.com/foray1010/didyoumean2/commit/3933072bfdef689b98869d4820b9673bcbb28df2))
+- only support conditional exports for entry point ([f6c23c1](https://github.com/foray1010/didyoumean2/commit/f6c23c1f1495e24e8a637f310003231142155cc4))
 
 ### [6.0.1](https://github.com/foray1010/didyoumean2/compare/v6.0.0...v6.0.1) (2023-09-07)
 

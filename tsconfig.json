@@ -3,6 +3,6 @@
   "extends": "@foray1010/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-  },
+    "moduleResolution": "Bundler"
+  }
 }
