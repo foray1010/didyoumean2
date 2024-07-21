@@ -43,6 +43,7 @@
     }
   },
   "main": "./dist/index.cjs",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist",
     "*.md"
