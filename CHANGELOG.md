@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.0.1](https://github.com/foray1010/didyoumean2/compare/v7.0.0...v7.0.1) (2024-07-21)
 
-
 ### Bug Fixes
 
-* add back main entry point as eslint-plugin-import does not support conditional exports ([42ef97c](https://github.com/foray1010/didyoumean2/commit/42ef97ca810c6fc8692b70abaed6bd555eb0527c))
+- add back main entry point as eslint-plugin-import does not support conditional exports ([42ef97c](https://github.com/foray1010/didyoumean2/commit/42ef97ca810c6fc8692b70abaed6bd555eb0527c))
 
 ## [7.0.0](https://github.com/foray1010/didyoumean2/compare/v6.0.1...v7.0.0) (2024-07-21)
 
