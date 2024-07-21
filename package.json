@@ -43,7 +43,6 @@
     }
   },
   "main": "./dist/index.cjs",
-  "unpkg": "./dist/index.umd.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
   "files": [

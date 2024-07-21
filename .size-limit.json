@@ -6,9 +6,5 @@
   {
     "path": "dist/index.mjs",
     "limit": "2391 B"
-  },
-  {
-    "path": "dist/index.umd.js",
-    "limit": "2283 B"
   }
 ]

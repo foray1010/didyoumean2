@@ -50,30 +50,6 @@ const rollupOptions: readonly RollupOptions[] = [
     },
   },
   {
-    input: 'src/index.ts',
-    output: {
-      ...commonOutputOptions,
-      entryFileNames: '[name].[format].js',
-      format: 'umd',
-      name: 'didYouMean',
-    },
-    plugins: [
-      babel({
-        babelHelpers: 'runtime',
-        extensions: ['.js', '.ts'],
-        // https://github.com/rollup/plugins/issues/381
-        skipPreflightCheck: true,
-      }),
-      commonjs({
-        include: '**/node_modules/**',
-      }),
-      resolve({
-        extensions: ['.js', '.ts'],
-      }),
-      terser(),
-    ],
-  },
-  {
     input: 'build/dts/index.d.ts',
     output: {
       dir: outputDir,
