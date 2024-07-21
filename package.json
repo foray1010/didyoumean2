@@ -99,7 +99,7 @@
     "rollup-plugin-dts": "6.1.1",
     "shx": "0.3.4",
     "size-limit": "11.1.4",
-    "type-coverage": "2.29.0",
+    "type-coverage": "2.29.1",
     "typescript": "5.5.3"
   },
   "packageManager": "yarn@4.3.1",
