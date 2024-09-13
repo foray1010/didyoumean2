@@ -80,7 +80,7 @@
     "@rollup/plugin-commonjs": "26.0.1",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-terser": "0.4.4",
-    "@size-limit/preset-small-lib": "11.1.4",
+    "@size-limit/preset-small-lib": "11.1.5",
     "@types/jest": "29.5.12",
     "@types/lodash.deburr": "4.1.9",
     "eslint": "8.57.0",
@@ -94,7 +94,7 @@
     "rollup": "4.21.2",
     "rollup-plugin-dts": "6.1.1",
     "shx": "0.3.4",
-    "size-limit": "11.1.4",
+    "size-limit": "11.1.5",
     "type-coverage": "2.29.1",
     "typescript": "5.5.4"
   },
