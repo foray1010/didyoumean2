@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.3](https://github.com/foray1010/didyoumean2/compare/v7.0.2...v7.0.3) (2024-09-17)
+
 ### [7.0.2](https://github.com/foray1010/didyoumean2/compare/v7.0.1...v7.0.2) (2024-07-21)
 
 ### Bug Fixes
