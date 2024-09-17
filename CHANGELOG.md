@@ -4,12 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.0.4](https://github.com/foray1010/didyoumean2/compare/v7.0.3...v7.0.4) (2024-09-17)
 
-
 ### Bug Fixes
 
-* does not include any files on last release ([b899e53](https://github.com/foray1010/didyoumean2/commit/b899e535e4f6c8161264a5697be25aba13e6a93f))
+- does not include any files on last release ([b899e53](https://github.com/foray1010/didyoumean2/commit/b899e535e4f6c8161264a5697be25aba13e6a93f))
 
 ### [7.0.3](https://github.com/foray1010/didyoumean2/compare/v7.0.2...v7.0.3) (2024-09-17)
+
+### Build
+
+- do not minify build ([d91fea4](https://github.com/foray1010/didyoumean2/commit/d91fea426e4ec43b307763e57820c50028caff8b))
 
 ### [7.0.2](https://github.com/foray1010/didyoumean2/compare/v7.0.1...v7.0.2) (2024-07-21)
 
