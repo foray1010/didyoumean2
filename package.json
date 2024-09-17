@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "didyoumean2",
-  "version": "7.0.3",
+  "version": "7.0.4",
   "description": "a library for matching human-quality input to a list of potential matches using the Levenshtein distance algorithm",
   "keywords": [
     "closest",
