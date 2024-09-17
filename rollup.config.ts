@@ -1,7 +1,6 @@
 import { babel } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
-import terser from '@rollup/plugin-terser'
 import type { OutputOptions, RollupOptions } from 'rollup'
 import dts from 'rollup-plugin-dts'
 
@@ -43,7 +42,6 @@ const rollupOptions: readonly RollupOptions[] = [
       resolve({
         extensions: ['.js', '.ts'],
       }),
-      terser(),
     ],
     watch: {
       clearScreen: false,

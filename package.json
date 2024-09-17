@@ -81,7 +81,6 @@
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-commonjs": "26.0.1",
     "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-terser": "0.4.4",
     "@size-limit/preset-small-lib": "11.1.5",
     "@types/jest": "29.5.13",
     "@types/lodash.deburr": "4.1.9",
