@@ -51,7 +51,7 @@
     "*.md"
   ],
   "scripts": {
-    "build": "yarn clean:build && tsc --project tsconfig.build.json && rollup --configPlugin \"babel={ babelHelpers: 'runtime', extensions: ['.js', '.ts'] }\" -c",
+    "build": "yarn clean:build && tsc --project tsconfig.build.json && rollup --configPlugin \"babel={ extensions: ['.js', '.ts'] }\" -c",
     "ci": "yarn build && npm-run-all -p 'lint:*' 'type:*' && yarn test && size-limit",
     "clean:build": "shx rm -rf dist/ build/dts/",
     "lint": "npm-run-all -p 'lint:*'",
@@ -64,7 +64,6 @@
     "type:coverage": "type-coverage --strict --at-least 99 --detail --ignore-catch"
   },
   "dependencies": {
-    "@babel/runtime": "^7.24.8",
     "fastest-levenshtein": "^1.0.16",
     "lodash.deburr": "^4.1.0"
   },

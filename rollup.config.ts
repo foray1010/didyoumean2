@@ -33,7 +33,6 @@ const rollupOptions: readonly RollupOptions[] = [
     ],
     plugins: [
       babel({
-        babelHelpers: 'runtime',
         extensions: ['.js', '.ts'],
       }),
       commonjs({
