@@ -90,7 +90,7 @@
     "lint-staged": "15.4.3",
     "node-notifier": "10.0.1",
     "npm-run-all2": "7.0.2",
-    "prettier": "3.5.1",
+    "prettier": "3.5.2",
     "remark-cli": "12.0.1",
     "rollup": "4.34.8",
     "rollup-plugin-dts": "6.1.1",
