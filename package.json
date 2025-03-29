@@ -93,7 +93,7 @@
     "prettier": "3.5.3",
     "remark-cli": "12.0.1",
     "rollup": "4.37.0",
-    "rollup-plugin-dts": "6.1.1",
+    "rollup-plugin-dts": "6.2.1",
     "shx": "0.4.0",
     "size-limit": "11.2.0",
     "type-coverage": "2.29.7",
