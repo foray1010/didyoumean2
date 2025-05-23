@@ -4589,7 +4589,7 @@ __metadata:
     lint-staged: "npm:15.5.2"
     lodash.deburr: "npm:^4.1.0"
     node-notifier: "npm:10.0.1"
-    npm-run-all2: "npm:7.0.2"
+    npm-run-all2: "npm:8.0.3"
     prettier: "npm:3.5.3"
     remark-cli: "npm:12.0.1"
     rollup: "npm:4.40.2"
@@ -8617,14 +8617,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:7.0.2":
-  version: 7.0.2
-  resolution: "npm-run-all2@npm:7.0.2"
+"npm-run-all2@npm:8.0.3":
+  version: 8.0.3
+  resolution: "npm-run-all2@npm:8.0.3"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.6"
     memorystream: "npm:^0.3.1"
-    minimatch: "npm:^9.0.0"
+    minimatch: "npm:^10.0.1"
     pidtree: "npm:^0.6.0"
     read-package-json-fast: "npm:^4.0.0"
     shell-quote: "npm:^1.7.3"
@@ -8634,7 +8634,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10c0/4606c0cdaad9dc7dbe5a6ae432b1aabea25e2ffd541f959307e5c34247d0658952f98352b8ce45f925241af304c6718b2198b425f234e0e9fbc30b342cedb121
+  checksum: 10c0/22773c2144bf0477f2be464043e180c4b37078df63147a374a47b3bac9b5bc5825e7a7253d7b138a2a5e34d2ff13f0fc7cfff4f7d46170405728c373dd733855
   languageName: node
   linkType: hard
 
