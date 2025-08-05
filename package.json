@@ -97,7 +97,7 @@
     "shx": "0.4.0",
     "size-limit": "11.2.0",
     "type-coverage": "2.29.7",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   },
   "packageManager": "yarn@4.9.2",
   "engines": {
