@@ -78,7 +78,7 @@
     "@foray1010/prettier-config": "11.0.1",
     "@foray1010/remark-preset": "10.0.4",
     "@foray1010/tsconfig": "13.0.0",
-    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-babel": "6.1.0",
     "@rollup/plugin-commonjs": "28.0.6",
     "@rollup/plugin-node-resolve": "16.0.3",
     "@size-limit/preset-small-lib": "11.2.0",
