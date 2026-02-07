@@ -70,8 +70,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.29.0",
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/cli": "20.4.1",
+    "@commitlint/config-conventional": "20.4.1",
     "@foray1010/babel-preset": "10.0.0",
     "@foray1010/eslint-config": "13.0.3",
     "@foray1010/jest-preset": "5.1.0",
