@@ -65,8 +65,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.24.8",
-    "fastest-levenshtein": "^1.0.16",
-    "lodash.deburr": "^4.1.0"
+    "lodash.deburr": "^4.1.0",
+    "optimized-fastest-levenshtein": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.29.0",

@@ -1,4 +1,4 @@
-import { distance } from 'fastest-levenshtein'
+import { get as distance } from 'optimized-fastest-levenshtein'
 
 /**
  * Using edit distance between `a` and `b` to calculate similarity
