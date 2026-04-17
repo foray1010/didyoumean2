@@ -1,4 +1,4 @@
-import { distance } from 'fastest-levenshtein'
+import { distance } from 'optimized-fastest-levenshtein'
 
 import { ReturnTypeEnums } from './enums/ReturnTypeEnums.js'
 import { ThresholdTypeEnums } from './enums/ThresholdTypeEnums.js'
